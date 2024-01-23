@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Modules and packages &#8212; Manual Introduction to Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://utwente.mia.nl/template/notebooks/4_ModulesPackages/4_ModulesPackages_student.html" />
+    <link rel="shortcut icon" href="https://www.bunteworte.net/wp-content/uploads/2018/06/book_favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Dealing with files" href="../4_Files/4_Files_student.html" />
+    <link rel="prev" title="Objects" href="../3_Objects/3_Objects_student.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/banner.jpeg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/banner.jpeg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Scripts/2_Scripts_student.html">2. Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Functions/3_Functions_student.html">3. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Objects/3_Objects_student.html">4. Objects</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Files/4_Files_student.html">6. Reading and writing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_NumPy/5_NumPy_student.html">7. NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_Visualization/6_Visualization_student.html">8. Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DataAnalysis/7_DataAnalysis_student.html">9. Data analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../99_Project/99_Project_student.html">1 Inleiding</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../backmatter/references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backmatter/resources.html">Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utwente.nl/hub/hub/user-redirect/git-pull?repo=https%3A//gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration&urlpath=tree/notebook_collaboration/jupyter-book/notebooks/4_ModulesPackages/4_ModulesPackages_student.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-gitlab"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/4_ModulesPackages/4_ModulesPackages_student.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modules and packages</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules">Modules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-modules">Importing modules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-non-complete-list-of-useful-packages">A non-complete list of useful packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-install-packages">How to install packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda-environments">Anaconda environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment">Creating an environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activating-and-deactivating-environment">Activating and deactivating environment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-find-packages">Where to find packages</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modules-and-packages">
+<h1>Modules and packages<a class="headerlink" href="#modules-and-packages" title="Permalink to this heading">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Learning goals</p>
+<p>After finishing this chapter, you are expected to</p>
+<ul class="simple">
+<li><p>understand what a module is</p></li>
+<li><p>understand what a package is</p></li>
+<li><p>import modules and packages in several ways</p></li>
+</ul>
+</div>
+<p>By now, you know how to write a function and you know that Python has a set of built-in functions. The list of built-in functions in Python is very short, yet Python is a very powerful and popular programming language. The reason for this is that Python provides <em>modules</em> and <em>packages</em> that significantly extend the basic functionality. In this chapter we’ll introduce modules and packages and how to properly use them in combination with Anaconda.</p>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<p>A Python module is nothing more than a <code class="docutils literal notranslate"><span class="pre">*.py</span></code> file that you import and that defines variables and classes. This can be very convenient. For example, if you have written some functions or objects that you use in many different programming projects, you can put those functions in a module that you can easily reuse. Consider the contents of the following file, which we shall call <code class="docutils literal notranslate"><span class="pre">mod.py</span></code>. The module contains two variables, a function and a class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;If Comrade Napoleon says it, it must be right.&quot;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;arg = </span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Now imagine that you want to use the function <code class="docutils literal notranslate"><span class="pre">foo()</span></code> in many different projects. If we have a different file, let’s say, <code class="docutils literal notranslate"><span class="pre">project.py</span></code>, and we want to use the function <code class="docutils literal notranslate"><span class="pre">foo()</span></code> in <code class="docutils literal notranslate"><span class="pre">project.py</span></code>, we simply to the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mod</span>
+
+<span class="n">mod</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="s2">&quot;Test module&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The expected behavior is that now the function <code class="docutils literal notranslate"><span class="pre">foo()</span></code> will be called to output “Test module”. To be able to import a module, it is very important that it can be found by Python. If you put the file in the same directory from which the script was called, you should be good. Alternatively you can put the module file in any other directory as long as it’s on your <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>.</p>
+<section id="importing-modules">
+<h3>Importing modules<a class="headerlink" href="#importing-modules" title="Permalink to this heading">#</a></h3>
+<p>The easiest way to use a module is by importing it via <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">&lt;modulename&gt;</span></code> as we just did. It’s important to realize that - after importing - we cannot call all the functions in <code class="docutils literal notranslate"><span class="pre">mod.py</span></code> as if they are in <code class="docutils literal notranslate"><span class="pre">project.py</span></code>: we always need to prepend the module name and add a dot. For example, in the case above, calling <code class="docutils literal notranslate"><span class="pre">foo(&quot;Test</span> <span class="pre">module&quot;)</span></code> will not work because Python does not understand what you mean with <code class="docutils literal notranslate"><span class="pre">foo()</span></code>. Instead, we have to explicitly use <code class="docutils literal notranslate"><span class="pre">mod.foo(&quot;Test</span> <span class="pre">module&quot;)</span></code> so that Python will actually use the <code class="docutils literal notranslate"><span class="pre">foo()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">mod</span></code> module.</p>
+<p>Alternatively, we <em>can</em> import parts of the module directly, but that means that any other function, variable or class with the same name that we would have in our current <code class="docutils literal notranslate"><span class="pre">*.py</span></code> file get overwritten. To achieve this, we would use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">mod</span> <span class="pre">import</span> <span class="pre">foo</span></code> instead of <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">mod</span></code>. Now, we can use <code class="docutils literal notranslate"><span class="pre">foo(&quot;Test</span> <span class="pre">module&quot;)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">mod.foo(&quot;Test</span> <span class="pre">module&quot;)</span></code>. If you’re absolutely confident that you want to import everything from a module and don’t want to bother with prepending module names, you can also use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">mod</span> <span class="pre">import</span> <span class="pre">*</span></code>. The <code class="docutils literal notranslate"><span class="pre">*</span></code> commonly means ‘everything’ in programming.</p>
+<p>One more thing that you can do, is import a function, variable or class directly, but give it a different name for greater ease. In this case, you could use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">mod</span> <span class="pre">import</span> <span class="pre">foo</span> <span class="pre">as</span> <span class="pre">bar</span></code> and in the <code class="docutils literal notranslate"><span class="pre">project.py</span></code> script call <code class="docutils literal notranslate"><span class="pre">bar(&quot;Test</span> <span class="pre">module&quot;)</span></code>. You can use any term, here <code class="docutils literal notranslate"><span class="pre">bar</span></code> is just an alias. Similarly, you can import entire modules under alternate names: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">mod</span> <span class="pre">as</span> <span class="pre">modest</span></code>.</p>
+</section>
+</section>
+<section id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h2>
+<p>A Python package is a set of connected modules.</p>
+</section>
+<section id="a-non-complete-list-of-useful-packages">
+<h2>A non-complete list of useful packages<a class="headerlink" href="#a-non-complete-list-of-useful-packages" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="how-to-install-packages">
+<h2>How to install packages<a class="headerlink" href="#how-to-install-packages" title="Permalink to this heading">#</a></h2>
+<p>There are multiple ways to <em>manage</em> or organize your packages in Python. Most commonly, you’ll use <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the standard Python package manager, or Anaconda. Anaconda has a couple of advantages over <code class="docutils literal notranslate"><span class="pre">pip</span></code> in the way that it manages packages, which is why we advice you to use it. Anaconda comes with &gt;100 pre-installed packages that might come in handy, so you don’t have to organize every package from scratch.</p>
+<p>For many packages, you can use</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&lt;package_name&gt;</span></code></p>
+<p>to install the package, where <code class="docutils literal notranslate"><span class="pre">&lt;package_name&gt;</span></code> is the name of the package that you want to install.</p>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">#</a></h2>
+<p>Very few - if any - packages in Python are completely independent from other packages. You will see that packages or modules typically import functionality from other packages and modules. If package A is dependent on package B to work, we call package B a <em>dependency</em> of A. Dependencies often take on the form of a tree or graph and one package can be directly and indirectly dependent on many packages. Things can get complicated when packages have different <em>versions</em>. As most code in Python is under constant development, new versions of packages get released all the time. This also holds for Python itself, whose most current version (in January 2024) is v3.12.1. Things can get real complicated real quickly. For example, the below graph visualizes the dependencies of the <code class="docutils literal notranslate"><span class="pre">six</span></code> package. You can see that versions of some packages should be higher than or equal to a particular version (<code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>), while others should <em>not</em> be of a particular version (<code class="docutils literal notranslate"><span class="pre">!=</span></code>) for this package to be used.</p>
+<p><img alt="Dependencies" src="https://i.ytimg.com/vi/DMS6IIMloZ8/maxresdefault.jpg" /></p>
+</section>
+<section id="anaconda-environments">
+<h2>Anaconda environments<a class="headerlink" href="#anaconda-environments" title="Permalink to this heading">#</a></h2>
+<p>You can probably imagine that if you want to install ten different packages to run your code with, there can be conflicts between dependencies. For example, for package A some dependency should have at least a particular version, while for package B that version is not supported. One of the reasons for using Anaconda as your package manager is that it automatically tries to resolve these conflicts. Anaconda performs <em>dependency</em> management and will look for versions that are compatible with packages that you have already installed. If it is impossible to solve this puzzle, it will also tell you.</p>
+<p>However, the more packages you install, the higher the chance becomes that there will be some version conflicts that cannot be resolved. That’s why it’s always smart to work with <em>environments</em>. An environment in Anaconda is a directory that contains a specific set of packages that you have installed. You could for example make an Anaconda environment for this course (and we’ll let you do that later), and a different environment for some other course where you use other packages and dependencies. The <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Anaconda website</a> contains excellent documentation on how to properly set up environments. We’ll here show you the basics.</p>
+<section id="creating-an-environment">
+<h3>Creating an environment<a class="headerlink" href="#creating-an-environment" title="Permalink to this heading">#</a></h3>
+<p>You can create an environment by typing</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">&lt;myenv&gt;</span></code></p>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;myenv&gt;</span></code> is the name of your environment. For example, to create an Anaconda environment for this course, go to your command line interface and type</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">module3</span></code></p>
+<p>If you want an Anaconda environment with a particular Python version, you have to provide that version when creating the environment. For example, to set up an environment with Python version 3.12.1, do the following</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">module3</span> <span class="pre">python=3.12.1</span></code></p>
+<p>You can also extend this by adding particular packages (and their versions) that you want to install immediately</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">module3</span> <span class="pre">python=3.12.1</span> <span class="pre">numpy=1.26.3</span> <span class="pre">scipy</span></code></p>
+<p>If you have a long list of packages that are required, or you want users of your Python code to use exactly the same packages that you do, you can use an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file. This is simply a list of packages and versions that should be installed. This is a bit more advanced and is explained in more detail <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">here</a>. One great feature of Anaconda is that you can also make this file automatically based on your currently used packages. By running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">&gt;</span> <span class="pre">environment.yml</span></code>, you can create an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file with the exact packages that you are currently using in your active environment.</p>
+<p>You can always get a list of all your Anaconda environments by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code>. Note that by default there is a <code class="docutils literal notranslate"><span class="pre">base</span></code> environment. This is the environment that you have been working in thus far.</p>
+</section>
+<section id="activating-and-deactivating-environment">
+<h3>Activating and deactivating environment<a class="headerlink" href="#activating-and-deactivating-environment" title="Permalink to this heading">#</a></h3>
+<p>Once you have created your environment, you can <em>activate</em> it using</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">&lt;myenv&gt;</span></code></p>
+<p>where again <code class="docutils literal notranslate"><span class="pre">&lt;myenv&gt;</span></code> is the name of your environment. Now, you are in the environment and anything you do (like installing packages) will only affect <em>that</em> environment and not your global environment.</p>
+<p>To ‘leave’ an environment, you can deactivate it using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercises</p>
+<p>TODO: Some exercises on the use of Anaconda.</p>
+</div>
+</section>
+</section>
+<section id="where-to-find-packages">
+<h2>Where to find packages<a class="headerlink" href="#where-to-find-packages" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/4_ModulesPackages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../3_Objects/3_Objects_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Objects</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../4_Files/4_Files_student.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dealing with files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules">Modules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-modules">Importing modules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-non-complete-list-of-useful-packages">A non-complete list of useful packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-install-packages">How to install packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda-environments">Anaconda environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment">Creating an environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activating-and-deactivating-environment">Activating and deactivating environment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-find-packages">Where to find packages</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jelmer Wolterink
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
