@@ -164,8 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../5_NumPy/5_NumPy_student.html">7. NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_Visualization/6_Visualization_student.html">8. Visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../7_DataAnalysis/7_DataAnalysis_student.html">9. Data analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../99_Project/99_Project_student.html">1 Inleiding</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../99_Project/99_Project_student.html">10. Project</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -363,10 +362,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-jan-23-2024">Version Jan 23, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-start">How do I start?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda">Installing Anaconda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">Using the command line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-interpreter">The Python interpreter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-values-to-multiple-variables">Assigning values to multiple variables</a></li>
 </ul>
@@ -393,11 +394,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<section id="version-jan-23-2024">
+<h2>Version Jan 23, 2024<a class="headerlink" href="#version-jan-23-2024" title="Permalink to this heading">#</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Learning goals</p>
 <p>After finishing this chapter, you are expected to</p>
 <ul class="simple">
-<li><p>install and use Anaconda as your Python distribution</p></li>
+<li><p>be able to install and use Anaconda as your Python distribution</p></li>
 <li><p>know the role of the Python interpreter in programming</p></li>
 <li><p>find and use the command line interface on your computer</p></li>
 <li><p>perform basic arithmetic operations using the Python interpreter</p></li>
@@ -407,9 +410,10 @@ document.write(`
 <li><p>index and slice tuples and lists</p></li>
 </ul>
 </div>
+</section>
 <section id="what-is-python">
 <h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
-<p>Python is a programming language, that allows you to write software programs, telling the computer how to compute things. Just like Python, there are many other programming languages out there. You might have heard about some of them, like <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">C++</span></code>, <code class="docutils literal notranslate"><span class="pre">Java</span></code>. Alternatively, it might be that you have heard of (or used) <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>. In general, programming languages have a lot of similarities. They all allow you to work with data, and to change that data into something else. They (almost) all have ways to visualize your data. However, there are also some differences. According to the Python website,</p>
+<p>Python is a programming language that allows you to write software programs. By programming in Python you can tell the computer how to do things. Just like Python, there are many other programming languages out there. You might have heard about some of them, like <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">C++</span></code>, <code class="docutils literal notranslate"><span class="pre">Java</span></code>. Alternatively, it might be that you have heard of (or used) <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>. In general, programming languages have a lot of similarities. They all allow you to work with data, and to change that data into something else. They (almost) all have ways to visualize your data. However, there are also some differences.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Python
@@ -419,21 +423,20 @@ Python is an interpreted, <em>object-oriented</em>, high-level programming langu
 </section>
 <section id="how-do-i-start">
 <h2>How do I start?<a class="headerlink" href="#how-do-i-start" title="Permalink to this heading">#</a></h2>
-<p>Python is a programming language, that doesn’t natively come with a programming environment. There are many ways to install and use Python on your own computer, but in this course we will use three essential components to get you up and running with Python.</p>
+<p>Python is a programming language that doesn’t natively come with a programming environment. There are many ways to install and use Python on your own computer, but in this course we will use three essential components to get you up and running with Python.</p>
 <ul class="simple">
 <li><p>We will use <strong>Anaconda</strong> as the Python distribution and environment manager.</p></li>
-<li><p>We will use <strong>PyCharm</strong> as the integrated development environment (IDE).</p></li>
-<li><p>We will use <strong>Jupyter Notebooks</strong> for the materials and exercises.
-Don’t worry if these words don’t mean a lot yet, we’ll explain them later. We’ll introduce all these tools step-by-step so that you get a good understanding what everything is and that you’ll be comfortable using Python in your studies.</p></li>
+<li><p>We will use <strong>Visual Studio Code</strong> as the integrated development environment (IDE).</p></li>
+<li><p>We will use <strong>Jupyter Notebooks</strong> to develop interactive notebooks.</p></li>
 </ul>
+<p>Don’t worry if these words don’t mean a lot yet. We’ll introduce all these tools step-by-step so that you get a good understanding what everything is and that you’ll be comfortable using Python in your studies.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Whenever we provide instructions on how to install software, please closely follow the order that we indicate.</p>
+<p>Whenever we provide instructions on how to install software, please closely follow the order indicated.</p>
 </div>
 </section>
 <section id="installing-anaconda">
 <h2>Installing Anaconda<a class="headerlink" href="#installing-anaconda" title="Permalink to this heading">#</a></h2>
-<p><img alt="Anaconda logo" src="https://datasciencepartners.nl/wp-content/uploads/2021/05/virtual-environments-python-tutorial-uitleg-met-anaconda.png" /></p>
 <p>The first step is to download Anaconda, a widely used Python distribution. Anaconda contains a lot of very useful functionality:</p>
 <ul class="simple">
 <li><p>The newest versions of Python</p></li>
@@ -442,11 +445,23 @@ Don’t worry if these words don’t mean a lot yet, we’ll explain them later.
 <p>Anaconda is free. To download it, go to <a class="reference external" href="https://www.anaconda.com/download">the Anaconda website</a> and select <code class="docutils literal notranslate"><span class="pre">Download</span></code>. This will download a file of around 500-600 MB. Use the file to install Anaconda. Follow the instructions and just install it as a regular software package on Windows. You can follow the detailed instructions <a class="reference external" href="https://docs.anaconda.com/free/anaconda/install/windows/">here</a>. It’s important that you <em>don’t add Anaconda to your PATH variable</em>. This is the default setting during installation, so you should be fine.</p>
 <p><img alt="Anaconda installer" src="https://docs.anaconda.com/_images/win-install-destination1.png" /></p>
 <p>Anaconda installs some additional tools on your machine, including Anaconda Navigator. This is a tool that conveniently combines several important elements of your Python distribution: environments, packages. For now, we will not discuss environments too much, but we will do so extensively later in the course.</p>
+<div class="warning admonition">
+<p class="admonition-title">Before you continue</p>
+<p>Before you continue, please make sure that you have successfully installed Anaconda.</p>
+</div>
 </section>
 <section id="using-the-command-line">
 <h2>Using the command line<a class="headerlink" href="#using-the-command-line" title="Permalink to this heading">#</a></h2>
-<p>One useful skill to have as a programmer is to be able to effectively use the command line. The command line is a text interface to your computer. You can use it to - for example - navigate your computer, create and delete files, inspect which processes are happening. The command line also offers an alternative to the graphics user interface (GUI) that you are used to, and you will find that many software tools can be used either via the command line or via a GUI. To start, open the command line. In Windows, you do this by pressing the Windows key on your keyboard and typing <code class="docutils literal notranslate"><span class="pre">cmd</span></code> in the search window. This should open a command line interface (CLI).</p>
+<p>One useful skill to have as a programmer is to be able to effectively use the command line. The command line is a text interface to your computer. You can use it to - for example - navigate your computer, create and delete files, inspect which processes are happening. The command line also offers an alternative to the graphics user interface (GUI) that you are used to, and you will find that many software tools can be used either via the command line or via a GUI.</p>
+<div class="note admonition">
+<p class="admonition-title">Terminal? Shell?</p>
+<p>You’ll find that the words ‘terminal’, ‘command line’, ‘shell’, ‘CLI’, ‘console’, and ‘prompt’ are all used for the same thing: a text-based interface to your computer.</p>
+</div>
+<p>To start, open the a terminal window. In Windows, you do this by pressing the Windows key on your keyboard and typing <code class="docutils literal notranslate"><span class="pre">cmd</span></code> in the search window. This should open a command line interface (CLI).</p>
+<p><img alt="terminal" src="notebooks/images/cmd.png" /></p>
 <p>There are many things that you can do with the command line, but one essential skill is to be able to navigate your filesystem. As you might be aware, the file system on your computer is organized like a tree, with directories/folders and subdirectories.</p>
+<p><img alt="filesystem" src="https://cdn.ttgtmedia.com/rms/onlineImages/TT_tree_mobile.jpg" /></p>
+<p>The table below provides a couple of common commands that you can use to navigate your file system.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
@@ -477,14 +492,30 @@ Don’t worry if these words don’t mean a lot yet, we’ll explain them later.
 </tr>
 </tbody>
 </table>
-<p>Python is a programming language, but once you have installed Python, you also have installed a <em>Python interpreter</em>. This is a command line tool that allows you to program in <em>interactive mode</em>.</p>
-<p>In the command line, type <code class="docutils literal notranslate"><span class="pre">python</span></code> and hit <kbd>Enter</kbd> to start your Python interpreter. The output should look something like this. There is some useful information in this output. In particular, on the left you see the Python version that you’re currently using in combination with Anaconda. Like each software tools, there are multiple versions of Python. Versions 3.11 and 3.12 are the newest versions of Python (as of December 2023) and are most likely to be supported in the long run.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1.1</p>
+<ol class="arabic simple">
+<li><p>Create a Microsoft Word file called <code class="docutils literal notranslate"><span class="pre">Exercise1.docx</span></code> and save it somewhere in a folder of your choosing.</p></li>
+<li><p>Start a terminal window.</p></li>
+<li><p>Use the commands above to navigate to the folder where you stored your <code class="docutils literal notranslate"><span class="pre">Exercise1.docx</span></code> file.</p></li>
+</ol>
+</div>
+</section>
+<section id="the-python-interpreter">
+<h2>The Python interpreter<a class="headerlink" href="#the-python-interpreter" title="Permalink to this heading">#</a></h2>
+<p>Python is a programming language, but once you have installed Anaconda, you also have installed a <em>Python interpreter</em>. This is a command line tool that allows you to program in <em>interactive mode</em>.</p>
+<p>To start the Python interpreter, type <code class="docutils literal notranslate"><span class="pre">python</span></code> in a terminal and hit <kbd>Enter</kbd>. The output should look something like this.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.11.7</span> <span class="o">|</span> <span class="n">packaged</span> <span class="n">by</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">|</span> <span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="n">Dec</span> <span class="mi">23</span> <span class="mi">2023</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="mi">59</span><span class="p">)</span> <span class="p">[</span><span class="n">MSC</span> <span class="n">v</span><span class="mf">.1937</span> <span class="mi">64</span> <span class="n">bit</span> <span class="p">(</span><span class="n">AMD64</span><span class="p">)]</span> <span class="n">on</span> <span class="n">win32</span>
 <span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> indicates that you’re in interactive mode and Python is ‘listening’. Anything that you will type here will be parsed, it will be interpreted, and an answer will be returned to you. Let’s give it a try! You can use the interpreter as a calculator and perform some simple arithmetic operations. Remember to press <kbd>Enter</kbd> after each line to send your request to the interpreter.</p>
+<p>There is some useful information in this output. In particular, on the left you see the Python version that you’re currently using in combination with Anaconda. Like each software tools, there are multiple versions of Python. Versions 3.11 and 3.12 are the newest versions of Python (as of December 2023) and are most likely to be supported in the long run.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> indicates that you’re in interactive mode and Python is ‘listening’. Anything that you will type here will be parsed, it will be interpreted, and an answer will be returned to you. Let’s give it a try! You can use the interpreter as a calculator and perform some simple arithmetic operations.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1.2</p>
+<p>Replicate the output below using the Python interpreter. Remember to press <kbd>Enter</kbd> after each line to send your request to the interpreter.</p>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span>
 <span class="go">5</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span>
@@ -497,7 +528,8 @@ Don’t worry if these words don’t mean a lot yet, we’ll explain them later.
 <span class="go">11</span>
 </pre></div>
 </div>
-<p>We can use the interpreter as a calculator, and for many standard operations there is a version in Python.</p>
+<p>Two things in the previous outputs are interesting to note. First, Python automatically interprets the minus sign in front of 6 and gives the correct answer. Second, if we divide 8 by 4, we don’t get 2, but we get 2.0. This has to do with the ‘type’ of the number. Like most programming languages, Python differentiates between integer numbers (such as 1, 2, 3, 4, …, 100000, …) and floating point numbers (such as -45.7, 0.00001, 12.9772). By default, if we divide two numbers using <code class="docutils literal notranslate"><span class="pre">/</span></code>, Python returns a floating point number to preserve <em>precision</em>.</p>
+<p>We can use the interpreter as a calculator. For many standard operations there is a version in Python. The table below gives an overview of some command mathematical operations and how to implement them in Python.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Mathematical notation</p></th>
@@ -548,9 +580,8 @@ Don’t worry if these words don’t mean a lot yet, we’ll explain them later.
 <span class="go">44</span>
 </pre></div>
 </div>
-<p>Two things in the previous outputs are interesting to note. First, Python automatically interprets the minus sign in front of 6 and gives the correct answer. Second, if we divide 8 by 4, we don’t get 2, but we get 2.0. This has to do with the ‘type’ of the number. Like most programming languages, Python differentiates between integer numbers (such as 1, 2, 3, 4, …, 100000, …) and floating point numbers (such as -45.7, 0.00001, 12.9772). By default, if we divide two numbers using <code class="docutils literal notranslate"><span class="pre">/</span></code>, Python returns a floating point number to preserve <em>precision</em>.</p>
 <div class="tip admonition">
-<p class="admonition-title">Exercise</p>
+<p class="admonition-title">Exercise 1.3</p>
 <p>Evaluate the following expressions by hand and use Python to check the answers.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">2/2*3</span></code></p></li>
@@ -567,7 +598,7 @@ Don’t worry if these words don’t mean a lot yet, we’ll explain them later.
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
-<p>By now, you can use Python as a basic calculator, but of course, this isn’t really programming yet. You haven’t really stored values properly yet, only in the last output <code class="docutils literal notranslate"><span class="pre">_</span></code>, so it’s hard to perform more complex computations. One key element of programming is the use of named variables and the ability to store values in those variables.</p>
+<p>By now, you can use Python as a basic calculator, but this is not yet real programming. You haven’t really stored values properly yet, only in the last output <code class="docutils literal notranslate"><span class="pre">_</span></code>, so it’s hard to perform more complex computations. One key element of programming is the use of named variables and the ability to store values in those variables.</p>
 <div class="note admonition">
 <p class="admonition-title">Variables</p>
 <p>Variables are containers for storing data values.</p>
@@ -1020,10 +1051,12 @@ NameError: name &#39;A&#39; is not defined
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-jan-23-2024">Version Jan 23, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-start">How do I start?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda">Installing Anaconda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">Using the command line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-interpreter">The Python interpreter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-values-to-multiple-variables">Assigning values to multiple variables</a></li>
 </ul>
