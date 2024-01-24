@@ -377,6 +377,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
 </ul>
 </li>
 </ul>
@@ -399,11 +400,11 @@ document.write(`
 <p>After finishing this chapter, you are expected to</p>
 <ul class="simple">
 <li><p>be able to install and use Anaconda as your Python distribution</p></li>
-<li><p>know the role of the Python interpreter in programming</p></li>
+<li><p>understand the role of the Python interpreter in programming</p></li>
 <li><p>find and use the command line interface on your computer</p></li>
 <li><p>perform basic arithmetic operations using the Python interpreter</p></li>
 <li><p>define variables in Python</p></li>
-<li><p>work with floating point numbers, integers, string</p></li>
+<li><p>work with floating point numbers, integers, and string variables</p></li>
 <li><p>know the difference between tuples, lists, sets, and dictionaries</p></li>
 <li><p>index and slice tuples and lists</p></li>
 </ul>
@@ -493,9 +494,9 @@ Python is an interpreted, <em>object-oriented</em>, high-level programming langu
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.1</p>
 <ol class="arabic simple">
-<li><p>Create a Microsoft Word file called <code class="docutils literal notranslate"><span class="pre">Exercise1.docx</span></code> and save it somewhere in a folder of your choosing.</p></li>
+<li><p>Create a Microsoft Word file called <code class="docutils literal notranslate"><span class="pre">AnswersTutorial1.docx</span></code> and save it somewhere in a folder of your choosing. In this week’s tutorial, you will use this file to store all your answers.</p></li>
 <li><p>Start a terminal window.</p></li>
-<li><p>Use the commands above to navigate to the folder where you stored your <code class="docutils literal notranslate"><span class="pre">Exercise1.docx</span></code> file.</p></li>
+<li><p>Use the commands above to navigate to the folder where you stored your <code class="docutils literal notranslate"><span class="pre">Exercise1.docx</span></code> file. Display the contents of that folder. Make a screenshot of the terminal and paste it to your <code class="docutils literal notranslate"><span class="pre">AnswersTutorial1.docx</span></code> file.</p></li>
 </ol>
 </div>
 </section>
@@ -512,7 +513,7 @@ Python is an interpreted, <em>object-oriented</em>, high-level programming langu
 <p>The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> indicates that you’re in interactive mode and Python is ‘listening’. Anything that you will type here will be parsed, it will be interpreted, and an answer will be returned to you. Let’s give it a try! You can use the interpreter as a calculator and perform some simple arithmetic operations.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.2</p>
-<p>Replicate the output below using the Python interpreter. Remember to press <kbd>Enter</kbd> after each line to send your request to the interpreter.</p>
+<p>Replicate the output below using the Python interpreter. Remember to press <kbd>Enter</kbd> after each line to send your request to the interpreter. Paste the contents of your terminal window into your Word document.</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span>
 <span class="go">5</span>
@@ -592,6 +593,7 @@ Python is an interpreted, <em>object-oriented</em>, high-level programming langu
 <li><p><code class="docutils literal notranslate"><span class="pre">3**2**3</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">(3**2)**3</span></code></p></li>
 </ol>
+<p>Paste the contents of your terminal window into your Word document.</p>
 </div>
 </section>
 <section id="variables">
@@ -675,7 +677,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_41805</span><span class="o">/</span><span class="mf">1121104675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3424</span><span class="o">/</span><span class="mf">1121104675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 
 <span class="ne">ValueError</span>: not enough values to unpack (expected 3, got 2)
@@ -688,8 +690,9 @@ NameError: name &#39;A&#39; is not defined
 </pre></div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Exercise</p>
+<p class="admonition-title">Exercise 1.4</p>
 <p>Special numbers like <span class="math notranslate nohighlight">\(\pi\)</span> and Euler’s number <span class="math notranslate nohighlight">\(e\)</span> are not automatically defined in Python. Define these two numbers as variables and use them to compute the volume of a sphere with radius <span class="math notranslate nohighlight">\(e\)</span>. Store the result in a new variable called <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<p>Paste the contents of your terminal window into your Word document.</p>
 </div>
 </section>
 </section>
@@ -727,7 +730,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_41805</span><span class="o">/</span><span class="mf">1642992856.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3424</span><span class="o">/</span><span class="mf">1642992856.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">4</span> <span class="o">+</span> <span class="s1">&#39;Hello world&#39;</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
@@ -736,7 +739,7 @@ NameError: name &#39;A&#39; is not defined
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Exercise</p>
+<p class="admonition-title">Exercise 1.5</p>
 <p>Define two variables. One should have the value ‘Technical ‘ and the other ‘Medicine’. What is the type of these variables? Try to add these two variables in the Python interpreter. Which result do you get? Can you explain what happened?</p>
 </div>
 <p>Some arithmetic operations take inputs of one type and return outputs of another type. For example, evaluating if one integer is smaller than another integer will return a boolean: the statement is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -762,11 +765,12 @@ NameError: name &#39;A&#39; is not defined
 <p>As you notice, Python uses the literal <span class="math notranslate nohighlight">\(j\)</span> instead of <span class="math notranslate nohighlight">\(i\)</span> in complex numbers. This is an engineering convention.</p>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Exercise</p>
+<p class="admonition-title">Exercise 1.6</p>
 <ol class="arabic simple">
 <li><p>Use the Python interpreter to find out the type of the variable <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
 <li><p>Choose two complex numbers, for example <span class="math notranslate nohighlight">\(-3 + 2j\)</span> and <span class="math notranslate nohighlight">\(5-7j\)</span>. Add, subtract, multiply and divide these numbers in Python.</p></li>
 </ol>
+<p>Paste the contents of your terminal window into your Word document.</p>
 </div>
 </section>
 <section id="tuples-lists-sets-and-dictionaries">
@@ -808,7 +812,7 @@ NameError: name &#39;A&#39; is not defined
 </tr>
 <tr class="row-odd"><td><p>Tuple can be created using the tuple() function.</p></td>
 <td><p>A list can be created using the list() function</p></td>
-<td><p>A setA dictionary can be created using the set() function</p></td>
+<td><p>A set can be created using the set() function</p></td>
 <td><p>A dictionary can be created using the dict() function.</p></td>
 </tr>
 <tr class="row-even"><td><p>A tuple is immutable i.e we can not make any changes in the tuple.</p></td>
@@ -843,7 +847,7 @@ NameError: name &#39;A&#39; is not defined
 <p class="admonition-title">Warning</p>
 <p>Note that to get the <strong>first</strong> element, we use index 0. In most programming languages, we start counting at 0, and not at 1 (as you might expect and are probably used to doing).</p>
 </div>
-<p>The second property of the tuple is that it is <strong>unchangeable</strong>. Hence, we cannot change the values of its individual elements. Let’s give that a try below. Indeed, we get an error. Take a close look at this error, it tells you exactly what the problem is.</p>
+<p>The second property of the tuple is that it is <strong>unchangeable</strong>. Hence, we cannot change the values of its individual elements, or <em>assign</em> a value to one of the elements. Let’s give that a try below. Indeed, we get an error. Take a close look at this error, it tells you exactly what the problem is: tuples do not allow item assignment.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
@@ -865,7 +869,35 @@ NameError: name &#39;A&#39; is not defined
 <span class="go">[3, 6, 4]</span>
 </pre></div>
 </div>
-<p>Note how we don’t get an error in this case. Also, the order stays the same.</p>
+<p>Note how we don’t get an error in this case. Also, the order stays the same. Moreover, the list length is dynamic: given the list <code class="docutils literal notranslate"><span class="pre">a</span></code>, we can combine add another list to it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 6, 4, 6]</span>
+</pre></div>
+</div>
+<p>To add <em>one</em> item at the end of a list, we can use the <code class="docutils literal notranslate"><span class="pre">append</span></code> method as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 5, 4, 7]</span>
+</pre></div>
+</div>
+<p>To add <em>multiple</em> items to the end of a list, we can use the <code class="docutils literal notranslate"><span class="pre">extend</span></code> method</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 5, 4, 6, 7]</span>
+</pre></div>
+</div>
+<p>There are two ways to remove items from a list. First, the <code class="docutils literal notranslate"><span class="pre">pop</span></code> method removes an item from a list at a given index and returns its value. Second, the <code class="docutils literal notranslate"><span class="pre">remove</span></code> method removes an item based on its value. The code below demonstrates this.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;cherry&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[&#39;apple&#39;]</span>
+</pre></div>
+</div>
 <p>Each item in a list (or tuple) can have its own data type. We can make lists consisting of integers, strings, or combinations of these.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -880,7 +912,7 @@ NameError: name &#39;A&#39; is not defined
 </div>
 <p>We can <em>index</em> a list using integer numbers in square brackets (e.g, <code class="docutils literal notranslate"><span class="pre">a[1]</span></code> returns ‘banana’), and we can also index by counting back from the last element by using negative integer numbers, where index -1 refers to the last item, -2 to the second-to-last item, etc. This means that - in this example - <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> should result in the same value.</p>
 <div class="tip admonition">
-<p class="admonition-title">Exercise</p>
+<p class="admonition-title">Exercise 1.7</p>
 <p>Why do <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> refer to the same value?</p>
 </div>
 <p>In addition to <em>indexing</em> a list, we can also <em>slice</em> a list. This means that we select a portion of the list based on a start and an end index. In the example below, we select all items starting at index 3 and until (but not including) index 5.</p>
@@ -905,7 +937,7 @@ NameError: name &#39;A&#39; is not defined
 <span class="go">[&#39;lobster&#39;, &#39;ham&#39;, &#39;tomato&#39;, &#39;bacon&#39;, &#39;egg&#39;, &#39;spam&#39;]</span>
 </pre></div>
 </div>
-<p>Items in a list can even be variables, and lists can contain other lists. By nesting your indices, you can access the items in the <em>nested</em> lists.</p>
+<p>Items in a list can even be variables, and lists can contain other lists. By nesting your indices, you can access the individual items in the <em>nested</em> lists.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
 <span class="go">[&#39;apple&#39;, 5, [&#39;lobster&#39;, &#39;ham&#39;, &#39;tomato&#39;, &#39;bacon&#39;, &#39;egg&#39;, &#39;spam&#39;]]</span>
@@ -915,18 +947,42 @@ NameError: name &#39;A&#39; is not defined
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Indexing and slicing works the same way for lists and tuples.</p>
+<p>Indexing and slicing work the same way for lists and tuples.</p>
 </div>
 </section>
 <section id="set">
 <h3>Set<a class="headerlink" href="#set" title="Permalink to this heading">#</a></h3>
-<p>A set is a collection that is unordered, unchangeable, and does not allow duplicate values. Sets cannot contain multiple items with the same value. Sets are defined using curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<p>A set is a collection that is unordered and does not allow duplicate values. Sets cannot contain multiple items with the same value. Sets are defined using curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code>. In the example below, you can note two things</p>
+<ol class="arabic simple">
+<li><p>Although we assign two <code class="docutils literal notranslate"><span class="pre">5</span></code>s to the set, the set only contains one <code class="docutils literal notranslate"><span class="pre">5</span></code>. The reason for this is that a set does not allow duplicate values.</p></li>
+<li><p>Although the <code class="docutils literal notranslate"><span class="pre">4</span></code> comes after the <code class="docutils literal notranslate"><span class="pre">5</span></code> in our assignment, the order is swapped to be increasing in the eventual set. This is the case because a set is not ordered: elements will be sorted in increasing order by design.</p></li>
+</ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
 <span class="go">{3, 4, 5}</span>
 </pre></div>
 </div>
-<p>TODO: EXTEND</p>
+<p>You will find that sets can be very useful when you want to perform common mathematical operations like unions and intersections. Sets have some built-in <em>functions</em> that allow you do this. For example, if we have two groups of people, we can use sets for boolean operators.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Claire&#39;</span><span class="p">,</span> <span class="s1">&#39;Dean&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Dean&#39;</span><span class="p">,</span> <span class="s1">&#39;Edward&#39;</span><span class="p">,</span> <span class="s1">&#39;Fran&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># Who is in both groups (intersection)</span>
+<span class="go">{&#39;Dean&#39;, &#39;Bob&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>             <span class="c1"># All people (union)</span>
+<span class="go">{&#39;Dean&#39;, &#39;Fran&#39;, &#39;Bob&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>        <span class="c1"># Everyone that is in one group, minus those people that are also in another group</span>
+<span class="go">{&#39;Adam&#39;, &#39;Claire&#39;}</span>
+</pre></div>
+</div>
+<p>Just like in tuples, you cannot assign values to indices in sets. However, you can add and remove elements from sets using the <code class="docutils literal notranslate"><span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">remove</span></code> functions, as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Claire&#39;</span><span class="p">,</span> <span class="s1">&#39;Dean&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Edward&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">{&#39;Dean&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}</span>
+</pre></div>
+</div>
 </section>
 <section id="dictionary">
 <h3>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h3>
@@ -941,8 +997,54 @@ NameError: name &#39;A&#39; is not defined
 <span class="go">&#39;Ford&#39;</span>
 </pre></div>
 </div>
+<p>If you want to add something to an existing dictionary, you can simply assign a new key and value pair as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Blue&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">car</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 1964, &#39;color&#39;: &#39;Blue&#39;}</span>
+</pre></div>
+</div>
+<p>And to remove something, you can use <code class="docutils literal notranslate"><span class="pre">del</span></code> as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">car</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">car</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;year&#39;: 1964, &#39;color&#39;: &#39;Blue&#39;}</span>
+</pre></div>
+</div>
+<p>Note that dictionary keys and values can have any type. They don’t have to be strings or integers. This makes dictionaries very flexible and useful in practice. However, there are some restrictions that you should keep in mind:</p>
+<ol class="arabic simple">
+<li><p>A key can only appears in a dictionary once, duplicate keys are not allowed.</p></li>
+<li><p>If you assign a new value to a key, it overwrites the old value.</p></li>
+</ol>
+</section>
+<section id="converting-between-collections">
+<h3>Converting between collections<a class="headerlink" href="#converting-between-collections" title="Permalink to this heading">#</a></h3>
+<p>If your data is organized in a set, you can turn it into a list or vice versa. However, keep in mind the characteristics of these data types. For example, if you have a list with <em>duplicate</em> values and you turn that into a set, you’ll lose the duplicates. This <em>can</em> be convenient, for example if you want to automatically select all unique values in a list. In the code below, notice how the set contains all unique elements in the list, ordered in ascending order, while the tuple maintains the original order and preserves duplicates.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">{1, 2, 3, 4, 5}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">(1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4, 5)</span>
+</pre></div>
+</div>
+<p>Dictionaries cannot be directly transformed into lists or sets, but you can get a list of either the keys or values in a dictionary using the <code class="docutils literal notranslate"><span class="pre">keys()</span></code> and <code class="docutils literal notranslate"><span class="pre">values()</span></code> methods</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1964</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[&#39;brand&#39;, &#39;model&#39;, &#39;year&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="go">[&#39;Ford&#39;, &#39;Mustang&#39;, 1964]</span>
+</pre></div>
+</div>
+<p>To create a new dictionary from two lists (one containing keys, one values), use the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function. This function takes two lists and, like a zipper, loops over pairs of items in both lists. Each pair is combined in a tuple, and a new list is made using all these tuples. Using the <code class="docutils literal notranslate"><span class="pre">dict</span></code> function, this list can be turned into a dictionary. The following code illustrates this.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;brand&#39;</span><span class="p">,</span> <span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ford&#39;</span><span class="p">,</span> <span class="s1">&#39;Mustang&#39;</span><span class="p">,</span> <span class="mi">1964</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span>
+<span class="go">[(&#39;brand&#39;, &#39;Ford&#39;), (&#39;model&#39;, &#39;Mustang&#39;), (&#39;year&#39;, 1964)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 1964}</span>
+</pre></div>
+</div>
+<p>And voilà, we have retrieved our original dictionary.</p>
 <div class="tip admonition">
-<p class="admonition-title">Exercise</p>
+<p class="admonition-title">Exercise 1.8</p>
 <ol class="arabic simple">
 <li><p>Reverse the order of tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">50)</span></code></p></li>
 <li><p>Given list <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>, make two new lists: one containing every second item counting from the back, and one containing every third item.</p></li>
@@ -975,8 +1077,10 @@ NameError: name &#39;A&#39; is not defined
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
-<li><p>Define a dictionary that contains the names, ages, hair colors of the two of you (students).</p></li>
+<li><p>Define a dictionary called <code class="docutils literal notranslate"><span class="pre">student</span></code> that contains your own name, hair color, and age.</p></li>
+<li><p>Create a list containing yourself and two additional students as dictionaries.</p></li>
 </ol>
+<p>Paste the contents of your terminal window into your Word document.</p>
 </div>
 </section>
 </section>
@@ -1048,6 +1152,7 @@ NameError: name &#39;A&#39; is not defined
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
 </ul>
 </li>
 </ul>
