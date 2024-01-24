@@ -337,9 +337,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -355,14 +353,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization">Organization</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -374,63 +364,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-programming">
 <h1>Introduction to programming<a class="headerlink" href="#introduction-to-programming" title="Permalink to this heading">#</a></h1>
-<p>Welcome to the course <em>Introduction</em> to programming. This is a 2EC course as part of Module 3, which means that you are expected to spend around 56 hours on this course. The course schedule consists of eight four-hour coding sessions, which means that we also expect you to spend time preparing and going over the materials. The sessions and topics are as follows:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Session</p></th>
-<th class="head text-left"><p>Date</p></th>
-<th class="head text-left"><p>Topic</p></th>
-<th class="head text-left"><p>Exercises</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p>February 5, 2024</p></td>
-<td class="text-left"><p>Introduction</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>2</p></td>
-<td class="text-left"><p>February 12, 2024</p></td>
-<td class="text-left"><p>Scripts and functions</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>3</p></td>
-<td class="text-left"><p>February 14, 2024</p></td>
-<td class="text-left"><p>Objects</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>4</p></td>
-<td class="text-left"><p>February 26, 2024</p></td>
-<td class="text-left"><p>Modules and packages</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>5</p></td>
-<td class="text-left"><p>March 5, 2024</p></td>
-<td class="text-left"><p>NumPy</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>6</p></td>
-<td class="text-left"><p>March 6, 2024</p></td>
-<td class="text-left"><p>Visualization</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>7</p></td>
-<td class="text-left"><p>March 20, 2024</p></td>
-<td class="text-left"><p>Data analysis</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>8</p></td>
-<td class="text-left"><p>March 25, 2024</p></td>
-<td class="text-left"><p>Project</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-</tbody>
-</table>
-<p>A deep understanding of programming is very useful, not just for passing this course or module, but for all the other courses and projects that you will work on in your <em>Technical Medicine</em> program and - likely - in your working life.</p>
-<section id="organization">
-<h2>Organization<a class="headerlink" href="#organization" title="Permalink to this heading">#</a></h2>
-<p>This is a <em>pass or fail</em> course. Your grade will be determined based on your participation in the tutorial sessions. Each week, you are expected to work on a number of exercises, which you can find on the schedule here or on Canvas. At the end of each session, you should hand in your exercises via Canvas. Only when you’ve handed in all your exercises can you pass this part of the course. If you don’t hand in the exercises, or it is clear from the answers that you haven’t seriously considered working on the problem, you will fail the course.</p>
-</section>
+<p>This is the manual for the <em>Introduction to programming</em> part of Module 3 of the Technical Medicine program at the University of Twente. A deep understanding of programming is very useful, not just for passing this course or module, but for all the other courses and projects that you will work on in your <em>Technical Medicine</em> program and - likely - in your working life.</p>
+<p>In part, this manual follows the previous manual for Matlab that was previously used in Technical Medicine, In other parts, it focuses on aspects that are specific to Python. This manual by no means claims to be a complete handbook to Python. For that, other options are available. Instead, it provides a summary of Python knowledge that will be relevant to the starting Technical Medicine student.</p>
+<p>The manual consists of ten chapters. In each chapter, there are exercises, which you can recognize by their distinct appearance.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>This is an exercise.</p>
+</div>
+<p>If you’re a student in the <em>Introduction to programming</em> course, you’re expected to complete all these exercises to pass the course.</p>
+<p>The contents of this manual were carefully prepared by Jelmer Wolterink and Veerle Michels. If you find errors in the manual, please send an e-mail to <code class="docutils literal notranslate"><span class="pre">j.m.wolterink&#64;utwente.nl</span></code> so that they can be corrected.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -491,20 +433,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization">Organization</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
