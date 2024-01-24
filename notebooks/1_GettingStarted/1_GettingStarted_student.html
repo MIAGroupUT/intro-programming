@@ -382,6 +382,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-in-operator">The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator</a></li>
 </ul>
             </nav>
         </div>
@@ -679,7 +680,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3424</span><span class="o">/</span><span class="mf">1121104675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_41805</span><span class="o">/</span><span class="mf">1121104675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 
 <span class="ne">ValueError</span>: not enough values to unpack (expected 3, got 2)
@@ -732,7 +733,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3424</span><span class="o">/</span><span class="mf">1642992856.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_41805</span><span class="o">/</span><span class="mf">1642992856.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">4</span> <span class="o">+</span> <span class="s1">&#39;Hello world&#39;</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
@@ -755,6 +756,72 @@ NameError: name &#39;A&#39; is not defined
 <span class="go">False</span>
 </pre></div>
 </div>
+<p>Special variants of this are the <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">and</span></code> operators. These return either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> depending on the input. As you might expect, by writing <code class="docutils literal notranslate"><span class="pre">not</span></code> before a statement, we get the opposite value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">and</span></code> we can combine two statements. For example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">4</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>And of course, <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> can also be combined with <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Here, parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> matter. For example, consider the following output.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1.6</p>
+<p>For each of the following nonsense programs, write down the expected output and verify in the Python interpreter.</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">x</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">or</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">x</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="complex-numbers">
 <h2>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this heading">#</a></h2>
@@ -767,7 +834,7 @@ NameError: name &#39;A&#39; is not defined
 <p>As you notice, Python uses the literal <span class="math notranslate nohighlight">\(j\)</span> instead of <span class="math notranslate nohighlight">\(i\)</span> in complex numbers. This is an engineering convention.</p>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Exercise 1.6</p>
+<p class="admonition-title">Exercise 1.7</p>
 <ol class="arabic simple">
 <li><p>Use the Python interpreter to find out the type of the variable <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
 <li><p>Choose two complex numbers, for example <span class="math notranslate nohighlight">\(-3 + 2j\)</span> and <span class="math notranslate nohighlight">\(5-7j\)</span>. Add, subtract, multiply and divide these numbers in Python.</p></li>
@@ -914,7 +981,7 @@ NameError: name &#39;A&#39; is not defined
 </div>
 <p>We can <em>index</em> a list using integer numbers in square brackets (e.g, <code class="docutils literal notranslate"><span class="pre">a[1]</span></code> returns ‘banana’), and we can also index by counting back from the last element by using negative integer numbers, where index -1 refers to the last item, -2 to the second-to-last item, etc. This means that - in this example - <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> should result in the same value.</p>
 <div class="tip admonition">
-<p class="admonition-title">Exercise 1.7</p>
+<p class="admonition-title">Exercise 1.8</p>
 <p>Why do <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> refer to the same value?</p>
 </div>
 <p>In addition to <em>indexing</em> a list, we can also <em>slice</em> a list. This means that we select a portion of the list based on a start and an end index. In the example below, we select all items starting at index 3 and until (but not including) index 5.</p>
@@ -994,6 +1061,10 @@ NameError: name &#39;A&#39; is not defined
 <span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 1964}</span>
 </pre></div>
 </div>
+<div class="note admonition">
+<p class="admonition-title">Single or double quotes</p>
+<p>Some programming languages distinguish between using ‘single quotes’ and “double quotes”, but Python does not. You’re free to choose what you prefer. As you can see above, even if you use double quotes, Python will turn these into single quotes.</p>
+</div>
 <p>Dictionaries are very useful in many applications that you will see during this course. Note that we cannot use indexing and slicing in dictionaries, but we can get values in dictionaries by using keys. For example, if the dictionary above defines a car, we can use <code class="docutils literal notranslate"><span class="pre">car[&quot;brand&quot;]</span></code> to get the brand of this car.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span><span class="p">[</span><span class="s1">&#39;brand&#39;</span><span class="p">]</span>
 <span class="go">&#39;Ford&#39;</span>
@@ -1046,7 +1117,7 @@ NameError: name &#39;A&#39; is not defined
 </div>
 <p>And voilà, we have retrieved our original dictionary.</p>
 <div class="tip admonition">
-<p class="admonition-title">Exercise 1.8</p>
+<p class="admonition-title">Exercise 1.9</p>
 <ol class="arabic simple">
 <li><p>Reverse the order of tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">50)</span></code></p></li>
 <li><p>Given list <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>, make two new lists: one containing every second item counting from the back, and one containing every third item.</p></li>
@@ -1085,6 +1156,31 @@ NameError: name &#39;A&#39; is not defined
 <p>Paste the contents of your terminal window into your Word document.</p>
 </div>
 </section>
+</section>
+<section id="the-in-operator">
+<h2>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator<a class="headerlink" href="#the-in-operator" title="Permalink to this heading">#</a></h2>
+<p>For tuples, lists, sets, and dictionaries, Python provides the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator, which checks whether a value is present in the collection. If so, it returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, if not it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This operator can also be easily combined with <code class="docutils literal notranslate"><span class="pre">not</span></code> to ask for the opposite response. Consider the following examples.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1964</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;brand&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">car</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>As you will see in the next chapter, this is useful to define expressions regarding containers.</p>
 </section>
 </section>
 
@@ -1175,6 +1271,7 @@ NameError: name &#39;A&#39; is not defined
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-in-operator">The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator</a></li>
 </ul>
   </nav></div>
 
