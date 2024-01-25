@@ -222,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utwente.nl/hub/hub/user-redirect/git-pull?repo=https%3A//gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration&urlpath=tree/notebook_collaboration/jupyter-book/notebooks/3_Functions/3_Functions_teacher.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utwente.nl/hub/user-redirect/git-pull?repo=https%3A//gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration&urlpath=tree/notebook_collaboration/jupyter-book/notebooks/3_Functions/3_Functions_teacher.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,38 +404,29 @@ document.write(`
 <li><p>use Jupyter notebooks</p></li>
 </ul>
 </div>
-<p><em><strong>FROM <a class="reference external" href="https://realpython.com/python-optional-arguments/#creating-functions-in-python-for-reusing-code">https://realpython.com/python-optional-arguments/#creating-functions-in-python-for-reusing-code</a></strong></em>
-By now you can write and run a Python script, you can write conditional statements using <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>, and you can write <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops.</p>
-<p>Conditional statements are a very useful tool to control your code execution. For example, we could write a script that ..</p>
-<p>Loops are useful to repeatedly do the same thing.</p>
-<p>However, if we want to repeatedly do something but the output depends on some input, we are going to need <strong>functions</strong>. In Python, functions are everywhere. In fact, you have already used one function: the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function outputs something to the screen. Depending on what we call it with, our output is different.</p>
+<p>By now you can write and run a Python script, you can write conditional statements using <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>, and you can write <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops. You have written scripts that can be called with <em>arguments</em> that dynamically define the output of the script. In Python, if we want to repeatedly do something but the output depends on some input, we are going to need <strong>functions</strong>. In Python, functions are everywhere. In fact, you have already used functions: for example, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function outputs something to the screen. Depending on what we call it with, our output is different.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
 <span class="go">Hello</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">)</span>
 <span class="go">Bonjour</span>
 </pre></div>
 </div>
-<p>This seems trivial, but is actually very convenient.</p>
 <p>You can think of a function as a mini-program that runs within another program or within another function. The main program calls the mini-program and sends information that the mini-program will need as it runs. When the function completes all of its actions, it may send some data back to the main program that has called it. The primary purpose of a function is to allow you to reuse the code within it whenever you need it, using different inputs if required.</p>
 <p>When you use functions, you are extending your Python vocabulary. This lets you express the solution to your problem in a clearer and more succinct way.</p>
 <p>In Python, by convention, you should name a function using lowercase letters with words separated by an underscore, such as <code class="docutils literal notranslate"><span class="pre">do_something()</span></code>. These conventions are described in PEP 8, which is Python’s style guide. You’ll need to add parentheses after the function name when you call it. Since functions represent actions, it’s a best practice to start your function names with a verb to make your code more readable.</p>
 <section id="a-very-basic-function">
 <h2>A very basic function<a class="headerlink" href="#a-very-basic-function" title="Permalink to this heading">#</a></h2>
-<p>Let’s start by considering a scenario in which we have a piece of code that we repeatedly need to execute. For example, for some reason, we want to write horizontal lines in our output, and we have code that looks like this.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>Let’s start by creating a very basic function. For some reason, we’re writing a program in which we repeatedly want to do the following</p>
+<p>Let’s start by considering a scenario in which we have a piece of code that we repeatedly need to execute. Let’s start by creating a very basic function. For some reason, we’re writing a program in which we repeatedly want to do the following</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
     <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Instead of We can put this block of code in a function</p>
+<p>We can put this block of code in a function</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">useless_power</span><span class="p">():</span>
-<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -450,7 +441,6 @@ By now you can write and run a Python script, you can write conditional statemen
 <section id="optional-arguments">
 <h2>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this heading">#</a></h2>
 <p>Python differentiates between <em>required</em> and <em>optional</em> arguments. Required arguments <em>should</em> always be provided to the function. If they are not provided, Python throws an error. Optional arguments <em>could</em> be provided, but when they are not provided, the function still runs. This is because we provide <em>default</em> parameter values: if the user does not provide other values, these are used. Consider the following example:</p>
-<p>TODO</p>
 <p>Because it can be confusing which argument refers to which parameter, you should provide names if there are multiple optional arguments. These are referred to as keyword arguments.</p>
 </section>
 <section id="return">
@@ -459,6 +449,17 @@ By now you can write and run a Python script, you can write conditional statemen
 </section>
 <section id="scope">
 <h2>Scope<a class="headerlink" href="#scope" title="Permalink to this heading">#</a></h2>
+<p>Each variable in Python has a <code class="docutils literal notranslate"><span class="pre">scope</span></code>, which is either local or global.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    
+<span class="n">some_function</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">x</span></code> variable in <code class="docutils literal notranslate"><span class="pre">some_function</span></code> only has a local scope and does not override the global variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </section>
 <section id="the-anatomy-of-a-python-function">
 <h2>The anatomy of a Python function<a class="headerlink" href="#the-anatomy-of-a-python-function" title="Permalink to this heading">#</a></h2>
@@ -528,7 +529,7 @@ By now you can write and run a Python script, you can write conditional statemen
 </section>
 <section id="command-line">
 <h3>Command line<a class="headerlink" href="#command-line" title="Permalink to this heading">#</a></h3>
-<p>You can run things on the command line using the <code class="docutils literal notranslate"><span class="pre">!</span></code> command. For example, to list the contents of the current directory, you can run <code class="docutils literal notranslate"><span class="pre">!dir</span></code> (on Windows) or <code class="docutils literal notranslate"><span class="pre">!ls</span></code> (on Mac and Linux). This is also convenient when you’re working in a notebook and you want to install a missing package. You can then run - for example - <code class="docutils literal notranslate"><span class="pre">!conda</span> <span class="pre">install</span> <span class="pre">&lt;package_name&gt;</span></code> without first having to go to the terminal.</p>
+<p>When inside a Jupyter notebook, you can run things on the command line using the <code class="docutils literal notranslate"><span class="pre">!</span></code> command. For example, to list the contents of the current directory, you can run <code class="docutils literal notranslate"><span class="pre">!dir</span></code> (on Windows) or <code class="docutils literal notranslate"><span class="pre">!ls</span></code> (on Mac and Linux). This is also convenient when you’re working in a notebook and you want to install a missing package. You can then run - for example - <code class="docutils literal notranslate"><span class="pre">!conda</span> <span class="pre">install</span> <span class="pre">&lt;package_name&gt;</span></code> without first having to go to the terminal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls

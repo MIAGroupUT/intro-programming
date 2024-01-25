@@ -224,7 +224,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utwente.nl/hub/hub/user-redirect/git-pull?repo=https%3A//gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration&urlpath=tree/notebook_collaboration/jupyter-book/notebooks/2_Scripts/2_Scripts_student.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utwente.nl/hub/user-redirect/git-pull?repo=https%3A//gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration&urlpath=tree/notebook_collaboration/jupyter-book/notebooks/2_Scripts/2_Scripts_student.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -376,6 +376,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops"><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
 </ul>
             </nav>
         </div>
@@ -494,7 +495,7 @@ document.write(`
 <p>A bank will offer a customer a loan if they are 21 or over and have an annual income of at least €21000. Write a Python script that defines the customers age and income in a dictionary. Depending on the age and income, one of the following lines should be printed (using the <code class="docutils literal notranslate"><span class="pre">print</span></code> function):</p>
 <ul class="simple">
 <li><p>‘We are able to offer you a loan.’</p></li>
-<li><p>‘ Unfortunately at this time we are unable to offer you a loan.</p></li>
+<li><p>‘Unfortunately at this time we are unable to offer you a loan.</p></li>
 </ul>
 </div>
 </section>
@@ -643,6 +644,37 @@ general syntax</p>
 </div>
 </section>
 </section>
+<section id="interactive-scripts">
+<h2>Interactive scripts<a class="headerlink" href="#interactive-scripts" title="Permalink to this heading">#</a></h2>
+<p>A Python script will run ‘as is’, i.e., its output is entirely defined by what we put in the script. We can also make the script more interactive by using the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function in Python. This asks the user for an input and stores it in a variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
+<span class="go">Please enter your name: Adam</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span>
+<span class="go">&#39;Adam&#39;</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 2.X</p>
+<p>Adapt the script that you wrote in Exercise 2.5 to request the annual income and age of the customer using the <code class="docutils literal notranslate"><span class="pre">input</span></code> function.</p>
+</div>
+<p>Another option to make your scripts depend on user input is to provide <em>arguments</em> to the script. The easiest way to do this is using the <code class="docutils literal notranslate"><span class="pre">sys</span></code> package. Each time a Python script is called, it is called with a list of arguments. The first item in the list is always the name of the script, the second item is the first argument, etc. This means that we can <em>call</em> a script with some arguments that define its output. In a very simple case, let’s say that we have a script called <code class="docutils literal notranslate"><span class="pre">add.py</span></code> and its contents are</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>Then we can simply call this script from the command line with two different numbers and we always get the addition of these numbers in return.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> % python add.py <span class="m">4</span> <span class="m">5</span>
+<span class="m">9</span>
+<span class="o">(</span>base<span class="o">)</span> % python add.py <span class="m">23</span> <span class="m">54</span>
+<span class="m">77</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 2.X</p>
+<p>Adapt the script you wrote earlier one last time so that it can be called with two different arguments: the age of the customer and his annual income.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -726,6 +758,7 @@ general syntax</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops"><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
 </ul>
   </nav></div>
 
