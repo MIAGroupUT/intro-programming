@@ -1,0 +1,14 @@
+name: notebook_collaboration
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.7
+  - jupyter
+  - jupytext
+  - jupyter-book
+  - sphinx-tabs
+  - sphinx-click 
+  - nodejs

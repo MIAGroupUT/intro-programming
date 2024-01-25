@@ -14,7 +14,7 @@ exclude_patterns:
   - "README.md"
 
 repository:
-  url: https://gitlab.utwente.nl/mathematics-of-imaging-and-ai/postdocs/elina-thibeau-sutre/notebook_collaboration # To change 
+  url: https://github.com/MIAGroupUT/intro-programming # To change 
   path_to_book: jupyter-book/
   branch: main
 
@@ -22,6 +22,7 @@ repository:
 launch_buttons:
   colab_url: https://colab.research.google.com
   jupyterhub_url: https://jupyter.utwente.nl
+  notebook_interface: "jupyterlab"  
 
 ######################################################################################
 # Execution settings
