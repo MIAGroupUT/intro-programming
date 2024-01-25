@@ -1,9 +1,9 @@
 # Book settings
-title: Manual Introduction to Programming # To change
+title: Manual Introduction to Programming 
 author: Jelmer Wolterink
 copyright: "2024"  
 logo: 'images/banner.jpeg'
-description: Manual for Introduction to Programming # To change
+description: Manual for Introduction to Programming
 
 exclude_patterns:
   -  _build
@@ -14,7 +14,7 @@ exclude_patterns:
   - "README.md"
 
 repository:
-  url: https://github.com/MIAGroupUT/intro-programming # To change 
+  url: https://github.com/MIAGroupUT/intro-programming 
   path_to_book: jupyter-book/
   branch: main
 
@@ -35,7 +35,7 @@ execute:
   allow_errors: true
 
 html:
-  favicon: https://www.bunteworte.net/wp-content/uploads/2018/06/book_favicon.png
+  favicon: https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png
   home_page_in_navbar: false
   use_edit_page_button: false # Not working on Gitlab
   use_repository_button: true
