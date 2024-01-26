@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Writing scripts &#8212; Manual Introduction to Programming</title>
+    <title>Control statements &#8212; Manual Introduction to Programming</title>
   
   
   
@@ -156,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Scripts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_Functions/3_Functions_student.html">3. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_Objects/3_Objects_student.html">4. Objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_ModulesPackages/4_ModulesPackages_student.html">5. Modules and packages</a></li>
@@ -402,7 +402,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Writing scripts</h1>
+    <h1>Control statements</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,15 +412,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-scripts-in-vs-code">Writing scripts in VS Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-scripts-in-vs-code">Running scripts in VS Code</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocks">Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-and-elif"><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-conditional-expression">Advanced: conditional expression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-lists-sets-and-dictionaries">Tuples, lists, sets, and dictionaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple">Tuple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-in-operator">The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops"><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops"><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
@@ -438,71 +442,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="writing-scripts">
-<h1>Writing scripts<a class="headerlink" href="#writing-scripts" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="control-statements">
+<h1>Control statements<a class="headerlink" href="#control-statements" title="Permalink to this heading">#</a></h1>
 <div class="note admonition">
 <p class="admonition-title">Learning goals</p>
 <p>After finishing this chapter, you are expected to</p>
 <ul class="simple">
-<li><p>execute a Python script</p></li>
-<li><p>write a Python script using Visual Studio Code</p></li>
 <li><p>use <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+<li><p>know the difference between tuples, lists, sets, and dictionaries</p></li>
+<li><p>index and slice tuples and lists</p></li>
 <li><p>write <code class="docutils literal notranslate"><span class="pre">while</span></code> loops</p></li>
 <li><p>write <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p></li>
 </ul>
 </div>
-<p>Last week, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a oprogram. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. In practice, a Python file is a file whose name ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, following what you did last week, the contents of a Python file can be</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mi">324</span><span class="p">,</span> <span class="mf">8.14</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;house&#39;</span><span class="p">,</span> <span class="s1">&#39;enschede&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>     <span class="c1"># print(*) allows you two print something back to the command line</span>
-</pre></div>
-</div>
-<p>You can see that these are just two lines of code, which should more or less similar. The first line defines variable <code class="docutils literal notranslate"><span class="pre">a</span></code> as a list of items, including another list. The second line <em>slices</em> this list and prints these items.</p>
-<p>In the second line, we have also added a <em>comment</em>. This is a piece of human-readable text that is not part of the code. It will not be run by the Python interpreter. We use the character <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate that this is a comment. Documenting your code properly with comments is a very valuable way to make sure that you (or someone else) will still understand the code when you look at it later. We’ll go over some common practices for code documentation later.</p>
-<p>Running a Python script can be straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file of the previous chapter. Open Notepad (<em>Kladblok</em>) and paste the two lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and do one of the following</p>
-<ol class="arabic simple">
-<li><p>Navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code> and run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code></p></li>
-<li><p>Directly run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">{directory}\test.py</span></code>, where you replace <code class="docutils literal notranslate"><span class="pre">{directory}</span></code> with the directory where you stored the file.</p></li>
-</ol>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 2.1</p>
-<ol class="arabic simple">
-<li><p>What is the output of this script?</p></li>
-<li><p>Change and run the script so that the output is [‘house’, ‘enschede’]</p></li>
-<li><p>Turn the list into a tuple. What is the output?</p></li>
-</ol>
-</div>
-<p>And that’s it: you’ve written and run your first Python script! Now we can really start programming. There is no limit to how long a script can be and - as you’ll see - you can do much more in a script than just processing lines in a fixed order.</p>
-<section id="visual-studio-code">
-<h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this heading">#</a></h2>
-<p>For simple programming, Notepad will get you quite far as a script editor. However, most programmers use an ‘integrated development environment’ (IDE) that provides additional tools during programming to increase productivity and help you write clear and reusable code. There are many different IDEs on the market, some focusing on one programming language, one on a range of programming languages. Some are very expensive and intended for professional use, some are free. Some are complex, some are easier to use. In this course, <strong>we will use Visual Studio Code</strong>, commonly referred to as VS Code. VS Code is free, flexible, and widely considered to be a good entry point for new programmers. In the remainder of the course, we assume that you are using VS Code.</p>
-<p>To install VS Code, take the following steps:</p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://code.visualstudio.com/download">the Visual Studio Code website</a> and download the correct version for your computer. If you’re on a Windows laptop, this is likely going to be the <em>User Installer</em> <code class="docutils literal notranslate"><span class="pre">x64</span></code> version.</p></li>
-<li><p>Run the installer to install Visual Studio Code.</p></li>
-<li><p>Open Visual Studio Code and go to ‘Extensions’ (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> on Windows).</p></li>
-<li><p>Install the Python extension. <strong>Warning</strong> There are multiple Python extensions available. You should download the most popular one by Microsoft, which has been downloaded over a 100m times.</p></li>
-</ol>
-<p>If you have properly installed Anaconda as described in the previous chapter, you should now be able to use Python within the VS Code IDE. You can find more information on the combination of Anaconda and VS Code on the <a class="reference external" href="https://docs.anaconda.com/free/anaconda/ide-tutorials/python-vsc/">Anaconda website</a>.</p>
-<p>It’s good to be aware that there are other (free) IDEs that you can also use, like Spyder and PyCharm. The latter is a professional, expensive IDE that provides free licenses to students. Go to <a class="reference external" href="https://www.jetbrains.com/shop/eform/students">the JetBrains website</a> and register as a student. Make sure to use  your University of Twente email account. Once you have received confirmation from JetBrains, download the latest version of PyCharm from <a class="reference external" href="https://www.jetbrains.com/pycharm/">the PyCharm website</a>. Use the license provides to you by JetBrains.</p>
-</section>
-<section id="writing-scripts-in-vs-code">
-<h2>Writing scripts in VS Code<a class="headerlink" href="#writing-scripts-in-vs-code" title="Permalink to this heading">#</a></h2>
-<p>Writing code is all about keeping your files organized. With VS Code open, go to the ‘Explorer’ (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> on Windows). Go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Folder</span></code> and select the folder you just created and in which you stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. If all is well, you should see the folder appear in ‘Explorer’, including the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file. You can double click on the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file and it will open in the VS Code editor. You will see that many colors are used to highlight individual words and characters in the code. This is called <em>syntax highlighting</em> and is a useful tool to make your code readable and easily spot errors. You can change the colors and the general look-and-feel of VS Code by picking a different theme. For this, go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Theme</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Theme</span></code>. Note that this is just a visualization and will not change anything to your code or what your code does. The editor in which you now see your code is basically a text editor with some nice additional functionality to make your life as a programmer easier.</p>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 2.2</p>
-<p>Extend your Python script as follows:</p>
-<ol class="arabic simple">
-<li><p>Define a variable <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code>.</p></li>
-<li><p>Define a new variable <code class="docutils literal notranslate"><span class="pre">c</span></code> that sums the second and third element of <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">print</span></code> to print the value of <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
-</ol>
-</div>
-<section id="running-scripts-in-vs-code">
-<h3>Running scripts in VS Code<a class="headerlink" href="#running-scripts-in-vs-code" title="Permalink to this heading">#</a></h3>
-<p>There are two ways to run scripts from within VS Code. The first option is very similar to what you did before. From within VS Code, you can open a command line interface, similar to the one you used in the previous chapter. To do so, select <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Terminal</span></code> from the menu. A command line interface should open at the bottom of your screen. If all is well, you should already be in the same directory as the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file that you created. Verify this using the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command that you learned in the previous chapter. Now, type <code class="docutils literal notranslate"><span class="pre">python</span></code> in the terminal and verify that you are using your Anaconda distribution. Next, you can, just as in the standard Windows command line interface, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> to run your Python script.</p>
-<p>The second option basically simplifies this process for you. If you go select <code class="docutils literal notranslate"><span class="pre">Run</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Without</span> <span class="pre">Debugging</span></code> from the menu, VS Code will start a terminal, call the Python interpreter with your script, and output the results in a terminal window.</p>
-</section>
-</section>
 <section id="conditional-statements">
 <h2>Conditional statements<a class="headerlink" href="#conditional-statements" title="Permalink to this heading">#</a></h2>
 <p>Now that you are able to write and run scripts in VS Code, it is time to do some more interesting programming. So far, your scripts have been quite predictable. They are a series of statements that are executed from top to bottom, i.e., sequential execution. One nice feature of almost all programming languages is that they allow the use of <em>control structures</em> that direct the execution of your program. One of the most commonly used control structures is the conditional statement <code class="docutils literal notranslate"><span class="pre">if</span></code>. An <code class="docutils literal notranslate"><span class="pre">if</span></code> statement looks like this:</p>
@@ -630,6 +582,346 @@ BASE IT ON EXERCISE 5.7 IN THE MATLAB MANUAL</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coat</span> <span class="o">=</span> <span class="s1">&#39;raincoat&#39;</span> <span class="k">if</span> <span class="n">raining</span> <span class="k">else</span> <span class="s1">&#39;jacket&#39;</span>
 </pre></div>
 </div>
+</section>
+<section id="tuples-lists-sets-and-dictionaries">
+<h2>Tuples, lists, sets, and dictionaries<a class="headerlink" href="#tuples-lists-sets-and-dictionaries" title="Permalink to this heading">#</a></h2>
+<p>In addition to integers, floating point numbers, strings, and booleans, Python has a couple of other very useful data types: tuples, lists, sets and dictionaries. All of these are collections, which can be used to store multiple values or variables. However, there are some important differences between these four data types. The following table <a class="reference external" href="https://www.geeksforgeeks.org/differences-and-applications-of-list-tuple-set-and-dictionary-in-python/">(source)</a> nicely summarizes the differences between tuples, lists, sets and dictionaries. We’ll elaborate below.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tuple</p></th>
+<th class="head"><p>List</p></th>
+<th class="head"><p>Set</p></th>
+<th class="head"><p>Dictionary</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A Tuple is also a non-homogeneous data structure that stores elements in columns of a single row or multiple rows.</p></td>
+<td><p>A list is a non-homogeneous data structure that stores the elements in columns of a single row or multiple rows.</p></td>
+<td><p>The set data structure is also a non-homogeneous data structure but stores the elements in a single row.</p></td>
+<td><p>A dictionary is also a non-homogeneous data structure that stores key-value pairs.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuple can be represented by  ( )</p></td>
+<td><p>The list can be represented by [ ]</p></td>
+<td><p>The set can be represented by { }</p></td>
+<td><p>The dictionary can be represented by { }</p></td>
+</tr>
+<tr class="row-even"><td><p>Tuple allows duplicate elements</p></td>
+<td><p>The list allows duplicate elements</p></td>
+<td><p>The Set will not allow duplicate elements</p></td>
+<td><p>The dictionary doesn’t allow duplicate keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuple can use nested among all</p></td>
+<td><p>The list can use nested among all</p></td>
+<td><p>The set can use nested among all</p></td>
+<td><p>The dictionary can use nested among all</p></td>
+</tr>
+<tr class="row-even"><td><p>Example: <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5)</span></code></p></td>
+<td><p>Example: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code></p></td>
+<td><p>Example: <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></code></p></td>
+<td><p>Example: <code class="docutils literal notranslate"><span class="pre">{1:</span> <span class="pre">“a”,</span> <span class="pre">2:</span> <span class="pre">“b”,</span> <span class="pre">3:</span> <span class="pre">“c”,</span> <span class="pre">4:</span> <span class="pre">“d”,</span> <span class="pre">5:</span> <span class="pre">“e”}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuple can be created using the tuple() function.</p></td>
+<td><p>A list can be created using the list() function</p></td>
+<td><p>A set can be created using the set() function</p></td>
+<td><p>A dictionary can be created using the dict() function.</p></td>
+</tr>
+<tr class="row-even"><td><p>A tuple is immutable i.e we can not make any changes in the tuple.</p></td>
+<td><p>A list is mutable i.e we can make any changes in the list.</p></td>
+<td><p>A set is mutable i.e we can make any changes in the set, ut elements are not duplicated.</p></td>
+<td><p>A dictionary is mutable, ut Keys are not duplicated.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuple is ordered</p></td>
+<td><p>List is ordered</p></td>
+<td><p>Set is unordered</p></td>
+<td><p>Dictionary is ordered (Python 3.7 and above)</p></td>
+</tr>
+<tr class="row-even"><td><p>Creating an empty Tuple t=()</p></td>
+<td><p>Creating an empty list l=[]</p></td>
+<td><p>Creating a set a=set() b=set(a)</p></td>
+<td><p>Creating an empty dictionary d={}</p></td>
+</tr>
+</tbody>
+</table>
+<section id="tuple">
+<h3>Tuple<a class="headerlink" href="#tuple" title="Permalink to this heading">#</a></h3>
+<p>We define a tuple in Python using parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>. For example, we can define a tuple with three items as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A tuple has two properties: it is ordered and it is unchangeable.  This means that the values with which we initialize the tuple stay in their order (even if they are not ascending or descending, or alphabetically ordered), and we cannot change individual values. We can access the value of the individual items in the tuple using <code class="docutils literal notranslate"><span class="pre">[]</span></code>. For example, to get the value of the <strong>first</strong> element in the tuple, we use the <em>index</em> of that element in <code class="docutils literal notranslate"><span class="pre">a</span></code> and write</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that to get the <strong>first</strong> element, we use index 0. In most programming languages, we start counting at 0, and not at 1 (as you might expect and are probably used to doing).</p>
+</div>
+<p>The second property of the tuple is that it is <strong>unchangeable</strong>. Hence, we cannot change the values of its individual elements, or <em>assign</em> a value to one of the elements. Let’s give that a try below. Indeed, we get an error. Take a close look at this error, it tells you exactly what the problem is: tuples do not allow item assignment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;tuple&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+</section>
+<section id="list">
+<h3>List<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h3>
+<p>Like a tuple, a list can contain multiple items. Similarly to a tuple, these are ordered. Different than in a tuple, they are also changeable. A list is defined using square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 5, 4]</span>
+</pre></div>
+</div>
+<p>To illustrate what we mean with <em>changeable</em>, let’s assign a new value to the second element</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 6, 4]</span>
+</pre></div>
+</div>
+<p>Note how we don’t get an error in this case. Also, the order stays the same. Moreover, the list length is dynamic: given the list <code class="docutils literal notranslate"><span class="pre">a</span></code>, we can combine add another list to it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 6, 4, 6]</span>
+</pre></div>
+</div>
+<p>To add <em>one</em> item at the end of a list, we can use the <code class="docutils literal notranslate"><span class="pre">append</span></code> method as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 5, 4, 7]</span>
+</pre></div>
+</div>
+<p>To add <em>multiple</em> items to the end of a list, we can use the <code class="docutils literal notranslate"><span class="pre">extend</span></code> method</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[3, 5, 4, 6, 7]</span>
+</pre></div>
+</div>
+<p>There are two ways to remove items from a list. First, the <code class="docutils literal notranslate"><span class="pre">pop</span></code> method removes an item from a list at a given index and returns its value. Second, the <code class="docutils literal notranslate"><span class="pre">remove</span></code> method removes an item based on its value. The code below demonstrates this.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;cherry&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[&#39;apple&#39;]</span>
+</pre></div>
+</div>
+<p>Each item in a list (or tuple) can have its own data type. We can make lists consisting of integers, strings, or combinations of these.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[3, 5, 4]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">[&#39;apple&#39;, 5, &#39;3&#39;]</span>
+</pre></div>
+</div>
+<p>We can <em>index</em> a list using integer numbers in square brackets (e.g, <code class="docutils literal notranslate"><span class="pre">a[1]</span></code> returns ‘banana’), and we can also index by counting back from the last element by using negative integer numbers, where index -1 refers to the last item, -2 to the second-to-last item, etc. This means that - in this example - <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> should result in the same value.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1.8</p>
+<p>Why do <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> refer to the same value?</p>
+</div>
+<p>In addition to <em>indexing</em> a list, we can also <em>slice</em> a list. This means that we select a portion of the list based on a start and an end index. In the example below, we select all items starting at index 3 and until (but not including) index 5.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">,</span> <span class="s1">&#39;lobster&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">[&#39;tomato&#39;, &#39;ham&#39;]</span>
+</pre></div>
+</div>
+<p>If the start and end index are not defined, we are simply selecting all items in the list</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">,</span> <span class="s1">&#39;lobster&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:]</span>
+<span class="go">[&#39;spam&#39;, &#39;egg&#39;, &#39;bacon&#39;, &#39;tomato&#39;, &#39;ham&#39;, &#39;lobster&#39;]</span>
+</pre></div>
+</div>
+<p>We can also slice by adding an increment (in this case 2). This only selects every second (in this case) element.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;bacon&#39;, &#39;ham&#39;]</span>
+</pre></div>
+</div>
+<p>We can reverse the order in a list by not defining the start and end, and making the increment negative. In this case, the slicing starts at the end of the list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[&#39;lobster&#39;, &#39;ham&#39;, &#39;tomato&#39;, &#39;bacon&#39;, &#39;egg&#39;, &#39;spam&#39;]</span>
+</pre></div>
+</div>
+<p>Items in a list can even be variables, and lists can contain other lists. By nesting your indices, you can access the individual items in the <em>nested</em> lists.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">[&#39;apple&#39;, 5, [&#39;lobster&#39;, &#39;ham&#39;, &#39;tomato&#39;, &#39;bacon&#39;, &#39;egg&#39;, &#39;spam&#39;]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;tomato&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Indexing and slicing work the same way for lists and tuples.</p>
+</div>
+</section>
+<section id="set">
+<h3>Set<a class="headerlink" href="#set" title="Permalink to this heading">#</a></h3>
+<p>A set is a collection that is unordered and does not allow duplicate values. Sets cannot contain multiple items with the same value. Sets are defined using curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code>. In the example below, you can note two things</p>
+<ol class="arabic simple">
+<li><p>Although we assign two <code class="docutils literal notranslate"><span class="pre">5</span></code>s to the set, the set only contains one <code class="docutils literal notranslate"><span class="pre">5</span></code>. The reason for this is that a set does not allow duplicate values.</p></li>
+<li><p>Although the <code class="docutils literal notranslate"><span class="pre">4</span></code> comes after the <code class="docutils literal notranslate"><span class="pre">5</span></code> in our assignment, the order is swapped to be increasing in the eventual set. This is the case because a set is not ordered: elements will be sorted in increasing order by design.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">{3, 4, 5}</span>
+</pre></div>
+</div>
+<p>You will find that sets can be very useful when you want to perform common mathematical operations like unions and intersections. Sets have some built-in <em>functions</em> that allow you do this. For example, if we have two groups of people, we can use sets for boolean operators.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Claire&#39;</span><span class="p">,</span> <span class="s1">&#39;Dean&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Dean&#39;</span><span class="p">,</span> <span class="s1">&#39;Edward&#39;</span><span class="p">,</span> <span class="s1">&#39;Fran&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># Who is in both groups (intersection)</span>
+<span class="go">{&#39;Dean&#39;, &#39;Bob&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>             <span class="c1"># All people (union)</span>
+<span class="go">{&#39;Dean&#39;, &#39;Fran&#39;, &#39;Bob&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>        <span class="c1"># Everyone that is in one group, minus those people that are also in another group</span>
+<span class="go">{&#39;Adam&#39;, &#39;Claire&#39;}</span>
+</pre></div>
+</div>
+<p>Just like in tuples, you cannot assign values to indices in sets. However, you can add and remove elements from sets using the <code class="docutils literal notranslate"><span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">remove</span></code> functions, as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Claire&#39;</span><span class="p">,</span> <span class="s1">&#39;Dean&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;Edward&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">{&#39;Dean&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}</span>
+</pre></div>
+</div>
+</section>
+<section id="dictionary">
+<h3>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h3>
+<p>A dictionary is a collection that contains items which are pairs of keys and values. As with lists, tuples and sets, a dictionary can contain items with different data types. Keys do not necessarily have a specific type, and neither do values. Dictionaries ar defined using curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code> and keys and values are separated using a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1964</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">car</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 1964}</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Single or double quotes</p>
+<p>Some programming languages distinguish between using ‘single quotes’ and “double quotes”, but Python does not. You’re free to choose what you prefer. As you can see above, even if you use double quotes, Python will turn these into single quotes.</p>
+</div>
+<p>Dictionaries are very useful in many applications that you will see during this course. Note that we cannot use indexing and slicing in dictionaries, but we can get values in dictionaries by using keys. For example, if the dictionary above defines a car, we can use <code class="docutils literal notranslate"><span class="pre">car[&quot;brand&quot;]</span></code> to get the brand of this car.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span><span class="p">[</span><span class="s1">&#39;brand&#39;</span><span class="p">]</span>
+<span class="go">&#39;Ford&#39;</span>
+</pre></div>
+</div>
+<p>If you want to add something to an existing dictionary, you can simply assign a new key and value pair as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Blue&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">car</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 1964, &#39;color&#39;: &#39;Blue&#39;}</span>
+</pre></div>
+</div>
+<p>And to remove something, you can use <code class="docutils literal notranslate"><span class="pre">del</span></code> as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">car</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">car</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;year&#39;: 1964, &#39;color&#39;: &#39;Blue&#39;}</span>
+</pre></div>
+</div>
+<p>Note that dictionary keys and values can have any type. They don’t have to be strings or integers. This makes dictionaries very flexible and useful in practice. However, there are some restrictions that you should keep in mind:</p>
+<ol class="arabic simple">
+<li><p>A key can only appears in a dictionary once, duplicate keys are not allowed.</p></li>
+<li><p>If you assign a new value to a key, it overwrites the old value.</p></li>
+</ol>
+</section>
+<section id="converting-between-collections">
+<h3>Converting between collections<a class="headerlink" href="#converting-between-collections" title="Permalink to this heading">#</a></h3>
+<p>If your data is organized in a set, you can turn it into a list or vice versa. However, keep in mind the characteristics of these data types. For example, if you have a list with <em>duplicate</em> values and you turn that into a set, you’ll lose the duplicates. This <em>can</em> be convenient, for example if you want to automatically select all unique values in a list. In the code below, notice how the set contains all unique elements in the list, ordered in ascending order, while the tuple maintains the original order and preserves duplicates.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">{1, 2, 3, 4, 5}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">(1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4, 5)</span>
+</pre></div>
+</div>
+<p>Dictionaries cannot be directly transformed into lists or sets, but you can get a list of either the keys or values in a dictionary using the <code class="docutils literal notranslate"><span class="pre">keys()</span></code> and <code class="docutils literal notranslate"><span class="pre">values()</span></code> methods</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1964</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[&#39;brand&#39;, &#39;model&#39;, &#39;year&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="go">[&#39;Ford&#39;, &#39;Mustang&#39;, 1964]</span>
+</pre></div>
+</div>
+<p>To create a new dictionary from two lists (one containing keys, one values), use the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function. This function takes two lists and, like a zipper, loops over pairs of items in both lists. Each pair is combined in a tuple, and a new list is made using all these tuples. Using the <code class="docutils literal notranslate"><span class="pre">dict</span></code> function, this list can be turned into a dictionary. The following code illustrates this.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;brand&#39;</span><span class="p">,</span> <span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ford&#39;</span><span class="p">,</span> <span class="s1">&#39;Mustang&#39;</span><span class="p">,</span> <span class="mi">1964</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span>
+<span class="go">[(&#39;brand&#39;, &#39;Ford&#39;), (&#39;model&#39;, &#39;Mustang&#39;), (&#39;year&#39;, 1964)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="go">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 1964}</span>
+</pre></div>
+</div>
+<p>And voilà, we have retrieved our original dictionary.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1.9</p>
+<ol class="arabic simple">
+<li><p>Reverse the order of tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">50)</span></code></p></li>
+<li><p>Given list <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>, make two new lists: one containing every second item counting from the back, and one containing every third item.</p></li>
+<li><p>Given tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>, write a line of Python code to extract the value</p></li>
+<li><p>Use slicing to get a tuple <code class="docutils literal notranslate"><span class="pre">t2</span> <span class="pre">=</span> <span class="pre">(44,</span> <span class="pre">55)</span></code> from tuple <code class="docutils literal notranslate"><span class="pre">t1</span> <span class="pre">=</span> <span class="pre">(11,</span> <span class="pre">22,</span> <span class="pre">33,</span> <span class="pre">44,</span> <span class="pre">55,</span> <span class="pre">66)</span></code>.</p></li>
+<li><p>Given the below dictionary, write a line of code that outputs Mike’s grade for history.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;student&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mike&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;grades&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;physics&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+                <span class="s2">&quot;history&quot;</span><span class="p">:</span> <span class="mi">80</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Given the below dictionary, raise the salary of Brad to 6800.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;emp1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jhon&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">7500</span><span class="p">},</span>
+    <span class="s1">&#39;emp2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Emma&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">},</span>
+    <span class="s1">&#39;emp3&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Brad&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Define a dictionary called <code class="docutils literal notranslate"><span class="pre">student</span></code> that contains your own name, hair color, and age.</p></li>
+<li><p>Create a list containing yourself and two additional students as dictionaries.</p></li>
+</ol>
+<p>Paste the contents of your terminal window into your Word document.</p>
+</div>
+</section>
+</section>
+<section id="the-in-operator">
+<h2>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator<a class="headerlink" href="#the-in-operator" title="Permalink to this heading">#</a></h2>
+<p>For tuples, lists, sets, and dictionaries, Python provides the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator, which checks whether a value is present in the collection. If so, it returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, if not it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This operator can also be easily combined with <code class="docutils literal notranslate"><span class="pre">not</span></code> to ask for the opposite response. Consider the following examples.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">car</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1964</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;brand&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">car</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>As you will see in the next chapter, this is useful to define expressions regarding containers.</p>
 </section>
 <section id="loops">
 <h2>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h2>
@@ -794,15 +1086,19 @@ general syntax</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-scripts-in-vs-code">Writing scripts in VS Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-scripts-in-vs-code">Running scripts in VS Code</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocks">Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-and-elif"><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-conditional-expression">Advanced: conditional expression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-lists-sets-and-dictionaries">Tuples, lists, sets, and dictionaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple">Tuple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-in-operator">The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops"><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops"><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
