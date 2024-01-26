@@ -9,7 +9,7 @@ parts:
   - file: notebooks/1_GettingStarted/1_GettingStarted_student
     title: 1. Getting started
   - file: notebooks/2_Scripts/2_Scripts_student
-    title: 2. Scripts 
+    title: 2. Control structures 
   - file: notebooks/3_Functions/3_Functions_student
     title: 3. Functions    
   - file: notebooks/3_Objects/3_Objects_student
