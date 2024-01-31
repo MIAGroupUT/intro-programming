@@ -411,18 +411,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6">Opdracht 6:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7">Opdracht 7:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8">Opdracht 8:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-9">Opdracht 9:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-10">Opdracht 10:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-11">Opdracht 11:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
 </ul>
             </nav>
@@ -442,12 +431,12 @@ document.write(`
 <h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink to this heading">#</a></h2>
 <p>Voor patiënten met type 1 of 2 diabetes is het belangrijk dat de bloedglucose goed gereguleerd is want dat beperkt de kans op ontwikkeling van macro- en microvasculaire complicaties. Er zijn meerdere manieren om de bloedglucose te monitoren:</p>
 <ul class="simple">
-<li><p><strong>HbA1c:</strong> Dat is een maat voor de hoeveelheid glucose dat zich in de afgelopen 3 maanden heeft opgestapeld in de rode bloedcellen. (Dit is niet hetzelfde als glucoseconcentratie in het bloed.)</p></li>
-<li><p><strong>Bloedglucosemonitoring (BGM):</strong> Diabeten die insuline gebruiken prikken dagelijks 4 a 6 keer: bij ontbijt, lunch, diner en soms bij de 2 tussendoortjes op een dag, en voor het slapen gaan. Daarnaast prikken ze ook wanneer er symptomen zijn van een hypo- of hyperglycemie. Met die prikken wordt bloedglucose gemeten.</p></li>
-<li><p>Tegenwoordig gebruiken steeds meer diabeten een <strong>continue glucosemeter (CGM)</strong>, die, afhankelijk van het type, iedere 5 of 15 minuten een glucosemeting doet.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">HbA1c:</span></code></strong> Dat is een maat voor de hoeveelheid glucose dat zich in de afgelopen 3 maanden heeft opgestapeld in de rode bloedcellen. (Dit is niet hetzelfde als glucoseconcentratie in het bloed.)</p></li>
+<li><p><strong>Bloedglucosemonitoring (<code class="docutils literal notranslate"><span class="pre">BGM</span></code>):</strong> Diabeten die insuline gebruiken prikken dagelijks 4 a 6 keer: bij ontbijt, lunch, diner en soms bij de 2 tussendoortjes op een dag, en voor het slapen gaan. Daarnaast prikken ze ook wanneer er symptomen zijn van een hypo- of hyperglycemie. Met die prikken wordt bloedglucose gemeten.</p></li>
+<li><p>Tegenwoordig gebruiken steeds meer diabeten een <strong>continue glucosemeter (<code class="docutils literal notranslate"><span class="pre">CGM</span></code>)</strong>, die, afhankelijk van het type, iedere 5 of 15 minuten een glucosemeting doet.</p></li>
 </ul>
-<p>Met de komst van de CGM hebben diabeten en hun behandelaren meer inzicht gekregen in de glucoseregulatie. Er zijn op basis daarvan nieuwe klinische CGM-parameters gedefinieerd (zie Tabel 1 en Figuur 1) en de verwachting is dat we daarmee de belangrijke maar moeilijker te bepalen HbA1c kunnen schatten.
-Voor deze opdracht maken we gebruik van open-source data van een studie<span class="math notranslate nohighlight">\(^{1}\)</span> die onderzoekt of CGM zonder regelmatige vingerprik net zo veilig is als het gebruik van CGM met regelmatige vingerprik. Dit onderzoek is gedaan bij Type 1 diabetespatiënten. De CGM die de patiënten gebruiken tijdens dit onderzoek bepaalt iedere 5 minuten een glucosewaarde.</p>
+<p>Met de komst van de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> hebben diabeten en hun behandelaren meer inzicht gekregen in de glucoseregulatie. Er zijn op basis daarvan nieuwe klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters gedefinieerd (zie Tabel 1 en Figuur 1) en de verwachting is dat we daarmee de belangrijke maar moeilijker te bepalen <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> kunnen schatten.
+Voor deze opdracht maken we gebruik van open-source data van een studie<span class="math notranslate nohighlight">\(^{1}\)</span> die onderzoekt of <code class="docutils literal notranslate"><span class="pre">CGM</span></code> zonder regelmatige vingerprik net zo veilig is als het gebruik van <code class="docutils literal notranslate"><span class="pre">CGM</span></code> met regelmatige vingerprik. Dit onderzoek is gedaan bij Type 1 diabetespatiënten. De <code class="docutils literal notranslate"><span class="pre">CGM</span></code> die de patiënten gebruiken tijdens dit onderzoek bepaalt iedere 5 minuten een glucosewaarde.</p>
 <p><strong>Tabel 1</strong> Gebruikte variabelen en hun eenheid, doel en omschrijving.</p>
 <table class="table">
 <thead>
@@ -461,28 +450,28 @@ Voor deze opdracht maken we gebruik van open-source data van een studie<span cla
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(g_{BGM}\)</span></p></td>
-<td class="text-left"><p>BGM</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">BGM</span></code></p></td>
 <td class="text-left"><p>bloedglucosemonitoring</p></td>
 <td class="text-left"><p>glucoseconcentratie (op onregelmatige tijden)</p></td>
 <td class="text-left"><p>-</p></td>
 <td class="text-left"><p>mmol/L</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(g_{CGM}\)</span></p></td>
-<td class="text-left"><p>CGM</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CGM</span></code></p></td>
 <td class="text-left"><p>continueglucosemonitoring</p></td>
 <td class="text-left"><p>glucoseconcentratie (gemaakt door een continue glucosemeter)</p></td>
 <td class="text-left"><p>-</p></td>
 <td class="text-left"><p>mmol/L</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(h\)</span></p></td>
-<td class="text-left"><p>HBA1c</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HBA1c</span></code></p></td>
 <td class="text-left"><p><em>hemoglobinA1c</em></p></td>
 <td class="text-left"><p>hoeveelheid glucose in bloedcel</p></td>
 <td class="text-left"><p>-</p></td>
 <td class="text-left"><p>mmol/L</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(h_{CGM}\)</span></p></td>
-<td class="text-left"><p>eA1</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">eA1</span></code></p></td>
 <td class="text-left"><p><em>extimated HbA1c</em></p></td>
 <td class="text-left"><p>schatting van HbA1c op basis van gemiddelde CGM</p></td>
 <td class="text-left"><p>&lt; 53</p></td>
@@ -503,21 +492,21 @@ Voor deze opdracht maken we gebruik van open-source data van een studie<span cla
 <td class="text-left"><p>4.70587 L/mol</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(p_{TAR}\)</span></p></td>
-<td class="text-left"><p>TAR</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TAR</span></code></p></td>
 <td class="text-left"><p><em>time above range</em></p></td>
 <td class="text-left"><p>percentage van de tijd dat de CGM boven 10 mmol/L is</p></td>
 <td class="text-left"><p>&lt; 30</p></td>
 <td class="text-left"><p>%</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(p_{TIR}\)</span></p></td>
-<td class="text-left"><p>TIR</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TIR</span></code></p></td>
 <td class="text-left"><p><em>time in range</em></p></td>
 <td class="text-left"><p>percentage van de tijd dat de CGM tussen 3.9 en 10 mmol/L is</p></td>
 <td class="text-left"><p>&gt; 70</p></td>
 <td class="text-left"><p>%</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(p_{TBR}\)</span></p></td>
-<td class="text-left"><p>TBR</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TBR</span></code></p></td>
 <td class="text-left"><p><em>time below range</em></p></td>
 <td class="text-left"><p>percentage van de tijd dat de CGM onder 3.9 mmol/L is</p></td>
 <td class="text-left"><p>&lt; 5</p></td>
@@ -553,7 +542,7 @@ Voor deze opdracht maken we gebruik van open-source data van een studie<span cla
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_53135/2457528420.py&quot;</span><span class="gt">, line </span><span class="mi">6</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_24053/2457528420.py&quot;</span><span class="gt">, line </span><span class="mi">6</span>
     <span class="n">mat_contents</span> <span class="o">=</span>
                    <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -588,7 +577,7 @@ Voor deze opdracht maken we gebruik van open-source data van een studie<span cla
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">1909997843.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">1909997843.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Laden van het bestand glucosedata.mat met functie loadmat</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">mat_contents</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="s1">&#39;C:/Users/veerl/Documents/Inleiding Programmeren/tm-introduction-programming/data/glucosedata.mat&#39;</span><span class="p">)</span>
@@ -657,7 +646,7 @@ Als het goed is zie je dat <code class="docutils literal notranslate"><span clas
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">286901398.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">286901398.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Type van de variabele glucodat</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">glucodat</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -688,7 +677,7 @@ Als het goed is zie je dat <code class="docutils literal notranslate"><span clas
 </tr>
 </tbody>
 </table>
-<p>Hier is <strong>time</strong> een vector van tijden, en <strong>data</strong> de bijbehorende meetwaarden. De BGM is vaak gemeten op onregelmatige tijden; de CGM zijn de continue glucosemetingen, meestal regelmatig gemeten. Van de HbA1c is per patiënt maar één meting uitgevoerd, maar de waarde is twee keer opgeslagen. Dat maakt het plotten ervan makkelijk:</p>
+<p>Hier is <code class="docutils literal notranslate"><span class="pre">time</span></code> een vector van tijden, en <code class="docutils literal notranslate"><span class="pre">data</span></code> de bijbehorende meetwaarden. De <code class="docutils literal notranslate"><span class="pre">BGM</span></code> is vaak gemeten op onregelmatige tijden; de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> zijn de continue glucosemetingen, meestal regelmatig gemeten. Van de <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> is per patiënt maar één meting uitgevoerd, maar de waarde is twee keer opgeslagen. Dat maakt het plotten ervan makkelijk:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">patient_id</span> <span class="o">=</span> <span class="s1">&#39;ID_293&#39;</span>
 <span class="n">time_component</span><span class="o">=</span> <span class="n">glucodat</span><span class="p">[</span><span class="n">patient_id</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;HbA1c&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -696,9 +685,8 @@ Als het goed is zie je dat <code class="docutils literal notranslate"><span clas
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_component</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">data_component</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>De tijd is in dagen, de glucosedata (BGM, CGM) is in mmol/L, en de HbA1c is in
-mmol/mol. Per patiënt is er 3 maanden aan data geselecteerd. Patiënten hebben verschillende hoeveelheden BGM- en CGM-metingen gedaan. Daardoor is de
-data van iedere patiënt verschillend van lengte.
+<p>De tijd is in dagen, de glucosedata (<code class="docutils literal notranslate"><span class="pre">BGM</span></code>, <code class="docutils literal notranslate"><span class="pre">CGM</span></code>) is in mmol/L, en de <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> is in
+mmol/mol. Per patiënt is er 3 maanden aan data geselecteerd. Patiënten hebben verschillende hoeveelheden <code class="docutils literal notranslate"><span class="pre">BGM</span></code>- en <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-metingen gedaan. Daardoor is de data van iedere patiënt verschillend van lengte.
 Met een for-loop kun je door de patiënten lopen om, vervolgens, per patiënt
 de data te gebruiken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verkrijg een lijst van patient IDs</span>
@@ -711,19 +699,20 @@ de data te gebruiken:</p>
     <span class="c1"># Doe iet met CGM       # ... CGM bereiken, en eriets mee doen</span>
 </pre></div>
 </div>
-<section id="opdracht-3">
-<h3>Opdracht 3:<a class="headerlink" href="#opdracht-3" title="Permalink to this heading">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 3</p>
 <p>Importeer <code class="docutils literal notranslate"><span class="pre">random</span></code> en gebruik de functie <code class="docutils literal notranslate"><span class="pre">random.sample()</span></code> om drie willekeurige patiënten te selecteren. Maak vervolgens in één figuur drie subplots (voor elke patiënt een subplot), en zet per patiënt in één subplot:</p>
 <ol class="arabic simple">
-<li><p>de CGM van de patiënt als functie van tijd,</p></li>
-<li><p>de BGM van de patiënt als functie van tijd (gebruik stem in plaats van plot om het verschil met CGM beter te zien),</p></li>
-<li><p>de gemiddelde bloedglucoseconcentratie g (mmol/L) van de patiënt geschat a.d.h.v. opgestapelde glucose in bloedcellen <span class="math notranslate nohighlight">\(h\)</span> = HbA1c als
+<li><p>de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> van de patiënt als functie van tijd,</p></li>
+<li><p>de <code class="docutils literal notranslate"><span class="pre">BGM</span></code> van de patiënt als functie van tijd,</p></li>
+<li><p>de gemiddelde bloedglucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> (mmol/L) van de patiënt geschat a.d.h.v. opgestapelde glucose in bloedcellen <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> als
 <br>
 <span class="math notranslate nohighlight">\(g = \frac{h − a}{b}\)</span>
 <br>
-met <span class="math notranslate nohighlight">\(a\)</span> = 12.71mmol/mol en <span class="math notranslate nohighlight">\(b\)</span> = 4.70587L/mol.</p></li>
+met <span class="math notranslate nohighlight">\(a\)</span> = 12.71mmol/mol en <span class="math notranslate nohighlight">\(b\)</span> = 4.70587 L/mol.</p></li>
 </ol>
 <p>Voeg zinvolle titels, labels en legenda toe.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code...</span>
@@ -764,15 +753,14 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71mmol/mol en <
     <span class="c1"># Plot de CGM van de patiënt als functie van tijd</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">CGM_time</span><span class="p">,</span> <span class="n">CGM_data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CGM&#39;</span><span class="p">)</span>
     
-    <span class="c1"># Plot de BGM van de patiënt als functie van tijd (gebruik stem)</span>
-    <span class="c1">#plt.stem(bgm_time, bgm_data, label=&#39;BGM&#39;,linefmt =&#39;pink&#39;,markerfmt =&#39;D&#39;)</span>
+    <span class="c1"># Plot de BGM van de patiënt als functie van tijd </span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">BGM_time</span><span class="p">,</span> <span class="n">BGM_data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;BGM&#39;</span><span class="p">)</span>
     
     <span class="c1"># Bereken de geschatte gemiddelde bloedglucoseconcentratie g</span>
-    <span class="n">g_estimate</span> <span class="o">=</span> <span class="n">HbA1c_data</span> <span class="o">-</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="n">g_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="n">HbA1c_data</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">b</span>
 
     <span class="c1"># Plot de geschatte gemiddelde bloedglucoseconcentratie</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HbA1c_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_estimate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gemiddelde glucoseconcentratie&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HbA1c_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_estimate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gemiddelde glucoseconcentratie (g)&#39;</span><span class="p">)</span>
 
     <span class="c1"># Zet labels en titel</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Patient </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">patient_id</span><span class="p">))</span>
@@ -788,7 +776,7 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71mmol/mol en <
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">1232127747.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">1244221564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> 
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Kies drie willekeurige patiënten</span>
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">selected_patients</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">IDs</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -800,32 +788,33 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71mmol/mol en <
 </div>
 </div>
 </div>
-</section>
-<section id="opdracht-4">
-<h3>Opdracht 4<a class="headerlink" href="#opdracht-4" title="Permalink to this heading">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 4</p>
 <p>Wat valt je op aan de verschillende plots? Zijn er verschillen tussen patiënten?</p>
-<p>Jouw antwoord</p>
+</div>
+<p>Jouw uitleg</p>
 <ul class="simple">
-<li><p>Beschrijf verschil tussen de geschatte gemiddelde glucose concentratie en CGM en BGM: de De gemiddelde glucoseconcentratie geschat aan de hand van de opgestapelde glucose in de rode bloedcellen is significant hoger dan gemeten met CGM en BGM.</p></li>
-<li><p>Beschrijf verschillen tussen CGM en BGM. De CGM toont meer uitschieters dan de BGM. BGM heeft ook minder meetpunten dat CGM.</p></li>
-<li><p>Beschrijf verschillen tussen de patiënten. Bijvoorbeeld de verschillen tussen de lengte van de data.</p></li>
+<li><p>Beschrijf verschillen tussen de patiënten: Bijvoorbeeld de verschillen tussen de lengte van de data/het aantal meetmomenten.</p></li>
+<li><p>Beschrijf de verschillen tussen de uitkomst voor de gemiddelde glucoseconcentratie.</p></li>
+<li><p>Beschrijf het verschil in het aantal fluctuaties van de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> en <code class="docutils literal notranslate"><span class="pre">BGM</span></code>.</p></li>
 </ul>
-<p><strong>HbA1c vs klinische CGM parameters:</strong> Nu gaan we HbA1c vergelijken met een paar klinische CGM-parameters. We onderscheiden vier parameters (per patiënt):</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vs klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameters:</strong> Nu gaan we <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vergelijken met een paar klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters. We onderscheiden vier parameters (per patiënt):</p>
 <ul class="simple">
-<li><p><em><strong>eA1c</strong></em> In opdracht 3 schatten we een gemiddelde glucoseconcentratie <span class="math notranslate nohighlight">\(g\)</span> uit <span class="math notranslate nohighlight">\(h\)</span> = HbA1c volgens de formule <span class="math notranslate nohighlight">\(g = \frac{h − a}{b}\)</span>. Omgekeerd kunnen we uit het gemiddelde <span class="math notranslate nohighlight">\(g_{cgm}\)</span> van de CGM-metingen van de patiënt de  <span class="math notranslate nohighlight">\(h\)</span> = HbA1c schatten volgens <br>
+<li><p><code class="docutils literal notranslate"><span class="pre">eA1c</span></code>: In opdracht 3 schatten we een gemiddelde glucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> uit <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> volgens de formule <span class="math notranslate nohighlight">\(g = \frac{h − a}{b}\)</span>. Omgekeerd kunnen we uit het gemiddelde <span class="math notranslate nohighlight">\(g_{cgm}\)</span> van de CGM-metingen van de patiënt de  <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> schatten volgens <br>
 <br>
 <span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)</span>       (mmol/mol)
-<br>
-<br>
-met <span class="math notranslate nohighlight">\(a\)</span> = 12.71 mmol/mol en <span class="math notranslate nohighlight">\(b\)</span> = 4.70587L/mol. Deze hCGM wordt eA1c genoemd (voor “estimated HbA1c”).</p></li>
-<li><p><em><strong>TAR</strong></em>: Dit is het percentage samples van CGM hoger dan 10.0 mmol/L.</p></li>
-<li><p><em><strong>TIR</strong></em>: Dit het percentage samples van CGM tussen de 3.9 en 10.0 mmol/L.</p></li>
-<li><p><em><strong>TBR</strong></em>: Dit is het percentage samples van CGM kleiner dan 3.9 mmol/L.</p></li>
+<br></p></li>
 </ul>
-</section>
-<section id="opdracht-5">
-<h3>Opdracht 5:<a class="headerlink" href="#opdracht-5" title="Permalink to this heading">#</a></h3>
-<p>Maak een Python functie <em>Gluc_param</em> die voor een gegeven CGM signaal (van een patiënt) alle 4 parameters (eA1c, TAR, TIR, TBR) bepaalt.</p>
+<p>met <code class="docutils literal notranslate"><span class="pre">a</span></code> = 12.71 mmol/mol en <code class="docutils literal notranslate"><span class="pre">b</span></code> = 4.70587L/mol. Deze <span class="math notranslate nohighlight">\(h_{CGM}\)</span> wordt <code class="docutils literal notranslate"><span class="pre">eA1c</span></code> genoemd (voor “estimated <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>”).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TAR</span></code>: Dit is het percentage samples van CGM hoger dan 10.0 mmol/L.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TIR</span></code>: Dit het percentage samples van CGM tussen de 3.9 en 10.0 mmol/L.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TBR</span></code>: Dit is het percentage samples van CGM kleiner dan 3.9 mmol/L.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 5</p>
+<p>Maak een Python functie <code class="docutils literal notranslate"><span class="pre">Gluc_param</span></code> die voor een gegeven <code class="docutils literal notranslate"><span class="pre">CGM</span></code> signaal (van een patiënt) alle 4 parameters (<code class="docutils literal notranslate"><span class="pre">eA1c</span></code>, <code class="docutils literal notranslate"><span class="pre">TAR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code>, <code class="docutils literal notranslate"><span class="pre">TBR</span></code>) bepaalt.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code...</span>
@@ -843,7 +832,7 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71 mmol/mol en 
     <span class="c1"># Bereken eA1c</span>
     <span class="n">eA1c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">CGM_signaal</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
-    <span class="c1"># Bereken TAR, TIR, TBR percentages # KLOPT DIT OF MOET HET DELEN DOOR HET TOTAAL AANTAL SIGNALEN ZIJN</span>
+    <span class="c1"># Bereken TAR, TIR, TBR percentages </span>
     <span class="n">tar_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">CGM_signaal</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
     <span class="n">tir_percentage</span> <span class="o">=</span> <span class="p">((</span><span class="n">CGM_signaal</span> <span class="o">&gt;=</span> <span class="mf">3.9</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">CGM_signaal</span> <span class="o">&lt;=</span> <span class="mf">10.0</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
     <span class="n">tbr_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">CGM_signaal</span> <span class="o">&lt;</span> <span class="mf">3.9</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
@@ -869,7 +858,7 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71 mmol/mol en 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">1308286635.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">3940851256.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Selecteer 1 patiënt</span>
 <span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">select_ID</span><span class="o">=</span><span class="s1">&#39;ID_293&#39;</span>
 <span class="ne">---&gt; </span><span class="mi">19</span> <span class="n">CGM_signaal</span> <span class="o">=</span> <span class="n">glucodat</span><span class="p">[</span><span class="n">select_ID</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;CGM&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
@@ -881,7 +870,7 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71 mmol/mol en 
 </div>
 </div>
 </div>
-<p>De streefwaarde van HbA1c voor diabetespatiënten is &lt; 53 mmol/mol. Voor de sommige patiënten is deze streefwaarde lastig te behalen. Nu willen we kijken hoe de verschillende HbA1c streefwaarden zich verhouden tot de CGM-parameters (eA1c, TAR, TIR, TBR). We onderscheiden drie groepen:</p>
+<p>De streefwaarde van <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> voor diabetespatiënten is &lt; 53 mmol/mol. Voor de sommige patiënten is deze streefwaarde lastig te behalen. Nu willen we kijken hoe de verschillende HbA1c streefwaarden zich verhouden tot de <code class="docutils literal notranslate"><span class="pre">CGM-parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">eA1c</span></code>, <code class="docutils literal notranslate"><span class="pre">TAR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code>, <code class="docutils literal notranslate"><span class="pre">TBR</span></code>). We onderscheiden drie groepen:</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p></p></th>
@@ -890,23 +879,32 @@ met <span class="math notranslate nohighlight">\(a\)</span> = 12.71 mmol/mol en 
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p>Patiëntgroep 1:</p></td>
-<td class="text-center"><p>laag: HbA1c ≤ 53</p></td>
+<td class="text-center"><p>laag: <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> ≤ 53</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p>Patiëntgroep 2:</p></td>
-<td class="text-center"><p>midden: 53 &lt; HbA1c &lt; 63</p></td>
+<td class="text-center"><p>midden: 53 &lt; <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> &lt; 63</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p>patiëntgroep 3:</p></td>
-<td class="text-center"><p>hoog: HbA1c ≥ 63</p></td>
+<td class="text-center"><p>hoog: <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> ≥ 63</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="opdracht-6">
-<h3>Opdracht 6:<a class="headerlink" href="#opdracht-6" title="Permalink to this heading">#</a></h3>
-<p>Maak een <em>stacked bar chart</em>, waarbij de drie verschillende patiëntgroepen naast elkaar op de x-as staan, en, per patiëntgroep de gemiddelde TBR, TIR en TAR voor de patiëntgroep op elkaar gestapeld staan, een beetje zoals in Figuur 1.
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 6</p>
+<p>Maak een <code class="docutils literal notranslate"><span class="pre">stacked</span> <span class="pre">bar</span> <span class="pre">chart</span></code>, waarbij de drie verschillende patiëntgroepen naast elkaar op de x-as staan, en, per patiëntgroep de gemiddelde <code class="docutils literal notranslate"><span class="pre">TBR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code> en <code class="docutils literal notranslate"><span class="pre">TAR</span></code> voor de patiëntgroep op elkaar gestapeld staan, een beetje zoals in Figuur 1.
 <br>
-Hints: (i) Gebruik een for-loop om deze klinische parameters te bepalen
-voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde for-loop om een vector met verschillende nummers voor de verschillende groepen te creeëren. (iii) Bereken de gemiddelde TBR, TIR en TAR, voor de verschillende groepen. (iv.) Maak een bar-graph met de functie <strong>bar</strong>.</p>
+Hints:
+<br></p>
+<ol class="arabic simple">
+<li><p>Gebruik een for-loop om deze klinische parameters te bepalen voor alle patiënten en opslaan in één vector/matrix.
+<br></p></li>
+<li><p>Gebruik dezelfde for-loop om een vector met verschillende nummers voor de verschillende groepen te creeëren.
+<br></p></li>
+<li><p>Bereken de gemiddelde <code class="docutils literal notranslate"><span class="pre">TBR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code> en <code class="docutils literal notranslate"><span class="pre">TAR</span></code>, voor de verschillende groepen.
+<br></p></li>
+<li><p>Maak een bar-graph met de functie <code class="docutils literal notranslate"><span class="pre">bar</span></code>.</p></li>
+</ol>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code...</span>
@@ -985,7 +983,7 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">1040279718.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">1040279718.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># 1: Sla alle klinische parametrs op in één matrix</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Gluc_parameters</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">IDs</span><span class="p">)))</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">patient_groep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">IDs</span><span class="p">))</span>
@@ -997,28 +995,28 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 </div>
 </div>
 </div>
-</section>
-<section id="opdracht-7">
-<h3>Opdracht 7:<a class="headerlink" href="#opdracht-7" title="Permalink to this heading">#</a></h3>
-<p>Wat valt op aan de resultaten? Welke groepen behalen de CGM parameterdoelen (zoals beschreven in Figuur 1).</p>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 7</p>
+<p>Wat valt op aan de resultaten? Welke groepen behalen de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameterdoelen (zoals beschreven in Figuur 1).</p>
+</div>
 <p>Jouw uitleg</p>
 <p>Een aantal zaken vallen op:</p>
 <ul class="simple">
-<li><p>De groep TIR is percentueel het hoogste in de Lage en hoge groep. In de ‘Midden’ groep is TAR percentueel het hoogst.</p></li>
+<li><p>De groep TIR is percentueel het hoogste in de lage en hoge groep. In de ‘Midden’ groep is TAR percentueel het hoogst.</p></li>
 <li><p>Geen enkele groep behaald alle doelen. De groep ‘Laag’ wijkt wel het minste af. Alleen de TBR is hier 0.2% te hoog.</p></li>
 <li><p>Alleen de groep ‘Laag’ behaald een TIR &gt; 70%.</p></li>
 <li><p>Opvallend dat de groep ‘Midden’ een hoger percentage TAR heeft dan de groep ‘Hoog’.</p></li>
 </ul>
-<p><strong>Moving average:</strong> Het is je wellicht opgevallen dat de CGM-metingen als functie van tijd enorm fluctueren. Door de metingen te middelen over tijd ontstaat er een langzaam variërende functie van tijd, en die zegt vermoedelijk meer over HbA1c. Het langzaam variërende signaal construeren we met een “moving averaging” filter van orde <span class="math notranslate nohighlight">\(M\)</span>. Dat is een filter dat op basis van metingen <span class="math notranslate nohighlight">\(x_{1},x_{1},...,x_{n}\)</span> het signaal <span class="math notranslate nohighlight">\(y_{1},y_{1},...,y_{n}\)</span> bepaalt volgens de regel
+<p><strong>Moving average:</strong> Het is je wellicht opgevallen dat de <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-metingen als functie van tijd enorm fluctueren. Door de metingen te middelen over tijd ontstaat er een langzaam variërende functie van tijd, en die zegt vermoedelijk meer over <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>. Het langzaam variërende signaal construeren we met een “moving averaging” filter van orde <strong><code class="docutils literal notranslate"><span class="pre">M</span></code></strong>. Dat is een filter dat op basis van metingen <span class="math notranslate nohighlight">\(x_{1},x_{1},...,x_{n}\)</span> het signaal <span class="math notranslate nohighlight">\(y_{1},y_{1},...,y_{n}\)</span> bepaalt volgens de regel
 <br>
 <br>
 <span class="math notranslate nohighlight">\(y_{k}=\frac{1}{M+1}(x_{k},x_{k-1},...,x_{k-M}),   k=1,..,n\)</span><br />
 <br>
-<br> Het getal <span class="math notranslate nohighlight">\(M\)</span> wordt de “orde” van het filter genoemd.</p>
-</section>
-<section id="opdracht-8">
-<h3>Opdracht 8:<a class="headerlink" href="#opdracht-8" title="Permalink to this heading">#</a></h3>
-<p>Maak een Python functie movingav.m met syntax y=movingav(x,M) die uit een vector <span class="math notranslate nohighlight">\(x\)</span> een vector <span class="math notranslate nohighlight">\(y\)</span> bepaalt zoals gedefinieerd in (1). [Hint: Gebruik <code class="docutils literal notranslate"><span class="pre">np.convolve()</span></code> in mode=<code class="docutils literal notranslate"><span class="pre">same</span></code>]</p>
+<br> Het getal <strong><code class="docutils literal notranslate"><span class="pre">M</span></code></strong> wordt de “orde” van het filter genoemd.</p>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 8</p>
+<p>Maak een Python functie <code class="docutils literal notranslate"><span class="pre">movingav</span></code> met syntax <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">movingav(x,M)</span></code> die uit een vector <code class="docutils literal notranslate"><span class="pre">x</span></code> een vector <code class="docutils literal notranslate"><span class="pre">y</span></code> bepaalt zoals gedefinieerd in (1). [Hint: Gebruik <code class="docutils literal notranslate"><span class="pre">np.convolve()</span></code> in mode=<code class="docutils literal notranslate"><span class="pre">same</span></code>]</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">movingav</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">M</span><span class="p">):</span>
@@ -1044,9 +1042,8 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 </div>
 </div>
 </div>
-</section>
-<section id="opdracht-9">
-<h3>Opdracht 9:<a class="headerlink" href="#opdracht-9" title="Permalink to this heading">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9</p>
 <p>Controleer deze functie met onderstaande code, en leg uit waarom de plot klopt.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
@@ -1057,6 +1054,7 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 <span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1"># ook wel &quot;lollipop plot&quot; genoemd</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1086,16 +1084,16 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 <img alt="../../_images/48cec3fe88d35eafde3bd601c373dad85c7003ed88d254b324b31883d2641781.png" src="../../_images/48cec3fe88d35eafde3bd601c373dad85c7003ed88d254b324b31883d2641781.png" />
 </div>
 </div>
-<p>Het filter heeft een windowsize van M + 1 oftewel 2 + 1 = 3. Het filter start in t=0 oftewel x=0 en omvat, met een windowsize van 3, de waarde x=0 en x=1. Om een output y van dezelfde lengte als input x te generen wordt een extra 0 toegevoegd. De berekening is nu als volgt: 1/3*(0 + 0 + 1) =  1/3. Vervolgens verschuift het filter 1 positie en wordt de volgende berekening uitgevoerd: 1/3*(0 + 1 +1) = 2/3. Etc.</p>
-</section>
-<section id="opdracht-10">
-<h3>Opdracht 10:<a class="headerlink" href="#opdracht-10" title="Permalink to this heading">#</a></h3>
+<p>Het filter heeft een windowsize van <strong><code class="docutils literal notranslate"><span class="pre">M</span></code></strong> + 1 oftewel 2 + 1 = 3. Het filter start in <code class="docutils literal notranslate"><span class="pre">t</span></code>=0 oftewel <code class="docutils literal notranslate"><span class="pre">x</span></code>=0 en omvat, met een windowsize van 3, de waarde <code class="docutils literal notranslate"><span class="pre">x</span></code>=0 en <code class="docutils literal notranslate"><span class="pre">x</span></code>=1. Om een output <code class="docutils literal notranslate"><span class="pre">y</span></code> van dezelfde lengte als input <code class="docutils literal notranslate"><span class="pre">x</span></code> te generen wordt een extra 0 toegevoegd. De berekening is nu als volgt: 1/3*(0 + 0 + 1) =  1/3. Vervolgens verschuift het filter 1 positie en wordt de volgende berekening uitgevoerd: 1/3*(0 + 1 +1) = 2/3. Etc.</p>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 10</p>
 <p>Selecteer drie patiënten, en, per patiënt, maak een figuur met daarin een plot van de:</p>
 <ul class="simple">
-<li><p>ongefilterde CGM data,</p></li>
-<li><p>gefilterde CGM data (dus bepaald m.b.v. movingav)</p></li>
-<li><p>de geschatte gemiddelde bloedglucoseconcentratie <span class="math notranslate nohighlight">\(g\)</span> bepaald op basis van de HbA1c gegevens (zoals in opdracht 3(3))</p></li>
+<li><p>ongefilterde <code class="docutils literal notranslate"><span class="pre">CGM</span></code> data,</p></li>
+<li><p>gefilterde <code class="docutils literal notranslate"><span class="pre">CGM</span></code> data (dus bepaald m.b.v. movingav)</p></li>
+<li><p>de geschatte gemiddelde bloedglucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> bepaald op basis van de <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> gegevens (zoals in opdracht 3(3))</p></li>
 </ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code...</span>
@@ -1135,10 +1133,10 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">CGM_time</span><span class="p">,</span> <span class="n">CGM_filt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gefilterd CGM&#39;</span><span class="p">)</span>
     
     <span class="c1"># Bereken de geschatte gemiddelde bloedglucoseconcentratie g</span>
-    <span class="n">g_estimate</span> <span class="o">=</span> <span class="n">HbA1c_data</span> <span class="o">-</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="n">g_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="n">HbA1c_data</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">b</span>
 
     <span class="c1"># Plot de geschatte gemiddelde bloedglucoseconcentratie</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HbA1c_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_estimate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gemiddelde glucoseconcentratie&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HbA1c_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_estimate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gemiddelde glucoseconcentratie (g)&#39;</span><span class="p">)</span>
 
     <span class="c1"># Zet labels en titel</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Patient </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">patient_id</span><span class="p">))</span>
@@ -1154,7 +1152,7 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">3595474949.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">3764585949.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Kies drie willekeurige patiënten</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">selected_patients</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">IDs</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1166,10 +1164,10 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 </div>
 </div>
 </div>
-</section>
-<section id="opdracht-11">
-<h3>Opdracht 11:<a class="headerlink" href="#opdracht-11" title="Permalink to this heading">#</a></h3>
-<p>Maak plaatjes met verschillende orde <span class="math notranslate nohighlight">\(M\)</span> van het moving average filter. Filter bijvoorbeeld ook eens met grote orders, bijvoorbeeld het aantal samples voor een dag, of voor een week. Je mag er vanuit gaan dat de samplefrequentie 5/min is. Wat valt je op voor verschillende filter ordes?</p>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 11</p>
+<p>Maak plaatjes met verschillende orde <strong><code class="docutils literal notranslate"><span class="pre">M</span></code></strong> van het moving average filter. Filter bijvoorbeeld ook eens met grote orders, bijvoorbeeld het aantal samples voor een dag, of voor een week. Je mag er vanuit gaan dat de samplefrequentie 5/min is. Wat valt je op voor verschillende filter ordes?</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code... + uitleg</span>
@@ -1211,10 +1209,10 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">CGM_time</span><span class="p">,</span> <span class="n">CGM_filt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gefilterd CGM&#39;</span><span class="p">)</span>
     
     <span class="c1"># Bereken de geschatte gemiddelde bloedglucoseconcentratie g</span>
-    <span class="n">g_estimate</span> <span class="o">=</span> <span class="n">HbA1c_data</span> <span class="o">-</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="n">g_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="n">HbA1c_data</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">b</span>
 
     <span class="c1"># Plot de geschatte gemiddelde bloedglucoseconcentratie</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HbA1c_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_estimate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gemiddelde glucoseconcentratie&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HbA1c_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_estimate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gemiddelde glucoseconcentratie (g)&#39;</span><span class="p">)</span>
 
     <span class="c1"># Zet labels en titel</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Patient </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">patient_id</span><span class="p">))</span>
@@ -1230,7 +1228,7 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53135</span><span class="o">/</span><span class="mf">3234937313.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_24053</span><span class="o">/</span><span class="mf">2213830078.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">M</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">M_select</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="c1"># Haal de CGM, BGM en HbA1c data op voor de huidige patiënt</span>
 <span class="ne">---&gt; </span><span class="mi">14</span>     <span class="n">CGM_time</span> <span class="o">=</span> <span class="n">glucodat</span><span class="p">[</span><span class="n">patient_id</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;CGM&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
@@ -1245,8 +1243,10 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
 </div>
 </div>
 </div>
-<p>Door een grotere orde (M) van het movingaverage filter wordt het sterk flunctuerende CGM signaal meer gemiddeld en dus vlakker.</p>
-</section>
+<ul class="simple">
+<li><p>Door een grotere orde <strong><code class="docutils literal notranslate"><span class="pre">M</span></code></strong> van het movingaverage filter wordt het sterk flunctuerende <code class="docutils literal notranslate"><span class="pre">CGM</span></code> signaal over een groter tijdsframe gemiddeld en daardoor dus vlakker/minder fluctuerend.</p></li>
+<li><p>Het gefilterde <code class="docutils literal notranslate"><span class="pre">CGM</span></code>signaal geeft een hogere gemiddelde glucoseconcentratie dan de uit <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> geschatte gemiddelde glucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p></li>
+</ul>
 </section>
 <section id="referenties">
 <h2>Referenties<a class="headerlink" href="#referenties" title="Permalink to this heading">#</a></h2>
@@ -1304,18 +1304,7 @@ voor alle patiënten en opslaan in één vector/matrix. (ii) Gebruik dezelfde fo
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6">Opdracht 6:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7">Opdracht 7:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8">Opdracht 8:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-9">Opdracht 9:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-10">Opdracht 10:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-11">Opdracht 11:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
 </ul>
   </nav></div>

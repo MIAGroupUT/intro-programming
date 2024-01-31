@@ -8,24 +8,24 @@ parts:
     title: Preface
   - file: notebooks/1_GettingStarted/1_GettingStarted_student
     title: 1. Getting started
-  - file: notebooks/2_Scripts/2_Scripts_student
+  - file: placeholder_notebooks/2_Scripts/2_Scripts_student
     title: 2. Control structures 
-  - file: notebooks/3_Functions/3_Functions_student
+  - file: placeholder_notebooks/3_Functions/3_Functions_student
     title: 3. Functions    
-  - file: notebooks/3_Objects/3_Objects_student
+  - file: placeholder_notebooks/3_Objects/3_Objects_student
     title: 4. Objects
-  - file:  notebooks/4_ModulesPackages/4_ModulesPackages_student 
+  - file:  placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student 
     title: 5. Modules and packages
-  - file: notebooks/4_Files/4_Files_student 
+  - file: placeholder_notebooks/4_Files/4_Files_student 
     title: 6. Reading and writing files   
-  - file: notebooks/5_NumPy/5_NumPy_student 
+  - file: placeholder_notebooks/5_NumPy/5_NumPy_student 
     title: 7. NumPy
-  - file: notebooks/6_Visualization/6_Visualization_student
+  - file: placeholder_notebooks/6_Visualization/6_Visualization_student
     title: 8. Visualization
-  - file: notebooks/7_DataAnalysis/7_DataAnalysis_student
+  - file: placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student
     title: 9. Data analysis
-  - file: notebooks/99_Project/99_Project_student
-    title: 10. Project
+#  - file: notebooks/99_Project/99_Project_student
+#    title: 10. Project
 - caption: Backmatter
   chapters:
   - file: backmatter/references

@@ -410,10 +410,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocks">Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-and-elif"><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-conditional-expression">Advanced: conditional expression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-lists-sets-and-dictionaries">Tuples, lists, sets, and dictionaries</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple">Tuple</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
@@ -428,7 +428,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops"><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-loops">Nested loops</a></li>
 </ul>
             </nav>
         </div>
@@ -453,6 +453,37 @@ document.write(`
 <li><p>write <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p></li>
 </ul>
 </div>
+<section id="interactive-scripts">
+<h2>Interactive scripts<a class="headerlink" href="#interactive-scripts" title="Permalink to this heading">#</a></h2>
+<p>A Python script will run ‘as is’, i.e., its output is entirely defined by what we put in the script. We can also make the script more interactive by using the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function in Python. This asks the user for an input and stores it in a variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
+<span class="go">Please enter your name: Adam</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span>
+<span class="go">&#39;Adam&#39;</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 2.X</p>
+<p>Adapt the script that you wrote in Exercise 2.5 to request the annual income and age of the customer using the <code class="docutils literal notranslate"><span class="pre">input</span></code> function.</p>
+</div>
+<p>Another option to make your scripts depend on user input is to provide <em>arguments</em> to the script. The easiest way to do this is using the <code class="docutils literal notranslate"><span class="pre">sys</span></code> package. Each time a Python script is called, it is called with a list of arguments. The first item in the list is always the name of the script, the second item is the first argument, etc. This means that we can <em>call</em> a script with some arguments that define its output. In a very simple case, let’s say that we have a script called <code class="docutils literal notranslate"><span class="pre">add.py</span></code> and its contents are</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>Then we can simply call this script from the command line with two different numbers and we always get the addition of these numbers in return.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> % python add.py <span class="m">4</span> <span class="m">5</span>
+<span class="m">9</span>
+<span class="o">(</span>base<span class="o">)</span> % python add.py <span class="m">23</span> <span class="m">54</span>
+<span class="m">77</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 2.X</p>
+<p>Adapt the script you wrote earlier one last time so that it can be called with two different arguments: the age of the customer and his annual income.</p>
+</div>
+</section>
 <section id="conditional-statements">
 <h2>Conditional statements<a class="headerlink" href="#conditional-statements" title="Permalink to this heading">#</a></h2>
 <p>Now that you are able to write and run scripts in VS Code, it is time to do some more interesting programming. So far, your scripts have been quite predictable. They are a series of statements that are executed from top to bottom, i.e., sequential execution. One nice feature of almost all programming languages is that they allow the use of <em>control structures</em> that direct the execution of your program. One of the most commonly used control structures is the conditional statement <code class="docutils literal notranslate"><span class="pre">if</span></code>. An <code class="docutils literal notranslate"><span class="pre">if</span></code> statement looks like this:</p>
@@ -461,7 +492,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Here, <code class="docutils literal notranslate"><span class="pre">&lt;expr&gt;</span></code> is a <em>boolean</em> expression, i.e., something that takes on the value <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. The <code class="docutils literal notranslate"><span class="pre">&lt;statement&gt;</span></code> is a valid Python statement, something that will be executed if <code class="docutils literal notranslate"><span class="pre">&lt;expr&gt;</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>. The colon <code class="docutils literal notranslate"><span class="pre">:</span></code> is part of the Python syntax and should always be placed after the boolean expression. Further, note that there is some whitespace in front of the <code class="docutils literal notranslate"><span class="pre">&lt;statement&gt;</span></code>. This is called <em>indentation</em> and is also part of the Python syntax. Python always uses four spaces as indentation. You usually don’t have to care of this yourself: the interpreter and any IDE that knows that you’re programming in Python will help you automatically use that indentation when necessary.</p>
-<p>To get a better feeling about the behavior of the <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement, take a good look at the following code. Note that the interpreter only prints <code class="docutils literal notranslate"><span class="pre">yes</span></code> if the <code class="docutils literal notranslate"><span class="pre">&lt;expr&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Otherwise, nothing happens. Also, note that <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">y</span></code> gets evaluated to <code class="docutils literal notranslate"><span class="pre">True</span></code>. This is so because the value of <code class="docutils literal notranslate"><span class="pre">y</span></code> is larger than zero. The <code class="docutils literal notranslate"><span class="pre">or</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code> does exactly what you expect it to do: it will evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code> if either of the two expressions that it connects is <code class="docutils literal notranslate"><span class="pre">True</span></code>. In contrast, for the <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code> statement to be <code class="docutils literal notranslate"><span class="pre">True</span></code>, both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> should evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code>, which is here not the case.</p>
+<p>To get a better feeling about the behavior of the <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement, take a good look at the following code. Note that the interpreter only prints <code class="docutils literal notranslate"><span class="pre">yes</span></code> if the <code class="docutils literal notranslate"><span class="pre">&lt;expr&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Otherwise, nothing happens. Also, note that <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">y</span></code> gets evaluated to <code class="docutils literal notranslate"><span class="pre">True</span></code>. This is so because Python evaluates any integer value larger than zero as <code class="docutils literal notranslate"><span class="pre">True</span></code>. The <code class="docutils literal notranslate"><span class="pre">or</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code> does exactly what you expect it to do: it will evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code> if either of the two expressions that it connects is <code class="docutils literal notranslate"><span class="pre">True</span></code>. In contrast, for the <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code> statement to be <code class="docutils literal notranslate"><span class="pre">True</span></code>, both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> should evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code>, which is here not the case.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 
@@ -565,27 +596,9 @@ The line <code class="docutils literal notranslate"><span class="pre">print('Inn
 BASE IT ON EXERCISE 5.7 IN THE MATLAB MANUAL</p>
 </div>
 </section>
-<section id="advanced-conditional-expression">
-<h2>Advanced: conditional expression<a class="headerlink" href="#advanced-conditional-expression" title="Permalink to this heading">#</a></h2>
-<p>In addition to the syntax above, Python offers a compact way of writing binary <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> statements. This is called a <em>conditional expression</em> or <em>ternary operator</em> and means that the expression</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;larger&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;smaller&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>can also be written in one line of code as</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;larger&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;snaller&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>It can in some cases be useful two write expressions like this, for example when you want to compactly assign a value to a variable.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coat</span> <span class="o">=</span> <span class="s1">&#39;raincoat&#39;</span> <span class="k">if</span> <span class="n">raining</span> <span class="k">else</span> <span class="s1">&#39;jacket&#39;</span>
-</pre></div>
-</div>
-</section>
 <section id="tuples-lists-sets-and-dictionaries">
 <h2>Tuples, lists, sets, and dictionaries<a class="headerlink" href="#tuples-lists-sets-and-dictionaries" title="Permalink to this heading">#</a></h2>
-<p>In addition to integers, floating point numbers, strings, and booleans, Python has a couple of other very useful data types: tuples, lists, sets and dictionaries. All of these are collections, which can be used to store multiple values or variables. However, there are some important differences between these four data types. The following table <a class="reference external" href="https://www.geeksforgeeks.org/differences-and-applications-of-list-tuple-set-and-dictionary-in-python/">(source)</a> nicely summarizes the differences between tuples, lists, sets and dictionaries. We’ll elaborate below.</p>
+<p>In the previous chapter, we have introduced integers, floating point numbers, strings, and booleans, Python has a couple of other very useful data types: tuples, lists, sets and dictionaries. All of these are collections, which can be used to store multiple values or variables. However, there are some important differences between these four data types. The following table <a class="reference external" href="https://www.geeksforgeeks.org/differences-and-applications-of-list-tuple-set-and-dictionary-in-python/">(source)</a> nicely summarizes the differences between tuples, lists, sets and dictionaries. We’ll elaborate below.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tuple</p></th>
@@ -926,30 +939,29 @@ BASE IT ON EXERCISE 5.7 IN THE MATLAB MANUAL</p>
 <section id="loops">
 <h2>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h2>
 <p>Iteration control structures, loops, are used to repeat a block of statements until some condition is
-met. Two types of loops exist: the for-loop and the while-loop.</p>
+met. Two types of loops exist: the <code class="docutils literal notranslate"><span class="pre">while</span></code>-loop and the <code class="docutils literal notranslate"><span class="pre">for</span></code>-loop.</p>
 <section id="while-loops">
 <h3><code class="docutils literal notranslate"><span class="pre">while</span></code> loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">#</a></h3>
-<p>A while loop executes some statement as long as a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>. As soon as the condition is <code class="docutils literal notranslate"><span class="pre">False</span></code> the loop will stop iterating. In a <code class="docutils literal notranslate"><span class="pre">for</span></code>-loop the number of iterations is fixed upon entering the loop.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span> <span class="mi">100</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">:</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<p>A while loop executes some statement as long as a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>. As soon as the condition is <code class="docutils literal notranslate"><span class="pre">False</span></code> the loop will stop iterating.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<p>The animation below nicely visualizes how a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop works.</p>
+<p>The animation below nicely visualizes how a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop works in this piece of code. As you can see, the <code class="docutils literal notranslate"><span class="pre">while</span></code> statement is checked at the beginning of each iteration. If that is the case, the block below the <code class="docutils literal notranslate"><span class="pre">while</span></code> statement is executed. If not, the loop ends.</p>
 <p><img alt="whileloop" src="https://surfdrive.surf.nl/files/index.php/s/HdTrPmqyiJpPFjr/download" /></p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.6</p>
 <p>Exercise about <code class="docutils literal notranslate"><span class="pre">while</span></code> loops</p>
 <ol class="arabic simple">
-<li><p>Write a script that determines the largest integer <span class="math notranslate nohighlight">\(n\)</span> for which <span class="math notranslate nohighlight">\(\sqrt{1^3} + \sqrt{1^3} + \ldots + \sqrt{n^3}\)</span> is less than 1000.</p></li>
+<li><p>Write a script that determines the largest integer <span class="math notranslate nohighlight">\(n\)</span> for which <span class="math notranslate nohighlight">\(1^3 + 2^3 + \cdots + n^3\)</span> is less than 2000.</p></li>
 </ol>
 </div>
 </section>
 <section id="for-loops">
 <h3><code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h3>
-<p>The for-loop repeats a group of statements a fixed number of times. The standard for-loop has
+<p>The for-loop repeats a group of statements a fixed number of times. In a <code class="docutils literal notranslate"><span class="pre">for</span></code>-loop the number of iterations is fixed upon entering the loop. The standard for-loop has
 general syntax</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="o">/</span><span class="nb">set</span><span class="o">/</span><span class="nb">tuple</span><span class="o">/</span><span class="n">dictionary</span><span class="p">:</span>
     <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">item</span>
@@ -986,35 +998,60 @@ general syntax</p>
 </div>
 </section>
 </section>
-<section id="interactive-scripts">
-<h2>Interactive scripts<a class="headerlink" href="#interactive-scripts" title="Permalink to this heading">#</a></h2>
-<p>A Python script will run ‘as is’, i.e., its output is entirely defined by what we put in the script. We can also make the script more interactive by using the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function in Python. This asks the user for an input and stores it in a variable.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
-<span class="go">Please enter your name: Adam</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span>
-<span class="go">&#39;Adam&#39;</span>
+<section id="nested-loops">
+<h2>Nested loops<a class="headerlink" href="#nested-loops" title="Permalink to this heading">#</a></h2>
+<p>Just like we can <em>nest</em> conditional statements in blocks, we can also nest loops. The</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 2.X</p>
-<p>Adapt the script that you wrote in Exercise 2.5 to request the annual income and age of the customer using the <code class="docutils literal notranslate"><span class="pre">input</span></code> function.</p>
 </div>
-<p>Another option to make your scripts depend on user input is to provide <em>arguments</em> to the script. The easiest way to do this is using the <code class="docutils literal notranslate"><span class="pre">sys</span></code> package. Each time a Python script is called, it is called with a list of arguments. The first item in the list is always the name of the script, the second item is the first argument, etc. This means that we can <em>call</em> a script with some arguments that define its output. In a very simple case, let’s say that we have a script called <code class="docutils literal notranslate"><span class="pre">add.py</span></code> and its contents are</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0
+0 1
+1 0
+1 1
+2 0
+2 1
+3 0
+3 1
+4 0
+4 1
 </pre></div>
 </div>
-<p>Then we can simply call this script from the command line with two different numbers and we always get the addition of these numbers in return.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> % python add.py <span class="m">4</span> <span class="m">5</span>
-<span class="m">9</span>
-<span class="o">(</span>base<span class="o">)</span> % python add.py <span class="m">23</span> <span class="m">54</span>
-<span class="m">77</span>
+</div>
+</div>
+<p>There are no restrictions on kinds of loops that you nest: a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop can contain a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop and vice versa. Moreover, there are no restrictions on the number of loops that you nest (or the <em>depth</em>). You can, for example, nest three loops as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 2.X</p>
-<p>Adapt the script you wrote earlier one last time so that it can be called with two different arguments: the age of the customer and his annual income.</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0 0
+0 2 1
+0 4 0
+0 6 1
+1 0 0
+1 2 1
+1 4 0
+1 6 1
+2 0 0
+2 2 1
+2 4 0
+2 6 1
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1068,10 +1105,10 @@ general syntax</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocks">Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-and-elif"><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-conditional-expression">Advanced: conditional expression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-lists-sets-and-dictionaries">Tuples, lists, sets, and dictionaries</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple">Tuple</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
@@ -1086,7 +1123,7 @@ general syntax</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops"><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-loops">Nested loops</a></li>
 </ul>
   </nav></div>
 

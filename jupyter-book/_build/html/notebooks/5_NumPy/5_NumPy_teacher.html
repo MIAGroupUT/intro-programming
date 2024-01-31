@@ -413,9 +413,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-and-matrices">Vectors and matrices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-numpy">Importing NumPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-arrays">1D arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-and-column-vectors">Row and column vectors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-writing-data">Loading and writing data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy">Copy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose">Transpose</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear algebra</a></li>
 </ul>
             </nav>
@@ -440,11 +442,11 @@ document.write(`
 </div>
 <section id="vectors-and-matrices">
 <h2>Vectors and matrices<a class="headerlink" href="#vectors-and-matrices" title="Permalink to this heading">#</a></h2>
-<p>For many practical programming problems, you’ll need vectors and matrices, or <em>arrays</em>. The most common way to work with such objects in Python is using the NumPy package. NumPy is the workhorse for anything related to vectors and matrices and offers functions beyond your wildest dreams. Moreover, many other packages in Python are able to use NumPy arrays. Among these the one-dimensional arrays (aka vectors) and two-dimensional arrays (aka matrices) and numbers are the most common.</p>
+<p>For many practical programming problems, you’ll need vectors and matrices, or <em>arrays</em>. The most common way to work with such objects in Python is using the NumPy package. NumPy is the workhorse for anything related to vectors and matrices, offers a wide range of functions, and provides the <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> object that represents multidimensional matrices and is at the core of many packages in Python.</p>
 </section>
 <section id="importing-numpy">
 <h2>Importing NumPy<a class="headerlink" href="#importing-numpy" title="Permalink to this heading">#</a></h2>
-<p>NumPy is a Python package that needs to be imported in order for you to use it. To import NumPy, just write <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> at the top of your script. Note that here we are importing the NumPy library with an alias <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
+<p>NumPy is a Python package that needs to be imported in order for you to use it. To import NumPy, just write <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> at the top of your script. Note that here we are importing the NumPy library with an alias <code class="docutils literal notranslate"><span class="pre">np</span></code>, which is a convention.</p>
 </section>
 <section id="arrays">
 <h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
@@ -454,11 +456,11 @@ document.write(`
 <p>In the NumPy documentation you might also find something about <em>matrices</em>. These are no longer recommended to use: the NumPy developers advice that you use <em>arrays</em> instead, also when working in 2D.</p>
 </div>
 <p><img alt="Numpy arrays" src="https://i0.wp.com/indianaiproduction.com/wp-content/uploads/2019/06/NumPy-array.png?w=1284&amp;ssl=1" /></p>
-<p>In the first chapter, you have learned about slicing and indexing of lists and tuples. Slicing in a NumPy array is very similar as in a list</p>
+<p>In the first chapter, you have learned about slicing and indexing of lists and tuples. Slicing in a NumPy array is very similar to slicing in a list. In general, you’ll see that NumPy arrays are quite similar to lists. We can slice and index NumPy arrays, change individual items and append values.</p>
 </section>
-<section id="vectors">
-<h2>Vectors<a class="headerlink" href="#vectors" title="Permalink to this heading">#</a></h2>
-<p>Vectors are easily defined by listing the entries separated by commas or spaces, e.g., <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">[11,</span> <span class="pre">12,</span> <span class="pre">13]</span></code>. The number of entries of a vector is known as the <em>length</em> of the vector. Each array also has a shape, which in the case of a vector, has only one value (which is the same as the length). Each value in an array is called an <em>element</em>. You can always find out the shape of your vector by asking for its <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute.</p>
+<section id="d-arrays">
+<h2>1D arrays<a class="headerlink" href="#d-arrays" title="Permalink to this heading">#</a></h2>
+<p>Vectors or 1-dimensional (1D) arrays are easily defined by listing the entries separated by commas or spaces, e.g., <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">[11,</span> <span class="pre">12,</span> <span class="pre">13]</span></code>. The number of entries of a vector is known as the <em>length</em> of the vector. Each array also has a shape, which in the case of a vector, has only one value (which is the same as the length). Each value in an array is called an <em>element</em>. You can always find out the shape of your vector by asking for its <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -471,16 +473,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_29511</span><span class="o">/</span><span class="mf">1294490031.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">7</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.          0.14112001  7.        ]
+3
+(3,)
 </pre></div>
 </div>
 </div>
@@ -499,16 +494,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_29511</span><span class="o">/</span><span class="mf">527469016.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">z</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">w</span>                  <span class="c1"># an element-by-element sum</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1  5 11]
+[ 3  7 13]
 </pre></div>
 </div>
 </div>
@@ -523,14 +510,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_29511</span><span class="o">/</span><span class="mf">1787207031.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>                <span class="c1"># print second element in the array</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>                   <span class="c1"># change second element in the array to a 4</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;v&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+[-1  4  7]
 </pre></div>
 </div>
 </div>
@@ -549,15 +530,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_29511</span><span class="o">/</span><span class="mf">981404370.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">v_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>     <span class="c1"># look closely, you&#39;ll see two square brackets instead of one</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">v_row</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">v_col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]])</span> <span class="c1"># now each element has its own row</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">v_col</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 3 4]]
+[[1]
+ [3]
+ [4]]
 </pre></div>
 </div>
 </div>
@@ -570,12 +546,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_29511</span><span class="o">/</span><span class="mf">1054290761.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">v_row</span> <span class="o">+</span> <span class="n">v_col</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;v_row&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 4 5]
+ [4 6 7]
+ [5 7 8]]
 </pre></div>
 </div>
 </div>
@@ -585,9 +558,66 @@ document.write(`
 <section id="loading-and-writing-data">
 <h2>Loading and writing data<a class="headerlink" href="#loading-and-writing-data" title="Permalink to this heading">#</a></h2>
 </section>
+<section id="copy">
+<h2>Copy<a class="headerlink" href="#copy" title="Permalink to this heading">#</a></h2>
+<p>Discuss copy vs deepcopy</p>
+</section>
+<section id="transpose">
+<h2>Transpose<a class="headerlink" href="#transpose" title="Permalink to this heading">#</a></h2>
+<p>In many cases, you’d want to <em>transpose</em> a matrix by swapping dimensions. In 2D, you can simply achieve this by adding <code class="docutils literal notranslate"><span class="pre">.T</span></code>.
+If you have more than two dimensions, you can swap axes</p>
+</section>
 <section id="linear-algebra">
 <h2>Linear algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this heading">#</a></h2>
-<p>NumPy provides the <code class="docutils literal notranslate"><span class="pre">linalg</span></code> module that contains many of the functions that you will need for linear algebra.</p>
+<p>NumPy provides the <code class="docutils literal notranslate"><span class="pre">linalg</span></code> module that contains many of the functions that you will need for linear algebra. The <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.linalg.html">documentation</a> provides a list of all functions. The most common ones are matrix multiplication</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If we don&#39;t make arrays, these matrices are just treated as lists</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">]]</span>
+
+<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3], [4, 5, 6], [1, 2, 3], [5, 8, 13]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">@</span> <span class="n">b</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2  4  6]
+ [ 9 13 19]]
+[[1.         1.         1.        ]
+ [0.8        0.625      0.46153846]]
+[[ 1  4  9]
+ [20 40 78]]
+[[ 14  60]
+ [ 32 138]]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -643,9 +673,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-and-matrices">Vectors and matrices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-numpy">Importing NumPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-arrays">1D arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-and-column-vectors">Row and column vectors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-writing-data">Loading and writing data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy">Copy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose">Transpose</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear algebra</a></li>
 </ul>
   </nav></div>
