@@ -153,16 +153,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_GettingStarted_student.html">1. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Scripts/2_Scripts_student.html">2. Control structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Functions/3_Functions_student.html">3. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Objects/3_Objects_student.html">4. Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_ModulesPackages/4_ModulesPackages_student.html">5. Modules and packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_Files/4_Files_student.html">6. Reading and writing files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_NumPy/5_NumPy_student.html">7. NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_Visualization/6_Visualization_student.html">8. Visualization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_DataAnalysis/7_DataAnalysis_student.html">9. Data analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../99_Project/99_Project_student.html">10. Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_GettingStarted_student.html">Getting started</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -410,16 +402,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting started</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-start">How do I start?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda">Installing Anaconda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">Using the command line</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-interpreter">The Python interpreter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-interpreter">The Python interpreter</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulo-operator">Modulo operator</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-values-to-multiple-variables">Assigning values to multiple variables</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data types</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison operators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">Assignment operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripts">Scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a></li>
@@ -428,6 +428,9 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -590,20 +593,11 @@ document.write(`
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{a}{b}\)</span></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">a/b</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a^b\)</span></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lfloor\frac{a}{b}\rfloor\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a//b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a^b\)</span></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">a**b</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a&gt;b\)</span></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">a&gt;b</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a&lt;b\)</span></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">a&lt;b</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a\geq b\)</span></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">a&gt;=b</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a\leq b\)</span></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">a&lt;=b</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -637,6 +631,28 @@ document.write(`
 </ol>
 <p>Paste the contents of your terminal window into your Word document.</p>
 </div>
+<section id="modulo-operator">
+<h3>Modulo operator<a class="headerlink" href="#modulo-operator" title="Permalink to this heading">#</a></h3>
+<p>One operator that you might not yet be familiar with is the modulo operator <code class="docutils literal notranslate"><span class="pre">%</span></code>. One clear example is time: we can express the time of day using 24 hours, but also using 12 hours. To use only 12 hours, we use a <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">12</span></code> to take the modulo of any hour after noon</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">17</span> <span class="o">%</span> <span class="mi">12</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>What is the output of the following expressions? Verify in Python.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">%</span> <span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">34</span> <span class="pre">%</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(6**2)</span> <span class="pre">%</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(7%3)</span> <span class="pre">//</span> <span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-7</span> <span class="pre">%</span> <span class="pre">-4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2**(5%3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(7//2)%2</span></code></p></li>
+</ol>
+<p>Paste the contents of your terminal window into your Word document.</p>
+</div>
+</section>
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
@@ -731,6 +747,22 @@ NameError: name &#39;A&#39; is not defined
 <p>Special numbers like <span class="math notranslate nohighlight">\(\pi\)</span> and Euler’s number <span class="math notranslate nohighlight">\(e\)</span> are not automatically defined in Python. Define these two numbers as variables and use them to compute the volume of a sphere with radius <span class="math notranslate nohighlight">\(e\)</span>. Store the result in a new variable called <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 <p>Paste the contents of your terminal window into your Word document.</p>
 </div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Consider the program below. The programmer wanted the program to swap the values in the variable <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. However, it does not work in the way the programmer expected.</p>
+<ol class="arabic simple">
+<li><p>Explain why the program fails to swap the values.</p></li>
+<li><p>Fix the program so that the variables are swapped. Verify your program in Python.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 <section id="data-types">
@@ -779,7 +811,46 @@ NameError: name &#39;A&#39; is not defined
 <p class="admonition-title">Exercise 1.5</p>
 <p>Define two variables. One should have the value ‘Technical ‘ and the other ‘Medicine’. What is the type of these variables? Try to add these two variables in the Python interpreter. Which result do you get? Can you explain what happened?</p>
 </div>
-<p>Some arithmetic operations take inputs of one type and return outputs of another type. For example, evaluating if one integer is smaller than another integer will return a boolean: the statement is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="comparison-operators">
+<h1>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h1>
+<p>Some arithmetic operations take inputs of one type and return outputs of another type. A good example of this are comparison operators, which check whether two inputs are the same or different. The comparison operators in Python are as follows.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>Equal</p></td>
+<td><p>x == y</p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>Not equal</p></td>
+<td><p>x != y</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>Greater than</p></td>
+<td><p>x &gt; y</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;</p></td>
+<td><p>Less than</p></td>
+<td><p>x &lt; y</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;=</p></td>
+<td><p>Greater than or equal to</p></td>
+<td><p>x &gt;= y</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>Less than or equal to</p></td>
+<td><p>x &lt;= y</p></td>
+</tr>
+</tbody>
+</table>
+<p>The return type of these operators is boolean. For example, evaluating if one integer is smaller than another integer will return a boolean: the statement is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1</span>
 <span class="go">False</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
@@ -856,6 +927,9 @@ NameError: name &#39;A&#39; is not defined
 </pre></div>
 </div>
 </div>
+<section id="assignment-operators">
+<h2>Assignment operators<a class="headerlink" href="#assignment-operators" title="Permalink to this heading">#</a></h2>
+<p>If we have a variable that we want to modify by adding or multiplying with some other number, we can explicitly write the addition, e.g., <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">5</span></code>, but we can also use the shorthand version <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+=</span> <span class="pre">5</span></code>. This adds <code class="docutils literal notranslate"><span class="pre">5</span></code> to the value of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Similarly, you can write <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*=</span> <span class="pre">5</span></code>, etc.</p>
 </section>
 <section id="complex-numbers">
 <h2>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this heading">#</a></h2>
@@ -878,25 +952,18 @@ NameError: name &#39;A&#39; is not defined
 </section>
 <section id="scripts">
 <h2>Scripts<a class="headerlink" href="#scripts" title="Permalink to this heading">#</a></h2>
-<p>Last week, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a oprogram. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. In practice, a Python file is a file whose name ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, following what you did last week, the contents of a Python file can be</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mi">324</span><span class="p">,</span> <span class="mf">8.14</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;house&#39;</span><span class="p">,</span> <span class="s1">&#39;enschede&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>     <span class="c1"># print(*) allows you two print something back to the command line</span>
+<p>So far, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a program. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. A Python file ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, the contents of a Python file can be as simple as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="n">b</span>         <span class="c1"># Compute a to the power b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can see that these are just two lines of code, which should more or less similar. The first line defines variable <code class="docutils literal notranslate"><span class="pre">a</span></code> as a list of items, including another list. The second line <em>slices</em> this list and prints these items.</p>
-<p>In the second line, we have also added a <em>comment</em>. This is a piece of human-readable text that is not part of the code. It will not be run by the Python interpreter. We use the character <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate that this is a comment. Documenting your code properly with comments is a very valuable way to make sure that you (or someone else) will still understand the code when you look at it later. We’ll go over some common practices for code documentation later.</p>
-<p>Running a Python script can be straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file of the previous chapter. Open Notepad (<em>Kladblok</em>) and paste the two lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and do one of the following</p>
-<ol class="arabic simple">
-<li><p>Navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code> and run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code></p></li>
-<li><p>Directly run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">{directory}\test.py</span></code>, where you replace <code class="docutils literal notranslate"><span class="pre">{directory}</span></code> with the directory where you stored the file.</p></li>
-</ol>
+<p>You can see that these are just four lines of code. In the third line, we have also added a <em>comment</em>. This is a piece of human-readable text that is not part of the code. It will not be run by the Python interpreter. We use the character <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate that this is a comment. Documenting your code properly with comments is a very valuable way to make sure that you (or someone else) will still understand the code when you look at it later. We’ll go over some common practices for code documentation later.</p>
+<p>Running a Python script can be straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file of the previous chapter. Open Notepad (<em>Kladblok</em>) and paste the two lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. To run the script, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> and press <kbd>Enter</kbd>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.8</p>
-<ol class="arabic simple">
-<li><p>What is the output of this script?</p></li>
-<li><p>Change and run the script so that the output is [‘house’, ‘enschede’]</p></li>
-<li><p>Turn the list into a tuple. What is the output?</p></li>
-</ol>
+<p>What is the output of this script?</p>
 </div>
 <p>And that’s it: you’ve written and run your first Python script! Now we can really start programming. There is no limit to how long a script can be and - as you’ll see - you can do much more in a script than just processing lines in a fixed order.</p>
 </section>
@@ -986,16 +1053,24 @@ NameError: name &#39;A&#39; is not defined
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting started</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-start">How do I start?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda">Installing Anaconda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">Using the command line</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-interpreter">The Python interpreter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-interpreter">The Python interpreter</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulo-operator">Modulo operator</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-values-to-multiple-variables">Assigning values to multiple variables</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data types</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison operators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">Assignment operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripts">Scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a></li>
@@ -1004,6 +1079,9 @@ NameError: name &#39;A&#39; is not defined
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
