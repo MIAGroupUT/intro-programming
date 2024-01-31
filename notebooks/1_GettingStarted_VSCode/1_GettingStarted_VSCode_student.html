@@ -64,12 +64,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://utwente.mia.nl/template/notebooks/1_GettingStarted/1_GettingStarted_student.html" />
+    <link rel="canonical" href="https://utwente.mia.nl/template/notebooks/1_GettingStarted_VSCode/1_GettingStarted_VSCode_student.html" />
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../../backmatter/references.html" />
-    <link rel="prev" title="Introduction to programming" href="../../frontmatter/preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,9 +151,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">Getting started</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
@@ -216,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utwente.nl/hub/user-redirect/git-pull?repo=https%3A//github.com/MIAGroupUT/intro-programming&urlpath=lab/tree/intro-programming/jupyter-book/notebooks/1_GettingStarted/1_GettingStarted_student.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utwente.nl/hub/user-redirect/git-pull?repo=https%3A//github.com/MIAGroupUT/intro-programming&urlpath=lab/tree/intro-programming/jupyter-book/notebooks/1_GettingStarted_VSCode/1_GettingStarted_VSCode_student.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -234,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/MIAGroupUT/intro-programming/blob/main/jupyter-book/notebooks/1_GettingStarted/1_GettingStarted_student.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/MIAGroupUT/intro-programming/blob/main/jupyter-book/notebooks/1_GettingStarted_VSCode/1_GettingStarted_VSCode_student.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/MIAGroupUT/intro-programming/issues/new?title=Issue%20on%20page%20%2Fnotebooks/1_GettingStarted/1_GettingStarted_student.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/MIAGroupUT/intro-programming/issues/new?title=Issue%20on%20page%20%2Fnotebooks/1_GettingStarted_VSCode/1_GettingStarted_VSCode_student.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/1_GettingStarted/1_GettingStarted_student.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/1_GettingStarted_VSCode/1_GettingStarted_VSCode_student.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -640,20 +638,6 @@ document.write(`
 <span class="go">5</span>
 </pre></div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise</p>
-<p>What is the output of the following expressions? Verify in Python.</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">%</span> <span class="pre">4</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">34</span> <span class="pre">%</span> <span class="pre">3</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(6**2)</span> <span class="pre">%</span> <span class="pre">3</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(7%3)</span> <span class="pre">//</span> <span class="pre">1</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-7</span> <span class="pre">%</span> <span class="pre">-4</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2**(5%3)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(7//2)%2</span></code></p></li>
-</ol>
-<p>Paste the contents of your terminal window into your Word document.</p>
-</div>
 </section>
 </section>
 <section id="variables">
@@ -748,22 +732,6 @@ NameError: name &#39;A&#39; is not defined
 <p class="admonition-title">Exercise 1.4</p>
 <p>Special numbers like <span class="math notranslate nohighlight">\(\pi\)</span> and Euler’s number <span class="math notranslate nohighlight">\(e\)</span> are not automatically defined in Python. Define these two numbers as variables and use them to compute the volume of a sphere with radius <span class="math notranslate nohighlight">\(e\)</span>. Store the result in a new variable called <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 <p>Paste the contents of your terminal window into your Word document.</p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise</p>
-<p>Consider the program below. The programmer wanted the program to swap the values in the variable <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. However, it does not work in the way the programmer expected.</p>
-<ol class="arabic simple">
-<li><p>Explain why the program fails to swap the values.</p></li>
-<li><p>Fix the program so that the variables are swapped. Verify your program in Python.</p></li>
-</ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">19</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
 </div>
 </section>
 </section>
@@ -954,18 +922,25 @@ NameError: name &#39;A&#39; is not defined
 </section>
 <section id="scripts">
 <h2>Scripts<a class="headerlink" href="#scripts" title="Permalink to this heading">#</a></h2>
-<p>So far, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a program. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. A Python file ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, the contents of a Python file can be as simple as</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="n">b</span>         <span class="c1"># Compute a to the power b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<p>Last week, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a oprogram. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. In practice, a Python file is a file whose name ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, following what you did last week, the contents of a Python file can be</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mi">324</span><span class="p">,</span> <span class="mf">8.14</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;house&#39;</span><span class="p">,</span> <span class="s1">&#39;enschede&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>     <span class="c1"># print(*) allows you two print something back to the command line</span>
 </pre></div>
 </div>
-<p>You can see that these are just four lines of code. In the third line, we have also added a <em>comment</em>. This is a piece of human-readable text that is not part of the code. It will not be run by the Python interpreter. We use the character <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate that this is a comment. Documenting your code properly with comments is a very valuable way to make sure that you (or someone else) will still understand the code when you look at it later. We’ll go over some common practices for code documentation later.</p>
-<p>Running a Python script can be straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file of the previous chapter. Open Notepad (<em>Kladblok</em>) and paste the two lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. To run the script, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> and press <kbd>Enter</kbd>.</p>
+<p>You can see that these are just two lines of code, which should more or less similar. The first line defines variable <code class="docutils literal notranslate"><span class="pre">a</span></code> as a list of items, including another list. The second line <em>slices</em> this list and prints these items.</p>
+<p>In the second line, we have also added a <em>comment</em>. This is a piece of human-readable text that is not part of the code. It will not be run by the Python interpreter. We use the character <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate that this is a comment. Documenting your code properly with comments is a very valuable way to make sure that you (or someone else) will still understand the code when you look at it later. We’ll go over some common practices for code documentation later.</p>
+<p>Running a Python script can be straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file of the previous chapter. Open Notepad (<em>Kladblok</em>) and paste the two lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and do one of the following</p>
+<ol class="arabic simple">
+<li><p>Navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code> and run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code></p></li>
+<li><p>Directly run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">{directory}\test.py</span></code>, where you replace <code class="docutils literal notranslate"><span class="pre">{directory}</span></code> with the directory where you stored the file.</p></li>
+</ol>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.8</p>
-<p>What is the output of this script?</p>
+<ol class="arabic simple">
+<li><p>What is the output of this script?</p></li>
+<li><p>Change and run the script so that the output is [‘house’, ‘enschede’]</p></li>
+<li><p>Turn the list into a tuple. What is the output?</p></li>
+</ol>
 </div>
 <p>And that’s it: you’ve written and run your first Python script! Now we can really start programming. There is no limit to how long a script can be and - as you’ll see - you can do much more in a script than just processing lines in a fixed order.</p>
 </section>
@@ -1019,7 +994,7 @@ NameError: name &#39;A&#39; is not defined
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/1_GettingStarted"
+            path: "./notebooks/1_GettingStarted_VSCode"
         },
         predefinedOutput: true
     }
@@ -1037,24 +1012,6 @@ NameError: name &#39;A&#39; is not defined
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../../frontmatter/preface.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to programming</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../../backmatter/references.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
