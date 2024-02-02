@@ -153,8 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">Getting started</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/2_Scripts/2_Scripts_student.html">2. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Functions/3_Functions_student.html">3. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Objects/3_Objects_student.html">4. Objects</a></li>
@@ -410,16 +409,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">NumPy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-and-matrices">Vectors and matrices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-numpy">Importing NumPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-arrays">1D arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-an-array">Indexing an array</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">NumPy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Vectors and matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Importing NumPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1D arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Indexing an array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-an-array">Initializing an array</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-from-a-file">Loading from a file</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-and-column-vectors">Row and column vectors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-writing-data">Loading and writing data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy">Copy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose">Transpose</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear algebra</a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -457,10 +473,81 @@ document.write(`
 </div>
 <p><img alt="Numpy arrays" src="https://i0.wp.com/indianaiproduction.com/wp-content/uploads/2019/06/NumPy-array.png?w=1284&amp;ssl=1" /></p>
 <p>In the first chapter, you have learned about slicing and indexing of lists and tuples. Slicing in a NumPy array is very similar to slicing in a list. In general, you’ll see that NumPy arrays are quite similar to lists. We can slice and index NumPy arrays, change individual items and append values.</p>
+<div class="warning admonition">
+<p class="admonition-title">Arrays</p>
+<p>Wherever we refer to ‘arrays’ in the remainder of this manual, we mean NumPy <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> objects.</p>
+</div>
 </section>
 <section id="d-arrays">
 <h2>1D arrays<a class="headerlink" href="#d-arrays" title="Permalink to this heading">#</a></h2>
 <p>Vectors or 1-dimensional (1D) arrays are easily defined by listing the entries separated by commas or spaces, e.g., <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">[11,</span> <span class="pre">12,</span> <span class="pre">13]</span></code>. The number of entries of a vector is known as the <em>length</em> of the vector. Each array also has a shape, which in the case of a vector, has only one value (which is the same as the length). Each value in an array is called an <em>element</em>. You can always find out the shape of your vector by asking for its <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute.</p>
+</section>
+<section id="indexing-an-array">
+<h2>Indexing an array<a class="headerlink" href="#indexing-an-array" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>NumPy<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Learning goals</p>
+<p>After finishing this chapter, you are expected to</p>
+<ul class="simple">
+<li><p>work with vectors and matrices</p></li>
+<li><p>do simple linear algebra</p></li>
+</ul>
+</div>
+<section id="id2">
+<h2>Vectors and matrices<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>For many practical programming problems, you’ll need vectors and matrices, or <em>arrays</em>. The most common way to work with such objects in Python is using the NumPy package. NumPy is the workhorse for anything related to vectors and matrices, offers a wide range of functions, and provides the <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> object that represents multidimensional matrices and is at the core of many packages in Python.</p>
+</section>
+<section id="id3">
+<h2>Importing NumPy<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>NumPy is a Python package that needs to be imported in order for you to use it. To import NumPy, just write <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> at the top of your script. Note that here we are importing the NumPy library with an alias <code class="docutils literal notranslate"><span class="pre">np</span></code>, which is a convention.</p>
+</section>
+<section id="id4">
+<h2>Arrays<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>Numpy uses objects called <em>arrays</em> to store 1D, 2D, 3D, nD data. It’s important to realize that it doesn’t matter if you have a 1D vector, a 2D matrix, or a 3D or 4D tensor: it’s all stored as an array.</p>
+<div class="warning admonition">
+<p class="admonition-title">Numpy matrices</p>
+<p>In the NumPy documentation you might also find something about <em>matrices</em>. These are no longer recommended to use: the NumPy developers advice that you use <em>arrays</em> instead, also when working in 2D.</p>
+</div>
+<p><img alt="Numpy arrays" src="https://i0.wp.com/indianaiproduction.com/wp-content/uploads/2019/06/NumPy-array.png?w=1284&amp;ssl=1" /></p>
+<p>In the first chapter, you have learned about slicing and indexing of lists and tuples. Slicing in a NumPy array is very similar to slicing in a list. In general, you’ll see that NumPy arrays are quite similar to lists. We can slice and index NumPy arrays, change individual items and append values.</p>
+</section>
+<section id="id5">
+<h2>1D arrays<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>Vectors or 1-dimensional (1D) arrays are easily defined by listing the entries separated by commas or spaces, e.g., <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">[11,</span> <span class="pre">12,</span> <span class="pre">13]</span></code>. The number of entries of a vector is known as the <em>length</em> of the vector. Each array also has a shape, which in the case of a vector, has only one value (which is the same as the length). Each value in an array is called an <em>element</em>. You can always find out the shape of your vector by asking for its <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute.</p>
+</section>
+<section id="id6">
+<h2>Indexing an array<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="initializing-an-array">
+<h2>Initializing an array<a class="headerlink" href="#initializing-an-array" title="Permalink to this heading">#</a></h2>
+<p>There are several ways to create an array.</p>
+<ol class="arabic simple">
+<li><p>Convert or <em>cast</em> an existing data object into an array</p></li>
+<li><p>Initialize an empty array</p></li>
+<li><p>Initialize an empty array of fixed size</p></li>
+<li><p>Load an array from a file</p></li>
+</ol>
+<section id="loading-from-a-file">
+<h3>Loading from a file<a class="headerlink" href="#loading-from-a-file" title="Permalink to this heading">#</a></h3>
+<p>If your data is organized in a textfile with a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> extension, you can use the <code class="docutils literal notranslate"><span class="pre">loadtxt</span></code> function in NumPy. NumPy will then try to parse this data into a text file based on the <em>delimiters</em> between values. For example, if we have a text file <code class="docutils literal notranslate"><span class="pre">matrix.txt</span></code> whose contents are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> 
+<span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> 
+</pre></div>
+</div>
+<p>and we load this into NumPy using</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;matrix.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>then the output is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Note that you don’t have to open and close the file, this happens under the hood in NumPy. NumPy will be able to load arrays of any size as long the number of columns is the same per line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -516,6 +603,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="row-and-column-vectors">
 <h2>Row and column vectors<a class="headerlink" href="#row-and-column-vectors" title="Permalink to this heading">#</a></h2>
@@ -618,6 +706,8 @@ If you have more than two dimensions, you can swap axes</p>
 </div>
 </div>
 </div>
+<p>Exercise: Compute the NumPy speed of the dot product to that of the function written in 3. Functions for dot products.</p>
+<p>Mention time it as well, how to time function speeds.</p>
 </section>
 </section>
 
@@ -670,16 +760,33 @@ If you have more than two dimensions, you can swap axes</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">NumPy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-and-matrices">Vectors and matrices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-numpy">Importing NumPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-arrays">1D arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-an-array">Indexing an array</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">NumPy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Vectors and matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Importing NumPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1D arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Indexing an array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-an-array">Initializing an array</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-from-a-file">Loading from a file</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-and-column-vectors">Row and column vectors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-writing-data">Loading and writing data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy">Copy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose">Transpose</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear algebra</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

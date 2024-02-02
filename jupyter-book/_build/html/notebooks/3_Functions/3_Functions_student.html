@@ -153,8 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">Getting started</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/2_Scripts/2_Scripts_student.html">2. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Functions/3_Functions_student.html">3. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Objects/3_Objects_student.html">4. Objects</a></li>
@@ -425,9 +424,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-a-notebook-server">Starting a notebook server</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kernel">The kernel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line">Command line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic-commands">Magic commands</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-function">The <code class="docutils literal notranslate"><span class="pre">main</span></code> function</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String formatting</a></li>
 </ul>
             </nav>
         </div>
@@ -530,13 +531,16 @@ document.write(`
 <p>Try and write out for yourself what happens when we call <code class="docutils literal notranslate"><span class="pre">factorial(4)</span></code>. What is the order in which lines are executed, and what is the answer that the function gives?</p>
 </div>
 <p>In practice, you won’t encounter many recursive functions, but it’s good to be aware that in principle, there is no reason why a function cannot be called from within itself.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a function to calculate the sum of a list of numbers using recursion.</p>
+</div>
 </section>
 <section id="still-add-args-and-kwargs">
 <h2>STILL ADD ARGS AND KWARGS??<a class="headerlink" href="#still-add-args-and-kwargs" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Exercise</p>
-<p>In this exercise, you’re going to write your own functions.</p>
-<p>TODO</p>
+<p>Write a function that merges two sorted lists into a new sorted list. <code class="docutils literal notranslate"><span class="pre">[1,4,6]</span></code>,<code class="docutils literal notranslate"><span class="pre">[2,3,5]</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5,6]</span></code>.</p>
 </div>
 </section>
 <section id="built-in-functions">
@@ -569,10 +573,6 @@ document.write(`
 <h3>Starting a notebook server<a class="headerlink" href="#starting-a-notebook-server" title="Permalink to this heading">#</a></h3>
 <p>Navigate to the directory in which you want to work, go to the command line and type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>.</p>
 <p>In fact, this whole book is made out of Jupyter notebooks! You can download each chapter as an <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file and run it as a notebook.</p>
-<div class="warning admonition">
-<p class="admonition-title">Exercises</p>
-<p>From the next chapter on, you will be asked to write all exercises in a notebook instead of in a <code class="docutils literal notranslate"><span class="pre">*.py</span></code> script.</p>
-</div>
 </section>
 <section id="the-kernel">
 <h3>The kernel<a class="headerlink" href="#the-kernel" title="Permalink to this heading">#</a></h3>
@@ -580,18 +580,10 @@ document.write(`
 <section id="command-line">
 <h3>Command line<a class="headerlink" href="#command-line" title="Permalink to this heading">#</a></h3>
 <p>When inside a Jupyter notebook, you can run things on the command line using the <code class="docutils literal notranslate"><span class="pre">!</span></code> command. For example, to list the contents of the current directory, you can run <code class="docutils literal notranslate"><span class="pre">!dir</span></code> (on Windows) or <code class="docutils literal notranslate"><span class="pre">!ls</span></code> (on Mac and Linux). This is also convenient when you’re working in a notebook and you want to install a missing package. You can then run - for example - <code class="docutils literal notranslate"><span class="pre">!conda</span> <span class="pre">install</span> <span class="pre">&lt;package_name&gt;</span></code> without first having to go to the terminal.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3_Functions_student.ipynb 3_Functions_teacher.ipynb
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="magic-commands">
+<h3>Magic commands<a class="headerlink" href="#magic-commands" title="Permalink to this heading">#</a></h3>
+<p>Useful magic commands</p>
 </section>
 <section id="the-main-function">
 <h3>The <code class="docutils literal notranslate"><span class="pre">main</span></code> function<a class="headerlink" href="#the-main-function" title="Permalink to this heading">#</a></h3>
@@ -605,6 +597,17 @@ document.write(`
 </pre></div>
 </div>
 </section>
+</section>
+<section id="string-formatting">
+<h2>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a function that computes the list of the first 100 Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The n+1-st Fibonacci number can be computed by adding the n-th and the n-1-th Fibonacci number. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a function that takes two vectors as input as lists and returns their dot product as a float.</p>
+</div>
 </section>
 </section>
 
@@ -672,9 +675,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-a-notebook-server">Starting a notebook server</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kernel">The kernel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line">Command line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic-commands">Magic commands</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-function">The <code class="docutils literal notranslate"><span class="pre">main</span></code> function</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String formatting</a></li>
 </ul>
   </nav></div>
 

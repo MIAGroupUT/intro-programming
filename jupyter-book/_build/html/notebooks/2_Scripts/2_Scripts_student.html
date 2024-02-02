@@ -153,8 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">Getting started</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/2_Scripts/2_Scripts_student.html">2. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Functions/3_Functions_student.html">3. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Objects/3_Objects_student.html">4. Objects</a></li>
@@ -410,7 +409,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocks">Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-and-elif"><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
@@ -453,15 +451,6 @@ document.write(`
 <li><p>write <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p></li>
 </ul>
 </div>
-<section id="interactive-scripts">
-<h2>Interactive scripts<a class="headerlink" href="#interactive-scripts" title="Permalink to this heading">#</a></h2>
-<p>A Python script will run ‘as is’, i.e., its output is entirely defined by what we put in the script. We can also make the script more interactive by using the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function in Python. This asks the user for an input and stores it in a variable.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
-<span class="go">Please enter your name: Adam</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span>
-<span class="go">&#39;Adam&#39;</span>
-</pre></div>
-</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.X</p>
 <p>Adapt the script that you wrote in Exercise 2.5 to request the annual income and age of the customer using the <code class="docutils literal notranslate"><span class="pre">input</span></code> function.</p>
@@ -483,7 +472,6 @@ document.write(`
 <p class="admonition-title">Exercise 2.X</p>
 <p>Adapt the script you wrote earlier one last time so that it can be called with two different arguments: the age of the customer and his annual income.</p>
 </div>
-</section>
 <section id="conditional-statements">
 <h2>Conditional statements<a class="headerlink" href="#conditional-statements" title="Permalink to this heading">#</a></h2>
 <p>Now that you are able to write and run scripts in VS Code, it is time to do some more interesting programming. So far, your scripts have been quite predictable. They are a series of statements that are executed from top to bottom, i.e., sequential execution. One nice feature of almost all programming languages is that they allow the use of <em>control structures</em> that direct the execution of your program. One of the most commonly used control structures is the conditional statement <code class="docutils literal notranslate"><span class="pre">if</span></code>. An <code class="docutils literal notranslate"><span class="pre">if</span></code> statement looks like this:</p>
@@ -1051,6 +1039,18 @@ general syntax</p>
 </div>
 </div>
 </div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a program that asks the user for a number <span class="math notranslate nohighlight">\(n\)</span> and gives them the possibility to choose between computing the sum and computing the product of <span class="math notranslate nohighlight">\(1,\ldots,n\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a program that computes the list of the first 100 Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The n+1-st Fibonacci number can be computed by adding the n-th and the n-1-th Fibonacci number. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.</p>
+</div>
 </section>
 </section>
 
@@ -1103,7 +1103,6 @@ general syntax</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocks">Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-and-elif"><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
