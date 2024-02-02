@@ -769,12 +769,12 @@ NameError: name &#39;A&#39; is not defined
 <h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this heading">#</a></h2>
 <p>Each variable in Python has a <em>type</em> that defines which kind of data it represents. There are four important types in Python that you will also see in almost any programming language:</p>
 <ol class="arabic simple">
-<li><p>Integers, or whole numbers such as 1, 2, 1000, 4000.</p></li>
+<li><p>Integers, or whole numbers, such as 1, 2, 1000, 4000. Integers can be <em>signed</em> or <em>unsigned</em>. Signed integers can take on negative or positive values, unsigned integers only positive values.</p></li>
 <li><p>Floating point numbers such as -1892.3, 0.000045, 1.3040, 9828.322.</p></li>
-<li><p>Strings, i.e., sequences of characters. For example, ‘Technical medicine’ is a string.</p></li>
-<li><p>Booleans, i.e., <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>Strings, i.e., sequences of characters. For example, ‘Technical medicine’ is a string. The length of strings can vary, e.g., ‘a’ is also a string.</p></li>
+<li><p>Booleans, which are variables that can take on just two values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ol>
-<p>Some programming languages require you to specify the type of each variable. Instead, Python tries to automatically infer the type of a variable for you. However, it’s always good to be aware of the type of your <a class="reference external" href="http://variables.To">variables.To</a> find out what the type is of a variable, you can use <code class="docutils literal notranslate"><span class="pre">type()</span></code>, i.e.,</p>
+<p>Some programming languages require you to explicitly specify the type of each variable. Instead, Python tries to automatically infer the type of a variable for you and does a good job in most cases. However, it’s always good to be aware of the type of your <a class="reference external" href="http://variables.To">variables.To</a> find out what the type is of a variable, you can use <code class="docutils literal notranslate"><span class="pre">type()</span></code>, i.e.,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="go">&lt;class &#39;int&#39;&gt;</span>
@@ -842,7 +842,7 @@ NameError: name &#39;A&#39; is not defined
 </section>
 <section id="comparison-operators">
 <h2>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h2>
-<p>Some arithmetic operations take inputs of one type and return outputs of another type. A good example of this are comparison operators, which check whether two inputs are the same or different. The comparison operators in Python are as follows.</p>
+<p>Some operations by default take inputs of one type and return outputs of another type. A good example of this are comparison operators, which check whether two inputs are the same or different. The comparison operators in Python are as follows.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
@@ -877,7 +877,7 @@ NameError: name &#39;A&#39; is not defined
 </tr>
 </tbody>
 </table>
-<p>The return type of these operators is boolean. For example, evaluating if one integer is smaller than another integer will return a boolean: the statement is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The return type of these operators is boolean. For example, evaluating if one integer is smaller or larger than another integer will return a boolean: the statement is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1</span>
 <span class="go">False</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
@@ -910,8 +910,16 @@ NameError: name &#39;A&#39; is not defined
 <span class="go">True</span>
 </pre></div>
 </div>
-<p>Here, parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> matter. For example, consider the following output.</p>
+<p>Here, parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> matter. For example, consider why following output is correct.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Alternatively, you can use <code class="docutils literal notranslate"><span class="pre">not</span></code> as a function (more on functions later), where you give the expression as an <em>argument</em>. For example, these statements give the same result</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="n">a</span> 
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>
 </div>
@@ -953,6 +961,18 @@ NameError: name &#39;A&#39; is not defined
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
+<ol class="arabic simple" start="4">
+<li></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">c</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span> <span class="ow">or</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="ow">and</span> <span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="ow">or</span> <span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 </section>
 <section id="assignment-operators">
@@ -966,35 +986,31 @@ NameError: name &#39;A&#39; is not defined
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">+=</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">3</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-=</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">3</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*=</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">*=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">3</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/=</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">/</span> <span class="pre">3</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">%=</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">%=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">%</span> <span class="pre">3</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">//=</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">//=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">//=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">//</span> <span class="pre">3</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">**=</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">**=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**=</span> <span class="pre">3</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">**</span> <span class="pre">3</span></code></p></td>
 </tr>
@@ -1002,14 +1018,16 @@ NameError: name &#39;A&#39; is not defined
 </table>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.9</p>
-<p>Use assignment operators to change - in one statement - the value of variable <code class="docutils literal notranslate"><span class="pre">a=4</span></code> into</p>
+<p>Use assignment operators to change - in one statement - the value of variable <code class="docutils literal notranslate"><span class="pre">a=4</span></code> into the following. <strong>You may only use each assingment operator once</strong>.</p>
 <ol class="arabic simple">
 <li><p>42</p></li>
-<li><p>745</p></li>
-<li><p>2</p></li>
-<li><p>162</p></li>
+<li><p>3.0</p></li>
+<li><p>1024</p></li>
+<li><p>1</p></li>
 <li><p>-64</p></li>
-<li><p>1.2</p></li>
+<li><p>2</p></li>
+<li><p>4627</p></li>
+<li><p>-172</p></li>
 </ol>
 <p>Paste the contents of your terminal window into your Word document.</p>
 </div>
@@ -1020,6 +1038,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span>
 </pre></div>
 </div>
+<p>You can get the real part of the number by typing <code class="docutils literal notranslate"><span class="pre">z.real</span></code> and the imaginary part by typing <code class="docutils literal notranslate"><span class="pre">z.imag</span></code>.</p>
 <div class="warning admonition">
 <p class="admonition-title">Literals</p>
 <p>As you notice, Python uses the literal <span class="math notranslate nohighlight">\(j\)</span> instead of <span class="math notranslate nohighlight">\(i\)</span> in complex numbers. This is an engineering convention.</p>
@@ -1027,7 +1046,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.10</p>
 <ol class="arabic simple">
-<li><p>Use the Python interpreter to find out the type of the variable <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
+<li><p>Use the Python interpreter to find the type of the variable <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
 <li><p>Choose two complex numbers, for example <span class="math notranslate nohighlight">\(-3 + 2j\)</span> and <span class="math notranslate nohighlight">\(5-7j\)</span>. Add, subtract, multiply and divide these numbers in Python.</p></li>
 </ol>
 <p>Paste the contents of your terminal window into your Word document.</p>
@@ -1035,7 +1054,7 @@ NameError: name &#39;A&#39; is not defined
 </section>
 <section id="scripts">
 <h2>Scripts<a class="headerlink" href="#scripts" title="Permalink to this heading">#</a></h2>
-<p>So far, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a program. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. A Python file ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, the contents of a Python file can be as simple as</p>
+<p>So far, you have used the Python interpreter to interact with Python. As you can imagine, once you want to write and run a piece of code that contains many steps or lines, it becomes inconvenient to use the interpreter: you would have to write each line of code each time you’re trying to run a program. Instead, you can write Python <em>scripts</em> that can be passed to the interpreter, which will run everything line-by-line. Python scripts are files that can be <em>run</em> and are supposed to do something each time you run them. A Python file ends in <code class="docutils literal notranslate"><span class="pre">.py</span></code>, and can be simply a set of statements. For example, the contents of a Python file can be as simple as</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="n">b</span>         <span class="c1"># Compute a to the power b</span>
@@ -1043,7 +1062,7 @@ NameError: name &#39;A&#39; is not defined
 </pre></div>
 </div>
 <p>You can see that these are just four lines of code. In the third line, we have also added a <em>comment</em>. This is a piece of human-readable text that is not part of the code. It will not be run by the Python interpreter. We use the character <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate that this is a comment. Documenting your code properly with comments is a very valuable way to make sure that you (or someone else) will still understand the code when you look at it later. We’ll go over some common practices for code documentation later.</p>
-<p>Running a Python script can be straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file of the previous chapter. Open Notepad (<em>Kladblok</em>) and paste the two lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. To run the script, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> and press <kbd>Enter</kbd>.</p>
+<p>Running a Python script is straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file you created earlier. Open Notepad (<em>Kladblok</em>) or an equivalent text editor and paste the lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. To run the script, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> and press <kbd>Enter</kbd>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.11</p>
 <p>What is the output of this script?</p>
@@ -1052,7 +1071,7 @@ NameError: name &#39;A&#39; is not defined
 </section>
 <section id="visual-studio-code">
 <h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this heading">#</a></h2>
-<p>For simple programming, Notepad will get you quite far as a script editor. However, most programmers use an ‘integrated development environment’ (IDE) that provides additional tools during programming to increase productivity and help you write clear and reusable code. There are many different IDEs on the market, some focusing on one programming language, one on a range of programming languages. Some are very expensive and intended for professional use, some are free. Some are complex, some are easier to use. In this course, <strong>we will use Visual Studio Code</strong>, commonly referred to as VS Code. VS Code is free, flexible, and widely considered to be a good entry point for new programmers. In the remainder of the course, we assume that you are using VS Code.</p>
+<p>For simple programming, Notepad will get you quite far as a script editor. However, most programmers use an ‘integrated development environment’ (IDE) that provides additional tools during programming to increase productivity and help you write clear and reusable code. There are many different IDEs on the market, some focusing on one programming language, others on a range of programming languages. Some are very expensive and intended for professional use, some are free. Some are complex, some are easier to use. In this course, <strong>we will use Visual Studio Code</strong>, commonly referred to as VS Code. VS Code is free, flexible, and widely considered to be a good entry point for new programmers. In the remainder of the course, we assume that you are using VS Code.</p>
 <p>To install VS Code, take the following steps:</p>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https://code.visualstudio.com/download">the Visual Studio Code website</a> and download the correct version for your computer. If you’re on a Windows laptop, this is likely going to be the <em>User Installer</em> <code class="docutils literal notranslate"><span class="pre">x64</span></code> version.</p></li>
@@ -1065,15 +1084,10 @@ NameError: name &#39;A&#39; is not defined
 </section>
 <section id="writing-scripts-in-vs-code">
 <h2>Writing scripts in VS Code<a class="headerlink" href="#writing-scripts-in-vs-code" title="Permalink to this heading">#</a></h2>
-<p>Writing code is all about keeping your files organized. With VS Code open, go to the ‘Explorer’ (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> on Windows). Go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Folder</span></code> and select the folder you just created and in which you stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. If all is well, you should see the folder appear in ‘Explorer’, including the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file. You can double click on the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file and it will open in the VS Code editor. You will see that many colors are used to highlight individual words and characters in the code. This is called <em>syntax highlighting</em> and is a useful tool to make your code readable and easily spot errors. You can change the colors and the general look-and-feel of VS Code by picking a different theme. For this, go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Theme</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Theme</span></code>. Note that this is just a visualization and will not change anything to your code or what your code does. The editor in which you now see your code is basically a text editor with some nice additional functionality to make your life as a programmer easier.</p>
+<p>With VS Code open, go to the ‘Explorer’ (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> on Windows). Go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Folder</span></code> and select the folder you just created and in which you stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. If all is well, you should see the folder appear in ‘Explorer’, including the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file. You can double click on the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file and it will open in the VS Code editor. You will see that colors are used to highlight individual words and characters in the code. This is called <em>syntax highlighting</em> and is a useful tool to make your code readable and easily spot errors. You can change the colors and the general look-and-feel of VS Code by picking a different theme. For this, go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Theme</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Theme</span></code>. Note that this is just a visualization and will not change anything to your code or what your code does. The editor in which you now see your code is basically a text editor with some nice additional functionality to make your life as a programmer easier.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.12</p>
-<p>Extend your Python script as follows:</p>
-<ol class="arabic simple">
-<li><p>Define a variable <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code>.</p></li>
-<li><p>Define a new variable <code class="docutils literal notranslate"><span class="pre">c</span></code> that sums the second and third element of <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">print</span></code> to print the value of <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
-</ol>
+<p>Write a Python script</p>
 </div>
 </section>
 <section id="running-scripts-in-vs-code">
@@ -1093,12 +1107,12 @@ NameError: name &#39;A&#39; is not defined
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function in a script to let the script compute something else depending on the users input. Keep in mind that <code class="docutils literal notranslate"><span class="pre">input()</span></code> always returns a string. Hence, if you want to ask the user for an <code class="docutils literal notranslate"><span class="pre">int</span></code> or a <code class="docutils literal notranslate"><span class="pre">float</span></code> instead, you will have to cast your variables.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.13</p>
-<p>Write Python scripts for the following tasks. Use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> and <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p>
+<p>Write Python scripts for the following tasks. Use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> and <code class="docutils literal notranslate"><span class="pre">print()</span></code> functions.</p>
 <ol class="arabic simple">
 <li><p>A script that asks the user for the radius of a sphere and prints the volume of the sphere.</p></li>
 <li><p>A script that asks the user for two numbers and prints whether the first number is larger than the second number.</p></li>
 <li><p>A script that asks the user for numbers <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> and prints whether <span class="math notranslate nohighlight">\(a\mod b &gt; c\)</span>.</p></li>
-<li><p>A script that asks the user for the height, width and depth of a box and returns</p></li>
+<li><p>A script that asks the user for the height, width and depth of a box and returns it’s volume and surface area.</p></li>
 </ol>
 </div>
 </section>
