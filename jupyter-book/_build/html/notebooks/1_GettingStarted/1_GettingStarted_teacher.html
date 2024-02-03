@@ -516,12 +516,12 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> (short for ‘list’)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> (short for ‘list’), <code class="docutils literal notranslate"><span class="pre">dir</span></code> on Windows</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> / <code class="docutils literal notranslate"><span class="pre">dir</span></code></p></td>
 <td><p>List contents (files and subdirectories) of current directory</p></td>
 </tr>
 <tr class="row-odd"><td><p></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">.\Thesis</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">.\Thesis</span></code> / <code class="docutils literal notranslate"><span class="pre">dir</span> <span class="pre">.\Thesis</span></code></p></td>
 <td><p>List contents in subdirectory <code class="docutils literal notranslate"><span class="pre">Thesis</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> (change directory)</p></td>
@@ -562,8 +562,7 @@ document.write(`
 <p>The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> in your terminal indicates that you’re in interactive mode and Python is ‘listening’. Anything that you will type here will be parsed, it will be interpreted, and an answer will be returned to you. Let’s give it a try! You can use the interpreter as a calculator and perform some simple arithmetic operations.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.2</p>
-<p>Replicate the output below using the Python interpreter. Remember to press <kbd>Enter</kbd> after each line to send your request to the interpreter. Paste the contents of your terminal window into your Word document.</p>
-</div>
+<p>Replicate the output below using the Python interpreter.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span>
 <span class="go">5</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span>
@@ -575,6 +574,8 @@ document.write(`
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span><span class="o">--</span><span class="mi">6</span>
 <span class="go">11</span>
 </pre></div>
+</div>
+<p>Remember to press <kbd>Enter</kbd> after each line to send your request to the interpreter. Paste the contents of your terminal window into your Word document.</p>
 </div>
 <p>Two things in the previous outputs are interesting to note. First, Python automatically interprets the minus sign in front of 6 and gives the correct answer. This is similar to what you would write yourself in mathematical notation. In fact, you’ll see that many expressions are quite intuitive. Second, if we divide 8 by 4, we don’t get 2, but we get 2.0. This has to do with the ‘type’ of the number. Like most programming languages, Python differentiates between integer numbers (such as 1, 2, 3, 4, …, 100000, …) and floating point numbers (such as -45.7, 0.00001, 12.9772). By default, if we divide two numbers using <code class="docutils literal notranslate"><span class="pre">/</span></code>, Python returns a floating point number to preserve <em>precision</em>.</p>
 <p>We can use the interpreter as a calculator. For many standard mathematical operators there is an equivalent in Python. The table below gives an overview of some mathematical operations and how to implement them in Python.</p>
@@ -644,7 +645,7 @@ document.write(`
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.4</p>
-<p>Evaluate the following expressions by hand and use Python to check the answers.</p>
+<p>First, evaluate the following expressions by hand. Then use Python to check your answers. If your answers don’t match, try to figure out why not.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">%</span> <span class="pre">4</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">34</span> <span class="pre">%</span> <span class="pre">3</span></code></p></li>
@@ -923,7 +924,8 @@ NameError: name &#39;A&#39; is not defined
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.8</p>
-<p>For each of the following nonsense programs, write down the expected output and verify in the Python interpreter. The <code class="docutils literal notranslate"><span class="pre">print</span></code> function lets Python print the value between parentheses to the terminal.</p>
+<p>For each of the following nonsense programs, first write down the expected output yourself. Then verify in the Python interpreter. If your answers don’t match those of Python, consider what might have gone wrong.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> function lets Python print the value between parentheses to the terminal.</p>
 <ol class="arabic simple">
 <li></li>
 </ol>
@@ -1016,13 +1018,12 @@ NameError: name &#39;A&#39; is not defined
 </table>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.9</p>
-<p>Use assignment operators to change - in one statement - the value of variable <code class="docutils literal notranslate"><span class="pre">a=4</span></code> into the following. <strong>You may only use each assingment operator once</strong>.</p>
+<p>Use assignment operators to change - in one statement - the value of variable <code class="docutils literal notranslate"><span class="pre">a=4</span></code> into the following. <strong>You may only use each assignment operator once</strong>.</p>
 <ol class="arabic simple">
 <li><p>42</p></li>
 <li><p>3.0</p></li>
 <li><p>1024</p></li>
 <li><p>1</p></li>
-<li><p>-64</p></li>
 <li><p>2</p></li>
 <li><p>4627</p></li>
 <li><p>-172</p></li>
@@ -1045,7 +1046,7 @@ NameError: name &#39;A&#39; is not defined
 <p class="admonition-title">Exercise 1.10</p>
 <ol class="arabic simple">
 <li><p>Use the Python interpreter to find the type of the variable <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
-<li><p>Choose two complex numbers, for example <span class="math notranslate nohighlight">\(-3 + 2j\)</span> and <span class="math notranslate nohighlight">\(5-7j\)</span>. Add, subtract, multiply and divide these numbers in Python.</p></li>
+<li><p>Choose two complex numbers. For example <span class="math notranslate nohighlight">\(-3 + 2j\)</span> and <span class="math notranslate nohighlight">\(5-7j\)</span>, but you can also choose other numbers. Add, subtract, multiply and divide these numbers in Python.</p></li>
 </ol>
 <p>Paste the contents of your terminal window into your Word document.</p>
 </div>
@@ -1063,7 +1064,7 @@ NameError: name &#39;A&#39; is not defined
 <p>Running a Python script is straightforward. First, you have to actually create the script. To do this, create a directory/folder on your computer where you intend to store the code of this course. This can be the same directory where you stored the Word file you created earlier. Open Notepad (<em>Kladblok</em>) or an equivalent text editor and paste the lines of code above. Then go to <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code>, under <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">type</span></code> select <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">files</span></code> and save the file as <code class="docutils literal notranslate"><span class="pre">test.py</span></code> in the directory you just created. Then, open a command line window and navigate to the directory where you have stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. To run the script, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> and press <kbd>Enter</kbd>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1.11</p>
-<p>What is the output of this script?</p>
+<p>What is the output of this script? Add a screenshot to your Word file.</p>
 </div>
 <p>And that’s it: you’ve written and run your first Python script! Now we can really start programming. There is no limit to how long a script can be and - as you’ll see - you can do much more in a script than just processing lines in a fixed order.</p>
 </section>
@@ -1083,15 +1084,15 @@ NameError: name &#39;A&#39; is not defined
 <section id="writing-scripts-in-vs-code">
 <h2>Writing scripts in VS Code<a class="headerlink" href="#writing-scripts-in-vs-code" title="Permalink to this heading">#</a></h2>
 <p>With VS Code open, go to the ‘Explorer’ (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> on Windows). Go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Folder</span></code> and select the folder you just created and in which you stored <code class="docutils literal notranslate"><span class="pre">test.py</span></code>. If all is well, you should see the folder appear in ‘Explorer’, including the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file. You can double click on the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file and it will open in the VS Code editor. You will see that colors are used to highlight individual words and characters in the code. This is called <em>syntax highlighting</em> and is a useful tool to make your code readable and easily spot errors. You can change the colors and the general look-and-feel of VS Code by picking a different theme. For this, go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Theme</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Theme</span></code>. Note that this is just a visualization and will not change anything to your code or what your code does. The editor in which you now see your code is basically a text editor with some nice additional functionality to make your life as a programmer easier.</p>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 1.12</p>
-<p>Write a Python script</p>
-</div>
 </section>
 <section id="running-scripts-in-vs-code">
 <h2>Running scripts in VS Code<a class="headerlink" href="#running-scripts-in-vs-code" title="Permalink to this heading">#</a></h2>
 <p>There are two ways to run scripts from within VS Code. The first option is very similar to what you did before. From within VS Code, you can open a command line interface, similar to the one you used in the previous chapter. To do so, select <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Terminal</span></code> from the menu. A command line interface should open at the bottom of your screen. If all is well, you should already be in the same directory as the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file that you created. Verify this using the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command that you learned in the previous chapter. Now, type <code class="docutils literal notranslate"><span class="pre">python</span></code> in the terminal and verify that you are using your Anaconda distribution. Next, you can, just as in the standard Windows command line interface, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> to run your Python script.</p>
 <p>The second option basically simplifies this process for you. If you go select <code class="docutils literal notranslate"><span class="pre">Run</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Without</span> <span class="pre">Debugging</span></code> from the menu, VS Code will start a terminal, call the Python interpreter with your script, and output the results in a terminal window.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1.12</p>
+<p>Write a Python script that prints the first eight numbers in the <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci sequence</a>. Use variables in your script. You are only allowed to use a maximum of two digits in your code. Run the script and verify the output.</p>
+</div>
 </section>
 <section id="interactive-scripts">
 <h2>Interactive scripts<a class="headerlink" href="#interactive-scripts" title="Permalink to this heading">#</a></h2>
