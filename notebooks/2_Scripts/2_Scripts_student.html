@@ -596,7 +596,7 @@ document.write(`
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.1</p>
-<p>&#64;Veerle, fill in</p>
+<p><code class="docutils literal notranslate"><span class="pre">a[0]</span></code> refers to the item in the list and <code class="docutils literal notranslate"><span class="pre">a[-3]</span></code> refers to the third-to-last item in the list. Since list <code class="docutils literal notranslate"><span class="pre">a</span></code> consists of three items, the third-to-last item and first item refer to the same item, which is <code class="docutils literal notranslate"><span class="pre">banana</span></code>.</p>
 </div>
 <p>In addition to <em>indexing</em> a list, we can also <em>slice</em> a list. This means that we select a portion of the list based on a start and an end index. In the example below, we select all items starting at index 3 and until (but not including) index 5.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">,</span> <span class="s1">&#39;lobster&#39;</span><span class="p">]</span>
@@ -770,7 +770,95 @@ document.write(`
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.2</p>
-<p>&#64;Veerle, fill in</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">66</span><span class="p">)</span>
+<span class="n">t1</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">dictionary</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;student&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mike&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;grades&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;physics&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+                <span class="s2">&quot;history&quot;</span><span class="p">:</span> <span class="mi">80</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">][</span><span class="s2">&quot;student&quot;</span><span class="p">][</span><span class="s2">&quot;grades&quot;</span><span class="p">][</span><span class="s2">&quot;history&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;emp1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jhon&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">7500</span><span class="p">},</span>
+    <span class="s1">&#39;emp2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Emma&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">},</span>
+    <span class="s1">&#39;emp3&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Brad&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">sample_dict</span><span class="p">[</span><span class="s2">&quot;emp3&quot;</span><span class="p">][</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">6800</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">myself</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Your name&#39;</span><span class="p">,</span> <span class="s1">&#39;hair color&#39;</span><span class="p">:</span> <span class="s1">&#39;Your hair color&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span> <span class="p">:</span> <span class="mi">24</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myself</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">students_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">myself</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Student 1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hair_color&quot;</span><span class="p">:</span> <span class="s2">&quot;Hair Color 1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">22</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Student 2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hair_color&quot;</span><span class="p">:</span> <span class="s2">&quot;Hair Color 2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">24</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student_list</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -841,12 +929,21 @@ document.write(`
 <p>A bank will offer a customer a loan if they are 21 or over and have an annual income of at least €21000. Write a Python script that defines the customers age and income in a dictionary. Depending on the age and income, one of the following lines should be printed (using the <code class="docutils literal notranslate"><span class="pre">print</span></code> function):</p>
 <ul class="simple">
 <li><p>‘We are able to offer you a loan.’</p></li>
-<li><p>‘Unfortunately at this time we are unable to offer you a loan.</p></li>
+<li><p>‘Unfortunately at this time we are unable to offer you a loan.’</p></li>
 </ul>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.3</p>
-<p>&#64;Veerle, fill in</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">customer_info</span> <span class="o">=</span> <span class="p">{</span> 
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;income&quot;</span><span class="p">:</span><span class="mi">20000</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="n">customer_info</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="ow">and</span> <span class="n">customer_info</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">21000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are able to offer you a loan.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unfortunately at this time we are unable to offer you a loan.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </section>
 <section id="function-arguments">
@@ -929,13 +1026,122 @@ document.write(`
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.5</p>
-<p>&#64; Veerle kun jij dit doen?
-Here an exercise about else and elif
-BASE IT ON EXERCISE 5.7 IN THE MATLAB MANUAL</p>
+<p>In each o fth efollowing quations, evaluate the given code fragments. Investigate each of the fragnments for the various starting values. Use Python to check your answer.</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<br>
+    a) `n = 7` `m = ?`
+    <br>
+    b) `n = 0`  `m = ?`
+    <br>
+    c) `n = -7`  `m = ?`
+```Python
+    if n > 1:
+        m = n + 2
+    else:
+        m = n - 1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2. 
+&lt;br&gt;
+    a) `s = 1`  `t = ?`
+    &lt;br&gt;
+    b) `s = 7`  `t = ?`
+    &lt;br&gt;
+    c) `s = 57`  `t = ?`
+    &lt;br&gt;
+    d) `s = 300`  `t = ?`
+```Python
+    if s &lt;= 1:
+        t = 2*s
+    elif s &lt; 10:
+        t = 9 - s
+    elif s &lt; 100:
+        t = sqrt(s)
+    else:
+        t = s
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<br>
+    a) `t = 50`  `h = ?`
+    <br>
+    b) `t = 19`  `h = ?`
+    <br>
+    c) `t = -6`  `h = ?`
+    <br>
+    d) `t = 0`  `h = ?`
+```Python
+    if t >= 24:
+        h = 3*t + 1
+    elif t < 9:
+        h = t**2/3 - 2*t
+    else:
+        h = -t
+```
+4. 
+<br>
+    a) `x = -1`  `y = ?`
+    <br>
+    b) `x = 5`  `y = ?`
+    <br>
+    c) `x = 30`  `y = ?`
+    <br>
+    d) `x = 56`  `y = ?`
+```Python
+    if 0 < x < 7:
+        y = 4 * x
+    elif 7 < x < 55:
+        y = -10 * x
+    else:
+        y = 333
+```
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.5</p>
-<p>&#64; Veerle kun jij dit doen?</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<br>
+    a) `n = 7`  `m = 9`
+    <br>
+    b) `n = 0`  `m = -7`
+    <br>
+    c) `n = -7`  `m = -8`
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<br>
+    a) `s = 1`  `t = 2`
+    <br>
+    b) `s = 7`  `t = 2`
+    <br>
+    c) `s = 57`  `t = 3249`
+    <br>
+    d) `s = 300`  `t = 3000`
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<br>
+    a) `t = 50`  `h = 151`
+    <br>
+    b) `t = 19`  `h = -19`
+    <br>
+    c) `t = -6`  `h = 24`
+    <br>
+    d) `t = 0`  `h = 0`
+<ol class="arabic simple" start="4">
+<li></li>
+</ol>
+<br>
+    a) `x = -1`  `y = 333`
+    <br>
+    b) `x = 5`  `y = 20`
+    <br>
+    c) `x = 30`  `y = -300`
+    <br>
+    d) `x = 56`  `y = 333`
 </div>
 </section>
 <section id="loops">
@@ -962,7 +1168,17 @@ met. Two types of loops exist: the <code class="docutils literal notranslate"><s
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.6</p>
-<p>&#64; Veerle antwoorden toevoegen</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">y</span> <span class="o">+</span> <span class="n">n</span><span class="o">**</span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
+    <span class="n">y</span><span class="o">+=</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+
+<span class="c1"># Decrease n by 1 to get the largest integer</span>
+<span class="n">n</span> <span class="o">-=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </section>
 <section id="for-loops">
@@ -999,7 +1215,37 @@ general syntax</p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.7</p>
-<p>&#64;Veerle antwoord</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_squares</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Iterate using a loop to calculate the sum of the first 50 squared numbers</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">):</span>
+    <span class="n">sum_of_squares</span> <span class="o">+=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Given vector x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># Initialize variables</span>
+<span class="n">total_sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">running_sums</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Calculate the sum of all entries and the vector of running sums</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="n">total_sum</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">running_sums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1"># Print the results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of all entries:&quot;</span><span class="p">,</span> <span class="n">total_sum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector of running sums:&quot;</span><span class="p">,</span> <span class="n">running_sums</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -1064,7 +1310,36 @@ general syntax</p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.8</p>
-<p>&#64;Veerle antwoord</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate a secret number</span>
+<span class="n">secret_number</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c1"># Initialize variables</span>
+<span class="n">guess</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">previous_guess</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Main loop for the guessing game</span>
+<span class="k">while</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">secret_number</span><span class="p">:</span>
+    <span class="c1"># Get user input</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Guess the secret number: &quot;</span><span class="p">))</span>
+    
+    <span class="c1"># Check if the guess is too large or too small</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">secret_number</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Too large! Try again.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret_number</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Too small! Try again.&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Count the attempt only if the guess is different from the previous one</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">previous_guess</span><span class="p">:</span>
+        <span class="n">attempts</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="c1"># Store the current guess for the next iteration</span>
+    <span class="n">previous_guess</span> <span class="o">=</span> <span class="n">guess</span>
+
+<span class="c1"># Print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Congratulations! You guessed the secret number </span><span class="si">{</span><span class="n">secret_number</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">attempts</span><span class="si">}</span><span class="s2"> number of tries.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.9</p>
@@ -1072,7 +1347,30 @@ general syntax</p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.9</p>
-<p>&#64;Veerle antwoord</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask the user for a number n</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Pick a number: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Display menu for user choice</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Choose an operation:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Compute the sum&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Compute the product&quot;</span><span class="p">)</span>
+<span class="n">option</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter 1 or 2:&quot;</span><span class="p">))</span>
+
+<span class="c1"># Create a list of 1, ..., n</span>
+<span class="n">number_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+<span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">outcome</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sum of 1,..,n is equal to:&quot;</span><span class="p">,</span> <span class="n">outcome</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">outcome</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Initialize outcome to 1 for multiplication</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">number_list</span><span class="p">:</span>
+        <span class="n">outcome</span> <span class="o">*=</span> <span class="n">num</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The product of 1,..,n is equal to:&quot;</span><span class="p">,</span> <span class="n">outcome</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid choise, please enter 1 or 2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.10</p>
@@ -1080,7 +1378,17 @@ general syntax</p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 2.10</p>
-<p>&#64;Veerle antwoord</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask the user for a number n</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many Fibonacci numbers should be computed?: &quot;</span><span class="p">))</span>
+<span class="n">Fibonacci_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">sum_F</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">sum_F</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Fibonacci_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+    <span class="n">Fibonacci_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sum_F</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Fibonacci_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </section>
 </section>
