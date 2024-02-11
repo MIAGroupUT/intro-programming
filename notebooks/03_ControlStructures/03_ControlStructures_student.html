@@ -583,10 +583,6 @@ yes
 </pre></div>
 </div>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.1</p>
-<p>The line <code class="docutils literal notranslate"><span class="pre">print('Inner</span> <span class="pre">condition</span> <span class="pre">1')</span></code> is not executed because <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&gt;</span> <span class="pre">20</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-</div>
 </section>
 <section id="else-and-elif">
 <h2><code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#else-and-elif" title="Permalink to this heading">#</a></h2>
@@ -690,15 +686,6 @@ d) <code class="docutils literal notranslate"><span class="pre">x</span> <span c
 </pre></div>
 </div>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.2</p>
-<ol class="arabic simple">
-<li><p>a) 9, b) -7, c) -8</p></li>
-<li><p>a) 2, b) 2, c) 3249, d) 300</p></li>
-<li><p>a) 151, b) -19, c) 24, d) 0</p></li>
-<li><p>a) 333, b) 20, c) -300, d) 333</p></li>
-</ol>
-</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 3.3</p>
 <p>A bank will offer a customer a loan if they are 21 or over and have an annual income of at least €21000. Write a Python script that contains the customer’s age and income in a dictionary. Depending on the age and income, one of the following lines should be printed (using the <code class="docutils literal notranslate"><span class="pre">print</span></code> function):</p>
@@ -714,40 +701,9 @@ d) <code class="docutils literal notranslate"><span class="pre">x</span> <span c
 <li><p>A 15-year old boy with an annual income of €5000</p></li>
 </ul>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.3</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">customer_info</span> <span class="o">=</span> <span class="p">{</span> 
-    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;income&quot;</span><span class="p">:</span><span class="mi">20000</span>
-<span class="p">}</span>
-
-<span class="k">if</span> <span class="n">customer_info</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="ow">and</span> <span class="n">customer_info</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">21000</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are able to offer you a loan.&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unfortunately at this time we are unable to offer you a loan.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Answers for test cases</p>
-<ul class="simple">
-<li><p>Unfortunately at this time we are unable to offer you a loan.</p></li>
-<li><p>Unfortunately at this time we are unable to offer you a loan.</p></li>
-<li><p>We are able to offer you a loan.</p></li>
-<li><p>Unfortunately at this time we are unable to offer you a loan.</p></li>
-</ul>
-</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 3.4</p>
 <p>Write a Python script that asks the user for two numbers and prints ‘The first number can be divided by the second number’ or ‘The first number cannot be divided by the second number’, depending on which is the case.</p>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.4</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number_a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Provide the first number: &#39;</span><span class="p">))</span>
-<span class="n">number_b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Provide the second number: &#39;</span><span class="p">))</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">number_a</span> <span class="o">%</span> <span class="n">number_b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The first number is divisible by the second number&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The first number is not divisible by the second number&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Conditional expression</p>
@@ -865,21 +821,6 @@ met. Two types of loops exist: the <code class="docutils literal notranslate"><s
 <p class="admonition-title">Exercise 3.5</p>
 <p>Write a script that determines the largest integer <span class="math notranslate nohighlight">\(n\)</span> for which <span class="math notranslate nohighlight">\(1^3 + 2^3 + \cdots + n^3\)</span> is less than 2000.</p>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.5</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sum_numbers</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">sum_numbers</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">sum_numbers</span> <span class="o">+</span> <span class="n">n</span><span class="o">**</span><span class="mi">3</span> <span class="o">&gt;=</span> <span class="mi">2000</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">sum_numbers</span> <span class="o">+=</span> <span class="n">n</span><span class="o">**</span><span class="mi">3</span>
-        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># Subtract 1 because the current n was too high</span>
-</pre></div>
-</div>
-</div>
 <div class="warning admonition">
 <p class="admonition-title">Infinite loops</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop will continue running as long as its condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>. That means that it’s also possible to make an infinite loop that causes your code to get stuck. For example, the following code will run forever if you don’t stop it.</p>
@@ -898,41 +839,6 @@ met. Two types of loops exist: the <code class="docutils literal notranslate"><s
 <span class="n">secret_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># The rest of your code goes here</span>
-</pre></div>
-</div>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.6</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate a secret number</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">secret_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-
-<span class="c1"># Initialize variables</span>
-<span class="n">guess</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">previous_guess</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="c1"># Main loop for the guessing game</span>
-<span class="k">while</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">secret_number</span><span class="p">:</span>
-    <span class="c1"># Get user input</span>
-    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Guess the secret number: &quot;</span><span class="p">))</span>
-    
-    <span class="c1"># Check if the guess is too large or too small</span>
-    <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">secret_number</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Too large! Try again.&quot;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret_number</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Too small! Try again.&quot;</span><span class="p">)</span>
-    
-    <span class="c1"># Count the attempt only if the guess is different from the previous one</span>
-    <span class="k">if</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">previous_guess</span><span class="p">:</span>
-        <span class="n">attempts</span> <span class="o">+=</span> <span class="mi">1</span>
-    
-    <span class="c1"># Store the current guess for the next iteration</span>
-    <span class="n">previous_guess</span> <span class="o">=</span> <span class="n">guess</span>
-
-<span class="c1"># Print the result</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Congratulations! You guessed the secret number </span><span class="si">{</span><span class="n">secret_number</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">attempts</span><span class="si">}</span><span class="s2"> tries.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1087,44 +993,6 @@ e
 <li><p>Create a script with just one loop that calculates the sum of all entries of a vector <span class="math notranslate nohighlight">\(x\)</span> and also the vector of running sums (as a list). The running sum of a vector <span class="math notranslate nohighlight">\(x\)</span> of <span class="math notranslate nohighlight">\(n\)</span> entries is the vector of <span class="math notranslate nohighlight">\(n\)</span> entries defined as <span class="math notranslate nohighlight">\([x_0, x_0+x_1, x_0+x_1+x_2, \cdots, x_0+x_1+\ldots+x_n]\)</span>. Test your code for x = <span class="math notranslate nohighlight">\([1, 9, 1, 0, 4]\)</span>.</p></li>
 </ol>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.7</p>
-<ol class="arabic simple">
-<li></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_squares</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># Iterate using a loop to calculate the sum of the first 50 squared numbers</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">):</span>
-    <span class="n">sum_of_squares</span> <span class="o">+=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">)</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Given vector x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-
-<span class="c1"># Initialize variables</span>
-<span class="n">total_sum</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">running_sums</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Calculate the sum of all entries and the vector of running sums</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
-    <span class="n">total_sum</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">running_sums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
-
-<span class="c1"># Print the results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of all entries:&quot;</span><span class="p">,</span> <span class="n">total_sum</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector of running sums:&quot;</span><span class="p">,</span> <span class="n">running_sums</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Output should be<br />
-Vector x: [1, 9, 1, 0, 4]<br />
-Sum of all entries: 15<br />
-Vector of running sums: [1, 10, 11, 11, 15]</p>
-</div>
 </section>
 <section id="nested-loops">
 <h2>Nested loops<a class="headerlink" href="#nested-loops" title="Permalink to this heading">#</a></h2>
@@ -1211,51 +1079,9 @@ Vector of running sums: [1, 10, 11, 11, 15]</p>
 <li><p>print the result for the user</p></li>
 </ul>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.8</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask the user for a number n</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Pick a number: &quot;</span><span class="p">))</span>
-
-<span class="c1"># Display menu for user choice</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Choose an operation:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Compute the sum&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Compute the product&quot;</span><span class="p">)</span>
-<span class="n">option</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter 1 or 2:&quot;</span><span class="p">))</span>
-
-<span class="c1"># Create a list of 1, ..., n</span>
-<span class="n">number_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-
-<span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">outcome</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sum of 1,..,n is equal to:&quot;</span><span class="p">,</span> <span class="n">outcome</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="n">outcome</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Initialize outcome to 1 for multiplication</span>
-    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">number_list</span><span class="p">:</span>
-        <span class="n">outcome</span> <span class="o">*=</span> <span class="n">num</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The product of 1,..,n is equal to:&quot;</span><span class="p">,</span> <span class="n">outcome</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid choice, please enter 1 or 2&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 3.9</p>
 <p>Write a program that uses loops to compute <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a> (as in Exercise 1.12). The scripts asks the user how many numbers should be computed. This can be <strong>any</strong> number, so your code should be flexible.</p>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Answer key 3.9</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask the user for a number n</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many Fibonacci numbers should be computed?: &quot;</span><span class="p">))</span>
-<span class="n">fibonacci_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">sum_f</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">sum_f</span> <span class="o">=</span> <span class="n">fibonacci_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">fibonacci_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">fibonacci_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sum_f</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci_numbers</span><span class="p">)</span>
-</pre></div>
-</div>
 </div>
 </section>
 </section>
