@@ -443,10 +443,8 @@ document.write(`
 <li><p>define a function in Python</p></li>
 <li><p>understand the concept of scope, local and global variables</p></li>
 <li><p>create a function with one or more input arguments and one or more output arguments</p></li>
-<li><p>understand what recursion is and know when to use it and when not</p></li>
+<li><p>understand what recursion is and how to use it</p></li>
 <li><p>provide arguments to a script</p></li>
-<li><p>how to format output strings</p></li>
-<li><p>use Jupyter notebooks</p></li>
 </ul>
 </div>
 <p>By now you can write and run a Python script, you can write conditional statements using <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>, and you can write <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops. You can ask the user for input to dynamically change what happens in a script. You’ve seen that with these building blocks, you can already solve some problems and write small programs. However, if you write scripts with only these building blocks, they can become quite lengthy and full of <code class="docutils literal notranslate"><span class="pre">if</span></code> statements. In Python, if we want to repeatedly do something but the output depends on some input, we are going to need <strong>functions</strong>. In Python, functions are everywhere. In fact, you have already used functions: for example, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function outputs something to the screen. We <em>call</em> this function with some input, and it writes it to the screen.</p>
@@ -482,25 +480,29 @@ Goodbye
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===============================================&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In this script, the line printing is repetitive, distracting, and taking up a lot of space. Instead, we can also define our own function to print these lines. A function always starts with the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code>, followed by an indented block, just as you have previously seen for loops and conditional statements. The function would look something like this</p>
+<p>In this script, the line printing is repetitive, distracting, and taking up a lot of space. Instead, we can also define our own function to print these lines. A function always starts with the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code>, followed by the name of the function, parentheses, and a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The body of the script is contained in an indented block, just as you have previously seen for loops and conditional statements. The function would look something like this</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_lines</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------------------&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===============================================&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>and we can replace all occurences of our line printing in the original script with a <em>call</em> to this function. The script then looks like this</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_lines</span><span class="p">():</span>
+<p>and we can replace all occurences of our line printing in the original script with a <em>call</em> to this function. The full script then looks like this</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is the function definition</span>
+<span class="k">def</span> <span class="nf">print_lines</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------------------&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===============================================&#39;</span><span class="p">)</span>
     
+<span class="c1"># Here we call the function</span>
 <span class="n">print_lines</span><span class="p">()</span>
 
 <span class="n">some</span> <span class="n">code</span>
 
+<span class="c1"># Call the same function again</span>
 <span class="n">print_lines</span><span class="p">()</span>
 
 <span class="n">some</span> <span class="n">more</span> <span class="n">code</span>
 
+<span class="c1"># Call the same function again</span>
 <span class="n">print_lines</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -512,7 +514,7 @@ Goodbye
 </section>
 <section id="functions-with-arguments">
 <h2>Functions with arguments<a class="headerlink" href="#functions-with-arguments" title="Permalink to this heading">#</a></h2>
-<p>Things get more interesting if our function does no exactly the same whenever it is called, but actually changes its output depending on the input that we provide. For example, we can write a function that takes two numbers and decides which of the two numbers is smallest.</p>
+<p>Things get more interesting if our function does no exactly the same whenever it is called, but changes what it does depending on the input that we provide. For example, we can write a function that takes two numbers and decides which of the two numbers is smallest.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_smallest</span><span class="p">(</span><span class="n">number_a</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>
@@ -529,7 +531,7 @@ Goodbye
 <p>This function has two <em>parameters</em>: <code class="docutils literal notranslate"><span class="pre">number_a</span></code> and <code class="docutils literal notranslate"><span class="pre">number_b</span></code>. Now, if we want to use this function, we have to <em>call</em> it using <em>arguments</em>, i.e., values for the parameters, as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_smallest</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_smallest</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">23</span><span class="p">)</span>  <span class="c1"># Call the function using two arguments</span>
 </pre></div>
 </div>
 </div>
@@ -539,10 +541,10 @@ Goodbye
 </div>
 </div>
 </div>
-<p>In general, you can call a function with any type of variable. Arguments can also be lists, tuples, dictionaries, etc. However, there is a chance that your type is not compatible with what the function was intended for. In that case, Python will throw an exception.</p>
+<p>In general, you can call a function with any type of variable. Arguments can also be lists, tuples, dictionaries, etc. However, there is a chance that your type is not compatible with the type that the function was intended for. In that case, Python will throw an exception.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 4.1</p>
-<p>Consider Exercise 3.1 about banking. Adapt that script into a function that takes in a customers age and annual income as parameters and prints the required answer.</p>
+<p>Consider <em>Exercise 3.3</em> about banking. Adapt that script into a function that takes in a customers age and annual income as parameters and prints the required answer.</p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Answer key 4.1</p>
@@ -561,22 +563,28 @@ Goodbye
 </section>
 <section id="return">
 <h2>Return<a class="headerlink" href="#return" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">print_lines()</span></code> and <code class="docutils literal notranslate"><span class="pre">find_smallest()</span></code> functions only print a result, but do not <em>return</em> something. In many cases, you will want to use a function to give you some output value. In Python, we use the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code> to send the result of the function call back to wherever the function was called from. Let’s make a very basic function that adds to numbers and returns the result.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_lines()</span></code> and <code class="docutils literal notranslate"><span class="pre">find_smallest()</span></code> functions, and the function that you just wrote only print a result, but do not <em>return</em> anything. In many cases, you will want to use a function to give you some output value. In Python, we use the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code> to send the result of the function call back to wherever the function was called from. Let’s make a very basic function that adds two numbers and returns the result.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">number_a</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">number_a</span> <span class="o">+</span> <span class="n">number_b</span>
 
-<span class="n">add_numbers</span><span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="n">sum_of_numbers</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">34</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>   <span class="c1"># We call the function using two arguments</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sum_of_numbers</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sum is 55
 </pre></div>
 </div>
 </div>
 </div>
+<p>When we call this function, the sum of both numbers is computed and immediately returned. It then takes the place of <code class="docutils literal notranslate"><span class="pre">add_numbers(number_a</span> <span class="pre">=</span> <span class="pre">34,</span> <span class="pre">number_b</span> <span class="pre">=</span> <span class="pre">21)</span></code>, which means that the line now says</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_numbers</span> <span class="o">=</span> <span class="mi">55</span>
+</pre></div>
+</div>
+<p>and that the result is directly assigned to the variable <code class="docutils literal notranslate"><span class="pre">sum_of_numbers</span></code>.</p>
 <div class="note admonition">
 <p class="admonition-title">Returning <code class="docutils literal notranslate"><span class="pre">pass</span></code></p>
 <p>In some cases - when you’re coding - it might be convenient not to return anything at all but to already type the header of a function. To make sure that your code runs, each function <strong>must</strong> return something, but what do you return if the function isn’t finished? A solution is to return <code class="docutils literal notranslate"><span class="pre">pass</span></code>, which can be used as a placeholder for future code. Note that this can also be used in control structures like <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, and loops.</p>
@@ -591,15 +599,15 @@ Goodbye
 <p>Python differentiates between <em>required</em> and <em>optional</em> arguments. Required arguments <em>should</em> always be provided to the function. If they are not provided, Python throws an error. Consider our <code class="docutils literal notranslate"><span class="pre">add_numbers()</span></code> function above: it has exactly two parameters: <code class="docutils literal notranslate"><span class="pre">number_a</span></code> and <code class="docutils literal notranslate"><span class="pre">number_b</span></code>. If fewer or more arguments are provided, Python throws an error:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_32030</span><span class="o">/</span><span class="mf">659767826.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_35806</span><span class="o">/</span><span class="mf">2140094660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: add_numbers() missing 1 required positional argument: &#39;number_b&#39;
 </pre></div>
@@ -608,22 +616,33 @@ Goodbye
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="n">number_b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_32030</span><span class="o">/</span><span class="mf">3138591825.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: add_numbers() takes 2 positional arguments but 3 were given
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_35806/238350148.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+                             <span class="o">^</span>
+<span class="ne">SyntaxError</span>: keyword argument repeated
 </pre></div>
 </div>
 </div>
 </div>
-<p>In this example,<code class="docutils literal notranslate"><span class="pre">number_a</span></code> and <code class="docutils literal notranslate"><span class="pre">number_b</span></code> are both required arguments. A way to make your code more flexible is to use <em>optional</em> arguments. If these are not provided, the function still runs. This is because we provide <em>default</em> parameter values: if the user does not provide other values, these are used. Consider the following variant on our function, which assumes that <code class="docutils literal notranslate"><span class="pre">number_b</span> <span class="pre">=</span> <span class="pre">37</span></code> if not provided.</p>
+<p>In this example,<code class="docutils literal notranslate"><span class="pre">number_a</span></code> and <code class="docutils literal notranslate"><span class="pre">number_b</span></code> are both required arguments. Because of this, we actually don’t have to specify which parameter we’re assigning the argument to when we call the function. We can call the function <em>with</em> or <em>without</em> parameter names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">75</span><span class="p">)</span> <span class="o">==</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>A way to make your code more flexible is to use <em>optional</em> arguments. If these are not provided, the function still runs. This is because we provide <em>default</em> parameter values: if the user does not provide other values, these are used. Consider the following variant on our function, which assumes that <code class="docutils literal notranslate"><span class="pre">number_b</span> <span class="pre">=</span> <span class="pre">37</span></code> if not provided.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers_optional</span><span class="p">(</span><span class="n">number_a</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">37</span><span class="p">):</span>
@@ -665,7 +684,7 @@ Goodbye
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_32030/1073581284.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_35806/1073581284.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">def</span> <span class="nf">add_numbers_optional</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">37</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>
                             <span class="o">^</span>
 <span class="ne">SyntaxError</span>: non-default argument follows default argument
@@ -852,7 +871,7 @@ The function returns 1</p></li>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_32030</span><span class="o">/</span><span class="mf">896397102.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_35806</span><span class="o">/</span><span class="mf">896397102.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
@@ -874,7 +893,7 @@ The function returns 1</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_32030/726729786.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_35806/726729786.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">n</span> <span class="o">=</span> <span class="c1">#</span>
           <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
