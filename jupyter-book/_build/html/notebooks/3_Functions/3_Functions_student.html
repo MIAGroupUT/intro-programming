@@ -154,14 +154,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/2_Scripts/2_Scripts_student.html">2. Control structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Functions/3_Functions_student.html">3. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Objects/3_Objects_student.html">4. Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html">5. Modules and packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_Files/4_Files_student.html">6. Reading and writing files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/5_NumPy/5_NumPy_student.html">7. NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/6_Visualization/6_Visualization_student.html">8. Visualization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student.html">9. Data analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Functions/3_Functions_student.html">4. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_Files/4_Files_student.html">5. Reading and writing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/5_NumPy/5_NumPy_student.html">6. NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/6_Visualization/6_Visualization_student.html">7. Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Objects/3_Objects_student.html">8. Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html">9. Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student.html">10. Data analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -416,7 +417,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-anatomy-of-a-python-function">The anatomy of a Python function</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-add-args-and-kwargs">STILL ADD ARGS AND KWARGS??</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keyword-arguments">Keyword arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-algorithms">Sorting algorithms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions">Built-in functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">Jupyter notebooks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cells">Cells</a></li>
@@ -425,10 +427,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kernel">The kernel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line">Command line</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic-commands">Magic commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-inspector-in-vs-code">Variable inspector in VS Code</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-function">The <code class="docutils literal notranslate"><span class="pre">main</span></code> function</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String formatting</a></li>
 </ul>
             </nav>
         </div>
@@ -480,6 +482,18 @@ document.write(`
             <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="note admonition">
+<p class="admonition-title">Function naming conventions</p>
+<p>In Python, naming conventions for functions are the same as for variables. You should use lowercase letters, and separate words with an underscore, as in the <code class="docutils literal notranslate"><span class="pre">useless_power()</span></code> example above.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Returning <code class="docutils literal notranslate"><span class="pre">pass</span></code></p>
+<p>In some cases - when you’re coding - it might be convenient not to return anything at all but to already type the header of a function. To make sure that your code runs, each function <strong>must</strong> return something, but what do you return if the function isn’t finished? A solution is to return <code class="docutils literal notranslate"><span class="pre">pass</span></code>, which can be used as a placeholder for future code. Note that this can also be used in control structures like <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, and loops.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unfinished_function</span><span class="p">():</span>
+    <span class="k">return</span> <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="functions-with-arguments">
 <h2>Functions with arguments<a class="headerlink" href="#functions-with-arguments" title="Permalink to this heading">#</a></h2>
@@ -488,6 +502,24 @@ document.write(`
 </pre></div>
 </div>
 <p>The function has <em>parameters</em>, and we pass <em>arguments</em> as the values to those parameters.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Consider Exercise 2.3 about banking. Adapt that script into a function that takes in a customers age and annual income and returns the required answer.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Answer key </p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a function with age and income as inputs</span>
+<span class="k">def</span> <span class="nf">customers_loan</span><span class="p">(</span><span class="n">age</span><span class="p">,</span><span class="n">income</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="ow">and</span> <span class="n">income</span> <span class="o">&gt;=</span> <span class="mi">21000</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are able to offer you a loan.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unfortunately at this time we are unable to offer you a loan.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Example</span>
+<span class="n">customers_loan</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="optional-arguments">
 <h2>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this heading">#</a></h2>
@@ -518,34 +550,275 @@ document.write(`
 </section>
 <section id="recursive-functions">
 <h2>Recursive functions<a class="headerlink" href="#recursive-functions" title="Permalink to this heading">#</a></h2>
-<p>We can call functions from anywhere, and we can even call a function from within itself. This is called a <em>recursive</em> function. A famous example is the factorial <span class="math notranslate nohighlight">\(n!\)</span>. We can implement this in a function as</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
+<p>We can call functions from anywhere, and we can even call a function from within itself. In Python (and in many other languages) there is no reason why a function cannot be called from within itself. This is called a <em>recursive</em> function. A famous example is the factorial <span class="math notranslate nohighlight">\(n!\)</span>. We can implement this in a function as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>                   <span class="c1"># 1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>                       <span class="c1"># 2</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># 3</span>
+    <span class="k">else</span><span class="p">:</span>                           <span class="c1"># 4</span>
+        <span class="k">return</span> <span class="mi">1</span>                    <span class="c1"># 5</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise</p>
-<p>Try and write out for yourself what happens when we call <code class="docutils literal notranslate"><span class="pre">factorial(4)</span></code>. What is the order in which lines are executed, and what is the answer that the function gives?</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function above, we have added line numbers in comments. Look at the code and see if you can figure out in which order the lines are executed if you call <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code>.</p>
 </div>
-<p>In practice, you won’t encounter many recursive functions, but it’s good to be aware that in principle, there is no reason why a function cannot be called from within itself.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Answer key</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code> is called in line 1</p></li>
+<li><p>3 &gt; 0 is True, so the function proceeds from line 2 to 3</p></li>
+<li><p>3 * <code class="docutils literal notranslate"><span class="pre">factorial(3-1)</span></code> is calculated in line 3
+Now we call the function from within itself, <code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code> will proceed to line 1</p></li>
+<li><p>2 &gt; 0 is True, so the function proceeds from line 2 to 3</p></li>
+<li><p>2 * <code class="docutils literal notranslate"><span class="pre">factorial(2-1)</span></code> is calculated in line 3
+Now we call the function from within itself, <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code> will proceed to line 1</p></li>
+<li><p>1 &gt; 0 is True, so the function proceeds from line 2 to 3</p></li>
+<li><p>2 * <code class="docutils literal notranslate"><span class="pre">factorial(1-1)</span></code> is calculated in line 3
+Now we call the function from within itself, <code class="docutils literal notranslate"><span class="pre">factorial(0)</span></code> will proceed to line 1</p></li>
+<li><p>0 &gt; 0 is False, so the function proceeds to line 5
+The function returns 1</p></li>
+<li><p>Now, <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code> receives the result of <code class="docutils literal notranslate"><span class="pre">factorial(0)</span></code>, which is 1. So it returns 1 * 1, which is 1.</p></li>
+<li><p>Now, <code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code> receives the result of <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code>, which is 1. So it returns 2 * 1, which is 2.</p></li>
+<li><p>Now, <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code> receives the result of <code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code>, which is 2. So it returns 3 * 2, which is 6.</p></li>
+</ol>
+<p>So the order is like 1 - 2 - 3 - 1 - 2 - 3 - 1 - 2 - 3 - 1 - 4 - 5</p>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise</p>
 <p>Write a function to calculate the sum of a list of numbers using recursion.</p>
 </div>
+<div class="seealso admonition">
+<p class="admonition-title">Answer key </p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a function that sums of a list of numbers</span>
+<span class="k">def</span> <span class="nf">summation_list</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>                   
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>               
+        <span class="k">return</span> <span class="mi">0</span>  
+    <span class="k">else</span><span class="p">:</span>                        
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">summation_list</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  
+
+<span class="c1"># Example</span>
+<span class="n">my_list</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of the list:&quot;</span><span class="p">,</span><span class="n">summation_list</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 </section>
-<section id="still-add-args-and-kwargs">
-<h2>STILL ADD ARGS AND KWARGS??<a class="headerlink" href="#still-add-args-and-kwargs" title="Permalink to this heading">#</a></h2>
+<section id="keyword-arguments">
+<h2>Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Permalink to this heading">#</a></h2>
+<p>Explain kwargs here and how to use them.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise (TODO)</p>
+<p>Something with kwargs</p>
+</div>
+</section>
+<section id="sorting-algorithms">
+<h2>Sorting algorithms<a class="headerlink" href="#sorting-algorithms" title="Permalink to this heading">#</a></h2>
+<p>There are many sorting algorithms, some faster than others, some more complex. The animation below visualizes nine popular sorting algorithms.</p>
+<p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
+<p>One famous sorting algorithm is <em>bubble sort</em>. Bubble sort does the following. We assume a list of <span class="math notranslate nohighlight">\(n\)</span> elements. We further assume that a swap function swaps the values of the given array elements.</p>
+<ul class="simple">
+<li><p>Step 1 − Check if the first element in the input array is greater than the next element in the array.</p></li>
+<li><p>Step 2 − If it is greater, swap the two elements; otherwise move the pointer forward in the array.</p></li>
+<li><p>Step 3 − Repeat Step 2 until we reach the end of the array.</p></li>
+<li><p>Step 4 − Check if the elements are sorted; if not, repeat the same process (Step 1 to Step 3) from the last element of the array to the first.</p></li>
+<li><p>Step 5 − The final output achieved is the sorted array.</p></li>
+</ul>
 <div class="tip admonition">
 <p class="admonition-title">Exercise</p>
-<p>Write a function that merges two sorted lists into a new sorted list. <code class="docutils literal notranslate"><span class="pre">[1,4,6]</span></code>,<code class="docutils literal notranslate"><span class="pre">[2,3,5]</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5,6]</span></code>.</p>
+<p>Write a function that performs bubble sort. This function should be callable with any list of <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code> numbers and return a sorted list. Call your function <code class="docutils literal notranslate"><span class="pre">bubble_sort()</span></code> and use the code below to test it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">sorted</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sorted</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Answer key </p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">last_swap_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="c1"># swamp the numbers in the array</span>
+                <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">last_swap_index</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="c1"># The last index a swap was made</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">last_swap_index</span>
+    <span class="k">return</span> <span class="n">arr</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">sorted</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sorted</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">sorted</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sorted</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before sorting [969, 97, 324, 559, 903, 844, 72, 602, 699, 192, 463, 207, 475, 464, 814, 80, 767, 381, 834, 754, 72, 216, 4, 175, 724, 989, 637, 99, 135, 228, 282, 244, 150, 947, 447, 505, 456, 400, 82, 845, 631, 191, 870, 634, 110, 313, 345, 265, 115, 423, 323, 683, 405, 943, 262, 604, 729, 691, 35, 864, 652, 596, 325, 912, 827, 859, 730, 19, 92, 40, 732, 872, 994, 647, 330, 362, 648, 80, 821, 386, 147, 97, 363, 540, 53, 483, 910, 760, 381, 146, 258, 313, 900, 532, 203, 705, 698, 106, 968, 775]
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_32070</span><span class="o">/</span><span class="mf">1510315538.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">sorted</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After sorting </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sorted</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;bubble_sort&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>A common operation in linear algebra is computing the dot product between two vectors. Write a function that takes two vectors as input as lists and returns their dot product as a float. Call your function <code class="docutils literal notranslate"><span class="pre">dot_product()</span></code> and use the code below to test it</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Answer key </p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span><span class="n">vector_b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vector_a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">vector_b</span><span class="p">):</span>
+        <span class="n">product</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vector_a</span><span class="p">)):</span>
+            <span class="n">product</span> <span class="o">+=</span> <span class="n">vector_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">vector_b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">product</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Inputs must have the same length&quot;</span><span class="p">)</span>
+
+<span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_32070</span><span class="o">/</span><span class="mf">896397102.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;dot_product&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a Python function that takes a number <span class="math notranslate nohighlight">\(n\)</span> as a parameter and returns whether the number is prime or not. Tip: you can consider <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">this algorithm</a> to make your function efficient. Name your function <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code> and use the following code to test it</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="c1"># </span>
+<span class="n">prime</span> <span class="o">=</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">prime</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is a prime number&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not a prime number&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Answer key </p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># 1 is not a prime number</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="c1"># When the number is divisible by 2 or 3, it is not a prime number</span>
+        <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+            <span class="c1"># Check the divisibility by 6k ± 1 </span>
+            <span class="c1"># With 6k ± 1, any integer greater than 3 can be expressed as one of these forms </span>
+            <span class="c1"># By skipping multiples of 2 and 3, the computational costs decrease</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">6</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Input must be a positive integer&quot;</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">prime</span> <span class="o">=</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">prime</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is a prime number&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is not a prime number&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="c1"># </span>
+<span class="n">prime</span> <span class="o">=</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">prime</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is a prime number&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not a prime number&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_32070/726729786.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="c1">#</span>
+          <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="built-in-functions">
 <h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Permalink to this heading">#</a></h2>
-<p>You don’t have to define each function yourself: Python has a number of built-in functions that are available in any Python distribution. Useful functions include the <code class="docutils literal notranslate"><span class="pre">len</span></code> function and the <code class="docutils literal notranslate"><span class="pre">print</span></code> function that you have already used. In addition to the functions that you can write yourself, Python has a number of <em>built-in</em> functions. These are functions that are always available if you program in Python. Examples are <code class="docutils literal notranslate"><span class="pre">print()</span></code>. A complete list of built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. Take a look, you’ll likely recognize some of them. We have previously used the <code class="docutils literal notranslate"><span class="pre">round()</span></code> and <code class="docutils literal notranslate"><span class="pre">range()</span></code> functions, and it’s clear what - for example - the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> does. Likewise, you have used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to find out what the type of a variable is.</p>
+<p>You don’t have to define each function yourself: Python has a number of built-in functions that are available in any Python distribution. Useful functions include the <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">input</span></code> functions that you have already used. In addition to the functions that you can write yourself, Python has a number of <em>built-in</em> functions. These are functions that are always available if you program in Python. Examples are <code class="docutils literal notranslate"><span class="pre">print()</span></code>. A complete list of built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. Take a look, you’ll likely recognize some of them. We have previously used the <code class="docutils literal notranslate"><span class="pre">round()</span></code> and <code class="docutils literal notranslate"><span class="pre">range()</span></code> functions, and it’s clear what - for example - the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> does. Likewise, you have used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to find out what the type of a variable is.</p>
 </section>
 <section id="jupyter-notebooks">
 <h2>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h2>
@@ -562,12 +835,12 @@ document.write(`
 <h3>How to run notebooks<a class="headerlink" href="#how-to-run-notebooks" title="Permalink to this heading">#</a></h3>
 <p>There are multiple ways to run Jupyter notebooks</p>
 <ol class="arabic simple">
-<li><p>In VS Code using an extension</p></li>
-<li><p>Run locally on your computer in the browser</p></li>
-<li><p>Not locally on your computer, but on the University of Twente server: <code class="docutils literal notranslate"><span class="pre">jupyter.utwente.nl</span></code></p></li>
+<li><p>In VS Code</p></li>
+<li><p>Locally on your computer in the browser</p></li>
+<li><p>On the University of Twente server: <code class="docutils literal notranslate"><span class="pre">jupyter.utwente.nl</span></code></p></li>
 <li><p>Google offers Google Colab, which is a lot like Jupyter Notebooks and is (almost) fully compatible</p></li>
 </ol>
-<p>All of these are valid options, you might want to use option (1) to stay in VS Code, of if you’d rather work in your browser, you can use option (2).</p>
+<p>All of these are valid options, you might want to use option (1) to stay in VS Code, of if you’d rather work in your browser, you can use option (2). Option (3) is convenient is you don’t wish to install Python/Jupyter on your own machine.</p>
 </section>
 <section id="starting-a-notebook-server">
 <h3>Starting a notebook server<a class="headerlink" href="#starting-a-notebook-server" title="Permalink to this heading">#</a></h3>
@@ -585,6 +858,10 @@ document.write(`
 <h3>Magic commands<a class="headerlink" href="#magic-commands" title="Permalink to this heading">#</a></h3>
 <p>Useful magic commands</p>
 </section>
+<section id="variable-inspector-in-vs-code">
+<h3>Variable inspector in VS Code<a class="headerlink" href="#variable-inspector-in-vs-code" title="Permalink to this heading">#</a></h3>
+<p>Ook uitleggen dat je dat kunt zien in een notebook.</p>
+</section>
 <section id="the-main-function">
 <h3>The <code class="docutils literal notranslate"><span class="pre">main</span></code> function<a class="headerlink" href="#the-main-function" title="Permalink to this heading">#</a></h3>
 <p>When you run a complex Python script, you don’t want to run all the lines sequentially, but you want to indicate the interpreter where to <em>enter</em> your code. By design, this is the <code class="docutils literal notranslate"><span class="pre">main</span></code> function. The <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement at the bottom is used to make sure that when you import a script into another script (more about that later) Python doesn’t execute the full file.</p>
@@ -597,21 +874,6 @@ document.write(`
 </pre></div>
 </div>
 </section>
-</section>
-<section id="string-formatting">
-<h2>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this heading">#</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Exercise</p>
-<p>Write a function that computes the list of the first 100 Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The n+1-st Fibonacci number can be computed by adding the n-th and the n-1-th Fibonacci number. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.</p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise</p>
-<p>Write a function that takes two vectors as input as lists and returns their dot product as a float.</p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise</p>
-<p>Write a function that performs bubble sort. Given a list of numbers as input, the function returns a sorted list.</p>
-</div>
 </section>
 </section>
 
@@ -671,7 +933,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-anatomy-of-a-python-function">The anatomy of a Python function</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-add-args-and-kwargs">STILL ADD ARGS AND KWARGS??</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keyword-arguments">Keyword arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-algorithms">Sorting algorithms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions">Built-in functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">Jupyter notebooks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cells">Cells</a></li>
@@ -680,10 +943,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kernel">The kernel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line">Command line</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic-commands">Magic commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-inspector-in-vs-code">Variable inspector in VS Code</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-function">The <code class="docutils literal notranslate"><span class="pre">main</span></code> function</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String formatting</a></li>
 </ul>
   </nav></div>
 
