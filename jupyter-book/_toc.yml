@@ -6,13 +6,13 @@ parts:
   chapters:
   - file: frontmatter/preface
     title: Preface
-  - file: notebooks/1_GettingStarted/1_GettingStarted_student
+  - file: notebooks/01_GettingStarted/01_GettingStarted_student
     title: 1. Getting started
   - file: notebooks/02_Containers/02_Containers_student
     title: 2. Containers 
   - file: notebooks/03_ControlStructures/03_ControlStructures_student
     title: 3. Control structures 
-  - file: placeholder_notebooks/3_Functions/3_Functions_student
+  - file: notebooks/04_Functions/04_Functions_student
     title: 4. Functions    
   - file: placeholder_notebooks/4_Files/4_Files_student 
     title: 5. Reading and writing files      

@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Control structures" href="../03_ControlStructures/03_ControlStructures_student.html" />
-    <link rel="prev" title="Getting started" href="../1_GettingStarted/1_GettingStarted_student.html" />
+    <link rel="prev" title="Getting started" href="../01_GettingStarted/01_GettingStarted_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../1_GettingStarted/1_GettingStarted_student.html">1. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_student.html">1. Getting started</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Containers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/3_Functions/3_Functions_student.html">4. Functions</a></li>
@@ -537,7 +537,7 @@ Claire
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_32018</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_36825</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">student_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Bert&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -549,7 +549,7 @@ Claire
 <p>Instead of indexing from the <em>start</em> of a tuple, you can also index by counting back from the last element by using negative integer numbers, where index -1 refers to the last item, -2 to the second-to-last item, etc.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.1</p>
-<p>Why do <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">student_names[3]</span></code> refer to the same item?</p>
+<p>Why do <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">student_names[-3]</span></code> refer to the same item?</p>
 </div>
 <p>In addition to selecting a <em>single</em> item using indexing, we can also select <em>multiple</em> items at once. This is called <em>slicing</em>. Slicing works with start, end, and step indices. These are used in the following syntax</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub_items</span> <span class="o">=</span> <span class="n">some_tuple</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
@@ -861,9 +861,9 @@ banana
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Bob&#39;, &#39;Dean&#39;}
-{&#39;Claire&#39;, &#39;Edward&#39;, &#39;Dean&#39;, &#39;Fran&#39;, &#39;Bob&#39;, &#39;Adam&#39;}
-{&#39;Claire&#39;, &#39;Adam&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;}
+{&#39;Dean&#39;, &#39;Fran&#39;, &#39;Bob&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}
+{&#39;Adam&#39;, &#39;Claire&#39;}
 </pre></div>
 </div>
 </div>
@@ -877,7 +877,7 @@ banana
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Claire&#39;, &#39;Edward&#39;, &#39;Dean&#39;, &#39;Bob&#39;, &#39;Adam&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Claire&#39;, &#39;Adam&#39;, &#39;Edward&#39;}
 </pre></div>
 </div>
 </div>
@@ -1262,16 +1262,16 @@ False
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: ""
         },
         kernelOptions: {
-            name: "python3",
+            name: "",
             path: "./notebooks/02_Containers"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = ''</script>
 
                 </article>
               
@@ -1285,7 +1285,7 @@ False
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../1_GettingStarted/1_GettingStarted_student.html"
+       href="../01_GettingStarted/01_GettingStarted_student.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
