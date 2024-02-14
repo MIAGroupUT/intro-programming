@@ -481,7 +481,7 @@ Goodbye
 </div>
 </div>
 </div>
-<p>By calling the function, it’s body gets executed. In this case, the body of the function only contains a call to the built-in <code class="docutils literal notranslate"><span class="pre">print</span></code> function. This also shows that you can call functions from within other functions.</p>
+<p>By calling the function, its body gets executed. In this case, the body of the function only contains a call to the built-in <code class="docutils literal notranslate"><span class="pre">print</span></code> function. This also shows that you can call functions from within other functions.</p>
 <div class="warning admonition">
 <p class="admonition-title">The use of <code class="docutils literal notranslate"><span class="pre">(</span></code> and <code class="docutils literal notranslate"><span class="pre">)</span></code></p>
 <p>Any time you <em>call</em> a function (i.e., use it), you have to use a <code class="docutils literal notranslate"><span class="pre">(</span></code> and a <code class="docutils literal notranslate"><span class="pre">)</span></code>. Note that this is different from <em>indexing</em> a list, tuple, dictionary, for which you use <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code>.</p>
@@ -489,7 +489,7 @@ Goodbye
 </section>
 <section id="where-do-you-put-a-function">
 <h2>Where do you put a function?<a class="headerlink" href="#where-do-you-put-a-function" title="Permalink to this heading">#</a></h2>
-<p>So far, you’ve written Python scripts as <code class="docutils literal notranslate"><span class="pre">.py</span></code> files. You can simply add functions to your script so that they can be used in that script. For example, the following would be a valid <code class="docutils literal notranslate"><span class="pre">.py</span></code> file that you can run in VS Code. Try it out!</p>
+<p>You’ve learned to write Python scripts as <code class="docutils literal notranslate"><span class="pre">.py</span></code> files. You can simply add functions to your script so that they can be used in that script. For example, the following would be a valid <code class="docutils literal notranslate"><span class="pre">.py</span></code> file that you can run in VS Code. Try it out!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>        <span class="c1"># This is the header of the function</span>
@@ -514,12 +514,12 @@ Goodbye
 </div>
 <div class="note admonition">
 <p class="admonition-title">Function naming conventions</p>
-<p>In Python, naming conventions for functions are the same as for variables. You should use lowercase letters, and separate words with an underscore, as in the <code class="docutils literal notranslate"><span class="pre">print_lines()</span></code> example above. Since functions represent actions, it’s a best practice to start your function names with a verb to make your code more readable.</p>
+<p>In Python, naming conventions for functions are the same as for variables. You should use lowercase letters, and separate words with an underscore, as in the <code class="docutils literal notranslate"><span class="pre">hello_world()</span></code> example above. Since functions represent actions, it’s best practice to start your function names with a verb to make your code more readable.</p>
 </div>
 </section>
 <section id="functions-with-arguments">
 <h2>Functions with arguments<a class="headerlink" href="#functions-with-arguments" title="Permalink to this heading">#</a></h2>
-<p>Things get more interesting if our function does not do exactly the same whenever it is called, but changes what it does depending on the input that we provide. For example, we can write a function that takes two numbers and decides which of the two numbers is smallest. For this, we use things that you have already learned: e.g, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, string formatting.</p>
+<p>Things get more interesting if our function does not do exactly the same whenever it is called, but changes what it does depending on the input that we provide. For example, we can write a function that takes two numbers and decides which of the two numbers is smallest. For this, we use things that you have already learned: e.g, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, string formatting. You can see that the <em>body</em> of the function is just a mini-program whose variables are defined in the <em>header</em> of the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_smallest</span><span class="p">(</span><span class="n">number_a</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>   <span class="c1"># The header of the function with two parameters</span>
@@ -546,10 +546,10 @@ Goodbye
 </div>
 </div>
 </div>
-<p>In general, you can call a function with any type of variable. Arguments can also be lists, tuples, dictionaries, etc. However, there is a chance that your type is not compatible with the type that the function was intended for. In that case, Python will throw an exception. You can help others reading your code by <em>type hinting</em>: indicating in your function header which type is expected. For the <code class="docutils literal notranslate"><span class="pre">find_smallest()</span></code> function this might look like the following.</p>
+<p>In general, you can create a function with any type of variable. Arguments can also be lists, tuples, dictionaries, etc. However, when you call a function, there is a chance that your type is not compatible with the type that the function was intended for. In that case, Python will throw an exception. You can help others reading your code by <em>type hinting</em>: indicating in your function header which type is expected. For the <code class="docutils literal notranslate"><span class="pre">find_smallest()</span></code> function this might look like the following.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_smallest</span><span class="p">(</span><span class="n">number_a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number_b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_smallest</span><span class="p">(</span><span class="n">number_a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number_b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>  <span class="c1"># We have here added types to number_a and number_b</span>
     <span class="k">if</span> <span class="n">number_a</span> <span class="o">&lt;</span> <span class="n">number_b</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is the smallest number&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number_a</span><span class="p">))</span>
     <span class="k">elif</span> <span class="n">number_b</span> <span class="o">&lt;</span> <span class="n">number_a</span><span class="p">:</span>
@@ -578,10 +578,10 @@ Goodbye
 <p class="admonition-title">Exercise 4.2</p>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">print_code</span></code> that takes a ‘code’ as input and uses that code to print characters to the command line. A code is a string that describes which characters should be printed. Each code consists of pairs of <em>characters</em> and <em>counts</em>. The maximum count is 9. For example,</p>
 <ul class="simple">
-<li><p>when calling <code class="docutils literal notranslate"><span class="pre">print_code('6+')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">++++++</span></code></p></li>
-<li><p>when calling <code class="docutils literal notranslate"><span class="pre">print_code('2+4*5+')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">++****+++++</span></code></p></li>
-<li><p>when calling <code class="docutils literal notranslate"><span class="pre">print_code('2*4+6*')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">**++++******</span></code>,</p></li>
-<li><p>when calling <code class="docutils literal notranslate"><span class="pre">print_code('9a4b3c')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">aaaaaaaaabbbbccc</span></code></p></li>
+<li><p>when called as <code class="docutils literal notranslate"><span class="pre">print_code('6+')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">++++++</span></code></p></li>
+<li><p>when called as  <code class="docutils literal notranslate"><span class="pre">print_code('2+4*5+')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">++****+++++</span></code></p></li>
+<li><p>when called as  <code class="docutils literal notranslate"><span class="pre">print_code('2*4+6*')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">**++++******</span></code>,</p></li>
+<li><p>when called as  <code class="docutils literal notranslate"><span class="pre">print_code('9a4b3c')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">aaaaaaaaabbbbccc</span></code></p></li>
 </ul>
 <p>To help you get started, here is a layout for your function. You have to change the commented lines in order to make the function work.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_code</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
@@ -617,14 +617,14 @@ Goodbye
 </section>
 <section id="return">
 <h2>Return<a class="headerlink" href="#return" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">print_lines</span></code>, <code class="docutils literal notranslate"><span class="pre">find_smallest</span></code>, and <code class="docutils literal notranslate"><span class="pre">print_code</span></code> functions only print a result, but do not <em>return</em> anything. In many cases, you will want to use a function to give you some output value that you can use in your script, instead of only writing the answer to the terminal. In Python, we use the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code> to send the result of the function call back to wherever the function was called from. Let’s make a very basic function that adds two numbers and returns the result.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">hello_world</span></code>, <code class="docutils literal notranslate"><span class="pre">find_smallest</span></code>, and <code class="docutils literal notranslate"><span class="pre">print_code</span></code> functions only print a result, but do not <em>return</em> anything. In many cases, you will want to use a function to give you some output value that you can use in your script, instead of only writing the answer to the terminal. In Python, we use the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code> to send the result of the function call back to wherever the function was called from. Let’s make a very basic function that adds two numbers and returns the result.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">number_a</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">number_a</span> <span class="o">+</span> <span class="n">number_b</span>
 
 <span class="n">sum_of_numbers</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">34</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>   <span class="c1"># The result of the function call is stored in sum_of_numbers</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sum_of_numbers</span><span class="p">))</span>      <span class="c1"># We can printthe value of sum_of_numbers (or use it for something else)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sum_of_numbers</span><span class="p">))</span>                <span class="c1"># We can print the value of sum_of_numbers (or use it for something else)</span>
 </pre></div>
 </div>
 </div>
@@ -681,7 +681,7 @@ Goodbye
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_46846</span><span class="o">/</span><span class="mf">2140094660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_96617</span><span class="o">/</span><span class="mf">2140094660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: add_numbers() missing 1 required positional argument: &#39;number_b&#39;
@@ -696,7 +696,7 @@ Goodbye
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_46846/3779491282.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_96617/3779491282.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
                                            <span class="o">^</span>
 <span class="ne">SyntaxError</span>: positional argument follows keyword argument
@@ -759,7 +759,7 @@ Goodbye
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_46846/1073581284.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_96617/1073581284.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">def</span> <span class="nf">add_numbers_optional</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">37</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>
                             <span class="o">^</span>
 <span class="ne">SyntaxError</span>: non-default argument follows default argument
@@ -769,7 +769,7 @@ Goodbye
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 4.3</p>
-<p>A common operation in linear algebra is computing the dot product between two vectors. The dot vector of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}=[a_1, a_2, \ldots, a_n]\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=[b_1, b_2, \ldots, b_n]\)</span> is defined as</p>
+<p>A common operation in linear algebra is computing the dot product between two vectors. The dot product of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}=[a_1, a_2, \ldots, a_n]\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=[b_1, b_2, \ldots, b_n]\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i\]</div>
 <p>Write a function that takes two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> as lists as input and returns their dot product as a floating point number. The dot product can only be computed if the length of <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is the same. Let your function check that this is the case, and if not, print a message for the user and return <code class="docutils literal notranslate"><span class="pre">-1</span></code>. Call your function <code class="docutils literal notranslate"><span class="pre">dot_product()</span></code> and use the code below to test it</p>
@@ -805,7 +805,7 @@ Goodbye
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_46846</span><span class="o">/</span><span class="mf">1922670122.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_96617</span><span class="o">/</span><span class="mf">1922670122.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">add_y</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -861,57 +861,16 @@ Goodbye
 <li><p>Local: these are variables that are defined only in a function.</p></li>
 <li><p>Enclosed: an (inner) function can be defined inside another (outer) function. The inner function is able to access the variables of the outer function, but not the other way around.</p></li>
 <li><p>Global: global variables at the level of your script.</p></li>
-<li><p>Some variable names are <code class="docutils literal notranslate"><span class="pre">built-in</span></code> and are always accessible from everywhere. These are the keywords that you have seen before and which you should never overwrite. These are:</p></li>
+<li><p>Some variable names are <code class="docutils literal notranslate"><span class="pre">built-in</span></code> and are always accessible from everywhere. These are the keywords that you have seen before, i.e.:</p></li>
 </ol>
 <p><img alt="keywords" src="https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1588956604/keywords_c8hxf4.png" /></p>
-<p>If the interpreter looks for the value of a variable, it does so bottom-up, starting at the local level. The figures below nicely visualize this process. Here, <code class="docutils literal notranslate"><span class="pre">x</span></code> is defined within the inner function, so that is the value that is used at that point. Were it not, then <code class="docutils literal notranslate"><span class="pre">x</span></code> in the outer function would be used. If that variable had not been defined, a global variable <code class="docutils literal notranslate"><span class="pre">x</span></code> would be used. And if that didn’t work, the interpreter would look for a built-in variable <code class="docutils literal notranslate"><span class="pre">x</span></code> (which does not exist).</p>
+<p>If the interpreter looks for the value of a variable, it does so bottom-up, starting at the local level. The figures below nicely visualize this process. Here, <code class="docutils literal notranslate"><span class="pre">x</span></code> is defined within the inner function, so that is the value that is used at that point. If <code class="docutils literal notranslate"><span class="pre">x</span></code> was not defined in the inner function, then <code class="docutils literal notranslate"><span class="pre">x</span></code> in the outer function would be used. If that variable had not been defined, a global variable <code class="docutils literal notranslate"><span class="pre">x</span></code> would be used. And if that didn’t work, the interpreter would look for a built-in variable <code class="docutils literal notranslate"><span class="pre">x</span></code> (which does not exist).</p>
 <p><img alt="scope" src="https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1588956604/code_dmeddc.png" />
 <img alt="morescope" src="https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1588956604/Scope_fbrzcw.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_46846</span><span class="o">/</span><span class="mf">896397102.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;dot_product&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="c1"># </span>
-<span class="n">prime</span> <span class="o">=</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">prime</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is a prime number&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not a prime number&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_46846/726729786.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="c1">#</span>
-          <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="recursive-functions">
 <h2>Recursive functions<a class="headerlink" href="#recursive-functions" title="Permalink to this heading">#</a></h2>
-<p>We can call functions from anywhere, and we can even call a function from within itself. In Python (and in many other languages) there is no reason why a function cannot be called from within itself. This is called a <em>recursive</em> function. Recursion is a concept that can be difficult to understand. The core idea is that you repeatedly call the same function from within itself. This means that the operations that you’re applying should be very similar each time the function is called. A well-known example is the factorial <span class="math notranslate nohighlight">\(n!=n \times n-1 \times n-2 \times \cdots \times 2 \times 1\)</span>. We can implement this in a recursive function as</p>
+<p>We can call functions from anywhere in a script, as long as it has been defined. Moreover, in Python (and in many other languages) there is no reason why a function cannot be called from within itself. This is called a <em>recursive</em> function. Recursion is a concept that can be difficult to understand. The core idea is that you repeatedly call the same function from within itself. This means that the operations that you’re applying should be very similar each time the function is called. A well-known example is the factorial <span class="math notranslate nohighlight">\(n!=n \times n-1 \times n-2 \times \cdots \times 2 \times 1\)</span>. We can implement this in a recursive function as</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>                   <span class="c1"># 1</span>
@@ -965,21 +924,21 @@ Goodbye
 <p>You don’t have to define each function yourself: Python has a number of built-in functions that are available in any Python distribution. Useful functions include the <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">input</span></code> functions that you have already used. In addition to the functions that you can write yourself, Python has a number of <em>built-in</em> functions. These are functions that are always available if you program in Python. Examples are <code class="docutils literal notranslate"><span class="pre">print()</span></code>. A complete list of built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. Take a look, you’ll likely recognize some of them. We have previously used the <code class="docutils literal notranslate"><span class="pre">round()</span></code> and <code class="docutils literal notranslate"><span class="pre">range()</span></code> functions, and it’s clear what - for example - the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> does. Likewise, you have used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to find out what the type of a variable is.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 4.6</p>
-<p>There are many cases in programming where we need to sort something, usually in ascending order (low to high), sometimes in descending order (high to low). There are also many different sorting algorithms, some faster than others, some more complex. The animation below visualizes nine popular sorting algorithms.</p>
+<p>There are many cases in programming where we need to sort something, usually in ascending order (low to high), sometimes in descending order (high to low). There are also many different sorting algorithms, some faster than others, some more complex. The animation below visualizes eight popular sorting algorithms. The length of the bars indicated their value, and as you can see, each algorithm tries to sort the values from low to high (in ascending order).</p>
 <p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
-<p>In this exercise, you will implement <em>bubble sort</em>. Bubble sort is not the fastest algorithm (as you can see in the animation), but it is (relatively) easy to understand. Let’s say that we have a list of numbers that we want to sort. Then bubble sort does the following:</p>
+<p>In this exercise, you will implement <em>bubble sort</em>. Bubble sort is not the fastest algorithm (as you can see in the animation), but it is (relatively) easy to understand. Let’s say that we have a list of numbers that we want to sort. The animation below visualizes bubble sort for a short list.</p>
+<p><img alt="bubblesort" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" /></p>
+<p>Bubble sort does the following:</p>
 <ol class="arabic simple">
 <li><p>Check if the first element in the list is greater than the next element in the list.</p></li>
-<li><p>If it is greater, swap the two elements. Otherwise, repeat step 1. for the next element in the list.</p></li>
-<li><p>Repeat 1 and 2 until you reach the end of the list.</p></li>
-<li><p>Check if all elements are sorted.</p></li>
+<li><p>If it is greater, swap the two elements. Otherwise, repeat step 1 for the next element in the list.</p></li>
+<li><p>Repeat steps 1 and 2 until you reach the end of the list.</p></li>
+<li><p>Check if all elements are sorted:</p></li>
 </ol>
 <ul class="simple">
 <li><p>If not, repeat the process in step 1 to 3. However, you can now ignore the last element because you know it has the highest value and is in the right place. The next iteration you can ignore the last two elements, etc.</p></li>
 <li><p>If yes, the final output is a sorted array.</p></li>
 </ul>
-<p>The animation below visualizes bubble sort for a short list.</p>
-<p><img alt="bubblesort" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" /></p>
 <p>Your task in this exercise is to implement a bubble sort function. Use the provided code below and fill in the missing parts.<br />
 <strong>Hint</strong> Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to check whether the list is sorted. You can use the provided <code class="docutils literal notranslate"><span class="pre">check_sorted</span></code> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
