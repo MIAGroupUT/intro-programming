@@ -16,7 +16,7 @@ parts:
     title: 4. Functions    
   - file: notebooks/05_Notebooks/05_Notebooks_student
     title: 5. Notebooks     
-  - file: placeholder_notebooks/5_NumPy/5_NumPy_student 
+  - file: notebooks/06_NumPy/06_NumPy_student 
     title: 6. NumPy
   - file: placeholder_notebooks/6_Visualization/6_Visualization_student
     title: 7. Visualization
