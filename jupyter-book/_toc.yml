@@ -18,10 +18,10 @@ parts:
     title: 5. Notebooks     
   - file: notebooks/06_NumPy/06_NumPy_student 
     title: 6. NumPy
-  - file: placeholder_notebooks/6_Visualization/6_Visualization_student
-    title: 7. Visualization
-  - file: placeholder_notebooks/3_Objects/3_Objects_student
-    title: 8. Objects
+  - file: notebooks/07_Objects/07_Objects_student
+    title: 7. Objects
+  - file: notebooks/08_Visualization/08_Visualization_student
+    title: 8. Visualization
   - file:  placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student 
     title: 9. Modules and packages 
   - file: placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student
