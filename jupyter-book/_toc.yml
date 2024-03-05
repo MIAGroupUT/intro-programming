@@ -22,12 +22,12 @@ parts:
     title: 7. Objects
   - file: notebooks/08_Visualization/08_Visualization_student
     title: 8. Visualization
+  - file: notebooks/09_Project/09_Project_student
+    title: 9. Project
   - file:  placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student 
-    title: 9. Modules and packages 
+    title: 10. Modules and packages 
   - file: placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student
-    title: 10. Data analysis
-#  - file: notebooks/99_Project/99_Project_student
-#    title: 10. Project
+    title: 11. Data analysis
 - caption: Backmatter
   chapters:
   - file: backmatter/references
