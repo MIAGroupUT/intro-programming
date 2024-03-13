@@ -161,8 +161,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../06_NumPy/06_NumPy_student.html">6. NumPy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08_Visualization/08_Visualization_student.html">8. Visualization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html">9. Modules and packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student.html">10. Data analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09_Project/09_Project_student.html">9. Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html">10. Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student.html">11. Data analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -883,13 +884,36 @@ Nederlands</label><div class="sd-tab-content docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">sort_name</span> <span class="o">=</span> <span class="n">name</span>
 </pre></div>
 </div>
-<p>Dieren moeten instaat zijn om ten minste het volgende te doen, geïmplementeerd in de geschikte <em>methods</em></p>
+<p>Dieren moeten in staat zijn om ten minste het volgende te doen, geïmplementeerd in de geschikte <em>methods</em></p>
 <ul class="simple">
 <li><p>een karakteristiek geluid maken</p></li>
 <li><p>hun favoriete voedsel eten</p></li>
 <li><p>zeggen waar ze vandaan komen</p></li>
 </ul>
 <p>Maak een code die all deze methodes aanroept.</p>
+<p>Een voorbeeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Tiger</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;tiger&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+    
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Roaaar&quot;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">eat_food</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m eating tofu&quot;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">show_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I live in India&quot;</span><span class="p">)</span>
+        
+
+<span class="n">tijgetje</span> <span class="o">=</span> <span class="n">Tiger</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">tijgetje</span><span class="o">.</span><span class="n">make_sound</span><span class="p">()</span>
+<span class="n">tijgetje</span><span class="o">.</span><span class="n">eat_food</span><span class="p">()</span>
+<span class="n">tijgetje</span><span class="o">.</span><span class="n">show_origin</span><span class="p">()</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

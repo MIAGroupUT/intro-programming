@@ -1,0 +1,836 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project &#8212; Manual Introduction to Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://utwente.mia.nl/template/notebooks/09_Project/09_Project_student.html" />
+    <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modules and packages" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html" />
+    <link rel="prev" title="Visualization" href="../08_Visualization/08_Visualization_student.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/banner.jpeg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/banner.jpeg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_student.html">1. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Functions/04_Functions_student.html">4. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">5. Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_NumPy/06_NumPy_student.html">6. NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07_Objects/07_Objects_student.html">7. Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_Visualization/08_Visualization_student.html">8. Visualization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html">10. Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student.html">11. Data analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../backmatter/references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backmatter/resources.html">Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utwente.nl/hub/user-redirect/git-pull?repo=https%3A//github.com/MIAGroupUT/intro-programming&urlpath=lab/tree/intro-programming/jupyter-book/notebooks/09_Project/09_Project_student.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/MIAGroupUT/intro-programming/blob/main/jupyter-book/notebooks/09_Project/09_Project_student.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MIAGroupUT/intro-programming" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MIAGroupUT/intro-programming/issues/new?title=Issue%20on%20page%20%2Fnotebooks/09_Project/09_Project_student.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/09_Project/09_Project_student.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hba1c-vs-klinische-cgm-parameters"><code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vs klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-average">Moving average</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project">
+<h1>Project<a class="headerlink" href="#project" title="Permalink to this heading">#</a></h1>
+<p>In dit hoofdstuk werk je met behulp van Python een casus uit met echte patiëntendata. Gebruik hierbij de functies en modules die je eerder in de cursus bent tegengekomen.</p>
+<p>Maak je eigen <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>-bestand en houd daarin je antwoorden bij. Voeg headers in Markdown toe om de opdrachten uit elkaar te houden.</p>
+<section id="inleiding">
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink to this heading">#</a></h2>
+<p>Voor patiënten met type 1 of 2 diabetes is het belangrijk dat hun bloedglucose goed gereguleerd is. Goede regulatie beperkt de kans op ontwikkeling van macro- en microvasculaire complicaties. Er zijn meerdere manieren om bloedglucose te monitoren:</p>
+<ul class="simple">
+<li><p>HbA1c. Dit is een maat voor de hoeveelheid glucose die zich in de afgelopen drie maanden heeft opgestapeld in de rode bloedcellen. (Dit is niet hetzelfde als glucoseconcentratie in het bloed.)</p></li>
+<li><p>Bloedglucosemonitoring (<code class="docutils literal notranslate"><span class="pre">BGM</span></code>). Diabeten die insuline gebruiken, prikken dagelijks 4 a 6 keer: bij ontbijt, lunch, diner en soms bij de twee tussendoortjes op een dag, en voor het slapen gaan. Daarnaast prikken ze ook wanneer er symptomen zijn van een hypo- of hyperglycemie. Met die prikken wordt bloedglucose gemeten.</p></li>
+<li><p>Tegenwoordig gebruiken steeds meer diabeten een continue glucosemeter (<code class="docutils literal notranslate"><span class="pre">CGM</span></code>), die, afhankelijk van het type, iedere 5 of 15 minuten een glucosemeting doet.</p></li>
+</ul>
+<p>Met de komst van de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> hebben diabeten en hun behandelaren meer inzicht gekregen in de glucoseregulatie. Er zijn op basis daarvan nieuwe klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters gedefinieerd (zie Tabel 1 en Figuur 1) en de verwachting is dat we daarmee de belangrijke maar moeilijker te bepalen <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> kunnen schatten.</p>
+<p>Voor deze opdracht maken we gebruik van open-source data van een studie<span class="math notranslate nohighlight">\(^{1}\)</span> die onderzoekt of <code class="docutils literal notranslate"><span class="pre">CGM</span></code> zonder regelmatige vingerprik net zo veilig is als het gebruik van <code class="docutils literal notranslate"><span class="pre">CGM</span></code> met regelmatige vingerprik. Dit onderzoek is gedaan bij Type 1 diabetespatiënten. De <code class="docutils literal notranslate"><span class="pre">CGM</span></code> die de patiënten gebruiken tijdens dit onderzoek bepaalt iedere 5 minuten een glucosewaarde.</p>
+<p><strong>Tabel 1</strong> Gebruikte variabelen en hun eenheid, doel en omschrijving.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p>Afkorting</p></th>
+<th class="head text-left"><p>Naam</p></th>
+<th class="head text-left"><p>Definitie</p></th>
+<th class="head text-left"><p>Doel</p></th>
+<th class="head text-left"><p>Eenheid</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(g_{BGM}\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">BGM</span></code></p></td>
+<td class="text-left"><p>bloedglucosemonitoring</p></td>
+<td class="text-left"><p>glucoseconcentratie (op onregelmatige tijden)</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>mmol/L</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(g_{CGM}\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CGM</span></code></p></td>
+<td class="text-left"><p>continueglucosemonitoring</p></td>
+<td class="text-left"><p>glucoseconcentratie (gemaakt door een continue glucosemeter)</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>mmol/L</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(h\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HBA1c</span></code></p></td>
+<td class="text-left"><p><em>hemoglobinA1c</em></p></td>
+<td class="text-left"><p>hoeveelheid glucose in bloedcel</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>mmol/L</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(h_{CGM}\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">eA1</span></code></p></td>
+<td class="text-left"><p><em>extimated HbA1c</em></p></td>
+<td class="text-left"><p>schatting van HbA1c op basis van gemiddelde CGM</p></td>
+<td class="text-left"><p>&lt; 53</p></td>
+<td class="text-left"><p>mmol/L</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>12.71 mmol/mol</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(b\)</span></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>4.70587 L/mol</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(p_{TAR}\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TAR</span></code></p></td>
+<td class="text-left"><p><em>time above range</em></p></td>
+<td class="text-left"><p>percentage van de tijd dat de CGM boven 10 mmol/L is</p></td>
+<td class="text-left"><p>&lt; 30</p></td>
+<td class="text-left"><p>%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(p_{TIR}\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TIR</span></code></p></td>
+<td class="text-left"><p><em>time in range</em></p></td>
+<td class="text-left"><p>percentage van de tijd dat de CGM tussen 3.9 en 10 mmol/L is</p></td>
+<td class="text-left"><p>&gt; 70</p></td>
+<td class="text-left"><p>%</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(p_{TBR}\)</span></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TBR</span></code></p></td>
+<td class="text-left"><p><em>time below range</em></p></td>
+<td class="text-left"><p>percentage van de tijd dat de CGM onder 3.9 mmol/L is</p></td>
+<td class="text-left"><p>&lt; 5</p></td>
+<td class="text-left"><p>%</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="My Image" src="https://surfdrive.surf.nl/files/index.php/s/qFua4yqda63motN/download" /><br />
+<strong>Figuur 1</strong> Voorbeeld van een gestapeld staafdiagram van CGM-waarden (mmol/L) met doelwaarden. Zo is in het ideale geval de TIR (percentage van de tijd dat 3.9 &lt;CGM&lt; 10) meer dan 70%. Zie ook Tabel 1.</p>
+</section>
+<section id="opdrachten">
+<h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Permalink to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.1</p>
+<p>De gegevens zijn opgeslagen in het bestand <code class="docutils literal notranslate"><span class="pre">glucosedata.pickle</span></code> dat je <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/B1pGIHnI1auNAsf">hier</a> kunt vinden. Een ‘pickle’ bestand bevat een object dat we uit kunnen pakken in Python. Gebruik onderstaande code om deze pickle uit te pakken. Het resultaat wordt opgeslagen in <code class="docutils literal notranslate"><span class="pre">glucodat</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;glucosedata.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="n">glucodat</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Inspecteer de variabele <code class="docutils literal notranslate"><span class="pre">glucodat</span></code>. Zoals je ziet is het een dictionary. Hoeveel patiënten zitten er in deze dictionary?</p>
+</div>
+<p>Iedere patiënt heeft een unieke ID. De ID van patient 2 is bijvoorbeeld ‘ID_2’. Je kunt alle IDs krijgen met de <code class="docutils literal notranslate"><span class="pre">.keys()</span></code> method op de dictonary. Voor elke patiënt zijn metingen van BGM en CGM en HbA1c opgeslagen. Om de BGM waarden van bijvoorbeeld patiënt ‘ID_2’ te verkrijgen, gebruik je (zoals je in Hoofdstuk 2 hebt geleerd) dictionary indexing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gbm_values</span> <span class="o">=</span> <span class="n">glucodat</span><span class="p">[</span><span class="s1">&#39;ID_2&#39;</span><span class="p">][</span><span class="s1">&#39;BGM&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Voor zowel BGM als CGM zijn voor elke patiënt tijd (eerste kolom) en gemeten waarde (tweede kolom) opgeslagen in een NumPy array. De <code class="docutils literal notranslate"><span class="pre">BGM</span></code> is vaak gemeten op onregelmatige tijden; de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> zijn de continue glucosemetingen, meestal regelmatig gemeten. Van de <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> is per patiënt maar één meting uitgevoerd, maar de waarde is twee keer opgeslagen.</p>
+<p>De tijd is in dagen, de glucosedata (<code class="docutils literal notranslate"><span class="pre">BGM</span></code>, <code class="docutils literal notranslate"><span class="pre">CGM</span></code>) zijn in mmol/L, en de <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> is in
+mmol/mol. Per patiënt zijn er 3 maanden aan data geselecteerd. Patiënten hebben verschillende hoeveelheden <code class="docutils literal notranslate"><span class="pre">BGM</span></code>- en <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-metingen gedaan. Daardoor is de data van iedere patiënt verschillend van lengte.</p>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.2</p>
+<p>Gebruik de <code class="docutils literal notranslate"><span class="pre">numpy.random</span></code> module (zie Hoofdstuk 6) om drie willekeurige patiënten te selecteren. Maak vervolgens in één figuur drie subplots (voor elke patiënt een subplot, zie Hoofdstuk 8), en zet per patiënt in één subplot (zie Hoofdstuk 8):</p>
+<ol class="arabic simple">
+<li><p>de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> van de patiënt als functie van tijd,</p></li>
+<li><p>de <code class="docutils literal notranslate"><span class="pre">BGM</span></code> van de patiënt als functie van tijd,</p></li>
+<li><p>de gemiddelde bloedglucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> (mmol/L) van de patiënt geschat a.d.h.v. opgestapelde glucose in bloedcellen <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> als</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[g = \frac{h − a}{b}\]</div>
+<p>met <span class="math notranslate nohighlight">\(a\)</span> = 12.71mmol/mol en <span class="math notranslate nohighlight">\(b\)</span> = 4.70587 L/mol.</p>
+<p>Voeg zinvolle titels, labels en een legenda toe.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.3</p>
+<p>Wat valt je op aan de verschillende plots? Zijn er verschillen tussen patiënten?</p>
+</div>
+</section>
+<section id="hba1c-vs-klinische-cgm-parameters">
+<h2><code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vs klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameters<a class="headerlink" href="#hba1c-vs-klinische-cgm-parameters" title="Permalink to this heading">#</a></h2>
+<p>Nu gaan we <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vergelijken met een paar klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters. We onderscheiden vier parameters (per patiënt):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eA1c</span></code>: In Opdracht 9.2 schatten we een gemiddelde glucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> uit <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> volgens de formule <span class="math notranslate nohighlight">\(g = \frac{h − a}{b}\)</span>. Omgekeerd kunnen we uit het gemiddelde <span class="math notranslate nohighlight">\(g_{cgm}\)</span> (mmol/mol) van de CGM-metingen van de patiënt de  <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> schatten volgens
+$<span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)</span>$</p></li>
+</ul>
+<p>met <code class="docutils literal notranslate"><span class="pre">a</span></code> = 12.71 mmol/mol en <code class="docutils literal notranslate"><span class="pre">b</span></code> = 4.70587L/mol. Deze <span class="math notranslate nohighlight">\(h_{CGM}\)</span> wordt <code class="docutils literal notranslate"><span class="pre">eA1c</span></code> genoemd (voor “estimated <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>”).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TAR</span></code>: Dit is het percentage samples van CGM hoger dan 10.0 mmol/L.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TIR</span></code>: Dit het percentage samples van CGM tussen de 3.9 en 10.0 mmol/L.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TBR</span></code>: Dit is het percentage samples van CGM kleiner dan 3.9 mmol/L.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.4</p>
+<p>Maak een Python functie <code class="docutils literal notranslate"><span class="pre">gluc_param</span></code> die voor een gegeven <code class="docutils literal notranslate"><span class="pre">CGM</span></code> signaal (van een patiënt) alle vier parameters (<code class="docutils literal notranslate"><span class="pre">eA1c</span></code>, <code class="docutils literal notranslate"><span class="pre">TAR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code>, <code class="docutils literal notranslate"><span class="pre">TBR</span></code>) bepaalt en teruggeeft.</p>
+</div>
+<p>De streefwaarde van <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> voor diabetespatiënten is &lt; 53 mmol/mol. Voor de sommige patiënten is deze streefwaarde lastig te behalen. Nu willen we kijken hoe de verschillende HbA1c streefwaarden zich verhouden tot de <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters (<code class="docutils literal notranslate"><span class="pre">eA1c</span></code>, <code class="docutils literal notranslate"><span class="pre">TAR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code>, <code class="docutils literal notranslate"><span class="pre">TBR</span></code>). We onderscheiden drie groepen:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Patiëntgroep 1:</p></td>
+<td class="text-center"><p>laag: <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> ≤ 53</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Patiëntgroep 2:</p></td>
+<td class="text-center"><p>midden: 53 &lt; <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> &lt; 63</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>patiëntgroep 3:</p></td>
+<td class="text-center"><p>hoog: <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> ≥ 63</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.5</p>
+<p>Maak een <em>stacked bar chart</em>, waarbij de drie verschillende patiëntgroepen naast elkaar op de x-as staan, en, per patiëntgroep de gemiddelde <code class="docutils literal notranslate"><span class="pre">TBR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code> en <code class="docutils literal notranslate"><span class="pre">TAR</span></code> voor de patiëntgroep op elkaar gestapeld staan, zoals in Figuur 1.</p>
+<p>Hints:</p>
+<ol class="arabic simple">
+<li><p>Bepaal deze klinische parameters voor alle patiënten en plaats in één container.</p></li>
+<li><p>Bereken de gemiddelde <code class="docutils literal notranslate"><span class="pre">TBR</span></code>, <code class="docutils literal notranslate"><span class="pre">TIR</span></code> en <code class="docutils literal notranslate"><span class="pre">TAR</span></code>, voor de verschillende groepen.</p></li>
+<li><p>Maak een bar-graph met de Matplotlib-functie <code class="docutils literal notranslate"><span class="pre">bar</span></code>. <a class="reference external" href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/bar_stacked.html">Hier</a> staat een voorbeeld van een stacked bar chart in Matplotlib.</p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.6</p>
+<p>Wat valt op aan de resultaten? Welke groepen behalen de <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameterdoelen (zoals beschreven in Figuur 1).</p>
+</div>
+<section id="moving-average">
+<h3>Moving average<a class="headerlink" href="#moving-average" title="Permalink to this heading">#</a></h3>
+<p>Het is je wellicht opgevallen dat de <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-metingen als functie van tijd enorm fluctueren. Door de metingen te middelen over tijd ontstaat er een langzaam variërende functie van tijd, en die zegt vermoedelijk meer over <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>. Het langzaam variërende signaal construeren we met een “moving averaging” filter van orde <span class="math notranslate nohighlight">\(M\)</span>. Een moving average, of voortschrijdend gemiddelde, bepaalt het gemiddelde over de afgelopen <span class="math notranslate nohighlight">\(M\)</span> metingen en vervangt daarmee de waarde in het signaal. Met andere woorden: het is een filter dat op basis van metingen <span class="math notranslate nohighlight">\(x_{1},x_{1},...,x_{n}\)</span> het signaal <span class="math notranslate nohighlight">\(y_{1},y_{1},...,y_{n}\)</span> bepaalt volgens de regel</p>
+<div class="math notranslate nohighlight">
+\[y_{k}=\frac{1}{M+1}(x_{k},x_{k-1},...,x_{k-M}),   k=1,..,n\]</div>
+<p>Het getal <span class="math notranslate nohighlight">\(M\)</span> wordt de “orde” van het filter genoemd. Als <code class="docutils literal notranslate"><span class="pre">M=1</span></code> kopiëren we gewoon de waarden van <span class="math notranslate nohighlight">\(x\)</span> naar <span class="math notranslate nohighlight">\(y\)</span>, en verder geldt dat hoe hoger <span class="math notranslate nohighlight">\(M\)</span> is, hoe gladder het signaal <span class="math notranslate nohighlight">\(y\)</span> wordt. Op <a class="reference external" href="https://nl.wikipedia.org/wiki/Voortschrijdend_gemiddelde">Wikipedia</a> staat een uitgebreide uitleg en onderstaand voorbeeld met <span class="math notranslate nohighlight">\(M=3\)</span></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Dag</p></th>
+<th class="head text-center"><p>Koers</p></th>
+<th class="head text-center"><p>MA berekend over 3 dagen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>11</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>15</p></td>
+<td class="text-center"><p>12, want (10+11+15)/3=12</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>7</p></td>
+<td class="text-center"><p>11</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>9</p></td>
+<td class="text-center"><p>10,3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>7,3</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>7</p></td>
+<td class="text-center"><p>7,3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-center"><p>8</p></td>
+<td class="text-center"><p>7</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-center"><p>17</p></td>
+<td class="text-center"><p>10,7</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-center"><p>20</p></td>
+<td class="text-center"><p>15</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.7</p>
+<p>Maak een Python functie <code class="docutils literal notranslate"><span class="pre">movingav</span></code> met syntax <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">movingav(x,</span> <span class="pre">m)</span></code> die uit een vector <code class="docutils literal notranslate"><span class="pre">x</span></code> een vector <code class="docutils literal notranslate"><span class="pre">y</span></code> bepaalt zoals gedefinieerd in de vergelijking hierboven.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.8</p>
+<p>Controleer deze functie met onderstaande code, en leg uit waarom de plot klopt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">movingav</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1"># ook wel &quot;lollipop plot&quot; genoemd</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.9</p>
+<p>Selecteer drie patiënten, en, per patiënt, maak een figuur met daarin een plot van de:</p>
+<ul class="simple">
+<li><p>ongefilterde <code class="docutils literal notranslate"><span class="pre">CGM</span></code> data,</p></li>
+<li><p>gefilterde <code class="docutils literal notranslate"><span class="pre">CGM</span></code> data (dus bepaald m.b.v. movingav)</p></li>
+<li><p>de geschatte gemiddelde bloedglucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> bepaald op basis van de <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> gegevens.</p></li>
+</ul>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 9.10</p>
+<p>Maak plaatjes met verschillende orde <span class="math notranslate nohighlight">\(M\)</span> van het moving average filter. Filter bijvoorbeeld ook eens met grote orders, bijvoorbeeld het aantal samples voor een dag, of voor een week. Je mag er vanuit gaan dat de samplefrequentie 5/min is. Wat valt je op voor verschillende filter ordes?</p>
+</div>
+</section>
+</section>
+<section id="referenties">
+<h2>Referenties<a class="headerlink" href="#referenties" title="Permalink to this heading">#</a></h2>
+<p><strong>[1]</strong>: <em>Aleppo G, Ruedy KJ, Riddlesworth TD, Kruger DF, Peters AL, Hirsch I, et al. REPLACE-BG: A Randomized Trial Comparing Continuous Glucose Monitoring With and Without Routine Blood Glucose Monitoring in Adults With Well-Controlled Type 1 Diabetes. Diabetes Care [Internet]. 2017 Apr 1 [cited 2021 Oct 4];40(4):538–45. Available from: <a class="reference external" href="https://care.diabetesjournals.org/content/40/4/538">https://care.diabetesjournals.org/content/40/4/538</a>. Dataset beschikbaar vanaf: <a class="reference external" href="https://public.jaeb.org/datasets/diabetes">https://public.jaeb.org/datasets/diabetes</a>.</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/09_Project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../08_Visualization/08_Visualization_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Visualization</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modules and packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hba1c-vs-klinische-cgm-parameters"><code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vs klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-average">Moving average</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jelmer Wolterink
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
