@@ -24,10 +24,10 @@ parts:
     title: 8. Visualization
   - file: notebooks/09_Project/09_Project_student
     title: 9. Project
-  - file:  placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student 
-    title: 10. Modules and packages 
-  - file: placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student
-    title: 11. Data analysis
+  - file: notebooks/10_DataAnalysis/10_DataAnalysis_student
+    title: 10. Data analysis
+  - file:  notebooks/11_ModulesPackages/11_ModulesPackages_student 
+    title: 11. Modules and packages 
 - caption: Backmatter
   chapters:
   - file: backmatter/references
