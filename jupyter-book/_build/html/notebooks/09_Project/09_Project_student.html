@@ -68,8 +68,6 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Modules and packages" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html" />
-    <link rel="prev" title="Visualization" href="../08_Visualization/08_Visualization_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,19 +151,19 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_student.html">1. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../04_Functions/04_Functions_student.html">4. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">5. Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../06_NumPy/06_NumPy_student.html">6. NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../07_Objects/07_Objects_student.html">7. Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../08_Visualization/08_Visualization_student.html">8. Visualization</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html">10. Modules and packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/7_DataAnalysis/7_DataAnalysis_student.html">11. Data analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_2.html">2. Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_3.html">3. Control structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_4.html">4. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_5.html">5. Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_6.html">6. NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_7.html">7. Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_8.html">8. Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_9.html">9. Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_10.html">10. Data analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_11.html">11. Modules and packages</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -565,11 +563,7 @@ mmol/mol. Per patiënt zijn er 3 maanden aan data geselecteerd. Patiënten hebbe
 <h2><code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vs klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code> parameters<a class="headerlink" href="#hba1c-vs-klinische-cgm-parameters" title="Permalink to this heading">#</a></h2>
 <p>Nu gaan we <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vergelijken met een paar klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters. We onderscheiden vier parameters (per patiënt):</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">eA1c</span></code>: In Opdracht 9.2 schatten we een gemiddelde glucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> uit <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> volgens de formule <span class="math notranslate nohighlight">\(g = \frac{h − a}{b}\)</span>. Omgekeerd kunnen we uit het gemiddelde <span class="math notranslate nohighlight">\(g_{cgm}\)</span> (mmol/mol) van de CGM-metingen van de patiënt de  <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> schatten volgens
-$<span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)</span>$</p></li>
-</ul>
-<p>met <code class="docutils literal notranslate"><span class="pre">a</span></code> = 12.71 mmol/mol en <code class="docutils literal notranslate"><span class="pre">b</span></code> = 4.70587L/mol. Deze <span class="math notranslate nohighlight">\(h_{CGM}\)</span> wordt <code class="docutils literal notranslate"><span class="pre">eA1c</span></code> genoemd (voor “estimated <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>”).</p>
-<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eA1c</span></code>: In Opdracht 9.2 schatten we een gemiddelde glucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> uit <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> volgens de formule <span class="math notranslate nohighlight">\(g = \frac{h − a}{b}\)</span>. Omgekeerd kunnen we uit het gemiddelde <span class="math notranslate nohighlight">\(g_{cgm}\)</span> (mmol/mol) van de CGM-metingen van de patiënt de  <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">HbA1c</span></code> schatten volgens <span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)</span> met <code class="docutils literal notranslate"><span class="pre">a</span></code> = 12.71 mmol/mol en <code class="docutils literal notranslate"><span class="pre">b</span></code> = 4.70587L/mol. Deze <span class="math notranslate nohighlight">\(h_{CGM}\)</span> wordt <code class="docutils literal notranslate"><span class="pre">eA1c</span></code> genoemd (voor “estimated <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>”).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">TAR</span></code>: Dit is het percentage samples van CGM hoger dan 10.0 mmol/L.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">TIR</span></code>: Dit het percentage samples van CGM tussen de 3.9 en 10.0 mmol/L.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">TBR</span></code>: Dit is het percentage samples van CGM kleiner dan 3.9 mmol/L.</p></li>
@@ -737,24 +731,6 @@ $<span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../08_Visualization/08_Visualization_student.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Visualization</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../../placeholder_notebooks/4_ModulesPackages/4_ModulesPackages_student.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Modules and packages</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
