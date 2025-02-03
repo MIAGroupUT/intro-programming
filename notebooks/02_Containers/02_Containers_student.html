@@ -66,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Control structures" href="../../placeholder_notebooks/placeholder_3.html" />
+    <link rel="prev" title="Getting started" href="../01_GettingStarted/01_GettingStarted_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,10 +151,10 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_student.html">1. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_2.html">2. Containers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Containers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_3.html">3. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_4.html">4. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_5.html">5. Notebooks</a></li>
@@ -536,7 +538,7 @@ Claire
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_34271</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60575</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">student_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Bert&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -546,9 +548,23 @@ Claire
 </div>
 <p>Indeed, we get an error. Take a close look at this error, it tells you exactly what the problem is: tuples do not allow item assignment.</p>
 <p>Instead of indexing from the <em>start</em> of a tuple, you can also index by counting back from the last element by using negative integer numbers, where index -1 refers to the last item, -2 to the second-to-last item, etc.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.1</p>
-<p>Why do <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">student_names[-3]</span></code> refer to the same item?</p>
+<p>Why do <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">student_names[3]</span></code> refer to the same item?</p>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 2.1</p>
+<p>Leg uit waarom <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">student_names[3]</span></code> naar hetzelfde item verwijzen.</p>
+</div>
+</div>
 </div>
 <p>In addition to selecting a <em>single</em> item using indexing, we can also select <em>multiple</em> items at once. This is called <em>slicing</em>. Slicing works with start, end, and step indices. These are used in the following syntax</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub_items</span> <span class="o">=</span> <span class="n">some_tuple</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
@@ -622,9 +638,23 @@ Claire
 </div>
 </div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.2</p>
 <p>Why does this code not print anything?</p>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 2.2</p>
+<p>Leg uit waarom er niets geprint wordt als je deze code runt.</p>
+</div>
+</div>
 </div>
 <p>Instead, to traverse the tuple in reverse, the start index should be higher than the end index:</p>
 <div class="cell docutils container">
@@ -817,6 +847,10 @@ banana
 </div>
 </div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.3</p>
 <p>Write scripts for the following tasks:</p>
@@ -824,8 +858,27 @@ banana
 <li><p>Use indexing and assignment to sort the items in the list <code class="docutils literal notranslate"><span class="pre">scrambled_numbers</span> <span class="pre">=</span> <span class="pre">[7,</span> <span class="pre">2,</span> <span class="pre">5,</span> <span class="pre">1]</span></code> in ascending order.</p></li>
 <li><p>Split the list <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code> into a list of even numbers and a list of uneven numbers using slicing.</p></li>
 <li><p>Given list <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>, make two new lists: one containing every second item counting from the back, and one containing every third item starting from the front.</p></li>
-<li><p>Given tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>, write code to extract the value <code class="docutils literal notranslate"><span class="pre">15</span></code> from <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+<li><p>Given tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>, write code to print the value <code class="docutils literal notranslate"><span class="pre">15</span></code> from <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
 </ol>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 2.3</p>
+<p>Schrijf scripts voor de volgende taken:</p>
+<ol class="arabic simple">
+<li><p>Gebruik <em>indexing</em> en <em>assignment</em> op de items in deze lijst op oplopende volgorde te zetten: <code class="docutils literal notranslate"><span class="pre">scrambled_numbers</span> <span class="pre">=</span> <span class="pre">[7,</span> <span class="pre">2,</span> <span class="pre">5,</span> <span class="pre">1]</span></code></p></li>
+<li><p>Gebruik <em>slicing</em> om twee lijsten te maken van de volgende lijst, één lijst met even en één lijst met oneven nummers: <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code></p></li>
+<li><p>Neem de lijst <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>. Maak hiervan met behulp van <em>slicing</em> twee nieuwe lijsten: één lijst die elk tweede item als je van achteren telt, en één lijst die elk derde item bevat als je van voren telt.</p></li>
+<li><p>Neem de tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>. Gebruik <em>indexing</em> om hieruit de waarde <code class="docutils literal notranslate"><span class="pre">15</span></code> te halen.</p></li>
+</ol>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="set">
@@ -861,8 +914,8 @@ banana
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;}
-{&#39;Bob&#39;, &#39;Adam&#39;, &#39;Claire&#39;, &#39;Dean&#39;, &#39;Edward&#39;, &#39;Fran&#39;}
-{&#39;Adam&#39;, &#39;Claire&#39;}
+{&#39;Dean&#39;, &#39;Adam&#39;, &#39;Fran&#39;, &#39;Edward&#39;, &#39;Claire&#39;, &#39;Bob&#39;}
+{&#39;Claire&#39;, &#39;Adam&#39;}
 </pre></div>
 </div>
 </div>
@@ -876,7 +929,7 @@ banana
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Bob&#39;, &#39;Adam&#39;, &#39;Claire&#39;, &#39;Dean&#39;, &#39;Edward&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Adam&#39;, &#39;Edward&#39;, &#39;Claire&#39;, &#39;Bob&#39;}
 </pre></div>
 </div>
 </div>
@@ -998,6 +1051,10 @@ banana
 </div>
 </div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.4</p>
 <p>Write scripts for the following tasks:</p>
@@ -1032,6 +1089,50 @@ banana
 <li><p>Define a dictionary called <code class="docutils literal notranslate"><span class="pre">student</span></code> that contains your own name, hair color, and age.</p></li>
 <li><p>Create a list containing yourself and two additional students as dictionaries.</p></li>
 </ol>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 2.4</p>
+<p>Schrijf scripts voor de volgende taken:</p>
+<ol class="arabic simple">
+<li><p>Neem de onderstaande dictionary. Schrijf <strong>één regel code</strong> om Mike’s cijfer voor geschiedenis te printen.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;student&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mike&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;grades&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;physics&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+                <span class="s2">&quot;history&quot;</span><span class="p">:</span> <span class="mi">80</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Neem de onderstaande dictionary. Schrijf <strong>één regel code</strong> om het salaris van Brad te verhogen naar 6800.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;emp1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jhon&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">7500</span><span class="p">},</span>
+    <span class="s1">&#39;emp2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Emma&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">},</span>
+    <span class="s1">&#39;emp3&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Brad&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Maak een dictionary met de naam <code class="docutils literal notranslate"><span class="pre">student</span></code> die je naam, haarkleur en leeftijd bevat.</p></li>
+<li><p>Maak een lijst van drie dictionaries: één dictionary die jezelf op deze manier omschrijft (uit voorgaande taak), en twee voor twee medestudenten.</p></li>
+</ol>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="the-in-operator">
@@ -1152,27 +1253,12 @@ False
 </section>
 <section id="string-formatting">
 <h2>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this heading">#</a></h2>
-<p>Oftentimes when we want to print something in a Python script, we want to include variable values in the print statement. Python formatting uses the <code class="docutils literal notranslate"><span class="pre">format</span></code> function, which is a very powerful way to make your print statements more dynamic. Consider the following example.</p>
+<p>Oftentimes when we want to print something in a Python script, we want to include variable values in the print statement. Python provides several ways to <em>format</em> strings, i.e., adding variable values to a string. The easiest way to do this is to use so-called <em>f-strings</em>, by prepending an <code class="docutils literal notranslate"><span class="pre">f</span></code> to your strings and use brackets within the string. Consider the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">45</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">76</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum of </span><span class="si">{}</span><span class="s1"> and </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sum of 45 and 76 is 121
-</pre></div>
-</div>
-</div>
-</div>
-<p>Changing the values of the variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> also changes the output of the print statement. To make sure that the right values end up in the right place, you can also name the formatted parts of your string, as follows</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">76</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum of </span><span class="si">{number_a}</span><span class="s1"> and </span><span class="si">{number_b}</span><span class="s1"> is </span><span class="si">{sum_numbers}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number_a</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">number_b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">sum_numbers</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The sum of </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1186,20 +1272,22 @@ False
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">9</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Prints the &#39;raw&#39; value of a with many decimals</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># Only prints two decimals</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{number:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="o">=</span><span class="n">a</span><span class="p">))</span>  <span class="c1"># Same as in previous line, but now with named argument</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Prints the &#39;raw&#39; value of a with many decimals</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Only prints two decimals</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1111111111111111
 0.11
-0.11
 </pre></div>
 </div>
 </div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.5</p>
 <p>The table below shows the average temperature in Enschede per month.</p>
@@ -1240,7 +1328,7 @@ False
 <p>Use this information for the following:</p>
 <ul class="simple">
 <li><p>Put this information in a dictionary, use strings as keys and integers as values.</p></li>
-<li><p>Then, use the dictionary and print the following statements. Use <code class="docutils literal notranslate"><span class="pre">format</span></code> for the italic parts in</p>
+<li><p>Then, use the dictionary and print the following statements. Use f-strings for the italic parts in</p>
 <ul>
 <li><p>‘The average temperature in <em>March</em> is <em>6</em>°C’</p></li>
 <li><p>‘The average temperature in <em>August</em> is <em>17</em>°C’</p></li>
@@ -1248,6 +1336,64 @@ False
 </ul>
 </li>
 </ul>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 2.5</p>
+<p>De tabel hieronder laat de gemiddelde temperatuur in Enschede per maand zien.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Average</p></th>
+<th class="head"><p>January</p></th>
+<th class="head"><p>February</p></th>
+<th class="head"><p>March</p></th>
+<th class="head"><p>April</p></th>
+<th class="head"><p>May</p></th>
+<th class="head"><p>June</p></th>
+<th class="head"><p>July</p></th>
+<th class="head"><p>August</p></th>
+<th class="head"><p>September</p></th>
+<th class="head"><p>October</p></th>
+<th class="head"><p>November</p></th>
+<th class="head"><p>December</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Temp.</p></td>
+<td><p>2°C</p></td>
+<td><p>3°C</p></td>
+<td><p>6°C</p></td>
+<td><p>9°C</p></td>
+<td><p>13°C</p></td>
+<td><p>16°C</p></td>
+<td><p>18°C</p></td>
+<td><p>17°C</p></td>
+<td><p>14°C</p></td>
+<td><p>10°C</p></td>
+<td><p>6°C</p></td>
+<td><p>3°C</p></td>
+</tr>
+</tbody>
+</table>
+<p>Gebruik deze informatie voor het volgende:</p>
+<ul class="simple">
+<li><p>Zet alle informatie in één dictionary. Gebruik strings als <em>keys</em> en integers als <em>values</em>.</p></li>
+<li><p>Gebruik die dictionary om het volgende te printen. Gebruik hierbij f-strings voor de schuingedrukte delen</p>
+<ul>
+<li><p>‘The average temperature in <em>March</em> is <em>6</em>°C’</p></li>
+<li><p>‘The average temperature in <em>August</em> is <em>17</em>°C’</p></li>
+<li><p>‘The average temperature in <em>July</em> is <em>15</em>°C higher than in <em>February</em>’</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1261,16 +1407,16 @@ False
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: ""
+            mode: "python"
         },
         kernelOptions: {
-            name: "",
+            name: "python3",
             path: "./notebooks/02_Containers"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = ''</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -1283,6 +1429,24 @@ False
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../01_GettingStarted/01_GettingStarted_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Getting started</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../placeholder_notebooks/placeholder_3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Control structures</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
