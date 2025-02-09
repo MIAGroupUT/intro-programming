@@ -564,6 +564,10 @@ Goodbye
 </div>
 </div>
 <p>Note that type hinting is a form of documentation: it doesn’t change how Python treats your code, but it makes your code more reusable, just like placing comments with <code class="docutils literal notranslate"><span class="pre">#</span></code> and using descriptive names for variables and functions.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 4.1</p>
 <p>Consider <em>Exercise 3.3</em> about banking. Adapt that script into a function called <code class="docutils literal notranslate"><span class="pre">evaluate_customer</span></code> that takes in a customers age (as <code class="docutils literal notranslate"><span class="pre">int</span></code>) and annual income (as <code class="docutils literal notranslate"><span class="pre">int</span></code>) as parameters and prints the required answer. Test your code by calling the function as follows</p>
@@ -577,45 +581,24 @@ Goodbye
 </pre></div>
 </div>
 </div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.2</p>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">print_code</span></code> that takes a ‘code’ as input and uses that code to print characters to the command line. A code is a string that describes which characters should be printed. Each code consists of pairs of <em>characters</em> and <em>counts</em>. The maximum count is 9. For example,</p>
-<ul class="simple">
-<li><p>when called as <code class="docutils literal notranslate"><span class="pre">print_code('6+')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">++++++</span></code></p></li>
-<li><p>when called as  <code class="docutils literal notranslate"><span class="pre">print_code('2+4*5+')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">++****+++++</span></code></p></li>
-<li><p>when called as  <code class="docutils literal notranslate"><span class="pre">print_code('2*4+6*')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">**++++******</span></code>,</p></li>
-<li><p>when called as  <code class="docutils literal notranslate"><span class="pre">print_code('9a4b3c')</span></code> the function should print <code class="docutils literal notranslate"><span class="pre">aaaaaaaaabbbbccc</span></code></p></li>
-</ul>
-<p>To help you get started, here is a layout for your function. You have to change the commented lines in order to make the function work.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_code</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">start_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="n">fragment</span> <span class="o">=</span> <span class="n">code</span><span class="p">[</span><span class="n">start_ind</span><span class="p">:</span><span class="n">start_ind</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span>
-        <span class="c1">#### based on the fragment, extend the output string</span>
-    <span class="c1">#### print the output string</span>
+<p class="admonition-title">Opdracht 4.1</p>
+<p>In <em>Exercise 3.3</em> heb je een script geschreven over een bank. Maak nu een functie op basis van dat script. Noem de functie <code class="docutils literal notranslate"><span class="pre">evaluate_customer</span></code>. De functie heeft twee argumenten: de leeftijd van de klant (als integer) en een jaarinkomen (ook als integer). De functie print op basis van deze twee argumenten het gewenste antwoord. Je kunt de volgende code gebruiken als basis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_customer</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">annual_income</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="c1">## The body of the function goes here</span>
+
+<span class="n">evaluate_customer</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">11000</span><span class="p">)</span>
+<span class="n">evaluate_customer</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">25000</span><span class="p">)</span>
+<span class="n">evaluate_customer</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40000</span><span class="p">)</span>
+<span class="n">evaluate_customer</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>    
 </pre></div>
 </div>
-<ol class="arabic">
-<li><p>Finish this function and verify that your function works using the examples shown above.</p></li>
-<li><p>The list below contains multiple codes. Write a script that loops over this list and prints each code. Note that these codes contain spaces. These are treated like characters by Python.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">full_code</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;9 5 6+7 6+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 3 9+1+3 9+1+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 1 9+4+1 9+4+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 9+9+9+2+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 9+9+9+2+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 9+9+9+2+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 1 9+9+9+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 3 9+9+5+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 5 9+9+1+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 7 9+6+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 9 9+2+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 9 2 7+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;9 9 4 3+&#39;</span><span class="p">,</span> 
-             <span class="s1">&#39;0+&#39;</span><span class="p">]</span>
-</pre></div>
 </div>
-</li>
-</ol>
+</div>
 </div>
 </section>
 <section id="return">
@@ -684,7 +667,7 @@ Goodbye
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_34291</span><span class="o">/</span><span class="mf">2140094660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_40968</span><span class="o">/</span><span class="mf">2140094660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: add_numbers() missing 1 required positional argument: &#39;number_b&#39;
@@ -699,7 +682,7 @@ Goodbye
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_34291/3779491282.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_40968/3779491282.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">add_numbers</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">number_b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
                                            <span class="o">^</span>
 <span class="ne">SyntaxError</span>: positional argument follows keyword argument
@@ -762,7 +745,7 @@ Goodbye
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_34291/1073581284.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/07/x0gf6dj176dfjvrn357t5p6h0000gn/T/ipykernel_40968/1073581284.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">def</span> <span class="nf">add_numbers_optional</span><span class="p">(</span><span class="n">number_a</span> <span class="o">=</span> <span class="mi">37</span><span class="p">,</span> <span class="n">number_b</span><span class="p">):</span>
                             <span class="o">^</span>
 <span class="ne">SyntaxError</span>: non-default argument follows default argument
@@ -770,8 +753,12 @@ Goodbye
 </div>
 </div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.3</p>
+<p class="admonition-title">Exercise 4.2</p>
 <p>A common operation in linear algebra is computing the dot product between two vectors. The dot product of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}=[a_1, a_2, \ldots, a_n]\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=[b_1, b_2, \ldots, b_n]\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i\]</div>
@@ -784,6 +771,28 @@ Goodbye
 <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 4.2</p>
+<p>Het berekenen van het inproduct tussen twee vectoren is een veelgebruikte operatie in de lineaire algebra en in veel toepassingen. Het is dus praktisch om hier een functie voor te schrijven Het inproduct tussen twee vectoren <span class="math notranslate nohighlight">\(\mathbf{a}=[a_1, a_2, \ldots, a_n]\)</span> en <span class="math notranslate nohighlight">\(\mathbf{b}=[b_1, b_2, \ldots, b_n]\)</span> is bepaald als</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i\]</div>
+<p>Schrijf een functie die twee vectoren <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> en <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> als input neemt en het inproduct terug geeft. De vectoren definieren we in deze opdracht als <code class="docutils literal notranslate"><span class="pre">list</span></code> containers. Hou er rekening mee dat je alleen het inproduct tussen twee vectoren kunt berekenen als ze allebei evenveel items hebben. Als dit niet het geval is, print dan een waarschuwing voor de gebruiker en geef <code class="docutils literal notranslate"><span class="pre">-1</span></code> terug als antwoord. Noem je functie <code class="docutils literal notranslate"><span class="pre">dot_product</span></code>. Gebruik vervolgens onderstaande code om te testen of je functie werkt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+
+<span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -808,7 +817,7 @@ Goodbye
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_34291</span><span class="o">/</span><span class="mf">1922670122.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_40968</span><span class="o">/</span><span class="mf">1922670122.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">add_y</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -897,9 +906,23 @@ Goodbye
 </div>
 </div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.4</p>
+<p class="admonition-title">Exercise 4.3</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function above, we have added line numbers in comments. Look at the code and see if you can figure out in which order the lines are executed if you call <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code>.</p>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 4.3</p>
+<p>In de <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function hierboven hebben we regelnummers toegevoegd in de comments. Bekijk de code goed en schrijf op in welke volgorde deze regels worden geëvalueerd als we <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code> aanroepen.</p>
+</div>
+</div>
 </div>
 <p>To write a proper recursive function, you need an <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> expression, where each one corresponds to one of the two scenarions:</p>
 <ol class="arabic simple">
@@ -908,11 +931,11 @@ Goodbye
 </ol>
 <p>In the example above, the base condition is <span class="math notranslate nohighlight">\(n=1\)</span>, and the change that is applied is <span class="math notranslate nohighlight">\(n-1\)</span>. If there is no base condition or no change, your function will just run indefinitely, like a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop without a stopping condition.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.5</p>
+<p class="admonition-title">Exercise 4.4</p>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">sum_recursion</span></code> to calculate the sum of a list of numbers using recursion.<br />
 <strong>Hint</strong>: In your base condition, there is only one item left in the list.</p>
 <p>Test your function using the following code.</p>
@@ -926,11 +949,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.5</p>
+<p class="admonition-title">Opdracht 4.4</p>
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">sum_recursion</span></code> die met behulp van recursie (zoals in de <code class="docutils literal notranslate"><span class="pre">factorial</span></code> functie gebruikt wordt) de som van een <code class="docutils literal notranslate"><span class="pre">list</span></code> met getallen bepaalt. Dus, stel dat we een lijst getallen <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">4]</span></code> hebben, dan moet de functie 31 als antwoord teruggegeven.</p>
 <p>Zorg ervoor dat de functie een <code class="docutils literal notranslate"><span class="pre">if</span></code> en een <code class="docutils literal notranslate"><span class="pre">else</span></code> statement bevat. Hier staat een opzetje van de functie en code om je functie te testen.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_recursion</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
@@ -952,11 +975,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 <h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Permalink to this heading">#</a></h2>
 <p>You don’t have to define each function yourself: Python has a number of built-in functions that are available in any Python distribution. Useful functions include the <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">input</span></code> functions that you have already used. In addition to the functions that you can write yourself, Python has a number of <em>built-in</em> functions. These are functions that are always available if you program in Python. Examples are <code class="docutils literal notranslate"><span class="pre">print()</span></code>. A complete list of built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. Take a look, you’ll likely recognize some of them. We have previously used the <code class="docutils literal notranslate"><span class="pre">round()</span></code> and <code class="docutils literal notranslate"><span class="pre">range()</span></code> functions, and it’s clear what - for example - the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> does. Likewise, you have used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to find out what the type of a variable is.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.6</p>
+<p class="admonition-title">Exercise 4.5</p>
 <p>There are many cases in programming where we need to sort something, usually in ascending order (low to high), sometimes in descending order (high to low). There are also many different sorting algorithms, some faster than others, some more complex. The animation below visualizes eight popular sorting algorithms. The length of the bars indicated their value, and as you can see, each algorithm tries to sort the values from low to high (in ascending order).</p>
 <p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
 <p>In this exercise, you will implement <em>bubble sort</em>. Bubble sort is not the fastest algorithm (as you can see in the animation), but it is (relatively) easy to understand. Let’s say that we have a list of numbers that we want to sort. The animation below visualizes bubble sort for a short list.</p>
@@ -997,20 +1020,20 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.6</p>
-<p>Er bestaan veel verschillende manieren om een lijst te segmenteren. De animatie hieronder laat een paar van die algoritmes zien. Zoals je kunt zien, zijn sommige algoritmes sneller dan andere algoritmes.</p>
+<p class="admonition-title">Opdracht 4.5</p>
+<p>Er bestaan veel verschillende manieren om een lijst te sorteren. De animatie hieronder laat een paar van die algoritmes zien. Zoals je kunt zien, zijn sommige algoritmes sneller dan andere algoritmes.</p>
 <p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
-<p>In deze opdracht ga je zelf een sorteeralgoritme implementeren. Het algoritme dat je gaat implementeren is <em>bubble sort</em>. Bubble sort is niet zo snel, maar wel eenvoudig om te begrijpen. De animate hieronder visualiseer het principe van bubble sort.</p>
+<p>In deze opdracht ga je zelf een sorteeralgoritme implementeren. Het algoritme dat je gaat implementeren is <em>bubble sort</em>. Bubble sort is niet zo snel, maar wel eenvoudig om te begrijpen. De animate hieronder visualiseert het principe van bubble sort.</p>
 <p><img alt="bubblesort" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" /></p>
-<p>Bubble sort werkt als volgt voor een lijst getallen die ik oplopende volgorde wordt gesorteerd:</p>
+<p>Bubble sort werkt als volgt voor een lijst getallen die in oplopende volgorde wordt gesorteerd:</p>
 <ol class="arabic simple">
 <li><p>Loop door de gehele lijst getallen heen. Als er twee buurelementen zijn in de lijst die niet op de goede volgorde staan (dus de eerste is hoger dan de tweede), draai je die om. Als je op deze manier één keer door de hele lijst bent gestapt weet je dat de hoogste waarde zich in ieder geval geheel op het einde bevindt.</p></li>
-<li><p>Controleer of de lijst goed gesorteerd is. Als dat het geval is geef je de rij terug als oplossing.</p></li>
-<li><p>Als de rij niet gesorteerd is loop je nog een keer door de hele rij heen, maar negeer je het laatste element: je weet immmers dat dat de hoogste waarde is.</p></li>
+<li><p>Controleer nu of de lijst goed gesorteerd is (dat is waarschijnlijk nog niet zo na één ronde). Als dat het geval is geef je de rij terug als oplossing.</p></li>
+<li><p>Als de rij niet gesorteerd is loop je nog een keer door de hele rij heen, maar negeer je het laatste element: je weet immmers dat daar al de hoogste waarde staat!</p></li>
 <li><p>Dit process herhaal je tot de hele lijst goed gesorteerd is. Telkens negeer je een extra element aan het einde van de lijst, want na <span class="math notranslate nohighlight">\(n\)</span> stappen weet je dat de <span class="math notranslate nohighlight">\(n\)</span> elementen op het einde van de lijst wel goed gesorteerd zijn.</p></li>
 </ol>
 <p>Het doel van deze opdracht is een eigen implementatie te maken. In onderstaande code moet je de missende regels toevoegen. We raden aan om een <code class="docutils literal notranslate"><span class="pre">while</span></code> loop te gebruiken om telkens te checken of de rij gesorteerd is. Om te kijken of de rij gesorteerd is, kun je de <code class="docutils literal notranslate"><span class="pre">check_sorted</span></code> functie gebruiken.</p>
@@ -1024,7 +1047,6 @@ Nederlands</label><div class="sd-tab-content docutils">
 
 <span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
     <span class="c1"># Your code goes here</span>
-        
 
 
 <span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
@@ -1039,11 +1061,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.7</p>
+<p class="admonition-title">Exercise 4.6</p>
 <p>Write a Python function that takes a number <span class="math notranslate nohighlight">\(n\)</span> as a parameter and returns <strong>all prime numbers up to <span class="math notranslate nohighlight">\(n\)</span></strong> as a list. Tip: you can consider <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">this algorithm</a> to make your function efficient. Name your function <code class="docutils literal notranslate"><span class="pre">all_primes()</span></code> and use the following code to test it</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">all_primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># The body of your function goes here</span>
@@ -1055,11 +1077,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.7</p>
+<p class="admonition-title">Opdracht 4.6</p>
 <p>Schrijf een Python functie die alle priemgetallen tot het getal <span class="math notranslate nohighlight">\(n\)</span> in een lijst terug geeft (returnt). Dus bijvoorbeeld, voor <code class="docutils literal notranslate"><span class="pre">n=8</span></code> moet de functie <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7]</span></code> teruggeven. Je kunt hiervoor de <a class="reference external" href="https://nl.wikipedia.org/wiki/Zeef_van_Eratosthenes"><em>Zeef van Eratosthenes</em></a> gebruiken. Dit is een bekend algoritme waarbij je telkens het volgende doet</p>
 <ul class="simple">
 <li><p>Maak een gesorteerde lijst van alle getallen van 2 tot <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
