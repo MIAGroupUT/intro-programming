@@ -68,6 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="../../backmatter/references.html" />
+    <link rel="prev" title="Jupyter notebooks" href="../05_Notebooks/05_Notebooks_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,15 +153,13 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_new_student.html">1. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">2. Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">3. Containers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_3.html">3. Control structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_4.html">4. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_5.html">5. Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_6.html">6. NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">4. Notebooks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Functions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -413,8 +413,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return">Return</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-arguments">Optional arguments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions">Built-in functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
 </ul>
             </nav>
         </div>
@@ -454,6 +454,24 @@ Goodbye
 </div>
 </div>
 <p>Other functions that you have used so far are <code class="docutils literal notranslate"><span class="pre">len()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code>. You can think of a function as a mini-program that runs within another program or within another function. The main program calls the mini-program and sends information that the mini-program will need as it runs. When the function completes all of its actions, it may send some data back to the main program that has called it. The primary purpose of a function is to allow you to reuse the code within it whenever you need it, using different inputs if required. When you use functions, you are extending your Python vocabulary. This lets you express the solution to your problem in a clearer and more succinct way. Functions can be used many times within one script. For example, when training a neural network, you call the same functions thousands or millions of times.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+English</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Exercise 5.0</p>
+<p>From now on, you are expected to write all answers to exercises in a <em>runnable</em> notebook. You can find a template for this notebook <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/2Nm9Zn0vIzPjpmL">here</a>. Download this <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and use it in VS Code to write down your answers. Add your name and student number to the file.</p>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 5.0</p>
+<p>Vanaf nu is het de bedoeling dat je al je antwoorden in een Jupyter notebook schrijft. Je kunt het template notebook voor dit hoofdstuk <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/2Nm9Zn0vIzPjpmL">hier</a> vinden. Download dit <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> en gebruik het in VS Code om je antwoorden op te slaan. Voeg je naam en studentnummer toe aan het bestand.</p>
+</div>
+</div>
+</div>
 <section id="a-basic-function">
 <h2>A basic function<a class="headerlink" href="#a-basic-function" title="Permalink to this heading">#</a></h2>
 <p>Let’s start by defining a very simple function. The <em>header</em> of a function always starts with the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code>, followed by the name of the function, parentheses, and a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The <em>body</em> of a function contains the actual Python lines that will be executed. The body is a <em>block</em> of code with indentation, just like the statement if you use <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">for</span></code>. We can define a function that simply writes ‘Hello world’ to the terminal.</p>
@@ -559,11 +577,11 @@ Goodbye
 </div>
 <p>Note that type hinting is a form of documentation: it doesn’t change how Python treats your code, but it makes your code more reusable, just like placing comments with <code class="docutils literal notranslate"><span class="pre">#</span></code> and using descriptive names for variables and functions.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.1</p>
+<p class="admonition-title">Exercise 5.1</p>
 <p>Consider <em>Exercise 3.3</em> about banking. Adapt that script into a function called <code class="docutils literal notranslate"><span class="pre">evaluate_customer</span></code> that takes in a customers age (as <code class="docutils literal notranslate"><span class="pre">int</span></code>) and annual income (as <code class="docutils literal notranslate"><span class="pre">int</span></code>) as parameters and prints the required answer. Test your code by calling the function as follows</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_customer</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">annual_income</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="c1">## The body of the function goes here</span>
@@ -576,11 +594,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.1</p>
+<p class="admonition-title">Opdracht 5.1</p>
 <p>In <em>Exercise 3.3</em> heb je een script geschreven over een bank. Maak nu een functie op basis van dat script. Noem de functie <code class="docutils literal notranslate"><span class="pre">evaluate_customer</span></code>. De functie heeft twee argumenten: de leeftijd van de klant (als integer) en een jaarinkomen (ook als integer). De functie print op basis van deze twee argumenten het gewenste antwoord. Je kunt de volgende code gebruiken als basis:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_customer</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">annual_income</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="c1">## The body of the function goes here</span>
@@ -748,11 +766,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.2</p>
+<p class="admonition-title">Exercise 5.2</p>
 <p>A common operation in linear algebra is computing the dot product between two vectors. The dot product of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}=[a_1, a_2, \ldots, a_n]\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=[b_1, b_2, \ldots, b_n]\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i\]</div>
@@ -768,11 +786,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.2</p>
+<p class="admonition-title">Opdracht 5.2</p>
 <p>Het berekenen van het inproduct tussen twee vectoren is een veelgebruikte operatie in de lineaire algebra en in veel toepassingen. Het is dus praktisch om hier een functie voor te schrijven Het inproduct tussen twee vectoren <span class="math notranslate nohighlight">\(\mathbf{a}=[a_1, a_2, \ldots, a_n]\)</span> en <span class="math notranslate nohighlight">\(\mathbf{b}=[b_1, b_2, \ldots, b_n]\)</span> is bepaald als</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i\]</div>
@@ -874,106 +892,15 @@ Nederlands</label><div class="sd-tab-content docutils">
 <p><img alt="scope" src="https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1588956604/code_dmeddc.png" />
 <img alt="morescope" src="https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1588956604/Scope_fbrzcw.png" /></p>
 </section>
-<section id="recursive-functions">
-<h2>Recursive functions<a class="headerlink" href="#recursive-functions" title="Permalink to this heading">#</a></h2>
-<p>We can call functions from anywhere in a script, as long as it has been defined. Moreover, in Python (and in many other languages) there is no reason why a function cannot be called from within itself. This is called a <em>recursive</em> function. Recursion is a concept that can be difficult to understand. The core idea is that you repeatedly call the same function from within itself. This means that the operations that you’re applying should be very similar each time the function is called. A well-known example is the factorial <span class="math notranslate nohighlight">\(n!=n \times n-1 \times n-2 \times \cdots \times 2 \times 1\)</span>. We can implement this in a recursive function as</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>                   <span class="c1"># 1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>                       <span class="c1"># 2</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># 3</span>
-    <span class="k">else</span><span class="p">:</span>                           <span class="c1"># 4</span>
-        <span class="k">return</span> <span class="mi">1</span>                    <span class="c1"># 5</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
-</pre></div>
-</div>
-</div>
-</div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-English</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Exercise 4.3</p>
-<p>In the <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function above, we have added line numbers in comments. Look at the code and see if you can figure out in which order the lines are executed if you call <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code>.</p>
-</div>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-Nederlands</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Opdracht 4.3</p>
-<p>In de <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function hierboven hebben we regelnummers toegevoegd in de comments. Bekijk de code goed en schrijf op in welke volgorde deze regels worden geëvalueerd als we <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code> aanroepen.</p>
-</div>
-</div>
-</div>
-<p>To write a proper recursive function, you need an <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> expression, where each one corresponds to one of the two scenarions:</p>
-<ol class="arabic simple">
-<li><p>A ‘base’ condition. This is the point at which the recursion stops and moves back ‘up’.</p></li>
-<li><p>A change that is applied so that your process comes closer to reaching the base condition.</p></li>
-</ol>
-<p>In the example above, the base condition is <span class="math notranslate nohighlight">\(n=1\)</span>, and the change that is applied is <span class="math notranslate nohighlight">\(n-1\)</span>. If there is no base condition or no change, your function will just run indefinitely, like a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop without a stopping condition.</p>
+<section id="built-in-functions">
+<h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Permalink to this heading">#</a></h2>
+<p>You don’t have to define each function yourself: Python has a number of built-in functions that are available in any Python distribution. Useful functions include the <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">input</span></code> functions that you have already used. In addition to the functions that you can write yourself, Python has a number of <em>built-in</em> functions. These are functions that are always available if you program in Python. Examples are <code class="docutils literal notranslate"><span class="pre">print()</span></code>. A complete list of built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. Take a look, you’ll likely recognize some of them. We have previously used the <code class="docutils literal notranslate"><span class="pre">round()</span></code> and <code class="docutils literal notranslate"><span class="pre">range()</span></code> functions, and it’s clear what - for example - the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> does. Likewise, you have used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to find out what the type of a variable is.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.4</p>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">sum_recursion</span></code> to calculate the sum of a list of numbers using recursion.<br />
-<strong>Hint</strong>: In your base condition, there is only one item left in the list.</p>
-<p>Test your function using the following code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_recursion</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="c1"># Your function body</span>
-    
-<span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">summed_list</span> <span class="o">=</span> <span class="n">sum_recursion</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum of </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">,</span> <span class="n">summed_list</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
-Nederlands</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Opdracht 4.4</p>
-<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">sum_recursion</span></code> die met behulp van recursie (zoals in de <code class="docutils literal notranslate"><span class="pre">factorial</span></code> functie gebruikt wordt) de som van een <code class="docutils literal notranslate"><span class="pre">list</span></code> met getallen bepaalt. Dus, stel dat we een lijst getallen <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">4]</span></code> hebben, dan moet de functie 31 als antwoord teruggegeven.</p>
-<p>Zorg ervoor dat de functie een <code class="docutils literal notranslate"><span class="pre">if</span></code> en een <code class="docutils literal notranslate"><span class="pre">else</span></code> statement bevat. Hier staat een opzetje van de functie en code om je functie te testen.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_recursion</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="c1"># Your code</span>
-    
-<span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">summed_list</span> <span class="o">=</span> <span class="n">sum_recursion</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum of </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">,</span> <span class="n">summed_list</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="built-in-functions">
-<h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Permalink to this heading">#</a></h2>
-<p>You don’t have to define each function yourself: Python has a number of built-in functions that are available in any Python distribution. Useful functions include the <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">input</span></code> functions that you have already used. In addition to the functions that you can write yourself, Python has a number of <em>built-in</em> functions. These are functions that are always available if you program in Python. Examples are <code class="docutils literal notranslate"><span class="pre">print()</span></code>. A complete list of built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. Take a look, you’ll likely recognize some of them. We have previously used the <code class="docutils literal notranslate"><span class="pre">round()</span></code> and <code class="docutils literal notranslate"><span class="pre">range()</span></code> functions, and it’s clear what - for example - the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> does. Likewise, you have used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to find out what the type of a variable is.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-8">
-English</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Exercise 4.5</p>
+<p class="admonition-title">Exercise 5.3</p>
 <p>There are many cases in programming where we need to sort something, usually in ascending order (low to high), sometimes in descending order (high to low). There are also many different sorting algorithms, some faster than others, some more complex. The animation below visualizes eight popular sorting algorithms. The length of the bars indicated their value, and as you can see, each algorithm tries to sort the values from low to high (in ascending order).</p>
 <p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
 <p>In this exercise, you will implement <em>bubble sort</em>. Bubble sort is not the fastest algorithm (as you can see in the animation), but it is (relatively) easy to understand. Let’s say that we have a list of numbers that we want to sort. The animation below visualizes bubble sort for a short list.</p>
@@ -1014,11 +941,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-9">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.5</p>
+<p class="admonition-title">Opdracht 5.3</p>
 <p>Er bestaan veel verschillende manieren om een lijst te sorteren. De animatie hieronder laat een paar van die algoritmes zien. Zoals je kunt zien, zijn sommige algoritmes sneller dan andere algoritmes.</p>
 <p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
 <p>In deze opdracht ga je zelf een sorteeralgoritme implementeren. Het algoritme dat je gaat implementeren is <em>bubble sort</em>. Bubble sort is niet zo snel, maar wel eenvoudig om te begrijpen. De animate hieronder visualiseert het principe van bubble sort.</p>
@@ -1055,11 +982,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 4.6</p>
+<p class="admonition-title">Exercise 5.4</p>
 <p>Write a Python function that takes a number <span class="math notranslate nohighlight">\(n\)</span> as a parameter and returns <strong>all prime numbers up to <span class="math notranslate nohighlight">\(n\)</span></strong> as a list. Tip: you can consider <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">this algorithm</a> to make your function efficient. Name your function <code class="docutils literal notranslate"><span class="pre">all_primes()</span></code> and use the following code to test it</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">all_primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># The body of your function goes here</span>
@@ -1071,11 +998,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-11">
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 4.6</p>
+<p class="admonition-title">Opdracht 5.4</p>
 <p>Schrijf een Python functie die alle priemgetallen tot het getal <span class="math notranslate nohighlight">\(n\)</span> in een lijst terug geeft (returnt). Dus bijvoorbeeld, voor <code class="docutils literal notranslate"><span class="pre">n=8</span></code> moet de functie <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7]</span></code> teruggeven. Je kunt hiervoor de <a class="reference external" href="https://nl.wikipedia.org/wiki/Zeef_van_Eratosthenes"><em>Zeef van Eratosthenes</em></a> gebruiken. Dit is een bekend algoritme waarbij je telkens het volgende doet</p>
 <ul class="simple">
 <li><p>Maak een gesorteerde lijst van alle getallen van 2 tot <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
@@ -1091,6 +1018,97 @@ Nederlands</label><div class="sd-tab-content docutils">
 <span class="n">n</span> <span class="o">=</span> <span class="c1"># </span>
 <span class="n">primes</span> <span class="o">=</span> <span class="n">all_primes</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="recursive-functions">
+<h2>Recursive functions<a class="headerlink" href="#recursive-functions" title="Permalink to this heading">#</a></h2>
+<p>We can call functions from anywhere in a script, as long as it has been defined. Moreover, in Python (and in many other languages) there is no reason why a function cannot be called from within itself. This is called a <em>recursive</em> function. Recursion is a concept that can be difficult to understand. The core idea is that you repeatedly call the same function from within itself. This means that the operations that you’re applying should be very similar each time the function is called. A well-known example is the factorial <span class="math notranslate nohighlight">\(n!=n \times n-1 \times n-2 \times \cdots \times 2 \times 1\)</span>. We can implement this in a recursive function as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>                   <span class="c1"># 1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>                       <span class="c1"># 2</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># 3</span>
+    <span class="k">else</span><span class="p">:</span>                           <span class="c1"># 4</span>
+        <span class="k">return</span> <span class="mi">1</span>                    <span class="c1"># 5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+English</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Exercise 5.5</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function above, we have added line numbers in comments. Look at the code and see if you can figure out in which order the lines are executed if you call <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code>.</p>
+</div>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 5.5</p>
+<p>In de <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function hierboven hebben we regelnummers toegevoegd in de comments. Bekijk de code goed en schrijf op in welke volgorde deze regels worden geëvalueerd als we <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code> aanroepen.</p>
+</div>
+</div>
+</div>
+<p>To write a proper recursive function, you need an <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> expression, where each one corresponds to one of the two scenarions:</p>
+<ol class="arabic simple">
+<li><p>A ‘base’ condition. This is the point at which the recursion stops and moves back ‘up’.</p></li>
+<li><p>A change that is applied so that your process comes closer to reaching the base condition.</p></li>
+</ol>
+<p>In the example above, the base condition is <span class="math notranslate nohighlight">\(n=1\)</span>, and the change that is applied is <span class="math notranslate nohighlight">\(n-1\)</span>. If there is no base condition or no change, your function will just run indefinitely, like a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop without a stopping condition.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
+English</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Exercise 5.6</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">sum_recursion</span></code> to calculate the sum of a list of numbers using recursion.<br />
+<strong>Hint</strong>: In your base condition, there is only one item left in the list.</p>
+<p>Test your function using the following code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_recursion</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="c1"># Your function body</span>
+    
+<span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">summed_list</span> <span class="o">=</span> <span class="n">sum_recursion</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum of </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">,</span> <span class="n">summed_list</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-13">
+Nederlands</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Opdracht 5.6</p>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">sum_recursion</span></code> die met behulp van recursie (zoals in de <code class="docutils literal notranslate"><span class="pre">factorial</span></code> functie gebruikt wordt) de som van een <code class="docutils literal notranslate"><span class="pre">list</span></code> met getallen bepaalt. Dus, stel dat we een lijst getallen <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">4]</span></code> hebben, dan moet de functie 31 als antwoord teruggegeven.</p>
+<p>Zorg ervoor dat de functie een <code class="docutils literal notranslate"><span class="pre">if</span></code> en een <code class="docutils literal notranslate"><span class="pre">else</span></code> statement bevat. Hier staat een opzetje van de functie en code om je functie te testen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_recursion</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="c1"># Your code</span>
+    
+<span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">summed_list</span> <span class="o">=</span> <span class="n">sum_recursion</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sum of </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">,</span> <span class="n">summed_list</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1130,6 +1148,24 @@ Nederlands</label><div class="sd-tab-content docutils">
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../05_Notebooks/05_Notebooks_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter notebooks</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../backmatter/references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -1154,8 +1190,8 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return">Return</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-arguments">Optional arguments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions">Built-in functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
 </ul>
   </nav></div>
 
