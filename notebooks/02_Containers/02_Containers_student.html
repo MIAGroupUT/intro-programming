@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Control structures" href="../../placeholder_notebooks/placeholder_3.html" />
-    <link rel="prev" title="Jupyter notebooks" href="../05_Notebooks/05_Notebooks_student.html" />
+    <link rel="next" title="Control structures" href="../03_ControlStructures/03_ControlStructures_student.html" />
+    <link rel="prev" title="Getting started" href="../01_GettingStarted/01_GettingStarted_new_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,12 +154,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_new_student.html">1. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">2. Notebooks</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Containers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_3.html">3. Control structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_4.html">4. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_5.html">5. Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../placeholder_notebooks/placeholder_6.html">6. NumPy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">4. Notebooks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -445,12 +442,12 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">course_name</span> <span class="o">=</span> <span class="s1">&#39;Introduction to programming&#39;</span>
-<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2026</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>In many practical scenarios, you might want to store multiple values in one variable. For example, when creating an overview of all students in one variable, or when you are working with matrices in mathematics. For this, Python has four very useful data types: tuples, lists, sets and dictionaries. These are called <em>containers</em>, which can be used to store multiple values or variables. There are similarities, but also important differences between these four data types. In this chapter we’ll discuss these.</p>
+<p>In many practical scenarios, you might want to store multiple values in one variable. For example, when creating an overview of all students, or when you are working with matrices in mathematics. For this, Python has four very useful data types: tuples, lists, sets and dictionaries. These are called <em>containers</em>, which can be used to store multiple values or variables. There are similarities, but also important differences between these four data types. In this chapter we’ll discuss these.</p>
 </section>
 <section id="tuple">
 <h2>Tuple<a class="headerlink" href="#tuple" title="Permalink to this heading">#</a></h2>
@@ -534,7 +531,7 @@ Claire
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_12709</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_81487</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">student_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Bert&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -550,6 +547,7 @@ Claire
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.1</p>
+<p>Consider <code class="docutils literal notranslate"><span class="pre">student_names</span> <span class="pre">=</span> <span class="pre">('Alice',</span> <span class="pre">'Bob',</span> <span class="pre">'Claire')</span></code>.</p>
 <p>Why do <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">student_names[-3]</span></code> refer to the same item?</p>
 </div>
 </div>
@@ -558,6 +556,7 @@ English</label><div class="sd-tab-content docutils">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Opdracht 2.1</p>
+<p>Neem <code class="docutils literal notranslate"><span class="pre">student_names</span> <span class="pre">=</span> <span class="pre">('Alice',</span> <span class="pre">'Bob',</span> <span class="pre">'Claire')</span></code>.</p>
 <p>Leg uit waarom <code class="docutils literal notranslate"><span class="pre">student_names[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">student_names[-3]</span></code> naar hetzelfde item verwijzen.</p>
 </div>
 </div>
@@ -849,12 +848,12 @@ banana
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2.3</p>
-<p>Write scripts for the following tasks:</p>
+<p>Write scripts for the following tasks. Name your scripts <code class="docutils literal notranslate"><span class="pre">Exercise_23_1.py</span></code>, <code class="docutils literal notranslate"><span class="pre">Exercise_23_2.py</span></code>, etc.:</p>
 <ol class="arabic simple">
 <li><p>Use indexing and assignment to sort the items in the list <code class="docutils literal notranslate"><span class="pre">scrambled_numbers</span> <span class="pre">=</span> <span class="pre">[7,</span> <span class="pre">2,</span> <span class="pre">5,</span> <span class="pre">1]</span></code> in ascending order.</p></li>
-<li><p>Split the list <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code> into a list of even numbers and a list of uneven numbers using slicing.</p></li>
+<li><p>Use slicing to split the list <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code> into a list of even numbers and a list of uneven numbers.</p></li>
 <li><p>Given list <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>, make two new lists: one containing every second item counting from the back, and one containing every third item starting from the front.</p></li>
-<li><p>Given tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>, write code to print the value <code class="docutils literal notranslate"><span class="pre">15</span></code> from <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+<li><p>Given tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>, write code that uses indexing to extract and print the value <code class="docutils literal notranslate"><span class="pre">15</span></code> from <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
 </ol>
 </div>
 </div>
@@ -868,7 +867,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li><p>Gebruik <em>indexing</em> en <em>assignment</em> op de items in deze lijst op oplopende volgorde te zetten: <code class="docutils literal notranslate"><span class="pre">scrambled_numbers</span> <span class="pre">=</span> <span class="pre">[7,</span> <span class="pre">2,</span> <span class="pre">5,</span> <span class="pre">1]</span></code></p></li>
 <li><p>Gebruik <em>slicing</em> om twee lijsten te maken van de volgende lijst, één lijst met even en één lijst met oneven nummers: <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code></p></li>
 <li><p>Neem de lijst <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">'a',</span> <span class="pre">'dog',</span> <span class="pre">3.4,</span> <span class="pre">True]</span></code>. Maak hiervan met behulp van <em>slicing</em> twee nieuwe lijsten: één lijst die elk tweede item als je van achteren telt, en één lijst die elk derde item bevat als je van voren telt.</p></li>
-<li><p>Neem de tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>. Gebruik <em>indexing</em> om hieruit de waarde <code class="docutils literal notranslate"><span class="pre">15</span></code> te halen.</p></li>
+<li><p>Neem de tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>. Gebruik <em>indexing</em> om hieruit de waarde <code class="docutils literal notranslate"><span class="pre">15</span></code> te halen en printen.</p></li>
 </ol>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
@@ -910,7 +909,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;}
-{&#39;Fran&#39;, &#39;Edward&#39;, &#39;Dean&#39;, &#39;Claire&#39;, &#39;Bob&#39;, &#39;Adam&#39;}
+{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Adam&#39;, &#39;Edward&#39;, &#39;Claire&#39;, &#39;Fran&#39;}
 {&#39;Adam&#39;, &#39;Claire&#39;}
 </pre></div>
 </div>
@@ -925,7 +924,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Edward&#39;, &#39;Dean&#39;, &#39;Claire&#39;, &#39;Bob&#39;, &#39;Adam&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Adam&#39;, &#39;Edward&#39;, &#39;Claire&#39;}
 </pre></div>
 </div>
 </div>
@@ -1055,7 +1054,7 @@ English</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Exercise 2.4</p>
 <p>Write scripts for the following tasks:</p>
 <ol class="arabic simple">
-<li><p>Given the below dictionary, write a line of code that outputs Mike’s grade for history.</p></li>
+<li><p>Given the below dictionary, use the keys in the dictionary to write a line of code that outputs Mike’s grade for history.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1426,16 +1425,16 @@ Nederlands</label><div class="sd-tab-content docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../05_Notebooks/05_Notebooks_student.html"
+       href="../01_GettingStarted/01_GettingStarted_new_student.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jupyter notebooks</p>
+        <p class="prev-next-title">Getting started</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../placeholder_notebooks/placeholder_3.html"
+       href="../03_ControlStructures/03_ControlStructures_student.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
