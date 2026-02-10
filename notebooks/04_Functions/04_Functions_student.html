@@ -777,11 +777,11 @@ English</label><div class="sd-tab-content docutils">
 <p>Write a function that takes two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> as lists as input and returns their dot product as a floating point number. The dot product can only be computed if the length of <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is the same. Let your function check that this is the case, and if not, print a message for the user and return <code class="docutils literal notranslate"><span class="pre">-1</span></code>. Call your function <code class="docutils literal notranslate"><span class="pre">dot_product()</span></code> and use the code below to test it</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span> <span class="c1"># Should give -5.4</span>
 
 <span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span> <span class="c1"># Should give an error</span>
 </pre></div>
 </div>
 </div>
@@ -797,11 +797,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 <p>Schrijf een functie die twee vectoren <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> en <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> als input neemt en het inproduct terug geeft. De vectoren definieren we in deze opdracht als <code class="docutils literal notranslate"><span class="pre">list</span></code> containers. Hou er rekening mee dat je alleen het inproduct tussen twee vectoren kunt berekenen als ze allebei evenveel items hebben. Als dit niet het geval is, print dan een waarschuwing voor de gebruiker en geef <code class="docutils literal notranslate"><span class="pre">-1</span></code> terug als antwoord. Noem je functie <code class="docutils literal notranslate"><span class="pre">dot_product</span></code>. Gebruik vervolgens onderstaande code om te testen of je functie werkt.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span> <span class="c1"># Zou -5.4 moeten geven</span>
 
 <span class="n">vector_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">vector_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span> <span class="n">vector_b</span><span class="p">))</span> <span class="c1"># Zou een foutmelding moeten geven</span>
 </pre></div>
 </div>
 </div>
@@ -901,7 +901,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 5.3</p>
-<p>There are many cases in programming where we need to sort something, usually in ascending order (low to high), sometimes in descending order (high to low). There are also many different sorting algorithms, some faster than others, some more complex. The animation below visualizes eight popular sorting algorithms. The length of the bars indicated their value, and as you can see, each algorithm tries to sort the values from low to high (in ascending order).</p>
+<p>There are many cases in programming where we need to sort something, usually in ascending order (low to high), sometimes in descending order (high to low). There are also many different sorting algorithms, some faster than others, some more complex. The animation below visualizes eight popular sorting algorithms. The length of the bars indicates their value, and as you can see, each algorithm tries to sort the values from low to high (in ascending order).</p>
 <p><img alt="sorting" src="https://surfdrive.surf.nl/files/index.php/s/hjPCX75AhZWBMCo/download" /></p>
 <p>In this exercise, you will implement <em>bubble sort</em>. Bubble sort is not the fastest algorithm (as you can see in the animation), but it is (relatively) easy to understand. Let’s say that we have a list of numbers that we want to sort. The animation below visualizes bubble sort for a short list.</p>
 <p><img alt="bubblesort" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" /></p>
@@ -913,11 +913,11 @@ English</label><div class="sd-tab-content docutils">
 <li><p>Check if all elements are sorted:</p></li>
 </ol>
 <ul class="simple">
-<li><p>If not, repeat the process in step 1 to 3. However, you can now ignore the last element because you know it has the highest value and is in the right place. The next iteration you can ignore the last two elements, etc.</p></li>
-<li><p>If yes, the final output is a sorted array.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, repeat the process in step 1 to 3. However, you can now ignore the last element because you know it has the highest value and is in the right place. In the next iteration you can ignore the last two elements, etc.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the final output is a sorted array.</p></li>
 </ul>
-<p>Your task in this exercise is to implement a bubble sort function. Use the provided code below and fill in the missing parts.<br />
-<strong>Hint</strong> Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to check whether the list is sorted. You can use the provided <code class="docutils literal notranslate"><span class="pre">check_sorted</span></code> function.</p>
+<p>Your task in this exercise is to implement a bubble sort function. Use the provided code below and fill in the missing parts.</p>
+<p><strong>Hint</strong> Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to check whether the list is sorted. You can use the provided <code class="docutils literal notranslate"><span class="pre">check_sorted</span></code> function in your code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">check_sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
@@ -987,7 +987,23 @@ Nederlands</label><div class="sd-tab-content docutils">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 5.4</p>
-<p>Write a Python function that takes a number <span class="math notranslate nohighlight">\(n\)</span> as a parameter and returns <strong>all prime numbers up to <span class="math notranslate nohighlight">\(n\)</span></strong> as a list. Tip: you can consider <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">this algorithm</a> to make your function efficient. Name your function <code class="docutils literal notranslate"><span class="pre">all_primes()</span></code> and use the following code to test it</p>
+<p>Write a Python function that takes a number <span class="math notranslate nohighlight">\(n\)</span> as a parameter and returns <strong>all prime numbers up to <span class="math notranslate nohighlight">\(n\)</span></strong> as a list. Here, use the so-called Sieve of Eratosthenes algorithm. You can read more about this algorithm <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">here</a>.</p>
+<p><img alt="bubblesort" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" /></p>
+<p>It does the following:</p>
+<ol class="arabic simple">
+<li><p>Create a list of consecutive integers from 2 through <span class="math notranslate nohighlight">\(n\)</span>: <span class="math notranslate nohighlight">\((2, 3, 4, ..., n)\)</span>.</p></li>
+<li><p>Initially, let <span class="math notranslate nohighlight">\(p\)</span> equal 2, the smallest prime number.</p></li>
+<li><p>Enumerate the multiples of <span class="math notranslate nohighlight">\(p\)</span> by counting in increments of <span class="math notranslate nohighlight">\(p\)</span> from <span class="math notranslate nohighlight">\(2p\)</span> to <span class="math notranslate nohighlight">\(n\)</span>, and mark them in the list (these will be <span class="math notranslate nohighlight">\(2p\)</span>, <span class="math notranslate nohighlight">\(3p\)</span>, <span class="math notranslate nohighlight">\(4p\)</span>, …; the <span class="math notranslate nohighlight">\(p\)</span> itself should not be marked).</p></li>
+<li><p>Find the smallest number in the list greater than <span class="math notranslate nohighlight">\(p\)</span> that is not marked. If there was no such number, stop. Otherwise, let <span class="math notranslate nohighlight">\(p\)</span> now equal this new number (which is the next prime), and repeat from step 3.</p></li>
+</ol>
+<p>When the algorithm terminates, the numbers remaining not marked in the list are all the primes below <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p><strong>Hints</strong></p>
+<ul class="simple">
+<li><p>You can make a list of integers using the <code class="docutils literal notranslate"><span class="pre">range</span></code> function that you used before (Chapter 3).</p></li>
+<li><p>To check if a number is a multiple of <span class="math notranslate nohighlight">\(p\)</span> you can use the modulo operator (Chapter 1).</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">remove</span></code> on a list to remove an item (Chapter 2).</p></li>
+</ul>
+<p>Name your function <code class="docutils literal notranslate"><span class="pre">all_primes()</span></code> and use the following code to test it</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">all_primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># The body of your function goes here</span>
 
@@ -1011,6 +1027,12 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li><p>Kies het volgende getal uit de lijst en ga verder met stap 3.</p></li>
 </ul>
 <p><img alt="plaatjezeef" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" />.</p>
+<p><strong>Hints</strong></p>
+<ul class="simple">
+<li><p>Je kunt een lijst integers maken met de <code class="docutils literal notranslate"><span class="pre">range</span></code> functie uit Chapter 3.</p></li>
+<li><p>Kijk of een getal een meervoud is van <span class="math notranslate nohighlight">\(p\)</span> met behulp van de modulo operator uit Chapter 1.</p></li>
+<li><p>Om een element uit een lijst te verwijderen kun je <code class="docutils literal notranslate"><span class="pre">remove</span></code> gebruiken (Chapter 2).</p></li>
+</ul>
 <p>Noem je functie <code class="docutils literal notranslate"><span class="pre">all_primes()</span></code> en gebruik de code hieronder om je functie te testen.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">all_primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># The body of your function goes here</span>
