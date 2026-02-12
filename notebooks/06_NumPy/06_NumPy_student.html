@@ -68,6 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="../../backmatter/references.html" />
+    <link rel="prev" title="Functions" href="../04_Functions/04_Functions_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,13 +153,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_new_student.html">1. Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../05_Notebooks/05_Notebooks_student.html">4. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../04_Functions/04_Functions_student.html">5. Functions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. NumPy</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -413,7 +416,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-and-indexing">Slicing and indexing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#element-wise-operators">Element-wise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting">Broadcasting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-column-array-wise-operators">Row/column/array-wise operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-array-wise-operators">Axis array-wise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-not-a-number">NaN: Not a number</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-indexing">Advanced indexing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshaping">Reshaping</a></li>
@@ -453,24 +456,6 @@ document.write(`
 <div class="warning admonition">
 <p class="admonition-title">Selecting the right interpreter</p>
 <p>Please make sure that you’re using the right interpreter in VS Code! On the bottom right of your screen, it says something like ‘3.9.12’. This is the Python interpreter you’re using. Click on it and select Conda from the list on the top of the screen.</p>
-</div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
-English</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Exercise 6.0</p>
-<p>From now on, you are expected to write all answers to exercises in a <em>runnable</em> notebook. You can find a template for this notebook <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/2Nm9Zn0vIzPjpmL">here</a>. Download this <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and use it in VS Code to write down your answers. Add your name and student number to the file.</p>
-</div>
-</div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
-Nederlands</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Opdracht 6.0</p>
-<p>Vanaf nu is het de bedoeling dat je al je antwoorden in een Jupyter notebook schrijft. Je kunt het template notebook voor dit hoofdstuk <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/2Nm9Zn0vIzPjpmL">hier</a> vinden. Download dit <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> en gebruik het in VS Code om je antwoorden op te slaan. Voeg je naam en studentnummer toe aan het bestand.</p>
-</div>
-</div>
 </div>
 </section>
 <section id="importing-a-package">
@@ -599,24 +584,6 @@ Array
  [[5 6]
   [7 8]]]
 </pre></div>
-</div>
-</div>
-</div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-English</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Exercise 6.1</p>
-<p>Write code to print the <em>size</em> and <em>shape</em> of <code class="docutils literal notranslate"><span class="pre">array_2D</span></code> and <code class="docutils literal notranslate"><span class="pre">array_3D</span></code>.</p>
-</div>
-</div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-Nederlands</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Opdracht 6.1</p>
-<p>Schrijf code die de <em>size</em> en <em>shape</em> van <code class="docutils literal notranslate"><span class="pre">array_2D</span></code> en <code class="docutils literal notranslate"><span class="pre">array_3D</span></code> print.</p>
 </div>
 </div>
 </div>
@@ -820,19 +787,19 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.2</p>
+<p class="admonition-title">Exercise 6.1</p>
 <p>Write a NumPy program to generate a <span class="math notranslate nohighlight">\(5\times 5\)</span> matrix with random integers between 10 and 30.</p>
 </div>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.2</p>
+<p class="admonition-title">Opdracht 6.1</p>
 <p>Gebruik NumPy om een <span class="math notranslate nohighlight">\(5\times 5\)</span> matrix met willekeurige volledige getallen (integers) tussen 10 en 30 te genereren.</p>
 </div>
 </div>
@@ -879,7 +846,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>As you can see, indexing and slicing is very similar to list indexing and slicing for individual axes, with the only differences that we now have to provide values for each axis. Here, if we want to select <em>all</em> rows/columns in an axis, we just use <code class="docutils literal notranslate"><span class="pre">:</span></code></p>
+<p>As you can see, indexing and slicing is very similar to list indexing and slicing for individual axes, with the only differences that we now have to provide values for each axis. These are separated with a comma. Here, if we want to select <em>all</em> rows/columns in an axis, we just use <code class="docutils literal notranslate"><span class="pre">:</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">square_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>  <span class="c1"># Print the first row of square_matrix</span>
@@ -985,17 +952,17 @@ changed a
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.3</p>
+<p class="admonition-title">Exercise 6.2</p>
 <p>Use the code below to generate an <span class="math notranslate nohighlight">\(11\times 11\)</span> matrix of integers.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span> <span class="c1"># Sets the seed of the NumPy random number generator</span>
 <span class="n">random_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>The random matrix that you get should look like the example below. Write Python code using indexing to print only</p>
+<p>The random matrix that you get should look like the example below. Write Python code that uses slicing to print only</p>
 <ol class="arabic simple">
 <li><p>the part in blue</p></li>
 <li><p>the part in red</p></li>
@@ -1004,17 +971,17 @@ English</label><div class="sd-tab-content docutils">
 <p><img alt="randmat" src="https://surfdrive.surf.nl/files/index.php/s/41Q0FnnViF8rwf6/download" /></p>
 </div>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.3</p>
+<p class="admonition-title">Opdracht 6.2</p>
 <p>Gebruik onderstaande code om een <span class="math notranslate nohighlight">\(11\times 11\)</span> matrix van gehele getallen (integers) te genereren.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span> <span class="c1"># Sets the seed of the NumPy random number generator</span>
 <span class="n">random_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>De matrix zou eruit moeten zien zoals hieronder. Schrijf vervolgens Python code met indexing om vanuit deze matrix te printen</p>
+<p>De matrix zou eruit moeten zien zoals hieronder. Schrijf vervolgens Python code met slicing om vanuit deze matrix te printen</p>
 <ol class="arabic simple">
 <li><p>het blauw gearceerde deel</p></li>
 <li><p>het rood gearceerde deel</p></li>
@@ -1263,8 +1230,8 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
-<section id="row-column-array-wise-operators">
-<h2>Row/column/array-wise operators<a class="headerlink" href="#row-column-array-wise-operators" title="Permalink to this heading">#</a></h2>
+<section id="axis-array-wise-operators">
+<h2>Axis array-wise operators<a class="headerlink" href="#axis-array-wise-operators" title="Permalink to this heading">#</a></h2>
 <p>In addition to the element-wise operators, there are operators that work on the full array, or on a single row or column in the array. Consider the <code class="docutils literal notranslate"><span class="pre">min</span></code> function. As its name implies, it gives the minimal value in an input.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1649,11 +1616,11 @@ If you have more than two dimensions, you can swap axes using the <code class="d
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-8">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.4</p>
+<p class="admonition-title">Exercise 6.3</p>
 <p>Use NumPy to create a <span class="math notranslate nohighlight">\(7\times 7\)</span> matrix with values ranging from 0 to 48.</p>
 <p><strong>Hint:</strong> use <code class="docutils literal notranslate"><span class="pre">reshape</span></code></p>
 <p>Your output should look like this</p>
@@ -1667,7 +1634,6 @@ English</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 <p>Then, use advanced indexing to get a new matrix that contains only rows with <strong>four</strong> even numbers.</p>
-<p><strong>Hint:</strong> use the modulo operator <code class="docutils literal notranslate"><span class="pre">%</span></code></p>
 <p>Your output should look like this</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span><span class="p">]</span>
  <span class="p">[</span><span class="mi">14</span> <span class="mi">15</span> <span class="mi">16</span> <span class="mi">17</span> <span class="mi">18</span> <span class="mi">19</span> <span class="mi">20</span><span class="p">]</span>
@@ -1675,13 +1641,25 @@ English</label><div class="sd-tab-content docutils">
  <span class="p">[</span><span class="mi">42</span> <span class="mi">43</span> <span class="mi">44</span> <span class="mi">45</span> <span class="mi">46</span> <span class="mi">47</span> <span class="mi">48</span><span class="p">]]</span>
 </pre></div>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 1</p>
+<p>Use the modulo operator <code class="docutils literal notranslate"><span class="pre">%</span></code> to make a matrix that contains <code class="docutils literal notranslate"><span class="pre">True</span></code> for even values and <code class="docutils literal notranslate"><span class="pre">False</span></code> for odd values.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 2</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> along axis 1 (see <span class="xref myst">here</span> to get a 1D array that contains the number of even numbers per row.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 3</p>
+<p>Use the 1D array that you obtained for advanced indexing along the rows axis to select only those rows where there are four even numbers.</p>
 </div>
 </div>
-<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-9">
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.4</p>
+<p class="admonition-title">Opdracht 6.3</p>
 <p>Gebruik NumPy om een <span class="math notranslate nohighlight">\(7\times 7\)</span> matrix met waarden van 0 tot 48 te maken.</p>
 <p><strong>Hint:</strong> gebruik <code class="docutils literal notranslate"><span class="pre">reshape</span></code></p>
 <p>Je matrix moet er zo uitzien</p>
@@ -1702,6 +1680,18 @@ Nederlands</label><div class="sd-tab-content docutils">
  <span class="p">[</span><span class="mi">28</span> <span class="mi">29</span> <span class="mi">30</span> <span class="mi">31</span> <span class="mi">32</span> <span class="mi">33</span> <span class="mi">34</span><span class="p">]</span>
  <span class="p">[</span><span class="mi">42</span> <span class="mi">43</span> <span class="mi">44</span> <span class="mi">45</span> <span class="mi">46</span> <span class="mi">47</span> <span class="mi">48</span><span class="p">]]</span>
 </pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 1</p>
+<p>Gebruik de modulus operator <code class="docutils literal notranslate"><span class="pre">%</span></code> om een matrix te maken waar een cel <code class="docutils literal notranslate"><span class="pre">True</span></code> is als het getal deelbaar is door 2, en <code class="docutils literal notranslate"><span class="pre">False</span></code> als dat niet zo is.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 2</p>
+<p>Gebruik <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> langs axis 1 (see <span class="xref myst">here</span> om een 1D array te krijgen die het aantal even getallen per rij bevat.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 3</p>
+<p>Gebruik de 1D array die je hebt gekregen voor ‘advanced indexing’ op de eerste axis van de oorspronkelijke matrix om de juiste rijen te selecteren.</p>
 </div>
 </div>
 </div>
@@ -1788,11 +1778,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.5</p>
+<p class="admonition-title">Exercise 6.4</p>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">tile</span></code> function to create a chessboard of ones and zeros out of <span class="math notranslate nohighlight">\(2\times 2\)</span> arrays.</p>
 <p>Your output should look like this</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">0.</span><span class="p">]</span>
@@ -1807,11 +1797,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-11">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.5</p>
+<p class="admonition-title">Opdracht 6.4</p>
 <p>Gebruik de <code class="docutils literal notranslate"><span class="pre">tile</span></code> functie op <span class="math notranslate nohighlight">\(2\times 2\)</span> arrays om een schaakbord te maken met 0-en (zwart) en 1-en (wit).</p>
 <p>De output zou er zo moeten uitzien:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">0.</span><span class="p">]</span>
@@ -1898,7 +1888,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </section>
 <section id="vectorization">
 <h2>Vectorization<a class="headerlink" href="#vectorization" title="Permalink to this heading">#</a></h2>
-<p>Because NumPy operates on arrays of elements instead of individual elements, it is very fast. We can verify this using <code class="docutils literal notranslate"><span class="pre">timeit</span></code> magic. Let’s reuse the <code class="docutils literal notranslate"><span class="pre">dot_product</span></code> function that you created in Chapter 4. The function loops over the elements in two vectors, multiplies them, and then sums all the products.</p>
+<p>Because NumPy operates on arrays of elements instead of individual elements, it is very fast. We can verify this using Jupyter’s magic <code class="docutils literal notranslate"><span class="pre">timeit</span></code> command. Let’s reuse the <code class="docutils literal notranslate"><span class="pre">dot_product</span></code> function that you created earlier. The function loops over the elements in two vectors, multiplies them, and then sums all the products.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dot product </span>
@@ -1913,7 +1903,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>In the cell below, we use <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> (as explained in Chapter 5) to run this function 100 times on a vector of 1000 elements.</p>
+<p>In the cell below, we use <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> to run this function 100 times on a vector of 1000 elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span> <span class="c1"># Make a random array</span>
@@ -1957,11 +1947,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 <p>We will not go into too much detail here, but it’s good to be aware that NumPy provides the <code class="docutils literal notranslate"><span class="pre">linalg</span></code> module that contains many of the functions that you will need for linear algebra. The <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.linalg.html">documentation</a> provides a list of all functions.</p>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-12">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.6</p>
+<p class="admonition-title">Exercise 6.5</p>
 <p>Compare runtimes for the following functions that can be used to compute the sum of an array</p>
 <ul class="simple">
 <li><p>With a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
@@ -1991,11 +1981,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-13">
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.6</p>
+<p class="admonition-title">Opdracht 6.5</p>
 <p>Vergelijk de <em>runtime</em> van drie manieren op de som van een array te bepalen:</p>
 <ul class="simple">
 <li><p>Met een <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p></li>
@@ -2181,72 +2171,86 @@ Unsorted array after sorting: [3 7 7 7 3 4 6 4 6 3]
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-14">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.7</p>
+<p class="admonition-title">Exercise 6.6</p>
 <p>Download the <code class="docutils literal notranslate"><span class="pre">.npy</span></code> file <code class="docutils literal notranslate"><span class="pre">grades.npy</span></code> from <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/OzPwivWAypMR6wh">here</a>. This file contains (fictional) grades for an exam and resit of a class of students. The first column contains the grades for the exam, the second column grades for the resit. Load the file using NumPy and write code to answer the following questions:</p>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>How many students are in the class?</p></li>
 <li><p>How many students passed the exam the first time (grade <span class="math notranslate nohighlight">\(\geq 5.5\)</span>)?</p></li>
 <li><p>What was the average grade of students that passed the exam the first time?</p></li>
-<li><p>Not all students that failed the exam, also took the resit. How many students didn’t?</p>
-<p><strong>Hint</strong>: Use <code class="docutils literal notranslate"><span class="pre">isnan</span></code></p>
-</li>
-<li><p>Some students passed the exam the first time, but still took the resit. The highest grade counts. What is the average final grade of all students that passed the course?
-<strong>Hint</strong>: Use <code class="docutils literal notranslate"><span class="pre">nanmax</span></code></p></li>
+<li><p>Not all students that failed the exam, also took the resit. How many students didn’t?</p></li>
 </ol>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 1</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">isnan</span></code> to find cells that do not contain numbers.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Some students passed the exam the first time, but still took the resit. The highest grade counts. What is the average final grade of all students that passed the course?</p></li>
+</ol>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 2</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">nanmax</span></code> to ignore <code class="docutils literal notranslate"><span class="pre">nan</span></code> values and get the maximum grade over the two columns. Use advanced indexing to select only those rows in which a student got a <span class="math notranslate nohighlight">\(\geq 5.5\)</span>.</p>
 </div>
 </div>
-<input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-15">
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.7</p>
+<p class="admonition-title">Opdracht 6.6</p>
 <p>Download het <code class="docutils literal notranslate"><span class="pre">.npy</span></code> bestand <code class="docutils literal notranslate"><span class="pre">grades.npy</span></code> van <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/OzPwivWAypMR6wh">hier</a>. Dit bestand bevat (fictieve) cijfers van een klas studenten voor een tentamen en herkansing. De eerste kolom bevat de cijfers voor het examen, de tweede kolom voor de herkansing. Laad het bestand met NumPy en schrijf code om de volgende vragen te beantwoorden:</p>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>Hoeveel studenten zitten er in de klas?</p></li>
 <li><p>Hoeveel studenten hebben het tentamen de eerste keer gehaald (cijfer <span class="math notranslate nohighlight">\(\geq 5.5\)</span>)?</p></li>
 <li><p>Wat was het gemiddelde cijfer van studenten die het tentamen de eerste keer haalden.</p></li>
-<li><p>Niet alle studenten die het tentamen niet haalden, hebben de herkansing gedaan. Hoeveel studenten hebben de herkansing laten schieten?</p>
-<p><strong>Hint</strong>: Gebruik <code class="docutils literal notranslate"><span class="pre">isnan</span></code></p>
-</li>
-<li><p>Sommige studenten haalden het eerste tentamen, maar deden alsnog de herkansing. Het hoogste cijfer telt. Wat is het gemiddelde eindcijfer van alle studenten die het vak gehaald hebben?
-<strong>Hint</strong>: Gebruik <code class="docutils literal notranslate"><span class="pre">nanmax</span></code></p></li>
+<li><p>Niet alle studenten die het tentamen niet haalden, hebben de herkansing gedaan. Hoeveel studenten hebben de herkansing laten schieten?</p></li>
 </ol>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 1</p>
+<p>Gebruik <code class="docutils literal notranslate"><span class="pre">isnan</span></code> om cellen zonder cijfer te vinden.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Sommige studenten haalden het eerste tentamen, maar deden alsnog de herkansing. Het hoogste cijfer telt. Wat is het gemiddelde eindcijfer van alle studenten die het vak gehaald hebben?</p></li>
+</ol>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint 2</p>
+<p>Gebruik <code class="docutils literal notranslate"><span class="pre">nanmax</span></code> om <code class="docutils literal notranslate"><span class="pre">nan</span></code> te negeren en het maximumcijfer per student te krijgen (dus per rij). Gebruik advanced indexing om alleen die studenten te selecteren die een <span class="math notranslate nohighlight">\(\geq 5.5\)</span> hebben gehaald.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-16" name="sd-tab-set-8" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-16">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 6.8</p>
+<p class="admonition-title">Exercise 6.7</p>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Magic_square">magic square</a> is a square matrix whose rows, columns, and two diagonals all sup um to the same value. This value is called the <em>magic value</em>. An example of a magic square is shown below</p>
 <p><img alt="magic square" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Magicsquareexample.svg/1200px-Magicsquareexample.svg.png" /></p>
 <p>In this exercise, you will write a function <code class="docutils literal notranslate"><span class="pre">check_magic_square</span></code> that uses NumPy to <em>check</em> whether an input array is a magic square or not. If the input array is a magic square, the function should return <code class="docutils literal notranslate"><span class="pre">True</span></code> and the magic vale. If it is not a magic square, the function should return <code class="docutils literal notranslate"><span class="pre">False</span></code> and the reason why it is not.</p>
 <p>Some guidelines/rules:</p>
 <ol class="arabic simple">
-<li><p>This is a function, so use what you learned in Chapter 4.</p></li>
+<li><p>This is a function, so use what you learned in Chapter 5.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> to check if all conditions for a magic square are met.</p></li>
 <li><p>Try to use NumPy and avoid the use of <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
 </ol>
 <p>To check whether your function is working properly, you can apply it on the arrays in an <code class="docutils literal notranslate"><span class="pre">npz</span></code> file that you can download <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/tNUJMIduOHr4ilt">here</a>. Load this <code class="docutils literal notranslate"><span class="pre">npz</span></code> file and apply your function to each individual array.</p>
 </div>
 </div>
-<input id="sd-tab-item-17" name="sd-tab-set-8" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-17">
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-13">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 6.8</p>
+<p class="admonition-title">Opdracht 6.7</p>
 <p>Een <a class="reference external" href="https://nl.wikipedia.org/wiki/Magisch_vierkant#:~:text=Een%20magisch%20vierkant%20of%20tovervierkant,of%20het%20karakteristieke%20getal%20genoemd.">magisch vierkant of tovervierkant</a> is een vierkante matrix waarvan de rijen, kolommen, en diagonalen allemaal optellen tot hetzelfde getal, het <em>magische getal</em>. Een voorbeeld van zo’n tovervierkant met magisch getal 15 is te zien op de afbeelding hieronder</p>
 <p><img alt="magic square" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Magicsquareexample.svg/1200px-Magicsquareexample.svg.png" /></p>
 <p>In deze opdracht ga je zelf een functie <code class="docutils literal notranslate"><span class="pre">check_magic_square</span></code> schrijven die een NumPy array als input neemt en met behulp van NumPy bepaalt of de array een tovervierkant is of niet. Zoja, dan moet de functie. <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven en het magisch getal. Zo niet, dan moet de functie <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven en de reden waarom de input geen tovervierkant is.</p>
 <p>Een paar hints en regels:</p>
 <ol class="arabic simple">
-<li><p>Je moet een functie schrijven, dus gebruik wat je geleerd hebt in Hoofdstuk 4.</p></li>
+<li><p>Je moet een functie schrijven, dus gebruik wat je geleerd hebt in Hoofdstuk 5.</p></li>
 <li><p>Gebruik <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> om te controleren of aan alle voorwaarden voor een tovervierkant voldaan is.</p></li>
 <li><p>Probeer zoveel mogelijk gebruik te maken van NumPy en vermijd <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
 </ol>
@@ -2292,6 +2296,24 @@ Nederlands</label><div class="sd-tab-content docutils">
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../04_Functions/04_Functions_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Functions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../backmatter/references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -2318,7 +2340,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-and-indexing">Slicing and indexing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#element-wise-operators">Element-wise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting">Broadcasting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-column-array-wise-operators">Row/column/array-wise operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-array-wise-operators">Axis array-wise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-not-a-number">NaN: Not a number</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-indexing">Advanced indexing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshaping">Reshaping</a></li>
