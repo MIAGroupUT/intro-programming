@@ -1621,8 +1621,7 @@ If you have more than two dimensions, you can swap axes using the <code class="d
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 6.3</p>
-<p>Use NumPy to create a <span class="math notranslate nohighlight">\(7\times 7\)</span> matrix with values ranging from 0 to 48.</p>
-<p><strong>Hint:</strong> use <code class="docutils literal notranslate"><span class="pre">reshape</span></code></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">arange</span></code> and <code class="docutils literal notranslate"><span class="pre">reshape</span></code> in NumPy to create a <span class="math notranslate nohighlight">\(7\times 7\)</span> matrix with values ranging from 0 to 48.</p>
 <p>Your output should look like this</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span><span class="p">]</span>
  <span class="p">[</span> <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span><span class="p">]</span>
@@ -1660,8 +1659,7 @@ English</label><div class="sd-tab-content docutils">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Opdracht 6.3</p>
-<p>Gebruik NumPy om een <span class="math notranslate nohighlight">\(7\times 7\)</span> matrix met waarden van 0 tot 48 te maken.</p>
-<p><strong>Hint:</strong> gebruik <code class="docutils literal notranslate"><span class="pre">reshape</span></code></p>
+<p>Gebruik <code class="docutils literal notranslate"><span class="pre">arange</span></code> en <code class="docutils literal notranslate"><span class="pre">reshape</span></code> in NumPy om een <span class="math notranslate nohighlight">\(7\times 7\)</span> matrix met waarden van 0 tot 48 te maken.</p>
 <p>Je matrix moet er zo uitzien</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span><span class="p">]</span>
  <span class="p">[</span> <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span><span class="p">]</span>
@@ -1955,7 +1953,7 @@ English</label><div class="sd-tab-content docutils">
 <p>Compare runtimes for the following functions that can be used to compute the sum of an array</p>
 <ul class="simple">
 <li><p>With a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
-<li><p>Using a recursive function like the one you made in Exercise 4.4.</p></li>
+<li><p>Using a recursive function like the one you made in Exercise 5.6.</p></li>
 <li><p>Using the <code class="docutils literal notranslate"><span class="pre">sum</span></code> function in NumPy.</p></li>
 </ul>
 <p>Base your solution on the script above. Before you run the code, consider which method you think is fastest, and which slowest. How much faster is the fastest method than the slowest method? How does the size of the input vector affect the runtime and speed-up?</p>
@@ -1989,7 +1987,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 <p>Vergelijk de <em>runtime</em> van drie manieren op de som van een array te bepalen:</p>
 <ul class="simple">
 <li><p>Met een <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p></li>
-<li><p>Met een recursieve functie zoals je die hebt bepaald in Opdracht 4.4.</p></li>
+<li><p>Met een recursieve functie zoals je die hebt bepaald in Opdracht 5.6.</p></li>
 <li><p>Met de <code class="docutils literal notranslate"><span class="pre">sum</span></code> functie in NumPy.</p></li>
 </ul>
 <p>Baseer je script op het script hierboven. Bedenk vooraf welke functie sneller zal zijn. Functies zijn hieronder gegeven. Hoeveel sneller is de snelste functie ten opzichte van de andere functies? In hoeverre heeft de lengte van de input array invloed op de tijd die het duurt om de functie uit te voeren?</p>
