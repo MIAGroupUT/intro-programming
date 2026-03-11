@@ -572,7 +572,7 @@ mmol/mol. Per patiënt zijn er 3 maanden aan data geselecteerd. Patiënten hebbe
 <p>Nu gaan we <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> vergelijken met een paar klinische <code class="docutils literal notranslate"><span class="pre">CGM</span></code>-parameters. We onderscheiden vier parameters (per patiënt):</p>
 <ul class="simple">
 <li><p>1: <code class="docutils literal notranslate"><span class="pre">eA1c</span></code>: In Opdracht 11.2 schatten we een gemiddelde glucoseconcentratie <code class="docutils literal notranslate"><span class="pre">g</span></code> uit <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> volgens de formule <span class="math notranslate nohighlight">\(g = \frac{HbA1c − a}{b}\)</span>. Omgekeerd kunnen we uit het gemiddelde <span class="math notranslate nohighlight">\(g_{cgm}\)</span> (mmol/mol) van de CGM-metingen van de patiënt de  <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> schatten volgens
-$<span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(h_{CGM} = a +b\overline{g}_{cgm}\)</span>.</p></li>
 </ul>
 <p>met <code class="docutils literal notranslate"><span class="pre">a</span></code> = 12.71 mmol/mol en <code class="docutils literal notranslate"><span class="pre">b</span></code> = 4.70587L/mol. Deze <span class="math notranslate nohighlight">\(h_{CGM}\)</span> wordt <code class="docutils literal notranslate"><span class="pre">eA1c</span></code> genoemd (voor “estimated <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code>”).</p>
 <ul class="simple">
@@ -699,7 +699,7 @@ Controleer deze functie met onderstaande code, en leg uit waarom de plot klopt.<
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Opdracht 11.7</p>
-<p>Maak plaatjes met verschillende orde <span class="math notranslate nohighlight">\(M\)</span> van het moving average filter. Filter bijvoorbeeld ook eens met grote orders, bijvoorbeeld het aantal samples voor een dag, of voor een week. Je mag er vanuit gaan dat de samplefrequentie 5/min is. Wat valt je op voor verschillende filter ordes?</p>
+<p>Maak plaatjes met verschillende orde <span class="math notranslate nohighlight">\(M\)</span> van het moving average filter. Filter bijvoorbeeld ook eens met grote orders, bijvoorbeeld het aantal samples voor een dag, of voor een week. Je mag er vanuit gaan dat er elke vijf minuten gemeten is. Wat valt je op voor verschillende filter ordes?</p>
 </div>
 </section>
 </section>
