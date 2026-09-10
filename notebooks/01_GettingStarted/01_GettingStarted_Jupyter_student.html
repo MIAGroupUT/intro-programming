@@ -430,7 +430,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-warning-about-running-jupyter-notebooks">A warning about running Jupyter Notebooks</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -449,16 +452,15 @@ document.write(`
 <p>After finishing this chapter, you are expected to</p>
 <ul class="simple">
 <li><p>be able to install and use Anaconda as your Python distribution</p></li>
-<li><p>perform basic operations Python</p></li>
+<li><p>open and run a Jupyter Notebook</p></li>
+<li><p>perform basic operations in Python</p></li>
 <li><p>define variables in Python</p></li>
 <li><p>work with floating point numbers, integers, string and boolean variables</p></li>
-<li><p>write a Python script using Visual Studio Code</p></li>
-<li><p>execute a Python script</p></li>
 </ul>
 </div>
 <section id="what-is-python">
 <h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
-<p>Python is a programming language that allows you to write software programs. By programming in Python you can tell the computer how to do things. Just like Python, many other programming languages. You might have heard about some of them, like <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">C++</span></code>, <code class="docutils literal notranslate"><span class="pre">Java</span></code>. Alternatively, it might be that you have heard of (or used) <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>. In general, programming languages have a lot of similarities. They all allow you to work with data such as information provided by the user or stored in a file, and do something based on that input. They (almost) all have ways to visualize results. Of course, there are also differences. Languages differ in the way that your code is <em>executed</em> on the computer, in the <em>syntax</em> that you should use when writing code, in naming conventions, etc. We use Python here because it is a widely used language that is user-friendly and allows you to get a grasp of fundamental concepts in programming.</p>
+<p>Python is a programming language that allows you to write software programs. By programming in Python you can tell the computer how to do things. Just like Python, many other programming languages exist. You might have heard about some of them, like <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">C++</span></code>, <code class="docutils literal notranslate"><span class="pre">Java</span></code>. Alternatively, it might be that you have heard of (or used) <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>. In general, programming languages have a lot of similarities. They all allow you to work with data such as information provided by the user or stored in a file, and do something based on that input. They (almost) all have ways to visualize results. Of course, there are also differences. Languages differ in the way that your code is <em>executed</em> on the computer, in the <em>syntax</em> that you should use when writing code, in naming conventions, etc. We use Python here because it is a widely used language that is user-friendly and allows you to get a grasp of fundamental concepts in programming.</p>
 <div class="note admonition">
 <p class="admonition-title">Python</p>
 <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.</p>
@@ -473,7 +475,7 @@ document.write(`
 <li><p>We will use <strong>Visual Studio Code</strong> (VS Code) as the programming environment.</p></li>
 <li><p>We will use <strong>Jupyter Notebooks</strong> as documents in which to write code and visualize results.</p></li>
 </ul>
-<p>We’ll introduce all these tools step-by-step so that you get a good understanding what everything is and that you’ll be comfortable using Python.</p>
+<p>We’ll introduce all these tools step-by-step so that you get a good understanding what everything is and so that you’ll be comfortable using Python.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Whenever we provide instructions on how to install software, please closely follow the order indicated.</p>
@@ -487,7 +489,7 @@ document.write(`
 <li><p>A clean way to organize <em>environments</em></p></li>
 <li><p>A terminal</p></li>
 </ul>
-<p>Anaconda is free. To download it, go to <a class="reference external" href="https://www.anaconda.com/download">the Anaconda website</a>, fill in a valid e-mail address, and download Anaconda using the link that you receive in your mailbox. This will download a file of around 500MB-1GB. Use the file to install Anaconda. Follow the instructions and just install it as a regular software package. You can follow the detailed instructions <a class="reference external" href="https://docs.anaconda.com/free/anaconda/install/windows/">here</a>. Please add Anaconda to your path variable.</p>
+<p>Anaconda is free. To download it, go to <a class="reference external" href="https://www.anaconda.com/download">the Anaconda website</a>, fill in a valid e-mail address, and download Anaconda using the link that you receive in your mailbox. This will download a file of around 500MB-1GB. Use the file to install Anaconda. Follow the instructions and just install it as a regular software package. You can follow the detailed instructions <a class="reference external" href="https://docs.anaconda.com/free/anaconda/install/windows/">here</a>. Please <strong>do</strong> add Anaconda to your path variable.</p>
 <p>Anaconda installs some additional tools on your machine, including Anaconda Navigator. This is a tool that conveniently combines several important elements of your Python distribution: environments, packages. For now, we will not discuss environments, but we will do so extensively later in the course.</p>
 <div class="warning admonition">
 <p class="admonition-title">Before you continue</p>
@@ -505,17 +507,13 @@ document.write(`
 <li><p>Install the Python extension. <strong>Warning</strong> There are multiple Python extensions available. You should download the most popular one by Microsoft, which has been downloaded over a 100m times.</p></li>
 </ol>
 <p>If you have properly installed Anaconda as described in the previous chapter, you should now be able to use Python within the VS Code IDE. You can find more information on the combination of Anaconda and VS Code on the <a class="reference external" href="https://docs.anaconda.com/free/anaconda/ide-tutorials/python-vsc/">Anaconda website</a>.</p>
-<div class="note admonition">
-<p class="admonition-title">Different IDEs</p>
-<p>Note that we suggest to use VS Code, but that there are other (free) IDEs that you can also use, like Spyder and PyCharm. The latter is a professional, expensive IDE that provides free licenses to students. Go to <a class="reference external" href="https://www.jetbrains.com/shop/eform/students">the JetBrains website</a> and register as a student. Make sure to use  your University of Twente email account. Once you have received confirmation from JetBrains, download the latest version of PyCharm from <a class="reference external" href="https://www.jetbrains.com/pycharm/">the PyCharm website</a>. Use the license provides to you by JetBrains. In the end, it doesn’t really matter which IDE you use, the Python code that you use is not affected by the IDE. The IDE is just there to help you write code.</p>
-</div>
 </section>
 <section id="using-notebooks">
 <h3>Using Notebooks<a class="headerlink" href="#using-notebooks" title="Permalink to this heading">#</a></h3>
-<p>A <strong>Jupyter notebook</strong> is a file that can contain code and text. In fact, you’re looking at a notebook right now! A notebook consists of <em>cells</em> and each cell can be <em>run</em> by a Python <em>kernel</em>. This Python kernel is like a Python interpreter that is continuously running in the background and keeping track of your variables.</p>
+<p>In VS Code, we can edit all kinds of documents. Python is typically written in <code class="docutils literal notranslate"><span class="pre">.py</span></code>. Here, we will use a slightly different file that is easier to work/learn with. A <strong>Jupyter notebook</strong> is a file that can contain code and text. In fact, you’re looking at a notebook right now! A notebook consists of <em>cells</em> and each cell can be <em>run</em> by a Python <em>kernel</em>. This Python kernel is like a Python interpreter that is continuously running in the background and keeping track of your variables.</p>
 <p>In order to use notebooks in VS Code, you first need to install the Jupyter extension, just like you did earlier for the Python extension. Go to the extensions window, search for ‘Jupyter’ and select the top option, as below.</p>
 <p><img alt="install" src="https://surfdrive.surf.nl/files/index.php/s/fpAJsb2CLbedBPR/download" /></p>
-<p>A notebook file should always end in an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension. If all is well, when you create a file (for example <code class="docutils literal notranslate"><span class="pre">my_notebook.ipynb</span></code>) and open it in VS Code, you should get the notebook editor view. This view is a bit different from the normal Python script editing view. The file already contains one <em>cell</em> that you can start editing. However, before you start editing, it’s good to select a Python kernel. For this, click on <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Kernel</span></code> in the top right of the screen. This takes you to your list of Python Environments, where you should again select your Anaconda Python interpreter.</p>
+<p>A notebook file should always end in an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension. If all is well, when you create a file (for example <code class="docutils literal notranslate"><span class="pre">my_notebook.ipynb</span></code>) and open it in VS Code, you should get the notebook editor view. This view is a bit different from the normal Python script editing view. The file already contains one <em>cell</em> that you can start editing. However, before you start editing, it’s good to select a Python kernel. For this, click on <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Kernel</span></code> in the top right of the screen. This takes you to your list of Python Environments, where you should select your Anaconda Python interpreter. In the example below, the interpreter <code class="docutils literal notranslate"><span class="pre">base</span></code> was selected.</p>
 <p><img alt="editor" src="https://surfdrive.surf.nl/files/index.php/s/nZiGCYyjJHUF8b5/download" /></p>
 <section id="cells">
 <h4>Cells<a class="headerlink" href="#cells" title="Permalink to this heading">#</a></h4>
@@ -526,25 +524,14 @@ document.write(`
 </ol>
 <p>You can use as many cells as you want in a notebook, but each cell can only have one of these two types. Markdown cells can be used to write comments, explanations, other documentation in between your blocks of code, or you can use them to add headers to your blocks of code. Markdown is a <em>markup language</em> like HTML that provides options to write text <strong>bold</strong>, <em>italic</em>, use <span class="math notranslate nohighlight">\(\LaTeX\)</span>, add headers, etc. We are not going to teach you all markdown commands here, but you can find an overview of the most commonly used Markdown statements <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">here</a>. Markdown can be very useful when building documents.</p>
 <div class="note admonition">
-<p class="admonition-title">Different IDEs</p>
+<p class="admonition-title">This manual</p>
 <p>In fact, this entire manual is written in Markdown. You can download each chapter as an <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file and run it as a notebook.</p>
 </div>
+<p>In VS Code, you will see that colors are used to highlight individual words and characters in the code. This is called <em>syntax highlighting</em> and is a useful tool to make your code readable and easily spot errors. You can change the colors and the general look-and-feel of VS Code by picking a different theme. For this, go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Theme</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Theme</span></code>. Note that this is just a visualization and will not change anything to your code or what your code does. The editor in which you now see your code is basically a text editor with some nice additional functionality to make your life as a programmer easier.</p>
 </section>
 <section id="running-cells">
 <h4>Running cells<a class="headerlink" href="#running-cells" title="Permalink to this heading">#</a></h4>
-<p>Once you have a notebook opened in VS Code, you can <em>run</em> its individual cells by pressing <kbd>Shift</kbd> + <kbd>Enter</kbd>. VS Code will ask you to select a <em>kernel</em>, a Python instance that will run your code. Choose the one that has ‘Anaconda’ or ‘conda’ in its name. The Jupyter kernel will then execute the contents of the cell, and if there is any output, that output will be shown directly below the cell. This is similar to how you’ve used scripts before, with two main differences:</p>
-<ol class="arabic simple">
-<li><p>The output is directly shown in the notebook, and not in a terminal window.</p></li>
-<li><p>Your Python session is <em>persistent</em>, which means that any variables that you create in a code cell, will be kept in memory.</p></li>
-</ol>
-<p>This means that you can create a variable in one cell, run that cell, and then reuse that variable in some other cell. Similarly, you can define a function in one cell and then reuse that function in another cell. Take a look at the example below.</p>
-<p><img alt="reuse" src="https://surfdrive.surf.nl/files/index.php/s/UTQlAv8IZetRlu6/download" /></p>
-<p>This is also dangerous: you should keep of track of the order in which you execute cells, because a variable might have a different value than you expect, depending on the order in which you run cells. That means that if you run one cell first and then the other, you might get different behavior than the other way around.</p>
-<div class="warning admonition">
-<p class="admonition-title">Order</p>
-<p>The order in which you run cells matters!</p>
-</div>
-<p>You will see that colors are used to highlight individual words and characters in the code. This is called <em>syntax highlighting</em> and is a useful tool to make your code readable and easily spot errors. You can change the colors and the general look-and-feel of VS Code by picking a different theme. For this, go to <code class="docutils literal notranslate"><span class="pre">File</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Theme</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Theme</span></code>. Note that this is just a visualization and will not change anything to your code or what your code does. The editor in which you now see your code is basically a text editor with some nice additional functionality to make your life as a programmer easier.</p>
+<p>Once you have a notebook opened in VS Code, you can <em>run</em> its individual cells by pressing <kbd>Shift</kbd> + <kbd>Enter</kbd>. VS Code will ask you to select a <em>kernel</em>, a Python instance that will run your code. Choose the one that has ‘Anaconda’ or ‘conda’ in its name. The Jupyter kernel will then execute the contents of the cell, and if there is any output, that output will be shown directly below the cell.</p>
 <div class="note admonition">
 <p class="admonition-title">Making exercises</p>
 <p>For the exercises in this chapter, we provide a template notebook, a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file that you can directly open in VS Code and that you can use to fill in your answers. It contains all the exercises that you see in the rest of the chapter. You can download this notebook from Canvas, <code class="docutils literal notranslate"><span class="pre">chapter1_notebook.ipynb</span></code>.</p>
@@ -569,7 +556,7 @@ English</label><div class="sd-tab-content docutils">
 <span class="mi">5</span><span class="o">--</span><span class="mi">6</span>
 </pre></div>
 </div>
-<p>Remember to run the cell after you put in the code.</p>
+<p>Put one of these expressions in a cell, and run the cell after you put in the code. If all is well, you should see the output appear below the cell.</p>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
@@ -772,9 +759,9 @@ Nederlands</label><div class="sd-tab-content docutils">
  &#39;_dh&#39;: [&#39;/Users/jmwolterink/Library/CloudStorage/OneDrive-UniversityofTwente/Teaching/TM/M3/2024/intro-programming/notebooks/01_GettingStarted&#39;],
  &#39;In&#39;: [&#39;&#39;, &#39;a=4&#39;, &#39;a&#39;, &#39;b = 3\nc = 7&#39;, &#39;(a*b)-c&#39;, &#39;d = (a*b)-c&#39;, &#39;vars()&#39;],
  &#39;Out&#39;: {2: 4, 4: 5},
- &#39;get_ipython&#39;: &lt;bound method InteractiveShell.get_ipython of &lt;ipykernel.zmqshell.ZMQInteractiveShell object at 0x7fa1d8214310&gt;&gt;,
- &#39;exit&#39;: &lt;IPython.core.autocall.ZMQExitAutocall at 0x7fa1d8214ed0&gt;,
- &#39;quit&#39;: &lt;IPython.core.autocall.ZMQExitAutocall at 0x7fa1d8214ed0&gt;,
+ &#39;get_ipython&#39;: &lt;bound method InteractiveShell.get_ipython of &lt;ipykernel.zmqshell.ZMQInteractiveShell object at 0x7fbbb06243d0&gt;&gt;,
+ &#39;exit&#39;: &lt;IPython.core.autocall.ZMQExitAutocall at 0x7fbbb0624f90&gt;,
+ &#39;quit&#39;: &lt;IPython.core.autocall.ZMQExitAutocall at 0x7fbbb0624f90&gt;,
  &#39;_&#39;: 5,
  &#39;__&#39;: 4,
  &#39;___&#39;: &#39;&#39;,
@@ -840,7 +827,7 @@ NameError: name &#39;A&#39; is not defined
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_28531</span><span class="o">/</span><span class="mf">1121104675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_34768</span><span class="o">/</span><span class="mf">1121104675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 
 <span class="ne">ValueError</span>: not enough values to unpack (expected 3, got 2)
@@ -922,19 +909,57 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li><p>Booleans, which are variables that can take on just two values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ol>
 <p>Some programming languages require you to explicitly specify the type of each variable. Instead, Python automatically infers the type of a variable for you and does a good job in most cases. However, it’s always good to be aware of the type of your <a class="reference external" href="http://variables.To">variables.To</a> find out what the type is of a variable, you can use <code class="docutils literal notranslate"><span class="pre">type()</span></code>, i.e.,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mf">3.1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="go">&lt;class &#39;float&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;Technical medicine&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="go">&lt;class &#39;str&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-<span class="go">&lt;class &#39;bool&#39;&gt;</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="mf">3.1</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;Technical Medicine&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
 </div>
 <p>Not all data types are compatible. While you can add integers and floating point numbers, and even booleans and numbers, adding floating point and strings will throw an error.</p>
 <div class="cell docutils container">
@@ -946,7 +971,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_28531</span><span class="o">/</span><span class="mf">1642992856.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_34768</span><span class="o">/</span><span class="mf">1642992856.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">4</span> <span class="o">+</span> <span class="s1">&#39;Hello world&#39;</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
@@ -1391,6 +1416,16 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
+<section id="a-warning-about-running-jupyter-notebooks">
+<h3>A warning about running Jupyter Notebooks<a class="headerlink" href="#a-warning-about-running-jupyter-notebooks" title="Permalink to this heading">#</a></h3>
+<p>Your Python session is <em>persistent</em>, which means that any variables that you create in a code cell, will be kept in memory. This means that you can create a variable in one cell, run that cell, and then reuse that variable in some other cell. Similarly, you can define a function in one cell and then reuse that function in another cell. Take a look at the example below.</p>
+<p><img alt="reuse" src="https://surfdrive.surf.nl/files/index.php/s/UTQlAv8IZetRlu6/download" /></p>
+<p>This is also dangerous: you should keep of track of the order in which you execute cells, because a variable might have a different value than you expect, depending on the order in which you run cells. That means that if you run one cell first and then the other, you might get different behavior than the other way around.</p>
+<div class="warning admonition">
+<p class="admonition-title">Order</p>
+<p>The order in which you run cells matters!</p>
+</div>
+</section>
 </section>
 </section>
 
@@ -1488,7 +1523,10 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-scripts">Interactive scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-warning-about-running-jupyter-notebooks">A warning about running Jupyter Notebooks</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
