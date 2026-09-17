@@ -408,7 +408,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-containers">Converting between containers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-in-operator">The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#containers-summary">Containers: summary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String formatting</a></li>
@@ -474,7 +474,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The last example shows that a tuple can contain the same value multiple times: it’s contents are <em>ordered</em> and they will stay in their order (even if they are not ascending or descending, or alphabetically ordered).</p>
+<p>The last example shows that a tuple can contain the same value multiple times: its contents are <em>ordered</em> and they will stay in their order (even if they are not ascending or descending, or alphabetically ordered).</p>
 <p>We can access the value of an individual item in the tuple using <code class="docutils literal notranslate"><span class="pre">[]</span></code>. This is called <em>indexing</em>. For example, to get the value of the <strong>first</strong> element in the tuple <code class="docutils literal notranslate"><span class="pre">student_names</span></code>, we use the <em>index</em> of that element in <code class="docutils literal notranslate"><span class="pre">student_names</span></code> and write</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -530,7 +530,7 @@ Claire
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_81487</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="n">x0gf6dj176dfjvrn357t5p6h0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_77240</span><span class="o">/</span><span class="mf">34016667.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">student_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Bert&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -564,7 +564,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub_items</span> <span class="o">=</span> <span class="n">some_tuple</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>In the example below, we select all items starting at index 3 and until (but not including) index 5. Note that in this example, the step is not provided. In this case, Python assumes that you want to use a step size of 1.</p>
+<p>In the example below, we select all items starting at index 3 and until (but not including) index 5. Note that in this example, the step is not provided. If you do not provide a step, Python assumes that you want to use a step size of 1, and will thus give all elements between start and stop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">food</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">,</span> <span class="s1">&#39;lobster&#39;</span><span class="p">)</span>
@@ -869,9 +869,6 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li><p>Neem de tuple <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(&quot;Orange&quot;,</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30],</span> <span class="pre">(5,</span> <span class="pre">15,</span> <span class="pre">25))</span></code>. Gebruik <em>indexing</em> om hieruit de waarde <code class="docutils literal notranslate"><span class="pre">15</span></code> te halen en printen.</p></li>
 </ol>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </section>
@@ -908,7 +905,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;}
-{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Adam&#39;, &#39;Edward&#39;, &#39;Claire&#39;, &#39;Fran&#39;}
+{&#39;Adam&#39;, &#39;Claire&#39;, &#39;Edward&#39;, &#39;Bob&#39;, &#39;Dean&#39;, &#39;Fran&#39;}
 {&#39;Adam&#39;, &#39;Claire&#39;}
 </pre></div>
 </div>
@@ -923,7 +920,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dean&#39;, &#39;Bob&#39;, &#39;Adam&#39;, &#39;Edward&#39;, &#39;Claire&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Adam&#39;, &#39;Claire&#39;, &#39;Edward&#39;, &#39;Bob&#39;, &#39;Dean&#39;}
 </pre></div>
 </div>
 </div>
@@ -996,8 +993,8 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li><p>If you assign a new value to a key, it overwrites the old value.</p></li>
 </ol>
 </section>
-<section id="converting-between-collections">
-<h2>Converting between collections<a class="headerlink" href="#converting-between-collections" title="Permalink to this heading">#</a></h2>
+<section id="converting-between-containers">
+<h2>Converting between containers<a class="headerlink" href="#converting-between-containers" title="Permalink to this heading">#</a></h2>
 <p>If your data is organized in a set, you can turn it into a list or vice versa. Remember how in the previous chapter we could <em>cast</em> an integer as a float and vice versa? We can do the same with containers by changing their type. However, keep in mind the characteristics of these data types. For example, if you have a list with <em>duplicate</em> values and you turn that into a set, you’ll lose the duplicates. This <em>can</em> be convenient, for example if you want to automatically select all unique values in a list. In the code below, notice how the set contains all unique elements in the list, ordered in ascending order, while the tuple maintains the original order and preserves duplicates.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1053,7 +1050,7 @@ English</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Exercise 2.4</p>
 <p>Write code for the following tasks:</p>
 <ol class="arabic simple">
-<li><p>Given the below dictionary, use the keys in the dictionary to write a line of code that outputs Mike’s grade for history.</p></li>
+<li><p>Given the below dictionary, use the keys in the dictionary to write a single line of code that outputs Mike’s grade for history.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1069,7 +1066,7 @@ English</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Given the below dictionary, raise the salary of Brad to 6800.</p></li>
+<li><p>Given the below dictionary, write a single line of code to raise the salary of Brad to 6800.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;emp1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jhon&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="mi">7500</span><span class="p">},</span>
@@ -1081,7 +1078,6 @@ English</label><div class="sd-tab-content docutils">
 </div>
 <ol class="arabic simple" start="3">
 <li><p>Define a dictionary called <code class="docutils literal notranslate"><span class="pre">student</span></code> that contains your own name, hair color, and age.</p></li>
-<li><p>Create a list containing yourself and two additional students as dictionaries.</p></li>
 </ol>
 </div>
 </div>
@@ -1120,7 +1116,6 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 <ol class="arabic simple" start="3">
 <li><p>Maak een dictionary met de naam <code class="docutils literal notranslate"><span class="pre">student</span></code> die je naam, haarkleur en leeftijd bevat.</p></li>
-<li><p>Maak een lijst van drie dictionaries: één dictionary die jezelf op deze manier omschrijft (uit voorgaande taak), en twee voor twee medestudenten.</p></li>
 </ol>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
@@ -1464,7 +1459,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-collections">Converting between collections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-between-containers">Converting between containers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-in-operator">The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#containers-summary">Containers: summary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String formatting</a></li>

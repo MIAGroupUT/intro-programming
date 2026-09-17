@@ -652,140 +652,6 @@ Nederlands</label><div class="sd-tab-content docutils">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Exercise 3.2</p>
-<p>In each of the following equations, evaluate the given code fragments. Investigate each of the fragments for the various starting values. Use Python to check your answer.</p>
-<ol class="arabic">
-<li><p>What is the value of <code class="docutils literal notranslate"><span class="pre">m</span></code> if<br />
-a) <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">7</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">0</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">-7</span></code> ?</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</li>
-<li><p>What is the value of <code class="docutils literal notranslate"><span class="pre">t</span></code> if<br />
-a) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">1</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">7</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">57</span></code><br />
-d) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">300</span></code></p></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">s</span>
-    <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">-</span> <span class="n">s</span>
-    <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">s</span><span class="o">**</span><span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">s</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>What is the value of <code class="docutils literal notranslate"><span class="pre">h</span></code> if<br />
-a) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">50</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">19</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">-6</span></code><br />
-d) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">h</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span>
-        <span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">h</span> <span class="o">=</span> <span class="o">-</span><span class="n">t</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>What is the value of <code class="docutils literal notranslate"><span class="pre">y</span></code> if<br />
-a) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">-1</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">30</span></code><br />
-d) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">56</span></code></p></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span>
-    <span class="k">elif</span> <span class="mi">7</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">55</span><span class="p">:</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span> <span class="o">*</span> <span class="n">x</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="mi">333</span>
-</pre></div>
-</div>
-</div>
-</div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-Nederlands</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Opdracht 3.2</p>
-<p>Bekijk de vier stukjes Python-code hieronder. Geef met behulp van Python antwoord op de vier vragen die bij elk stukje code staan.</p>
-<ol class="arabic">
-<li><p>Wat is de waarde van <code class="docutils literal notranslate"><span class="pre">m</span></code> als<br />
-a) <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">7</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">0</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">-7</span></code> ?</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</li>
-<li><p>Wat is de waarde van <code class="docutils literal notranslate"><span class="pre">t</span></code> als<br />
-a) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">1</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">7</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">57</span></code><br />
-d) <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">300</span></code></p></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">s</span>
-    <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">-</span> <span class="n">s</span>
-    <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">s</span><span class="o">**</span><span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">s</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>Wat is de waarde van <code class="docutils literal notranslate"><span class="pre">h</span></code> als
-a) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">50</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">19</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">-6</span></code><br />
-d) <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">h</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span>
-        <span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">h</span> <span class="o">=</span> <span class="o">-</span><span class="n">t</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>Wat is de waarde van <code class="docutils literal notranslate"><span class="pre">y</span></code> als
-a) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">-1</span></code><br />
-b) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code><br />
-c) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">30</span></code><br />
-d) <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">56</span></code></p></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span>
-    <span class="k">elif</span> <span class="mi">7</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">55</span><span class="p">:</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span> <span class="o">*</span> <span class="n">x</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="mi">333</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-English</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Exercise 3.3</p>
 <p>A bank will offer a customer a loan if they are 21 or over and have an annual income of at least €21000. Write a Python script that contains the customer’s age and income in a dictionary. Depending on the age and income, one of the following lines should be printed (using the <code class="docutils literal notranslate"><span class="pre">print</span></code> function):</p>
 <ul class="simple">
 <li><p>‘We are able to offer you a loan.’</p></li>
@@ -800,11 +666,11 @@ English</label><div class="sd-tab-content docutils">
 </ul>
 </div>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 3.3</p>
+<p class="admonition-title">Opdracht 3.2</p>
 <p>Een bank geeft alleen leningen aan klanten die minstens 21 jaar zijn en een jaarinkomen hebben van tenminste €21000.</p>
 <p>Schrijf een Python script waarin je de leeftijd en het inkomen van de klant in een <em>dictionary</em> zet (zie vorige hoofdstuk). Afhankelijk van de leeftijd en het inkomen van de klant in de dictionary, moet het script één van de volgende twee regels printen met de <code class="docutils literal notranslate"><span class="pre">print</span></code> functie.</p>
 <ul class="simple">
@@ -822,20 +688,20 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 3.4</p>
+<p class="admonition-title">Exercise 3.3</p>
 <p>Write a Python script that asks the user for two integer numbers and prints ‘The first number can be divided by the second number’ or ‘The first number cannot be divided by the second number’, depending on which is the case.</p>
 <p><em>Tip</em>: Use the modulo operator and the<code class="docutils literal notranslate"><span class="pre">input</span></code> en <code class="docutils literal notranslate"><span class="pre">print</span></code>-functions from the first chapter.</p>
 </div>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 3.4</p>
+<p class="admonition-title">Opdracht 3.3</p>
 <p>Schrijf een Python script dat de gebruiker vraagt om twee getallen en afhankelijk van de situatie één van de volgende twee zinnen laat zien</p>
 <ul class="simple">
 <li><p>‘Het eerste getal kan zonder rest worden gedeeld door het tweede getal’</p></li>
@@ -967,11 +833,11 @@ met. Python supports two types of loops: the <code class="docutils literal notra
 <p>If you make such a loop, always make sure that there is also a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement inside (in combination with an <code class="docutils literal notranslate"><span class="pre">if</span></code>) so you an actually exit the loop. If you accidentally do end up in an infinite loop, you can in most terminals use <kbd>Ctrl</kbd> + <kbd>c</kbd> to shut down your script.</p>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-8">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 3.5</p>
+<p class="admonition-title">Exercise 3.4</p>
 <p>Write a script that determines the largest integer <span class="math notranslate nohighlight">\(n\)</span> for which <span class="math notranslate nohighlight">\(1^3 + 2^3 + \cdots + n^3\)</span> is less than 2000. Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in this script. Use the code below as as basis.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -986,11 +852,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-9">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 3.5</p>
+<p class="admonition-title">Opdracht 3.4</p>
 <p>Schrijf een script dat de grootste integer <span class="math notranslate nohighlight">\(n\)</span> bepaald waarvoor <span class="math notranslate nohighlight">\(1^3 + 2^3 + \cdots + n^3\)</span> kleiner is dan 2000. Gebruik een <code class="docutils literal notranslate"><span class="pre">while</span></code>-loop in dit script. Je kunt onderstaande code als startpunt gebruiken.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1007,11 +873,11 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 3.6</p>
+<p class="admonition-title">Exercise 3.5</p>
 <p>Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end of the game, the number of tries needed by the user should be printed.</p>
 <p>Start your script with the following code to define the secret number:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -1029,11 +895,11 @@ English</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-11">
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 3.6</p>
+<p class="admonition-title">Opdracht 3.5</p>
 <p>Schrijf een spel waarbij de menselijke speler een geheim getal moet raden. De speler mag raden wat het getal is, waarna de computer zegt of het echte getal hoger of lager is. Aan het eind van het spel krijgt de speler te zien hoeveel beurten hij of zij nodig had. Je kunt onderstaande code gebruiken als startpunt.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
@@ -1196,19 +1062,19 @@ e
 <p>Just like in a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, you can use <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> to exit the loop or skip iterations in a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-12">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 3.7</p>
+<p class="admonition-title">Exercise 3.6</p>
 <p>Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to compute the sum of all odd numbers smaller than 100. <em>Tip</em> Use <code class="docutils literal notranslate"><span class="pre">range</span></code> with a step size of two.</p>
 </div>
 </div>
-<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-13">
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 3.7</p>
+<p class="admonition-title">Opdracht 3.6</p>
 <p>Gebruik een <code class="docutils literal notranslate"><span class="pre">for</span></code>-loop om de som van alle oneven getallen onder de 100 te bepalen.  <em>Tip</em> Gebruik <code class="docutils literal notranslate"><span class="pre">range</span></code> met een stapgrootte van twee.</p>
 </div>
 </div>
@@ -1290,19 +1156,19 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-14">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 3.8</p>
+<p class="admonition-title">Exercise 3.7</p>
 <p>Write a script that uses a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to compute <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a> (as in Exercise 1.10). The script asks the user how many numbers should be computed. This can be <strong>any</strong> number, so your code should be able to deal with this.</p>
 </div>
 </div>
-<input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-15">
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-13">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 3.8</p>
+<p class="admonition-title">Opdracht 3.7</p>
 <p>Schrijf een script dat een <code class="docutils literal notranslate"><span class="pre">for</span></code>-loop gebruikt om <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a> te berekenen (zoals in Opdracht 1.10). Het script vraagt de gebruiker eerst hoeveel nummers berekend moeten worden en berekent dan de reeks.</p>
 </div>
 </div>
