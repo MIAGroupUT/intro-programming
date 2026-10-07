@@ -66,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Visualization" href="../08_Visualization/08_Visualization_student.html" />
+    <link rel="prev" title="NumPy" href="../06_NumPy/06_NumPy_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,13 +151,15 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_Jupyter_student.html">1. Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_ControlStructures/03_ControlStructures_student.html">3. Control structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../04_Functions/04_Functions_student.html">4. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../06_NumPy/06_NumPy_student.html">5. NumPy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_Visualization/08_Visualization_student.html">7. Visualization</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -666,7 +670,7 @@ Toot!
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 7.1</p>
+<p class="admonition-title">Exercise 6.1</p>
 <p>Define a class for a circle, call it <code class="docutils literal notranslate"><span class="pre">Circle</span></code>. As attributes, give it an instance attribute <code class="docutils literal notranslate"><span class="pre">radius</span></code> and a method <code class="docutils literal notranslate"><span class="pre">calculate_area</span></code> that should return the area of the circle.</p>
 <p>Test your new class by making multiple circles with different radii.</p>
 </div>
@@ -675,7 +679,7 @@ English</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 7.1</p>
+<p class="admonition-title">Opdracht 6.1</p>
 <p>Definieer een class voor een cirkel, noem deze <code class="docutils literal notranslate"><span class="pre">Circle</span></code>. Geef de class een instance attribute <code class="docutils literal notranslate"><span class="pre">radius</span></code>en een method <code class="docutils literal notranslate"><span class="pre">calculate_area</span></code> die als output de oppervlakte van de cirkel geeft.</p>
 <p>Probeer je class uit door meerdere cirkels te maken met verschillende radii.</p>
 </div>
@@ -841,73 +845,6 @@ Nederlands</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-English</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Exercise 7.2</p>
-<p>Design a class for your favorite animal. The class should inherit from the base class <code class="docutils literal notranslate"><span class="pre">Animal</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sort_name</span> <span class="o">=</span> <span class="n">name</span>
-</pre></div>
-</div>
-<p>Animals should be able to do at least the following, implemented in appropriate <em>methods</em></p>
-<ul class="simple">
-<li><p>make a sound characteristic for that animal</p></li>
-<li><p>eat their favorite food</p></li>
-<li><p>tell you their geographic origin</p></li>
-</ul>
-<p>In your answer, include code that calls these methods.</p>
-</div>
-</div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-Nederlands</label><div class="sd-tab-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Opdracht 7.2</p>
-<p>Ontwerp een class voor je favoriete dier. Deze class moet overerven uit de basis class <code class="docutils literal notranslate"><span class="pre">Animal</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sort_name</span> <span class="o">=</span> <span class="n">name</span>
-</pre></div>
-</div>
-<p>Dieren moeten in staat zijn om ten minste het volgende te doen, geïmplementeerd in de geschikte <em>methods</em></p>
-<ul class="simple">
-<li><p>een karakteristiek geluid maken</p></li>
-<li><p>hun favoriete voedsel eten</p></li>
-<li><p>zeggen waar ze vandaan komen</p></li>
-</ul>
-<p>Maak een code die all deze methodes aanroept.</p>
-<p>Een voorbeeld:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Tiger</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;tiger&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-    
-    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Roaaar&quot;</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">eat_food</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m eating tofu&quot;</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">show_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I live in India&quot;</span><span class="p">)</span>
-        
-
-<span class="n">tijgetje</span> <span class="o">=</span> <span class="n">Tiger</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
-<span class="n">tijgetje</span><span class="o">.</span><span class="n">make_sound</span><span class="p">()</span>
-<span class="n">tijgetje</span><span class="o">.</span><span class="n">eat_food</span><span class="p">()</span>
-<span class="n">tijgetje</span><span class="o">.</span><span class="n">show_origin</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -942,6 +879,24 @@ Nederlands</label><div class="sd-tab-content docutils">
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../06_NumPy/06_NumPy_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">NumPy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../08_Visualization/08_Visualization_student.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Visualization</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
