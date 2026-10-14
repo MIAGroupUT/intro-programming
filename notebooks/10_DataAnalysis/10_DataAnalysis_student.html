@@ -68,6 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://www.utwente.nl/.utdesign/img/favicons/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="../../backmatter/references.html" />
+    <link rel="prev" title="Visualization" href="../08_Visualization/08_Visualization_student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Manual</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../frontmatter/preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_GettingStarted/01_GettingStarted_Jupyter_student.html">1. Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../02_Containers/02_Containers_student.html">2. Containers</a></li>
@@ -160,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../06_NumPy/06_NumPy_student.html">5. NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07_Objects/07_Objects_student.html">6. Objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08_Visualization/08_Visualization_student.html">7. Visualization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Data analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backmatter</span></p>
 <ul class="nav bd-sidenav">
@@ -468,7 +471,7 @@ document.write(`
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 9.1</p>
+<p class="admonition-title">Exercise 8.1</p>
 <ol class="arabic simple">
 <li><p>Download <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/3cfwvXJptwAJhwd">this image file</a>.</p></li>
 <li><p>Load the image file using the <code class="docutils literal notranslate"><span class="pre">imageio</span></code> package as follows</p></li>
@@ -489,7 +492,7 @@ English</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 9.1</p>
+<p class="admonition-title">Opdracht 8.1</p>
 <ol class="arabic simple">
 <li><p>Download <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/3cfwvXJptwAJhwd">dit bestand</a> dat een plaatje bevat.</p></li>
 <li><p>Laad het plaatje in Python met behulp van de <code class="docutils literal notranslate"><span class="pre">imageio</span></code> package, als volgt</p></li>
@@ -582,7 +585,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 9.2</p>
+<p class="admonition-title">Exercise 8.2</p>
 <p>Consider the function <span class="math notranslate nohighlight">\(y=\sin(x)\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Plot this function between <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(=\pi\)</span>.</p></li>
@@ -595,7 +598,7 @@ English</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 9.2</p>
+<p class="admonition-title">Opdracht 8.2</p>
 <p>Gegeven de functie <span class="math notranslate nohighlight">\(y=\sin(x)\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Plot de functie tussen <span class="math notranslate nohighlight">\(x=0\)</span> en <span class="math notranslate nohighlight">\(x=\pi\)</span> met behulp van Matplotlib.</p></li>
@@ -1537,8 +1540,8 @@ Original DataFrame after drop with inplace=True
 </div>
 </div>
 <div class="note admonition">
-<p class="admonition-title">Exercise 6.7 revisited</p>
-<p>Consider the <code class="docutils literal notranslate"><span class="pre">grades.npy</span></code> file in Exercise 6.7. Using Pandas, with a few lines of Python we can address all questions in that exercise. First, we create a DataFrame</p>
+<p class="admonition-title">Exercise 5.5 revisited</p>
+<p>Consider the <code class="docutils literal notranslate"><span class="pre">grades.npy</span></code> file in Exercise 5.5. Using Pandas, with a few lines of Python we can address all questions in that exercise. First, we create a DataFrame</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;grades.npy&#39;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">grades</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Exam&#39;</span><span class="p">,</span> <span class="s1">&#39;Resit&#39;</span><span class="p">])</span>
 </pre></div>
@@ -1780,7 +1783,7 @@ Original DataFrame after drop with inplace=True
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 9.3</p>
+<p class="admonition-title">Exercise 8.3</p>
 <ol class="arabic simple">
 <li><p>Download a CSV file <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/phgNzlvJwA6rzog">here</a>.</p></li>
 <li><p>Load this CSV file into a Pandas DataFrame.</p></li>
@@ -1795,7 +1798,7 @@ English</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 9.3</p>
+<p class="admonition-title">Opdracht 8.3</p>
 <ol class="arabic simple">
 <li><p>Download <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/phgNzlvJwA6rzog">hier</a> een CSV bestand.</p></li>
 <li><p>Laad dit CSV bestand in een Pandas DataFrame.</p></li>
@@ -1812,7 +1815,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 9.4</p>
+<p class="admonition-title">Exercise 8.4</p>
 <p>Download the CSV file <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/VVqhyQpZZhOcUj9">here</a>. This file shows the cost of a Big Mac over time in 57 countries over a period of twenty years, from 2000 to 2020.</p>
 <p><img alt="bigmac" src="https://s7d1.scene7.com/is/image/mcdonalds/ngk_gui_nl_main_big_mac:1-3-product-tile-desktop?wid=765&amp;hei=472&amp;dpr=off" /></p>
 <ol class="arabic simple">
@@ -1827,7 +1830,7 @@ English</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 9.4</p>
+<p class="admonition-title">Opdracht 8.4</p>
 <p>Download <a class="reference external" href="https://surfdrive.surf.nl/files/index.php/s/VVqhyQpZZhOcUj9">hier</a> een CSV bestand. Dit bestand bevat de prijs van een Big Mac in 57 landen, in de periode van 2000 tot 2020.</p>
 <p><img alt="bigmac" src="https://s7d1.scene7.com/is/image/mcdonalds/ngk_gui_nl_main_big_mac:1-3-product-tile-desktop?wid=765&amp;hei=472&amp;dpr=off" /></p>
 <ol class="arabic simple">
@@ -2045,7 +2048,7 @@ Nederlands</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
 English</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Exercise 9.5</p>
+<p class="admonition-title">Exercise 8.5</p>
 <ol class="arabic simple">
 <li><p>Get the <code class="docutils literal notranslate"><span class="pre">healthexp</span></code> dataset from Seaborn as follows</p></li>
 </ol>
@@ -2065,7 +2068,7 @@ English</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-9">
 Nederlands</label><div class="sd-tab-content docutils">
 <div class="tip admonition">
-<p class="admonition-title">Opdracht 9.5</p>
+<p class="admonition-title">Opdracht 8.5</p>
 <ol class="arabic simple">
 <li><p>Maak een DataFrame op basis van de <code class="docutils literal notranslate"><span class="pre">healthexp</span></code> dataset in Seaborn, als volgt</p></li>
 </ol>
@@ -2116,6 +2119,24 @@ Nederlands</label><div class="sd-tab-content docutils">
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../08_Visualization/08_Visualization_student.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Visualization</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../backmatter/references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
